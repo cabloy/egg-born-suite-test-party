@@ -6,7 +6,7 @@ module.exports = app => {
     base: {
       atoms: {},
       statics: {
-        'a-layoutpc.layout': {
+        'a-baselayout.layout': {
           items: staticLayouts,
         },
         'a-base.resource': {
