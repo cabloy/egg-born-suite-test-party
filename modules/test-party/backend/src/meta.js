@@ -13,6 +13,7 @@ module.exports = app => {
   const socketioSimpleChat = require('./config/socketio/simpleChat.js')(app);
   // static
   const staticDashboards = require('./config/static/dashboards.js')(app);
+  const staticLayouts = require('./config/static/layouts.js')(app);
   const staticResources = require('./config/static/resources.js')(app);
   const staticDicts = require('./config/static/dicts.js')(app);
   const staticRoles = require('./config/static/roles.js')(app);
@@ -49,6 +50,11 @@ module.exports = app => {
                 },
               },
             },
+            layout: {
+              config: {
+                atomList: 'layoutAtomListParty',
+              },
+            },
           },
           actions: {
             partyOver: {
@@ -80,6 +86,9 @@ module.exports = app => {
       statics: {
         'a-dashboard.dashboard': {
           items: staticDashboards,
+        },
+        'a-baselayout.layout': {
+          items: staticLayouts,
         },
         'a-base.resource': {
           items: staticResources,
