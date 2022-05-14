@@ -79,6 +79,8 @@ export default {
             </svg>
           </i>
           <span>e</span>
+          <f7-icon size="16" f7="/api/static/a/flownode/bpmn/events/start-event-timer.svg"></f7-icon>
+          <span>e</span>
         </f7-block>
       </eb-page>
     );
