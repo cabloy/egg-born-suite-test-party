@@ -12,6 +12,7 @@ module.exports = app => {
   const socketioTest = require('./config/socketio/test.js')(app);
   const socketioSimpleChat = require('./config/socketio/simpleChat.js')(app);
   // static
+  const staticApps = require('./config/static/apps.js')(app);
   const staticDashboards = require('./config/static/dashboards.js')(app);
   const staticLayouts = require('./config/static/layouts.js')(app);
   const staticResources = require('./config/static/resources.js')(app);
@@ -84,6 +85,9 @@ module.exports = app => {
         },
       },
       statics: {
+        'a-app.app': {
+          items: staticApps,
+        },
         'a-dashboard.dashboard': {
           items: staticDashboards,
         },

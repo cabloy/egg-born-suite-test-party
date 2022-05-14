@@ -4,6 +4,7 @@
   "title": "Party Test",
   "eggBornModule": {
     "fileVersion": 2,
+    "icon": ":business:party",
     "cms": {
       "name": "Party",
       "theme": true
