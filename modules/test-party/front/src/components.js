@@ -9,6 +9,8 @@ import widgetSnapshot from './kitchen-sink/components/widgets/snapshot.vue';
 import widgetSimpleChat from './kitchen-sink/components/widgets/simpleChat.jsx';
 import renderMotto from './kitchen-sink/components/renderMotto.vue';
 import loadComponentAsync from './kitchen-sink/components/loadComponentAsync.vue';
+// appMineLayoutDefault
+import appMineLayoutBlockDefaultMineBody from './components/appMineLayoutDefault/appMineLayoutBlockDefaultMineBody.jsx';
 
 export default {
   action,
@@ -22,4 +24,6 @@ export default {
   widgetSimpleChat,
   renderMotto,
   loadComponentAsync,
+  // appMineLayoutDefault
+  appMineLayoutBlockDefaultMineBody,
 };
