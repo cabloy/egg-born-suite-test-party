@@ -20,7 +20,7 @@ module.exports = app => {
     {
       atomName: 'Party List',
       atomStaticKey: 'listParty',
-      atomRevision: 1,
+      atomRevision: -1,
       atomCategoryId: 'a-base:menu.Party',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
