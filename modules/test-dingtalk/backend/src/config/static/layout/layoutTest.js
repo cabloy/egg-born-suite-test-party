@@ -4,7 +4,7 @@ module.exports = app => {
     toolbar: {
       buttons: [
         { module: 'test-dingtalk', name: 'buttonTest' },
-        { module: 'a-layoutmobile', name: 'buttonHome' },
+        { module: 'a-layoutmobile', name: 'buttonAppHome' },
         { module: 'a-layoutmobile', name: 'buttonMine' },
       ],
     },
@@ -12,7 +12,7 @@ module.exports = app => {
   const layout = {
     atomName: 'Test Layout(Dingtalk)',
     atomStaticKey: 'layoutTest',
-    atomRevision: 3,
+    atomRevision: 4,
     description: '',
     layoutTypeCode: 1,
     content: JSON.stringify(content),
