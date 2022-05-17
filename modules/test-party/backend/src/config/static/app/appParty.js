@@ -2,8 +2,8 @@ module.exports = app => {
   // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
   const info = {
     home: {
-      mode: 'page',
-      page: '/a/basefront/atom/list?module=test-party&atomClassName=party',
+      mode: 'dashboard',
+      dashboard: 'test-party:dashboardTest',
     },
     mine: {
       layout: 'test-party:layoutAppMineParty',
@@ -24,7 +24,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Party',
     atomStaticKey: 'appParty',
-    atomRevision: 0,
+    atomRevision: 1,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':business:party',

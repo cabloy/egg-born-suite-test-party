@@ -8,19 +8,7 @@ module.exports = ctx => {
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-wxwork' && provider.providerName === 'wxwork') {
         info.config = extend(true, info.config, {
-          modules: {
-            'a-layoutmobile': {
-              layout: {
-                presets: {
-                  authenticated: {
-                    scene: {
-                      web: 'test-wxwork:layoutTest',
-                    },
-                  },
-                },
-              },
-            },
-          },
+          modules: {},
         });
       }
       // next

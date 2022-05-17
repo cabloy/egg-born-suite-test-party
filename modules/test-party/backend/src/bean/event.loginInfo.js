@@ -10,20 +10,7 @@ module.exports = ctx => {
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-authgithub' && provider.providerName === 'authgithub') {
         info.config = extend(true, info.config, {
-          modules: {
-            'a-layoutmobile': {
-              layout: {
-                login: '/a/login/login',
-                loginOnStart: true,
-                toolbar: {
-                  tabbar: true,
-                  labels: true,
-                  bottomMd: true,
-                },
-                tabs: [{ name: 'Mine', tabLinkActive: true, iconF7: '::person', url: '/a/user/user/mine' }],
-              },
-            },
-          },
+          modules: {},
         });
       }
       // next

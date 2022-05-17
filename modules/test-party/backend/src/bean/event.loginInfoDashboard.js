@@ -8,22 +8,7 @@ module.exports = ctx => {
       const data = context.data;
       const info = data.info;
       info.config = extend(true, info.config, {
-        modules: {
-          'a-dashboard': {
-            dashboard: {
-              presets: {
-                anonymous: {
-                  default: 'a-dashboard:dashboardDefault',
-                  home: 'test-party:dashboardTest',
-                },
-                authenticated: {
-                  default: 'test-party:dashboardTest',
-                  home: 'test-party:homeTest',
-                },
-              },
-            },
-          },
-        },
+        modules: {},
       });
       // next
       await next();
