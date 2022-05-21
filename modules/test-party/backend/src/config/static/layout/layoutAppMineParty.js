@@ -17,7 +17,7 @@ module.exports = app => {
   const layout = {
     atomName: 'Party',
     atomStaticKey: 'layoutAppMineParty',
-    atomRevision: 2,
+    atomRevision: -1,
     description: '',
     layoutTypeCode: 14,
     content: JSON.stringify(content),

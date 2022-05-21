@@ -1,11 +1,11 @@
 const layoutAtomListParty = require('./layout/layoutAtomListParty.js');
-const layoutAppMineParty = require('./layout/layoutAppMineParty.js');
+// const layoutAppMineParty = require('./layout/layoutAppMineParty.js');
 
 module.exports = app => {
   const layouts = [
     //
     layoutAtomListParty(app),
-    layoutAppMineParty(app),
+    // layoutAppMineParty(app),
   ];
   return layouts;
 };
