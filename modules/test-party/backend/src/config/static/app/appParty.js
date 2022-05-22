@@ -6,7 +6,7 @@ module.exports = app => {
       dashboard: 'test-party:dashboardTest',
     },
     mine: {
-      layout: 'test-party:layoutAppMineParty',
+      layout: true,
     },
   };
   const content = {
@@ -24,7 +24,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Party',
     atomStaticKey: 'appParty',
-    atomRevision: 1,
+    atomRevision: 2,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':business:party',

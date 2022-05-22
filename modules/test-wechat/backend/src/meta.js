@@ -1,11 +1,15 @@
 module.exports = app => {
   // const schemas = require('./config/validation/schemas.js')(app);
+  const staticApps = require('./config/static/apps.js')(app);
   const staticLayouts = require('./config/static/layouts.js')(app);
   const staticResources = require('./config/static/resources.js')(app);
   const meta = {
     base: {
       atoms: {},
       statics: {
+        'a-app.app': {
+          items: staticApps,
+        },
         'a-baselayout.layout': {
           items: staticLayouts,
         },
