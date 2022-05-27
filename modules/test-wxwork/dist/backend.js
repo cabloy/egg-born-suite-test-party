@@ -14,19 +14,7 @@ module.exports = ctx => {
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-wxwork' && provider.providerName === 'wxwork') {
         info.config = extend(true, info.config, {
-          modules: {
-            'a-layoutmobile': {
-              layout: {
-                presets: {
-                  authenticated: {
-                    scene: {
-                      web: 'test-wxwork:layoutTest',
-                    },
-                  },
-                },
-              },
-            },
-          },
+          modules: {},
         });
       }
       // next
@@ -47,8 +35,7 @@ module.exports = ctx => {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class eventBean {
     async execute(context, next) {
-      const data = context.data;
-      const message = data.message;
+      const { message } = context.data;
       if (message.MsgType === 'text') {
         context.result = {
           ToUserName: message.FromUserName,
@@ -136,6 +123,55 @@ module.exports = {
 
 /***/ }),
 
+/***/ 266:
+/***/ ((module) => {
+
+// http://localhost:9192/?appKey=test-wxwork:appTest
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    presets: {
+      authenticated: {
+        mobile: {
+          layout: 'test-wxwork:layoutTest',
+        },
+      },
+    },
+  };
+  const _app = {
+    atomName: 'Test(Wechat Work)',
+    atomStaticKey: 'appTest',
+    atomRevision: 0,
+    atomCategoryId: 'Demonstration',
+    description: '',
+    appIcon: ':auth:wxwork-outline',
+    appIsolate: true,
+    content: JSON.stringify(content),
+    resourceRoles: 'authenticated',
+    appSorting: 0,
+  };
+  return _app;
+};
+
+
+/***/ }),
+
+/***/ 241:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const appTest = __webpack_require__(266);
+
+module.exports = app => {
+  const apps = [
+    //
+    appTest(app),
+  ];
+  return apps;
+};
+
+
+/***/ }),
+
 /***/ 756:
 /***/ ((module) => {
 
@@ -145,16 +181,17 @@ module.exports = app => {
     toolbar: {
       buttons: [
         { module: 'test-wxwork', name: 'buttonTest' },
-        { module: 'a-layoutmobile', name: 'buttonHome' },
-        { module: 'a-layoutmobile', name: 'buttonMine' },
+        { module: 'a-layoutmobile', name: 'buttonAppHome' },
+        { module: 'a-layoutmobile', name: 'buttonAppMine' },
       ],
     },
   };
   const layout = {
     atomName: 'Test Layout(Wechat Work)',
     atomStaticKey: 'layoutTest',
-    atomRevision: 2,
+    atomRevision: 5,
     description: '',
+    layoutTypeCode: 1,
     content: JSON.stringify(content),
     resourceRoles: 'root',
   };
@@ -289,13 +326,17 @@ module.exports = app => {
 
 module.exports = app => {
   // const schemas = require('./config/validation/schemas.js')(app);
+  const staticApps = __webpack_require__(241)(app);
   const staticLayouts = __webpack_require__(512)(app);
   const staticResources = __webpack_require__(429)(app);
   const meta = {
     base: {
       atoms: {},
       statics: {
-        'a-layoutpc.layout': {
+        'a-app.app': {
+          items: staticApps,
+        },
+        'a-baselayout.layout': {
           items: staticLayouts,
         },
         'a-base.resource': {
@@ -335,8 +376,6 @@ module.exports = app => {
 /***/ 825:
 /***/ ((module) => {
 
-const _sceneAll = 'wxwork,wxworkweb,wxworkmini';
-
 module.exports = app => {
   const routes = [
     // test
@@ -344,23 +383,11 @@ module.exports = app => {
       method: 'post',
       path: 'test/getMemberId',
       controller: 'test',
-      middlewares: 'inWxwork',
-      meta: {
-        inWxwork: {
-          scene: _sceneAll,
-        },
-      },
     },
     {
       method: 'post',
       path: 'test/sendAppMessage',
       controller: 'test',
-      middlewares: 'inWxwork',
-      meta: {
-        inWxwork: {
-          scene: _sceneAll,
-        },
-      },
     },
   ];
   return routes;

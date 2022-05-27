@@ -14,19 +14,7 @@ module.exports = ctx => {
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-wechat' && provider.providerName === 'wechat') {
         info.config = extend(true, info.config, {
-          modules: {
-            'a-layoutmobile': {
-              layout: {
-                presets: {
-                  authenticated: {
-                    scene: {
-                      web: 'test-wechat:layoutTest',
-                    },
-                  },
-                },
-              },
-            },
-          },
+          modules: {},
         });
       }
       // next
@@ -47,8 +35,7 @@ module.exports = ctx => {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class eventBean {
     async execute(context, next) {
-      const data = context.data;
-      const message = data.message;
+      const { message } = context.data;
       if (message.MsgType === 'text') {
         context.result = {
           ToUserName: message.FromUserName,
@@ -78,14 +65,11 @@ module.exports = ctx => {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class eventBean {
     async execute(context, next) {
-      const data = context.data;
-      // scene
-      const scene = data.scene;
+      const { beanProvider, message } = context.data;
       // message
-      const message = data.message;
       if (message.MsgType === 'text') {
         const text = `${ctx.text.locale('zh-cn', 'Reply')}: ${message.Content}`;
-        await ctx.bean.wechat.mini[scene].sendText(message.FromUserName, text);
+        await ctx.bean.wechat.mini[beanProvider.providerScene].sendText(message.FromUserName, text);
         // break
         return;
       }
@@ -170,6 +154,55 @@ module.exports = {
 
 /***/ }),
 
+/***/ 266:
+/***/ ((module) => {
+
+// http://localhost:9192/?appKey=test-wechat:appTest
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    presets: {
+      authenticated: {
+        mobile: {
+          layout: 'test-wechat:layoutTest',
+        },
+      },
+    },
+  };
+  const _app = {
+    atomName: 'Test(Wechat)',
+    atomStaticKey: 'appTest',
+    atomRevision: 0,
+    atomCategoryId: 'Demonstration',
+    description: '',
+    appIcon: ':auth:wechat-outline',
+    appIsolate: true,
+    content: JSON.stringify(content),
+    resourceRoles: 'authenticated',
+    appSorting: 0,
+  };
+  return _app;
+};
+
+
+/***/ }),
+
+/***/ 241:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const appTest = __webpack_require__(266);
+
+module.exports = app => {
+  const apps = [
+    //
+    appTest(app),
+  ];
+  return apps;
+};
+
+
+/***/ }),
+
 /***/ 756:
 /***/ ((module) => {
 
@@ -179,16 +212,17 @@ module.exports = app => {
     toolbar: {
       buttons: [
         { module: 'test-wechat', name: 'buttonTest' },
-        { module: 'a-layoutmobile', name: 'buttonHome' },
-        { module: 'a-layoutmobile', name: 'buttonMine' },
+        { module: 'a-layoutmobile', name: 'buttonAppHome' },
+        { module: 'a-layoutmobile', name: 'buttonAppMine' },
       ],
     },
   };
   const layout = {
     atomName: 'Test Layout(Wechat)',
     atomStaticKey: 'layoutTest',
-    atomRevision: 2,
+    atomRevision: 5,
     description: '',
+    layoutTypeCode: 1,
     content: JSON.stringify(content),
     resourceRoles: 'root',
   };
@@ -254,7 +288,7 @@ module.exports = app => {
 
     async getOpenidMini() {
       const res = await this.service.test.getOpenidMini({
-        scene: this.ctx.request.body.scene,
+        providerScene: this.ctx.request.body.providerScene,
         user: this.ctx.state.user.op,
       });
       this.ctx.success(res);
@@ -323,13 +357,17 @@ module.exports = app => {
 
 module.exports = app => {
   // const schemas = require('./config/validation/schemas.js')(app);
+  const staticApps = __webpack_require__(241)(app);
   const staticLayouts = __webpack_require__(512)(app);
   const staticResources = __webpack_require__(429)(app);
   const meta = {
     base: {
       atoms: {},
       statics: {
-        'a-layoutpc.layout': {
+        'a-app.app': {
+          items: staticApps,
+        },
+        'a-baselayout.layout': {
           items: staticLayouts,
         },
         'a-base.resource': {
@@ -381,7 +419,8 @@ module.exports = app => {
       middlewares: 'inWechat',
       meta: {
         inWechat: {
-          scene: 'wechatmini',
+          providerName: 'wechatmini',
+          providerScene: null,
         },
       },
     },
@@ -397,18 +436,20 @@ module.exports = app => {
 
 module.exports = app => {
   class Test extends app.Service {
+    get modelWechatUser() {
+      return this.ctx.model.module('a-wechat').wechatUser;
+    }
+
     async getOpenid({ user }) {
-      const modelWechatUser = this.ctx.model.module('a-wechat').wechatUser;
-      const wechatUser = await modelWechatUser.get({ userId: user.id, scene: 'wechat' });
+      const wechatUser = await this.modelWechatUser.get({ userId: user.id, providerName: 'wechat' });
       return {
         openid: wechatUser.openid,
         unionid: wechatUser.unionid,
       };
     }
 
-    async getOpenidMini({ scene, user }) {
-      const modelWechatUser = this.ctx.model.module('a-wechat').wechatUser;
-      const wechatUser = await modelWechatUser.get({ userId: user.id, scene: `wechatmini${scene}` });
+    async getOpenidMini({ providerScene, user }) {
+      const wechatUser = await this.modelWechatUser.get({ userId: user.id, providerName: 'wechatmini', providerScene });
       return {
         openid: wechatUser.openid,
         unionid: wechatUser.unionid,
