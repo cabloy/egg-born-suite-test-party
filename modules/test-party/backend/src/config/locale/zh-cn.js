@@ -10,6 +10,7 @@ module.exports = {
   Demonstration: '演示',
   PartyOver: '宴会结束',
   PartyOverFlag: '结束',
+  OpenIsolateApp: '打开独立App',
   'Home(Test)': '首页（测试）',
   'Dashboard(Test)': '仪表板（测试）',
   'Party Test': '宴会测试',

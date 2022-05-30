@@ -47,6 +47,21 @@ module.exports = app => {
       resourceRoles: 'root,RoleScopeCliDevelopment',
     },
     {
+      atomName: 'OpenIsolateApp',
+      atomStaticKey: 'openIsolateApp',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.Tools',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionComponent: 'tools',
+        name: 'openIsolateApp',
+      }),
+      resourceIcon: '::open-in-new',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+    },
+    {
       atomName: 'Kitchen-sink',
       atomStaticKey: 'mineKitchenSink',
       atomRevision: 1,

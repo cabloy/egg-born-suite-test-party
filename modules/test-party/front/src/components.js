@@ -1,4 +1,5 @@
 import action from './components/action.js';
+import tools from './components/tools.js';
 import renderPartyCity from './components/renderPartyCity.jsx';
 import helloGlobal from './kitchen-sink/components/helloGlobal.vue';
 import monkeyeeComponent from './kitchen-sink/components/monkeyeeComponent.vue';
@@ -14,6 +15,7 @@ import appMineLayoutBlockListMineBody from './components/appMineLayoutList/appMi
 
 export default {
   action,
+  tools,
   renderPartyCity,
   helloGlobal,
   monkeyeeComponent,
