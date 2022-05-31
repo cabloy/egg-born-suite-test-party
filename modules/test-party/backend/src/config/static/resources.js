@@ -47,6 +47,21 @@ module.exports = app => {
       resourceRoles: 'root,RoleScopeCliDevelopment',
     },
     {
+      atomName: 'Kitchen-sink',
+      atomStaticKey: 'mineKitchenSink',
+      atomRevision: 1,
+      atomCategoryId: 'a-base:mine.Tools',
+      resourceType: 'a-base:mine',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/index',
+      }),
+      resourceIcon: ':business:kitchen-set',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root,RoleScopeCliDevelopment',
+      resourceSorting: 1,
+    },
+    {
       atomName: 'OpenIsolateApp',
       atomStaticKey: 'openIsolateApp',
       atomRevision: 0,
@@ -60,20 +75,7 @@ module.exports = app => {
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
       resourceRoles: 'root',
-    },
-    {
-      atomName: 'Kitchen-sink',
-      atomStaticKey: 'mineKitchenSink',
-      atomRevision: 1,
-      atomCategoryId: 'a-base:mine.Tools',
-      resourceType: 'a-base:mine',
-      resourceConfig: JSON.stringify({
-        actionModule: moduleInfo.relativeName,
-        actionPath: 'kitchen-sink/index',
-      }),
-      resourceIcon: ':business:kitchen-set',
-      appKey: 'test-party:appParty',
-      resourceRoles: 'root,RoleScopeCliDevelopment',
+      resourceSorting: 2,
     },
     // dashboard widget
     {
