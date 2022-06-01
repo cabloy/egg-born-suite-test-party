@@ -1,6 +1,6 @@
 {
   "name": "egg-born-module-test-dingtalk",
-  "version": "4.2.13",
+  "version": "4.2.14",
   "title": "test-dingtalk",
   "eggBornModule": {
     "fileVersion": 0,
@@ -22,7 +22,5 @@
     "preversion": "npm run build:all && git add ."
   },
   "author": "zhennann",
-  "dependencies": {
-    "extend2": "^1.0.1"
-  }
+  "dependencies": {}
 }
