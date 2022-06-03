@@ -1,4 +1,5 @@
 const versionManager = require('./bean/version.manager.js');
+const cliDefaultDemo = require('./bean/cli.default.demo.js');
 const testApp = require('./bean/test.app.js');
 const testClass = require('./bean/test.class.js');
 const testCtx = require('./bean/test.ctx.js');
@@ -30,6 +31,11 @@ module.exports = app => {
     },
   };
   Object.assign(beans, {
+    // cli
+    'cli.default.demo': {
+      mode: 'ctx',
+      bean: cliDefaultDemo,
+    },
     // test
     'test.app': {
       mode: 'app',

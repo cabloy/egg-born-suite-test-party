@@ -18,6 +18,8 @@ module.exports = app => {
   const staticResources = require('./config/static/resources.js')(app);
   const staticDicts = require('./config/static/dicts.js')(app);
   const staticRoles = require('./config/static/roles.js')(app);
+  // cli commands
+  const cliCommands = require('./config/cli/commands.js')(app);
   // icons
   const iconGroups = require('./config/icons/groups.js');
   // meta
@@ -136,6 +138,9 @@ module.exports = app => {
         'x-languages': keywords.languages,
       },
       schemas,
+    },
+    cli: {
+      commands: cliCommands,
     },
     settings: {
       user: {
