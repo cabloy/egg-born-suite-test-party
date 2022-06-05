@@ -4,8 +4,18 @@ module.exports = app => {
   const content = {
     presets: {
       authenticated: {
+        // mobile: {
+        //   layout: 'test-dingtalk:layoutTest',
+        // },
         mobile: {
-          layout: 'test-dingtalk:layoutTest',
+          menu: {
+            layout: 'test-dingtalk:layoutAppMenuTest',
+          },
+        },
+        pc: {
+          menu: {
+            layout: 'test-dingtalk:layoutAppMenuTest',
+          },
         },
       },
     },
@@ -13,7 +23,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Dingtalk)',
     atomStaticKey: 'appTest',
-    atomRevision: 0,
+    atomRevision: 1,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':auth:dingtalk-square',
