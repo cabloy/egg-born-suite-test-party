@@ -74,7 +74,7 @@ module.exports = app => {
     {
       atomName: 'OpenIsolateApp',
       atomStaticKey: 'openIsolateApp',
-      atomRevision: 1,
+      atomRevision: 2,
       atomCategoryId: 'a-base:menu.Tools',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
@@ -84,6 +84,8 @@ module.exports = app => {
         appKey: 'test-party:appParty',
         appLanguage: null,
         appIsolate: true,
+        external: true,
+        target: '_self',
       }),
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
