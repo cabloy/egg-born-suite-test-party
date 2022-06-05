@@ -133,12 +133,22 @@ module.exports = {};
 
 /***/ }),
 
+/***/ 327:
+/***/ ((module) => {
+
+module.exports = {};
+
+
+/***/ }),
+
 /***/ 72:
 /***/ ((module) => {
 
 module.exports = {
   Reply: '回复',
+  'Test(Wechat)': '测试（微信）',
   'Test Layout(Wechat)': '测试布局（微信）',
+  'Test App Menu Layout(Wechat)': '测试App菜单布局（微信）',
 };
 
 
@@ -148,6 +158,7 @@ module.exports = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = {
+  'en-us': __webpack_require__(327),
   'zh-cn': __webpack_require__(72),
 };
 
@@ -163,8 +174,18 @@ module.exports = app => {
   const content = {
     presets: {
       authenticated: {
+        // mobile: {
+        //   layout: 'test-wechat:layoutTest',
+        // },
         mobile: {
-          layout: 'test-wechat:layoutTest',
+          menu: {
+            layout: 'test-wechat:layoutAppMenuTest',
+          },
+        },
+        pc: {
+          menu: {
+            layout: 'test-wechat:layoutAppMenuTest',
+          },
         },
       },
     },
@@ -172,7 +193,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat)',
     atomStaticKey: 'appTest',
-    atomRevision: 0,
+    atomRevision: 1,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':auth:wechat-outline',
@@ -198,6 +219,40 @@ module.exports = app => {
     appTest(app),
   ];
   return apps;
+};
+
+
+/***/ }),
+
+/***/ 192:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    layouts: {
+      list: {
+        blocks: {
+          items: {
+            component: {
+              module: moduleInfo.relativeName,
+              name: 'appTestMenuLayoutBlockListItems',
+            },
+          },
+        },
+      },
+    },
+  };
+  const layout = {
+    atomName: 'Test App Menu Layout(Wechat)',
+    atomStaticKey: 'layoutAppMenuTest',
+    atomRevision: 0,
+    description: '',
+    layoutTypeCode: 13,
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return layout;
 };
 
 
@@ -236,9 +291,14 @@ module.exports = app => {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const layoutTest = __webpack_require__(756);
+const layoutAppMenuTest = __webpack_require__(192);
 
 module.exports = app => {
-  const layouts = [layoutTest(app)];
+  const layouts = [
+    //
+    layoutTest(app),
+    layoutAppMenuTest(app),
+  ];
   return layouts;
 };
 
@@ -266,6 +326,27 @@ module.exports = app => {
         url: '/test/wechat/test/index',
       }),
       resourceRoles: 'root',
+    },
+    {
+      atomName: 'Wechat',
+      atomStaticKey: 'openIsolateAppWechat',
+      atomRevision: 7,
+      atomCategoryId: 'a-base:menu.OpenIsolateApp',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: 'a-app',
+        actionComponent: 'actionTools',
+        name: 'openApp',
+        appKey: 'test-wechat:appTest',
+        appLanguage: null,
+        appIsolate: true,
+        external: true,
+        target: '_self',
+      }),
+      resourceIcon: '::open-in-new',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+      resourceSorting: 2,
     },
   ];
   return resources;

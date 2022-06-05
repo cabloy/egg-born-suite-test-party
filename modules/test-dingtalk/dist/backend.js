@@ -92,12 +92,22 @@ module.exports = {};
 
 /***/ }),
 
+/***/ 327:
+/***/ ((module) => {
+
+module.exports = {};
+
+
+/***/ }),
+
 /***/ 72:
 /***/ ((module) => {
 
 module.exports = {
   Reply: '回复',
+  'Test(Dingtalk)': '测试（钉钉）',
   'Test Layout(Dingtalk)': '测试布局（钉钉）',
+  'Test App Menu Layout(Dingtalk)': '测试App菜单布局（钉钉）',
 };
 
 
@@ -107,6 +117,7 @@ module.exports = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = {
+  'en-us': __webpack_require__(327),
   'zh-cn': __webpack_require__(72),
 };
 
@@ -122,8 +133,18 @@ module.exports = app => {
   const content = {
     presets: {
       authenticated: {
+        // mobile: {
+        //   layout: 'test-dingtalk:layoutTest',
+        // },
         mobile: {
-          layout: 'test-dingtalk:layoutTest',
+          menu: {
+            layout: 'test-dingtalk:layoutAppMenuTest',
+          },
+        },
+        pc: {
+          menu: {
+            layout: 'test-dingtalk:layoutAppMenuTest',
+          },
         },
       },
     },
@@ -131,7 +152,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Dingtalk)',
     atomStaticKey: 'appTest',
-    atomRevision: 0,
+    atomRevision: 2,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':auth:dingtalk-square',
@@ -157,6 +178,40 @@ module.exports = app => {
     appTest(app),
   ];
   return apps;
+};
+
+
+/***/ }),
+
+/***/ 192:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    layouts: {
+      list: {
+        blocks: {
+          items: {
+            component: {
+              module: moduleInfo.relativeName,
+              name: 'appTestMenuLayoutBlockListItems',
+            },
+          },
+        },
+      },
+    },
+  };
+  const layout = {
+    atomName: 'Test App Menu Layout(Dingtalk)',
+    atomStaticKey: 'layoutAppMenuTest',
+    atomRevision: 0,
+    description: '',
+    layoutTypeCode: 13,
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return layout;
 };
 
 
@@ -195,9 +250,14 @@ module.exports = app => {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const layoutTest = __webpack_require__(756);
+const layoutAppMenuTest = __webpack_require__(192);
 
 module.exports = app => {
-  const layouts = [layoutTest(app)];
+  const layouts = [
+    //
+    layoutTest(app),
+    layoutAppMenuTest(app),
+  ];
   return layouts;
 };
 
@@ -225,6 +285,27 @@ module.exports = app => {
         url: '/test/dingtalk/test/index',
       }),
       resourceRoles: 'root',
+    },
+    {
+      atomName: 'DingTalk',
+      atomStaticKey: 'openIsolateAppDingtalk',
+      atomRevision: 7,
+      atomCategoryId: 'a-base:menu.OpenIsolateApp',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: 'a-app',
+        actionComponent: 'actionTools',
+        name: 'openApp',
+        appKey: 'test-dingtalk:appTest',
+        appLanguage: null,
+        appIsolate: true,
+        external: true,
+        target: '_self',
+      }),
+      resourceIcon: '::open-in-new',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+      resourceSorting: 4,
     },
   ];
   return resources;
@@ -373,11 +454,25 @@ module.exports = app => {
       method: 'post',
       path: 'test/getMemberId',
       controller: 'test',
+      middlewares: 'inDingtalk',
+      meta: {
+        inDingtalk: {
+          providerName: 'dingtalk',
+          providerScene: null,
+        },
+      },
     },
     {
       method: 'post',
       path: 'test/sendAppMessage',
       controller: 'test',
+      middlewares: 'inDingtalk',
+      meta: {
+        inDingtalk: {
+          providerName: 'dingtalk',
+          providerScene: null,
+        },
+      },
     },
   ];
   return routes;
