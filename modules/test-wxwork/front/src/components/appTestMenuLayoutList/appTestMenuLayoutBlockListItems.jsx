@@ -12,8 +12,8 @@ function installFactory(_Vue) {
     mixins: [ebAppMenuLayoutBlockListItemsBase],
     data() {
       return {
-        dd: null,
-        ddConfig: null,
+        wx: null,
+        wxConfig: null,
         memberId: null,
       };
     },
@@ -21,13 +21,13 @@ function installFactory(_Vue) {
       async onInit() {
         try {
           const action = {
-            actionModule: 'a-dingtalk',
+            actionModule: 'a-wxwork',
             actionComponent: 'jssdk',
             name: 'config',
           };
           const res = await this.$meta.util.performAction({ ctx: this, action });
-          this.dd = res && res.dd;
-          this.ddConfig = res && res.config;
+          this.wx = res && res.wx;
+          this.wxConfig = res && res.config;
         } catch (err) {
           this.$view.toast.show({ text: err.message });
         }
@@ -54,16 +54,17 @@ function installFactory(_Vue) {
         }
       },
       onPerformScanQRCode() {
-        if (!this.dd) {
-          return this.$text('Not In DingTalk');
+        if (!this.wx) {
+          return this.$text('Not In Wechat Work');
         }
-        this.dd.biz.util.scan({
-          type: 'all',
-          onSuccess: res => {
-            this.$view.toast.show({ text: res.text });
+        this.wx.scanQRCode({
+          needResult: 1,
+          scanType: ['qrCode', 'barCode'],
+          success: res => {
+            this.$view.toast.show({ text: res.resultStr });
           },
-          onFail: err => {
-            this.$view.toast.show({ text: err.message });
+          fail: res => {
+            this.$view.toast.show({ text: res.errMsg });
           },
         });
       },
@@ -94,7 +95,7 @@ function installFactory(_Vue) {
             <f7-card-header>{this.$text('Tools')}</f7-card-header>
             <f7-card-content>
               <eb-list no-hairlines-md>
-                <eb-list-item title="钉钉扫一扫" link="#" propsOnPerform={this.onPerformScanQRCode}></eb-list-item>
+                <eb-list-item title="微信扫一扫" link="#" propsOnPerform={this.onPerformScanQRCode}></eb-list-item>
                 <eb-list-item title="获取MemberId" link="#" propsOnPerform={this.onPerformMemberId}></eb-list-item>
                 <eb-list-item title="MemberId">
                   <div slot="after">{this.memberId}</div>

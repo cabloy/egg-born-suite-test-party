@@ -4,8 +4,18 @@ module.exports = app => {
   const content = {
     presets: {
       authenticated: {
+        // mobile: {
+        //   layout: 'test-wxwork:layoutTest',
+        // },
         mobile: {
-          layout: 'test-wxwork:layoutTest',
+          menu: {
+            layout: 'test-wxwork:layoutAppMenuTest',
+          },
+        },
+        pc: {
+          menu: {
+            layout: 'test-wxwork:layoutAppMenuTest',
+          },
         },
       },
     },
@@ -13,7 +23,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat Work)',
     atomStaticKey: 'appTest',
-    atomRevision: 0,
+    atomRevision: 1,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':auth:wxwork-outline',
