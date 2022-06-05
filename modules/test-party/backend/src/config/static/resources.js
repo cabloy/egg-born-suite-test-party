@@ -74,7 +74,7 @@ module.exports = app => {
     {
       atomName: 'OpenIsolateApp',
       atomStaticKey: 'openIsolateApp',
-      atomRevision: 2,
+      atomRevision: 4,
       atomCategoryId: 'a-base:menu.Tools',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
