@@ -4,8 +4,18 @@ module.exports = app => {
   const content = {
     presets: {
       authenticated: {
+        // mobile: {
+        //   layout: 'test-wechat:layoutTest',
+        // },
         mobile: {
-          layout: 'test-wechat:layoutTest',
+          menu: {
+            layout: 'test-wechat:layoutAppMenuTest',
+          },
+        },
+        pc: {
+          menu: {
+            layout: 'test-wechat:layoutAppMenuTest',
+          },
         },
       },
     },
@@ -13,7 +23,7 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat)',
     atomStaticKey: 'appTest',
-    atomRevision: 0,
+    atomRevision: 1,
     atomCategoryId: 'Demonstration',
     description: '',
     appIcon: ':auth:wechat-outline',
