@@ -72,10 +72,10 @@ module.exports = app => {
       resourceSorting: 1,
     },
     {
-      atomName: 'OpenIsolateApp',
-      atomStaticKey: 'openIsolateApp',
-      atomRevision: 4,
-      atomCategoryId: 'a-base:menu.Tools',
+      atomName: 'Party',
+      atomStaticKey: 'openIsolateAppParty',
+      atomRevision: 7,
+      atomCategoryId: 'a-base:menu.OpenIsolateApp',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
         actionModule: 'a-app',
@@ -90,7 +90,7 @@ module.exports = app => {
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
       resourceRoles: 'root',
-      resourceSorting: 2,
+      resourceSorting: 1,
     },
     // dashboard widget
     {
