@@ -19,7 +19,7 @@ module.exports = app => {
     },
     {
       atomName: 'DingTalk',
-      atomStaticKey: 'OpenIsolateAppDingtalk',
+      atomStaticKey: 'openIsolateAppDingtalk',
       atomRevision: 7,
       atomCategoryId: 'a-base:menu.OpenIsolateApp',
       resourceType: 'a-base:menu',
