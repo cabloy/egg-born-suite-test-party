@@ -456,10 +456,20 @@ module.exports = app => {
       controller: 'test',
       middlewares: 'inDingtalk',
       meta: {
-        inDingtalk: {
-          providerName: 'dingtalk',
-          providerScene: null,
-        },
+        inDingtalk: [
+          {
+            providerName: 'dingtalk',
+            providerScene: null,
+          },
+          {
+            providerName: 'dingtalkadmin',
+            providerScene: null,
+          },
+          {
+            providerName: 'dingtalkmini',
+            providerScene: null,
+          },
+        ],
       },
     },
     {
@@ -468,10 +478,20 @@ module.exports = app => {
       controller: 'test',
       middlewares: 'inDingtalk',
       meta: {
-        inDingtalk: {
-          providerName: 'dingtalk',
-          providerScene: null,
-        },
+        inDingtalk: [
+          {
+            providerName: 'dingtalk',
+            providerScene: null,
+          },
+          {
+            providerName: 'dingtalkadmin',
+            providerScene: null,
+          },
+          {
+            providerName: 'dingtalkmini',
+            providerScene: null,
+          },
+        ],
       },
     },
   ];

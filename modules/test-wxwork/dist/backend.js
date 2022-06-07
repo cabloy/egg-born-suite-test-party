@@ -466,10 +466,16 @@ module.exports = app => {
       controller: 'test',
       middlewares: 'inWxwork',
       meta: {
-        inWxwork: {
-          providerName: 'wxwork',
-          providerScene: null,
-        },
+        inWxwork: [
+          {
+            providerName: 'wxwork',
+            providerScene: null,
+          },
+          {
+            providerName: 'wxworkmini',
+            providerScene: null,
+          },
+        ],
       },
     },
     {
@@ -478,10 +484,16 @@ module.exports = app => {
       controller: 'test',
       middlewares: 'inWxwork',
       meta: {
-        inWxwork: {
-          providerName: 'wxwork',
-          providerScene: null,
-        },
+        inWxwork: [
+          {
+            providerName: 'wxwork',
+            providerScene: null,
+          },
+          {
+            providerName: 'wxworkmini',
+            providerScene: null,
+          },
+        ],
       },
     },
   ];

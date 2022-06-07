@@ -492,7 +492,18 @@ module.exports = app => {
 module.exports = app => {
   const routes = [
     // test
-    { method: 'post', path: 'test/getOpenid', controller: 'test', middlewares: 'inWechat' },
+    {
+      method: 'post',
+      path: 'test/getOpenid',
+      controller: 'test',
+      middlewares: 'inWechat',
+      meta: {
+        inWechat: {
+          providerName: 'wechat',
+          providerScene: null,
+        },
+      },
+    },
     {
       method: 'post',
       path: 'test/getOpenidMini',
