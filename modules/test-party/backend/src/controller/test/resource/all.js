@@ -6,10 +6,11 @@ module.exports = app => {
     async all() {
       // userIds
       const userIds = this.ctx.cache.mem.get('userIds');
-      const userTom = { id: userIds.Tom };
+      const userRoot = { id: userIds.root };
 
       // function all: including widgets
-      const resourceStaticsAll = this.ctx.module.main.meta.base.statics['a-base.resource'].items;
+      let resourceStaticsAll = this.ctx.module.main.meta.base.statics['a-base.resource'].items;
+      resourceStaticsAll = resourceStaticsAll.filter(item => item.atomRevision > -1);
       const resourceCount = resourceStaticsAll.length;
 
       // Tom list all
@@ -25,7 +26,7 @@ module.exports = app => {
           page: { index: 0, size: 0 },
           locale: 'en-us',
         },
-        user: userTom,
+        user: userRoot,
       });
       assert.equal(list.length, resourceCount);
       assert.equal(!!list[0].atomNameLocale, true);
@@ -36,7 +37,7 @@ module.exports = app => {
       // check
       list = await this.ctx.bean.resource.check({
         atomStaticKeys: [resource_one.atomStaticKey],
-        user: userTom,
+        user: userRoot,
       });
       assert.equal(list[0].passed, true);
 
@@ -44,7 +45,7 @@ module.exports = app => {
       const item = await this.ctx.bean.resource.read({
         key: { atomId: resource_one.atomId },
         options: { locale: 'en-us' },
-        user: userTom,
+        user: userRoot,
       });
       assert.equal(!!item.atomNameLocale, true);
 
