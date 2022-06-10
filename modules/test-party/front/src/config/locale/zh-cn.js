@@ -174,7 +174,6 @@ export default {
   'Load Component Async': '异步加载组件',
   'Image(Fixed Size: 400*200)': '图像(固定尺寸: 400*200)',
   'Markdown Editor': 'Markdown编辑器',
-  'Simple Chat': '简单聊天',
   'Party Time': '宴会时间',
   'Party Country': '宴会国家',
   'Party City': '宴会城市',

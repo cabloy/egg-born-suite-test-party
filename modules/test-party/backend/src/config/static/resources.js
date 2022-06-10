@@ -144,7 +144,7 @@ module.exports = app => {
     {
       atomName: 'Simple Chat',
       atomStaticKey: 'widgetSimpleChat',
-      atomRevision: 1,
+      atomRevision: -1,
       atomCategoryId: 'a-dashboard:widget.Demonstration',
       resourceType: 'a-dashboard:widget',
       resourceConfig: JSON.stringify({

@@ -29,7 +29,6 @@ module.exports = {
   'Fruit Sales': '水果销量',
   'Fruit Sales(Line Chart)': '水果销量（折线图）',
   'Fruit Sales(Pie Chart)': '水果销量（饼图）',
-  'Simple Chat': '简单聊天',
   'Article Comment Count': '文章评论数',
   'Cli Demo': 'Cli演示',
   'Your username': '您的名称',

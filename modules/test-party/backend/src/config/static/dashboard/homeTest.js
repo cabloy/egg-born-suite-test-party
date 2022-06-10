@@ -63,7 +63,7 @@ const content = {
         },
       },
       {
-        atomStaticKey: 'test-party:widgetSimpleChat',
+        atomStaticKey: 'test-note:widgetSimpleChat',
         id: '650acfa718f645098bf0516628d678f0',
         properties: {
           height: {
@@ -124,7 +124,7 @@ module.exports = app => {
   const dashboard = {
     atomName: 'Home(Test)',
     atomStaticKey: 'homeTest',
-    atomRevision: 1,
+    atomRevision: 10,
     description: '',
     content: JSON.stringify(content),
     resourceRoles: 'root',

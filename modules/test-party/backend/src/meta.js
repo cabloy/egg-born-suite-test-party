@@ -10,7 +10,6 @@ module.exports = app => {
   const keywords = require('./config/validation/keywords.js')(app);
   // socketio
   const socketioTest = require('./config/socketio/test.js')(app);
-  const socketioSimpleChat = require('./config/socketio/simpleChat.js')(app);
   // static
   const staticApps = require('./config/static/apps.js')(app);
   const staticDashboards = require('./config/static/dashboards.js')(app);
@@ -163,7 +162,6 @@ module.exports = app => {
     socketio: {
       messages: {
         test: socketioTest,
-        simpleChat: socketioSimpleChat,
       },
     },
     stats: {

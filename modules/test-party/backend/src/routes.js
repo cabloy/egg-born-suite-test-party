@@ -245,13 +245,6 @@ module.exports = (/* app */) => {
       middlewares: '',
       meta: { auth: { user: true } },
     },
-    {
-      method: 'post',
-      path: 'test/feat/socketio/simpleChat',
-      controller: 'testFeatSocketIO',
-      middlewares: '',
-      meta: { auth: { user: true } },
-    },
 
     // test/feat/instance
     {
