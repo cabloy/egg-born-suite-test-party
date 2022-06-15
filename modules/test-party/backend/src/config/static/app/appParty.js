@@ -1,9 +1,14 @@
 module.exports = app => {
   // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
   const info = {
+    // layout: null,
+    // menu: {
+    //   layout: null,
+    // },
     home: {
-      mode: 'dashboard',
+      mode: 'dashboard', // dashboard/page
       dashboard: 'test-party:dashboardTest',
+      page: null,
     },
     mine: {
       layout: true,
