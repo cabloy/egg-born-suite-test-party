@@ -38,6 +38,7 @@ module.exports = {
   'Your basic info': '您的基本信息',
   'The teacher info': '教师信息',
   'The student info': '学生信息',
+  'This is a test': '这是一个测试',
   // role name
   friend: '朋友',
   consultant: '咨询',
