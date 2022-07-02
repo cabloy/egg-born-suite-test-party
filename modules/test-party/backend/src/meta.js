@@ -55,6 +55,7 @@ module.exports = app => {
             layout: {
               config: {
                 atomList: 'layoutAtomListParty',
+                atomItem: 'layoutAtomItemParty',
               },
             },
           },
