@@ -46,7 +46,7 @@ export default [
   { path: 'kitchen-sink/form-captcha', component: loadKitchenSink('form-schema-validation/captcha') },
   { path: 'kitchen-sink/form-mobile-verify', component: loadKitchenSink('form-schema-validation/mobileVerify') },
   { path: 'kitchen-sink/ptrIsLoadMore', component: loadKitchenSink('ptrIsLoadMore') },
-  { path: 'kitchen-sink/buttonEvent', component: loadKitchenSink('buttonEvent') },
+  { path: 'kitchen-sink/buttonLink', component: loadKitchenSink('buttonLink') },
   { path: 'kitchen-sink/atom', component: loadKitchenSink('atom') },
   { path: 'kitchen-sink/layout/grid', component: loadKitchenSink('layout/gridResizable') },
   { path: 'kitchen-sink/layout/adaptive', component: loadKitchenSink('layout/adaptive') },

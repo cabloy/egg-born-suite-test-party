@@ -178,4 +178,5 @@ export default {
   'Party Country': '宴会国家',
   'Party City': '宴会城市',
   'Article Comment Count': '文章评论数',
+  'Button & Link': '按钮与链接',
 };

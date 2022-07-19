@@ -29,7 +29,7 @@ const items = [
   { title: 'Form / Captcha', path: 'kitchen-sink/form-captcha' },
   { title: 'Form / SMS Verification', path: 'kitchen-sink/form-mobile-verify' },
   { title: 'Pull To Refresh / Infinite Scroll / Load More', path: 'kitchen-sink/ptrIsLoadMore' },
-  { title: 'Button Event', path: 'kitchen-sink/buttonEvent' },
+  { title: 'Button & Link', path: 'kitchen-sink/buttonLink' },
   { title: 'Atom', path: 'kitchen-sink/atom' },
   { title: 'Layout(Grid)', path: 'kitchen-sink/layout/grid' },
   { title: 'Layout(Adaptive)', path: 'kitchen-sink/layout/adaptive' },
