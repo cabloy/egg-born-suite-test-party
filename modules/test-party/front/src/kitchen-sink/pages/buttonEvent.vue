@@ -30,6 +30,17 @@
         </f7-col>
       </f7-row>
     </f7-block>
+    <f7-block-title>eb-link</f7-block-title>
+    <f7-block>
+      <f7-row class="test-link">
+        <f7-col>
+          <eb-link eb-href="kitchen-sink/framework7/about" eb-target="">eb-href(relative)</eb-link>
+        </f7-col>
+        <f7-col>
+          <eb-link eb-href="/a/basefront/base/about" eb-target="_self">eb-href(absolute)</eb-link>
+        </f7-col>
+      </f7-row>
+    </f7-block>
   </eb-page>
 </template>
 <script>
