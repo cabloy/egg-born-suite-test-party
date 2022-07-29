@@ -34,6 +34,13 @@ module.exports = app => {
       // hold first
       const resource_one = list[0];
 
+      // checkRightResource
+      const res = await this.ctx.bean.resource.checkRightResource({
+        atomStaticKey: resource_one.atomStaticKey,
+        user: userRoot,
+      });
+      assert.equal(!!res, true);
+
       // check
       list = await this.ctx.bean.resource.check({
         atomStaticKeys: [resource_one.atomStaticKey],
