@@ -6,6 +6,7 @@ export default {
   CaptchaCode: 'Captcha',
   SMSVerificationCode: 'Code',
   IntervalMS: 'Interval(ms)',
+  PartyOver: 'Party Over',
   PartyOverBulkNotAllDone: 'Some Items Cannot be Overed',
   SelfIntroduction: 'Self-Introduction',
   MonkeyeeTestTip1: 'The page will be monkeyed',

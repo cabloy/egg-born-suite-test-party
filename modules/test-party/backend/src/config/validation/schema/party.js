@@ -84,6 +84,19 @@ module.exports = app => {
         ebType: 'tags',
         ebTitle: 'Tags',
       },
+      partyOver: {
+        ebType: 'toggle',
+        ebTitle: 'PartyOver',
+        ebDisplay: {
+          // expression: 'status===0',
+          // dependencies: ['status'],
+          host: {
+            stage: 'formal',
+            // mode: 'view',
+          },
+        },
+        ebReadOnly: true,
+      },
     },
   };
   // party search

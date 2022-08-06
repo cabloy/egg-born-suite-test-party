@@ -67,6 +67,7 @@ export default {
   Project: '项目',
   Saved: '已保存',
   IntervalMS: '间隔(ms)',
+  PartyOver: '宴会结束',
   PartyOverBulkNotAllDone: '某些条目无法执行结束操作',
   SelfIntroduction: '自我介绍',
   MonkeyeeTestTip1: '本页面将被Monkey',
