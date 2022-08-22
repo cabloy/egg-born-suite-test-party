@@ -57,23 +57,23 @@ export default {
         this.memberId = data.memberId;
       });
     },
-    onSubmitSendMessage(value, clear) {
-      // clear
-      clear();
-      // focus
-      if (value) {
-        this.messagebar.focus();
-      }
-      // send
-      this.$api
-        .post('test/sendAppMessage', {
+    async onSubmitSendMessage(value, clear) {
+      try {
+        // clear
+        clear();
+        // focus
+        if (value) {
+          this.messagebar.focus();
+        }
+        // send
+        await this.$api.post('test/sendAppMessage', {
           message: {
             text: value,
           },
-        })
-        .then(() => {
-          // donothing
         });
+      } catch (err) {
+        this.$view.toast.show({ text: err.message });
+      }
     },
   },
 };
