@@ -285,7 +285,7 @@ module.exports = app => {
       atomName: 'Test',
       description: 'Tabbar Button: Test(Wechat Work)',
       atomStaticKey: 'buttonTest',
-      atomRevision: 1,
+      atomRevision: -1,
       atomCategoryId: 'a-layoutmobile:button.General',
       resourceType: 'a-layoutmobile:button',
       resourceConfig: JSON.stringify({
