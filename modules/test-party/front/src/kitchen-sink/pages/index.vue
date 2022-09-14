@@ -39,7 +39,6 @@ const items = [
   { title: 'Socket IO', path: 'kitchen-sink/socketio' },
   { title: 'Mail', path: 'kitchen-sink/mail' },
   { title: 'Load Component Async', path: 'kitchen-sink/component/loadComponentAsync' },
-  { title: 'Dashboard', path: '/a/dashboard/dashboard' },
   { title: 'Locale', path: 'kitchen-sink/Locale' },
   { title: 'Stats', path: 'kitchen-sink/Stats' },
   { title: 'State Management', path: 'kitchen-sink/stateManagement' },
