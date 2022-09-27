@@ -1,6 +1,27 @@
 <template>
   <eb-page hide-navbar-on-scroll>
     <eb-navbar large largeTransparent title="Hide Navbar On Scroll" eb-back-link="Back"></eb-navbar>
+    <f7-block-title>Grouped with sticky titles</f7-block-title>
+    <f7-list>
+      <f7-list-group>
+        <f7-list-item title="A" group-title></f7-list-item>
+        <f7-list-item title="Aaron "></f7-list-item>
+        <f7-list-item title="Abbie"></f7-list-item>
+        <f7-list-item title="Adam"></f7-list-item>
+      </f7-list-group>
+      <f7-list-group>
+        <f7-list-item title="B" group-title></f7-list-item>
+        <f7-list-item title="Bailey"></f7-list-item>
+        <f7-list-item title="Barclay"></f7-list-item>
+        <f7-list-item title="Bartolo"></f7-list-item>
+      </f7-list-group>
+      <f7-list-group>
+        <f7-list-item title="C" group-title></f7-list-item>
+        <f7-list-item title="Caiden"></f7-list-item>
+        <f7-list-item title="Calvin"></f7-list-item>
+        <f7-list-item title="Candy"></f7-list-item>
+      </f7-list-group>
+    </f7-list>
     <f7-block strong>
       <p>Navbar will be hidden if you scroll bottom</p>
     </f7-block>
