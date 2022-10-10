@@ -92,10 +92,10 @@ export default {
       // socket io
       this.ioSimple = this.ioHelper.simple({
         messageClass: this.messageClass,
+        onMessagePush: this._onMessagePush.bind(this),
       });
       this.ioSimple.subscribe({
         path: _subscribePath,
-        onMessagePush: this._onMessagePush.bind(this),
       });
     },
     _stopSubscribe() {
