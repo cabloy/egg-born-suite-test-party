@@ -72,9 +72,30 @@ module.exports = app => {
       resourceSorting: 1,
     },
     {
+      atomName: 'DianCaiWechat',
+      atomStaticKey: 'openIsolateDiancaiApp',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.OpenIsolateApp',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: 'a-app',
+        actionComponent: 'actionTools',
+        name: 'openApp',
+        appKey: 'diancai-h5:appDianCaiWechatH5',
+        appLanguage: null,
+        appIsolate: true,
+        external: true,
+        target: '_self',
+      }),
+      resourceIcon: 'diancai-icon::dian',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+      resourceSorting: 1,
+    },
+    {
       atomName: 'Party',
       atomStaticKey: 'openIsolateAppParty',
-      atomRevision: 7,
+      atomRevision: 8,
       atomCategoryId: 'a-base:menu.OpenIsolateApp',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
@@ -90,7 +111,7 @@ module.exports = app => {
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
       resourceRoles: 'root',
-      resourceSorting: 1,
+      resourceSorting: 2,
     },
     // dashboard widget
     {

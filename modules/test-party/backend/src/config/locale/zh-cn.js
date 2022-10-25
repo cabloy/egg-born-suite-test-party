@@ -12,6 +12,7 @@ module.exports = {
   PartyOverFlag: '结束',
   OpenIsolateApp: '打开独立App',
   OpenIsolateAppParty: '打开独立App（宴会）',
+  DianCaiWechat: '微信点菜',
   'Home(Test)': '首页（测试）',
   'Dashboard(Test)': '仪表板（测试）',
   'Party Test': '宴会测试',

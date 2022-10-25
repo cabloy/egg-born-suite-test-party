@@ -20,7 +20,7 @@ module.exports = app => {
     {
       atomName: 'Wechat',
       atomStaticKey: 'openIsolateAppWechat',
-      atomRevision: 7,
+      atomRevision: 8,
       atomCategoryId: 'a-base:menu.OpenIsolateApp',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
@@ -36,7 +36,7 @@ module.exports = app => {
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
       resourceRoles: 'root',
-      resourceSorting: 2,
+      resourceSorting: 3,
     },
   ];
   return resources;
