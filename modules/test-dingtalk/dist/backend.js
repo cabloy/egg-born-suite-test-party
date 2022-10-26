@@ -152,8 +152,8 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Dingtalk)',
     atomStaticKey: 'appTest',
-    atomRevision: 2,
-    atomCategoryId: 'Demonstration',
+    atomRevision: 4,
+    atomCategoryId: 'DemoIsolateApp',
     description: '',
     appIcon: ':auth:dingtalk-square',
     appIsolate: true,
@@ -285,27 +285,6 @@ module.exports = app => {
         url: '/test/dingtalk/test/index',
       }),
       resourceRoles: 'root',
-    },
-    {
-      atomName: 'DingTalk',
-      atomStaticKey: 'openIsolateAppDingtalk',
-      atomRevision: 8,
-      atomCategoryId: 'a-base:menu.OpenIsolateApp',
-      resourceType: 'a-base:menu',
-      resourceConfig: JSON.stringify({
-        actionModule: 'a-app',
-        actionComponent: 'actionTools',
-        name: 'openApp',
-        appKey: 'test-dingtalk:appTest',
-        appLanguage: null,
-        appIsolate: true,
-        external: true,
-        target: '_self',
-      }),
-      resourceIcon: '::open-in-new',
-      appKey: 'test-party:appParty',
-      resourceRoles: 'root',
-      resourceSorting: 5,
     },
   ];
   return resources;

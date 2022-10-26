@@ -193,8 +193,8 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat)',
     atomStaticKey: 'appTest',
-    atomRevision: 1,
-    atomCategoryId: 'Demonstration',
+    atomRevision: 2,
+    atomCategoryId: 'DemoIsolateApp',
     description: '',
     appIcon: ':auth:wechat-outline',
     appIsolate: true,
@@ -326,27 +326,6 @@ module.exports = app => {
         url: '/test/wechat/test/index',
       }),
       resourceRoles: 'root',
-    },
-    {
-      atomName: 'Wechat',
-      atomStaticKey: 'openIsolateAppWechat',
-      atomRevision: 8,
-      atomCategoryId: 'a-base:menu.OpenIsolateApp',
-      resourceType: 'a-base:menu',
-      resourceConfig: JSON.stringify({
-        actionModule: 'a-app',
-        actionComponent: 'actionTools',
-        name: 'openApp',
-        appKey: 'test-wechat:appTest',
-        appLanguage: null,
-        appIsolate: true,
-        external: true,
-        target: '_self',
-      }),
-      resourceIcon: '::open-in-new',
-      appKey: 'test-party:appParty',
-      resourceRoles: 'root',
-      resourceSorting: 3,
     },
   ];
   return resources;

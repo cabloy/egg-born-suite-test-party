@@ -23,8 +23,8 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat)',
     atomStaticKey: 'appTest',
-    atomRevision: 1,
-    atomCategoryId: 'Demonstration',
+    atomRevision: 2,
+    atomCategoryId: 'DemoIsolateApp',
     description: '',
     appIcon: ':auth:wechat-outline',
     appIsolate: true,

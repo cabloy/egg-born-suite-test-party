@@ -162,8 +162,8 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Wechat Work)',
     atomStaticKey: 'appTest',
-    atomRevision: 1,
-    atomCategoryId: 'Demonstration',
+    atomRevision: 3,
+    atomCategoryId: 'DemoIsolateApp',
     description: '',
     appIcon: ':auth:wxwork-outline',
     appIsolate: true,
@@ -295,27 +295,6 @@ module.exports = app => {
         url: '/test/wxwork/test/index',
       }),
       resourceRoles: 'root',
-    },
-    {
-      atomName: 'Wechat Work',
-      atomStaticKey: 'openIsolateAppWxwork',
-      atomRevision: 8,
-      atomCategoryId: 'a-base:menu.OpenIsolateApp',
-      resourceType: 'a-base:menu',
-      resourceConfig: JSON.stringify({
-        actionModule: 'a-app',
-        actionComponent: 'actionTools',
-        name: 'openApp',
-        appKey: 'test-wxwork:appTest',
-        appLanguage: null,
-        appIsolate: true,
-        external: true,
-        target: '_self',
-      }),
-      resourceIcon: '::open-in-new',
-      appKey: 'test-party:appParty',
-      resourceRoles: 'root',
-      resourceSorting: 4,
     },
   ];
   return resources;

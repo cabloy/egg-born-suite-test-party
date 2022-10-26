@@ -23,8 +23,8 @@ module.exports = app => {
   const _app = {
     atomName: 'Test(Dingtalk)',
     atomStaticKey: 'appTest',
-    atomRevision: 2,
-    atomCategoryId: 'Demonstration',
+    atomRevision: 4,
+    atomCategoryId: 'DemoIsolateApp',
     description: '',
     appIcon: ':auth:dingtalk-square',
     appIsolate: true,
