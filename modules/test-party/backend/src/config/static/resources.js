@@ -55,6 +55,7 @@ module.exports = app => {
       resourceIcon: ':business:kitchen-set',
       appKey: 'test-party:appParty',
       resourceRoles: 'root,RoleScopeCliDevelopment',
+      resourceSorting: 1,
     },
     {
       atomName: 'Kitchen-sink',
