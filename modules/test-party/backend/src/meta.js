@@ -59,6 +59,10 @@ module.exports = app => {
               },
             },
             areaScope: {
+              sameAs: {
+                module: moduleInfo.relativeName,
+                atomClassName: 'party',
+              },
               joint: '|',
               schemas: {
                 partyCountry: {
