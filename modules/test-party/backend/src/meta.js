@@ -63,7 +63,6 @@ module.exports = app => {
                 module: moduleInfo.relativeName,
                 atomClassName: 'party',
               },
-              joint: '|',
               schemas: {
                 partyCountry: {
                   type: 'string',

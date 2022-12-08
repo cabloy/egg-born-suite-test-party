@@ -44,7 +44,11 @@ module.exports = app => {
       // write party
       await this.ctx.bean.atom.write({
         key: partyKeyDraft,
-        item: { atomName },
+        item: {
+          atomName,
+          partyCountry: '86',
+          partyCity: '410000/410900/410902',
+        },
         user: userJimmy,
       });
 
@@ -63,14 +67,30 @@ module.exports = app => {
       await this._checkRight({ user: userRose, party, shouldExists: false, step: 2 });
 
       // 3. rose: 分配权限：可以查看角色：friend的权限，区域为空
-      const roleRightId = await this.ctx.bean.role.addRoleRight({
+      let roleRightId = await this.ctx.bean.role.addRoleRight({
         roleId: roleFriend.id,
         atomClassId: party.atomClassId,
         action: 2, // read
         scope: [roleFriend.id],
         user: userRoot,
       });
-      await this._checkRight({ user: userRose, party, shouldExists: true, step: 3 });
+
+      // 4. rose: select/read，可以查看areaScopeTest001
+      await this._checkRight({ user: userRose, party, shouldExists: true, step: 4 });
+
+      // 5. rose: 删除旧权限，重新分配权限：可以查看角色：friend的权限，区域为中国|四川
+      await this.ctx.bean.role.deleteRoleRight({ roleId: roleFriend.id, roleRightId, user: userRoot });
+      roleRightId = await this.ctx.bean.role.addRoleRight({
+        roleId: roleFriend.id,
+        atomClassId: party.atomClassId,
+        action: 2, // read
+        scope: [roleFriend.id],
+        areaKey: 'partyCountry|partyCity',
+        areaScope: '86|510000',
+        user: userRoot,
+      });
+      //   6. rose: select/read，均查不到areaScopeTest001
+      await this._checkRight({ user: userRose, party, shouldExists: false, step: 6 });
 
       // 9. 清理测试数据：areaScopeTest001 / rose权限
       await this.ctx.bean.atom.delete({ key: partyKeyFormal, user: userJimmy });
