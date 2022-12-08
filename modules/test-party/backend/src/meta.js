@@ -58,6 +58,34 @@ module.exports = app => {
                 atomItem: 'layoutAtomItemParty',
               },
             },
+            areaScope: {
+              joint: '|',
+              schemas: {
+                partyCountry: {
+                  type: 'string',
+                  ebType: 'dict',
+                  ebTitle: 'Party Country',
+                  ebParams: {
+                    dictKey: 'a-dictbooster:countries',
+                    mode: 'select',
+                  },
+                  ebOptionsBlankAuto: true,
+                },
+                partyCity: {
+                  type: 'string',
+                  ebType: 'component',
+                  ebTitle: 'Party City',
+                  ebRender: {
+                    module: moduleInfo.relativeName,
+                    name: 'renderPartyCity',
+                  },
+                  ebParams: {
+                    separator: '/',
+                    leafOnly: false,
+                  },
+                },
+              },
+            },
           },
           actions: {
             partyOver: {
