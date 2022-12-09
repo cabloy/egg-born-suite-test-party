@@ -9,6 +9,11 @@ module.exports = app => {
   };
   class AreaScopeController extends app.Controller {
     async areaScope() {
+      if (!this.ctx.bean.areaScope.areaScopeEnabled()) {
+        // do nothing
+        this.ctx.success();
+        return;
+      }
       // 测试序列
       //   0. 说明：jimmy和rose均属于角色：friend
       //   1. jimmy: 创建party数据，标题:areaScopeTest001，归属角色：friend，区域：中国|河南|濮阳
