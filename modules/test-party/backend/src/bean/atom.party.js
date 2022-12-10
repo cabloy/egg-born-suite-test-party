@@ -67,19 +67,39 @@ module.exports = app => {
       return null;
     }
 
-    async _translate(item) {
+    async translateAreaScopeValue({ atomClass, areaScopeMeta, atomAreaKey, atomAreaValue }) {
+      // not invoke super
+      const [partyCountry, partyCity] = atomAreaValue;
+
+      return { title: 'sss' };
+    }
+
+    async _translateDictPartyCountry({ partyCountry }) {
       // dictKey
-      const partyCountry = item.partyCountry;
-      if (partyCountry !== '1' && partyCountry !== '86') return;
-      const dictKey = partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina';
-      // code
-      const code = item.partyCity;
-      if (!code) return;
+      if (partyCountry !== '1' && partyCountry !== '86') return null;
       // findItem
-      const dictItem = await this.ctx.bean.dict.findItem({
+      return await this.ctx.bean.dict.findItem({
+        dictKey: 'a-dictbooster:countries',
+        code: partyCountry,
+      });
+    }
+
+    async _translateDictPartyCity({ partyCountry, partyCity }) {
+      if (partyCountry !== '1' && partyCountry !== '86') return null;
+      if (!partyCity) return null;
+      // findItem
+      const dictKey = partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina';
+      return await this.ctx.bean.dict.findItem({
         dictKey,
-        code,
+        code: partyCity,
         options: { separator: '/' },
+      });
+    }
+
+    async _translate(item) {
+      const dictItem = await this._translateDictPartyCity({
+        partyCountry: item.partyCountry,
+        partyCity: item.partyCity,
       });
       if (dictItem) {
         item._partyCityTitle = dictItem.titleFull;
