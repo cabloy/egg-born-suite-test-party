@@ -75,7 +75,7 @@ module.exports = app => {
       const partyCountryTitle = dictItem ? dictItem.titleFull : '';
       const partyCountryTitleLocale = dictItem ? dictItem.titleLocaleFull : '';
       // partyCity
-      dictItem = await this._translateDictPartyCity({ partyCity });
+      dictItem = await this._translateDictPartyCity({ partyCountry, partyCity });
       const partyCityTitle = dictItem ? dictItem.titleFull : '';
       const partyCityTitleLocale = dictItem ? dictItem.titleLocaleFull : '';
       // ok
