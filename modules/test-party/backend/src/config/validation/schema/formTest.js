@@ -92,10 +92,9 @@ module.exports = app => {
       },
       avatar: {
         type: 'string',
-        ebType: 'file',
+        ebType: 'image',
         ebTitle: 'Avatar',
         ebParams: {
-          mode: 1,
           fixed: {
             width: 96,
             height: 96,
