@@ -14,6 +14,7 @@ module.exports = {
   OpenIsolateAppParty: '打开独立应用（宴会）',
   DianCaiWechat: '微信点菜',
   UIComponents: 'UI组件',
+  Guide: '指南',
   'Home(Test)': '首页（测试）',
   'Dashboard(Test)': '仪表板（测试）',
   'Party Test': '宴会测试',

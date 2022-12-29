@@ -1,6 +1,7 @@
 module.exports = app => {
   const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
   const resources = [
+    //
     {
       atomName: 'Create Party',
       atomStaticKey: 'createParty',
@@ -31,21 +32,7 @@ module.exports = app => {
       appKey: 'test-party:appParty',
       resourceRoles: 'template.system,authenticated',
     },
-    {
-      atomName: 'Kitchen-sink',
-      atomStaticKey: 'kitchenSink',
-      atomRevision: 1,
-      atomCategoryId: 'a-base:menu.Tools',
-      resourceType: 'a-base:menu',
-      resourceConfig: JSON.stringify({
-        actionModule: moduleInfo.relativeName,
-        actionPath: 'kitchen-sink/index',
-      }),
-      resourceIcon: ':business:kitchen-set',
-      appKey: 'test-party:appParty',
-      resourceRoles: 'root,RoleScopeCliDevelopment',
-      resourceSorting: 1,
-    },
+    //
     {
       atomName: 'Party',
       atomStaticKey: 'openIsolateAppParty',
@@ -64,6 +51,36 @@ module.exports = app => {
       }),
       resourceIcon: '::open-in-new',
       appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+      resourceSorting: 2,
+    },
+    // app: appComponents
+    {
+      atomName: 'About',
+      atomStaticKey: 'appComponentsAbout',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.General',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionPath: '/a/basefront/base/about',
+      }),
+      resourceIcon: '::information',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 1,
+    },
+    {
+      atomName: 'Guide',
+      atomStaticKey: 'appComponentsGuide',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.General',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/guide',
+      }),
+      resourceIcon: '::book',
+      appKey: 'test-party:appComponents',
       resourceRoles: 'root',
       resourceSorting: 2,
     },

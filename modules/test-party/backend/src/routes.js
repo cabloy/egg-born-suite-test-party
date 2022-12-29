@@ -358,7 +358,7 @@ module.exports = (/* app */) => {
       controller: 'testOpenAuth',
       middlewares: 'test',
       meta: {
-        right: { type: 'resource', name: 'kitchenSink' },
+        right: { type: 'resource', name: 'mineKitchenSink' },
       },
     },
     {
