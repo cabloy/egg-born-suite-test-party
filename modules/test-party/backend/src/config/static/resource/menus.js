@@ -84,6 +84,36 @@ module.exports = app => {
       resourceRoles: 'root',
       resourceSorting: 2,
     },
+    {
+      atomName: 'CabloyJS',
+      atomStaticKey: 'appComponentsCabloyJS',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.Components',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/index',
+      }),
+      resourceIcon: '::cabloy',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 1,
+    },
+    {
+      atomName: 'Framework7',
+      atomStaticKey: 'appComponentsFramework7',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.Components',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/framework7/index',
+      }),
+      resourceIcon: ':social:framework7',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 2,
+    },
   ];
   return resources;
 };
