@@ -391,7 +391,7 @@ module.exports = (/* app */) => {
       path: 'kitchen-sink/guide/echo9',
       controller: 'testKitchensinkGuide',
       meta: {
-        right: { type: 'resource', name: 'kitchenSink' },
+        right: { type: 'resource', name: 'appComponentsGuide' },
       },
     },
 
