@@ -87,12 +87,12 @@ module.exports = app => {
     {
       atomName: 'CabloyJS',
       atomStaticKey: 'appComponentsCabloyJS',
-      atomRevision: 0,
+      atomRevision: 1,
       atomCategoryId: 'a-base:menu.Components',
       resourceType: 'a-base:menu',
       resourceConfig: JSON.stringify({
         actionModule: moduleInfo.relativeName,
-        actionPath: 'kitchen-sink/index',
+        actionPath: 'kitchen-sink/index?mode=2',
       }),
       resourceIcon: '::cabloy',
       appKey: 'test-party:appComponents',

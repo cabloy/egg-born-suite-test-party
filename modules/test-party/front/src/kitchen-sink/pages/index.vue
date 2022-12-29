@@ -1,6 +1,6 @@
 <template>
   <eb-page>
-    <eb-navbar large largeTransparent :title="$text('Kitchen-sink')" eb-back-link="Back"></eb-navbar>
+    <eb-navbar large largeTransparent :title="pageTitle" eb-back-link="Back"></eb-navbar>
     <eb-list no-hairlines-md>
       <eb-list-item
         v-for="item of items"
@@ -13,10 +13,10 @@
   </eb-page>
 </template>
 <script>
-const items = [
-  { title: 'About', path: '/a/basefront/base/about' },
-  { title: 'Framework7', path: 'kitchen-sink/framework7/index' },
-  { title: 'Guide', path: 'kitchen-sink/guide' },
+const __items = [
+  { title: 'About', path: '/a/basefront/base/about', mode: 1 },
+  { title: 'Framework7', path: 'kitchen-sink/framework7/index', mode: 1 },
+  { title: 'Guide', path: 'kitchen-sink/guide', mode: 1 },
   { title: 'File Upload', path: 'kitchen-sink/fileUpload' },
   { title: 'Progress Bar', path: 'kitchen-sink/progress' },
   { title: 'Settings', path: 'kitchen-sink/settings' },
@@ -46,28 +46,42 @@ const items = [
 export default {
   data() {
     return {
+      mode: parseInt(this.$f7route.query.mode || 1),
       items: null,
     };
   },
+  computed: {
+    pageTitle() {
+      const title = this.mode === 2 ? 'CabloyJS' : 'Kitchen-sink';
+      return this.$text(title);
+    },
+  },
   created() {
-    // locale
-    let _items = items.map(item => {
-      return {
-        titleLocale: this.$text(item.title),
-        ...item,
-      };
-    });
-    // about
-    const about = _items.splice(0, 3);
-    // sort
-    _items = _items.sort((a, b) => {
-      const locale = this.$meta.util.getLocale();
-      return a.titleLocale.localeCompare(b.titleLocale, locale);
-    });
-    // about
-    _items = about.concat(_items);
-    // ok
-    this.items = _items;
+    this.initItems();
+  },
+  methods: {
+    initItems() {
+      // locale
+      let _items = __items.map(item => {
+        return {
+          titleLocale: this.$text(item.title),
+          ...item,
+        };
+      });
+      // about
+      const about = _items.splice(0, 3);
+      // sort
+      _items = _items.sort((a, b) => {
+        const locale = this.$meta.util.getLocale();
+        return a.titleLocale.localeCompare(b.titleLocale, locale);
+      });
+      // about
+      _items = about.concat(_items);
+      // filter
+      _items = _items.filter(item => !item.mode || item.mode === this.mode);
+      // ok
+      this.items = _items;
+    },
   },
 };
 </script>
