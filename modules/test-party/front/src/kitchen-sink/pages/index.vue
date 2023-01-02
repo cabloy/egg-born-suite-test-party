@@ -20,7 +20,7 @@ const __items = [
   { title: 'About', path: '/a/basefront/base/about', mode: 1 },
   { title: 'Framework7', path: 'kitchen-sink/framework7/index', source: 'framework7/index.vue', mode: 1 },
   { title: 'Guide', path: 'kitchen-sink/guide', source: 'guide.vue', mode: 1 },
-  { title: 'File Upload', path: 'kitchen-sink/fileUpload' },
+  { title: 'File Upload', path: 'kitchen-sink/fileUpload', source: 'fileUpload.vue' },
   { title: 'Progress Bar', path: 'kitchen-sink/progress' },
   { title: 'Settings', path: 'kitchen-sink/settings' },
   { title: 'View Size & Open Target', path: 'kitchen-sink/view/sizeTarget' },

@@ -119,7 +119,7 @@ export default {
       });
     },
     getFileJSON(file) {
-      return JSON5.stringify(this.file, null, 2);
+      return window.JSON5.stringify(file, null, 2);
     },
   },
 };
