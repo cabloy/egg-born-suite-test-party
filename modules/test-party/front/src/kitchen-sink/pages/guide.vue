@@ -1,6 +1,12 @@
 <template>
   <eb-page>
-    <eb-navbar large largeTransparent :title="$text('Guide')" eb-back-link="Back"></eb-navbar>
+    <eb-navbar large largeTransparent :title="$text('Guide')" eb-back-link="Back">
+      <f7-nav-right>
+        <f7-link :external="true" target="_blank" :href="getSourceUrl('guide.vue')">{{
+          $text('kitchenSinkSource')
+        }}</f7-link>
+      </f7-nav-right>
+    </eb-navbar>
     <!-- Basic process of frontend and backend development -->
     <f7-card>
       <f7-card-header>
@@ -177,6 +183,12 @@ export default {
     },
   },
   methods: {
+    getSourceUrl(source) {
+      return (
+        'https://github.com/zhennann/egg-born-suite-test-party/tree/master/modules/test-party/front/src/kitchen-sink/pages/' +
+        source
+      );
+    },
     getUrl(name) {
       const locale = this.locale;
       return (gUrls[locale] && gUrls[locale][name]) || gUrls['en-us'][name];

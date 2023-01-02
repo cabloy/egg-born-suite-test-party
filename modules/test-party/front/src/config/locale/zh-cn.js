@@ -1,4 +1,5 @@
 export default {
+  kitchenSinkSource: '源码',
   WidgetSalesTitleRotate: '轮换',
   About: '关于',
   Audio: '音频',

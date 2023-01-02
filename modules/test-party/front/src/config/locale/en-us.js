@@ -1,4 +1,5 @@
 export default {
+  kitchenSinkSource: 'Source',
   WidgetSalesTitleRotate: 'Rotate',
   GaugeChart: 'Gauge',
   RadioBox: 'Radio',

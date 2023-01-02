@@ -7,7 +7,9 @@
           <eb-link :eb-href="item.path">{{ item.titleLocale }}</eb-link>
         </div>
         <div v-if="item.source" slot="after">
-          <f7-link :external="true" target="_blank" :href="getSourceUrl(item.source)">源码</f7-link>
+          <f7-link :external="true" target="_blank" :href="getSourceUrl(item.source)">{{
+            $text('kitchenSinkSource')
+          }}</f7-link>
         </div>
       </eb-list-item>
     </eb-list>
