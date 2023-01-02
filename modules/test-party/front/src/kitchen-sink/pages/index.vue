@@ -17,7 +17,13 @@
 </template>
 <script>
 const __items = [
-  { title: 'About', path: '/a/basefront/base/about', mode: 1 },
+  {
+    title: 'About',
+    path: '/a/basefront/base/about',
+    source:
+      'https://github.com/zhennann/cabloy/blob/master/src/module-system/a-basefront/front/src/pages/base/about.vue',
+    mode: 1,
+  },
   { title: 'Framework7', path: 'kitchen-sink/framework7/index', source: 'framework7/index.vue', mode: 1 },
   { title: 'Guide', path: 'kitchen-sink/guide', source: 'guide.vue', mode: 1 },
   { title: 'File Upload', path: 'kitchen-sink/fileUpload', source: 'fileUpload.vue' },
@@ -80,6 +86,8 @@ export default {
   },
   methods: {
     getSourceUrl(source) {
+      if (!source) return null;
+      if (source.indexOf('https://') === 0) return source;
       return (
         'https://github.com/zhennann/egg-born-suite-test-party/tree/master/modules/test-party/front/src/kitchen-sink/pages/' +
         source
