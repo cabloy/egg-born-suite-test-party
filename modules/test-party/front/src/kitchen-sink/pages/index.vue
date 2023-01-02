@@ -2,21 +2,22 @@
   <eb-page>
     <eb-navbar large largeTransparent :title="pageTitle" eb-back-link="Back"></eb-navbar>
     <eb-list no-hairlines-md>
-      <eb-list-item
-        v-for="item of items"
-        :key="item.title"
-        :title="item.titleLocale"
-        link="#"
-        :eb-href="item.path"
-      ></eb-list-item>
+      <eb-list-item v-for="item of items" :key="item.title">
+        <div slot="title">
+          <eb-link :eb-href="item.path">{{ item.titleLocale }}</eb-link>
+        </div>
+        <div v-if="item.source" slot="after">
+          <f7-link :external="true" target="_blank" :href="getSourceUrl(item.source)">源码</f7-link>
+        </div>
+      </eb-list-item>
     </eb-list>
   </eb-page>
 </template>
 <script>
 const __items = [
   { title: 'About', path: '/a/basefront/base/about', mode: 1 },
-  { title: 'Framework7', path: 'kitchen-sink/framework7/index', mode: 1 },
-  { title: 'Guide', path: 'kitchen-sink/guide', mode: 1 },
+  { title: 'Framework7', path: 'kitchen-sink/framework7/index', source: 'framework7/index.vue', mode: 1 },
+  { title: 'Guide', path: 'kitchen-sink/guide', source: 'guide.vue', mode: 1 },
   { title: 'File Upload', path: 'kitchen-sink/fileUpload' },
   { title: 'Progress Bar', path: 'kitchen-sink/progress' },
   { title: 'Settings', path: 'kitchen-sink/settings' },
@@ -60,6 +61,12 @@ export default {
     this.initItems();
   },
   methods: {
+    getSourceUrl(source) {
+      return (
+        'https://github.com/zhennann/egg-born-suite-test-party/tree/master/modules/test-party/front/src/kitchen-sink/pages/' +
+        source
+      );
+    },
     initItems() {
       // locale
       let _items = __items.map(item => {
