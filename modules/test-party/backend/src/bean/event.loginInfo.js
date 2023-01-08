@@ -1,6 +1,3 @@
-const require3 = require('require3');
-const extend = require3('@zhennann/extend');
-
 module.exports = ctx => {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class EventBean {
@@ -9,7 +6,7 @@ module.exports = ctx => {
       const info = data.info;
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-authgithub' && provider.providerName === 'authgithub') {
-        info.config = extend(true, info.config, {
+        info.config = ctx.bean.util.extend(info.config, {
           modules: {},
         });
       }

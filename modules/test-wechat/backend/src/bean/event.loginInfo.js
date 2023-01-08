@@ -1,13 +1,10 @@
-const require3 = require('require3');
-const extend = require3('@zhennann/extend');
-
 module.exports = ctx => {
   class eventBean {
     async execute(context, next) {
       const info = context.data.info;
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-wechat' && provider.providerName === 'wechat') {
-        info.config = extend(true, info.config, {
+        info.config = ctx.bean.util.extend(info.config, {
           modules: {},
         });
       }

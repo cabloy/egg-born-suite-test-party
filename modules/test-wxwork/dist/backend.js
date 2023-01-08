@@ -2,10 +2,7 @@
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 427:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-const require3 = __webpack_require__(638);
-const extend = require3('@zhennann/extend');
+/***/ ((module) => {
 
 module.exports = ctx => {
   class eventBean {
@@ -13,7 +10,7 @@ module.exports = ctx => {
       const info = context.data.info;
       const provider = info.user && info.user.provider;
       if (provider && provider.module === 'a-wxwork' && provider.providerName === 'wxwork') {
-        info.config = extend(true, info.config, {
+        info.config = ctx.bean.util.extend(info.config, {
           modules: {},
         });
       }
@@ -530,14 +527,6 @@ module.exports = app => {
   return services;
 };
 
-
-/***/ }),
-
-/***/ 638:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("require3");
 
 /***/ })
 

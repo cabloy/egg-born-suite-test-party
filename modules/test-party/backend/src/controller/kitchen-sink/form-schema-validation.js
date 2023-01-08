@@ -1,6 +1,3 @@
-const require3 = require('require3');
-const extend = require3('@zhennann/extend');
-
 const __ItemDefault = {
   userName: '',
   password: '',
@@ -19,7 +16,7 @@ module.exports = app => {
       // try load from db cache
       const cacheName = this._getCacheName();
       let item = await this.ctx.cache.db.get(cacheName);
-      item = extend(true, {}, __ItemDefault, item);
+      item = this.ctx.bean.util.extend({}, __ItemDefault, item);
       // ok
       this.ctx.success(item);
     }
