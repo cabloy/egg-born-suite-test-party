@@ -35,9 +35,6 @@ module.exports = app => {
             category: true,
             tag: true,
             cms: true,
-            fields: {
-              custom: ['partyOver'],
-            },
             dict: {
               fields: {
                 partyTypeCode: {
