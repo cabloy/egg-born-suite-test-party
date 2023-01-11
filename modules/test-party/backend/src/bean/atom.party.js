@@ -36,7 +36,6 @@ module.exports = app => {
       await super.write({ atomClass, target, key, item, options, user });
       // update party
       const data = await this.ctx.model.party.prepareData(item);
-      data.id = key.itemId;
       await this.ctx.model.party.update(data);
       // area scope
       await this.ctx.bean.atom.setAreaScopeValue({
