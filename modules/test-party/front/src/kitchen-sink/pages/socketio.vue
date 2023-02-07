@@ -40,12 +40,7 @@ export default {
       return this.$store.state.auth.user.op;
     },
     userAvatar() {
-      let avatar = this.user.avatar;
-      if (!avatar) {
-        const configBase = this.$meta.config.modules['a-base'];
-        avatar = configBase.user.avatar.default;
-      }
-      return this.$meta.util.combineImageUrl(avatar, 48);
+      return this.$meta.util.combineAvatarUrl(this.user.avatar, 48);
     },
     userAuthor() {
       return {
@@ -55,8 +50,7 @@ export default {
       };
     },
     userSystem() {
-      const configBase = this.$meta.config.modules['a-base'];
-      const avatar = this.$meta.util.combineImageUrl(configBase.user.avatar.default, 48);
+      const avatar = this.$meta.util.combineAvatarUrl(null, 48);
       return {
         userId: 0,
         name: 'System',

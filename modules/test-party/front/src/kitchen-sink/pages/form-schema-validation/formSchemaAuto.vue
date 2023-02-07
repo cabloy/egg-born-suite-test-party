@@ -82,7 +82,7 @@ export default {
       });
     },
     getAvatarUrl(avatar, size) {
-      return this.$meta.util.combineImageUrl(avatar, size);
+      return this.$meta.util.combineAvatarUrl(avatar, size);
     },
   },
 };

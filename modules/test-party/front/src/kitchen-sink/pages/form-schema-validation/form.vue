@@ -127,7 +127,7 @@ export default {
       });
     },
     getAvatarUrl(avatar, size) {
-      return this.$meta.util.combineImageUrl(avatar, size);
+      return this.$meta.util.combineAvatarUrl(avatar, size);
     },
     onAvatarFocus(event) {
       const upload = this.$$(event.currentTarget).closest('li').find('.eb-input-file-upload');
