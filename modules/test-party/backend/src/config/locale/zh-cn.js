@@ -1,8 +1,8 @@
 module.exports = {
   Party: '宴会',
-  Review: '评审',
-  Reviewing: '评审中',
-  Reviewed: '已评审',
+  Review: '审核',
+  Reviewing: '审核中',
+  Reviewed: '已审核',
   Item: '条目',
   Products: '产品',
   Snapshots: '快照',
