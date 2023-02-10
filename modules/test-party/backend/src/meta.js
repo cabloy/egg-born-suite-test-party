@@ -95,6 +95,7 @@ module.exports = app => {
               actionComponent: 'action',
               icon: { f7: ':outline:check-circle-outline' },
               enableOnOpened: true,
+              directShowOnList: true,
               stage: 'formal',
             },
             partyOverBulk: {
