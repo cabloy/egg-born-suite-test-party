@@ -6,6 +6,8 @@ import widgetSales from './kitchen-sink/components/widgets/sales.vue';
 import widgetSalesLine from './kitchen-sink/components/widgets/salesLine_chartjs.vue';
 import widgetSalesPie from './kitchen-sink/components/widgets/salesPie_echart.vue';
 import widgetSnapshot from './kitchen-sink/components/widgets/snapshot.vue';
+import widgetAbout from './kitchen-sink/components/widgets/about.vue';
+import widgetSimpleChat from './kitchen-sink/components/widgets/simpleChat.jsx';
 import renderMotto from './kitchen-sink/components/renderMotto.vue';
 import loadComponentAsync from './kitchen-sink/components/loadComponentAsync.vue';
 // appMineLayoutList
@@ -20,6 +22,8 @@ export default {
   widgetSalesLine,
   widgetSalesPie,
   widgetSnapshot,
+  widgetAbout,
+  widgetSimpleChat,
   renderMotto,
   loadComponentAsync,
   // appMineLayoutList

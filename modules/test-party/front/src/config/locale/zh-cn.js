@@ -73,6 +73,11 @@ export default {
   SelfIntroduction: '自我介绍',
   MonkeyeeTestTip1: '本页面将被Monkey',
   MonkeyeeTestTip2: '本组件将被Monkey',
+  CabloyAboutTip1: 'CabloyJS - 是一款顶级NodeJS全栈业务开发框架',
+  CabloyAboutTip2: '前端采用VueJS + Framework7 + Webpack，后端采用KoaJS + EggJS，数据库采用MySQL',
+  CabloyAboutTip3: '在纵向上，将前端和后端打通，形成一个有机的整体，避免前端和后端各自为政的状况',
+  CabloyAboutTip4:
+    '在横向上，提炼出“业务模块化”的代码组织模式，通过不同的模块组合实现业务开发，也为大型Web应用不断增长的业务需求提供有力的基础架构',
   F7AboutTip1:
     'Framework7 - 是一款免费开源的HTML移动框架，用于开发混合程序和Web应用程序，达到iOS和Android的原生视觉体验。Framework7的作者是Vladimir Kharlampidi (iDangero.us)',
   F7AboutTip2: 'Framework7完全自由，不限制您的想象力，并以任何方式提供解决方案',
@@ -157,6 +162,7 @@ export default {
   'Sign Up': '注册',
   'Switch Tab': '切换Tab',
   'About CabloyJS': '关于CabloyJS',
+  'Simple Chat': '简单聊天',
   'Fruit Sales': '水果销量',
   'Fruit Sales(Line Chart)': '水果销量（折线图）',
   'Fruit Sales(Pie Chart)': '水果销量（饼图）',

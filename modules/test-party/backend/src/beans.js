@@ -17,6 +17,7 @@ const middlewareTestInterception = require('./bean/middleware.interception.js');
 const middlewareTestRestructuring = require('./bean/middleware.restructuring.js');
 const atomParty = require('./bean/atom.party.js');
 const ioMessageTest = require('./bean/io.message.test.js');
+const ioMessageSimpleChat = require('./bean/io.message.simpleChat.js');
 const sequenceTest = require('./bean/sequence.test.js');
 const statsTasksUser = require('./bean/stats.tasksUser.js');
 const statsTasksInstance = require('./bean/stats.tasksInstance.js');
@@ -112,6 +113,10 @@ module.exports = app => {
     'io.message.test': {
       mode: 'ctx',
       bean: ioMessageTest,
+    },
+    'io.message.simpleChat': {
+      mode: 'ctx',
+      bean: ioMessageSimpleChat,
     },
     // sequence
     'sequence.test': {

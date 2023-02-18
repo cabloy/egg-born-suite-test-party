@@ -49,6 +49,30 @@ module.exports = app => {
       }),
       resourceRoles: 'root',
     },
+    {
+      atomName: 'About',
+      atomStaticKey: 'widgetAbout',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetAbout',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'Simple Chat',
+      atomStaticKey: 'widgetSimpleChat',
+      atomRevision: 20,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSimpleChat',
+      }),
+      resourceRoles: 'root',
+    },
   ];
   return resources;
 };
