@@ -18,6 +18,7 @@ function loadKitchenSinkFramework7(name) {
 export default [
   { path: 'component', component: loadjsx('component') },
   { path: 'jsx', component: loadjsx('jsx') },
+  { path: 'login', component: loadjsx('login') },
   // cabloy
   { path: 'kitchen-sink/index', component: loadKitchenSink('index') },
   { path: 'kitchen-sink/guide', component: loadKitchenSink('guide') },
