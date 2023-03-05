@@ -66,7 +66,7 @@ module.exports = app => {
                 },
               },
               {
-                dataIndex: 'createdAt',
+                dataIndex: 'atomCreatedAt',
                 title: 'Created Time',
                 align: 'center',
                 params: {
@@ -76,7 +76,7 @@ module.exports = app => {
                 },
               },
               {
-                dataIndex: 'updatedAt',
+                dataIndex: 'atomUpdatedAt',
                 title: 'Modification Time',
                 align: 'center',
                 params: {
@@ -94,7 +94,7 @@ module.exports = app => {
   const layout = {
     atomName: 'Party',
     atomStaticKey: 'layoutAtomListParty',
-    atomRevision: 0,
+    atomRevision: 1,
     description: '',
     layoutTypeCode: 3,
     content: JSON.stringify(content),
