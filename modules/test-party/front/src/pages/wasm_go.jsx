@@ -25,7 +25,7 @@ export default {
       await go.run(wasmResult.instance);
     },
     async onPerformRun2() {
-      // load wasm
+      // load&run wasm
       const action = {
         actionModule: 'a-wasmgo',
         actionComponent: 'sdk',
