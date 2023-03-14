@@ -15,12 +15,10 @@ export default function (Vue) {
       },
     },
     actions: {
-      getMessage({ state, commit }) {
-        return new Promise((resolve, reject) => {
-          const data = 'test for dispatch';
-          commit('setMessage', data);
-          resolve(data);
-        });
+      async getMessage({ state, commit }) {
+        const data = 'test for dispatch';
+        commit('setMessage', data);
+        return data;
       },
     },
   };
