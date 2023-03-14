@@ -12,21 +12,11 @@ export default {
     return {};
   },
   methods: {
-    onPerformStart() {
-      return new Promise((resolve, reject) => {
-        return this.$api.post('test/feat/progress').then(data => {
-          const progressId = data.progressId;
-          this.$view.dialog
-            .progressbar({ progressId, title: this.$text('Working') })
-            .then(data => {
-              console.log(data);
-              resolve();
-            })
-            .catch(err => {
-              reject(err);
-            });
-        });
-      });
+    async onPerformStart() {
+      const data = await this.$api.post('test/feat/progress');
+      const progressId = data.progressId;
+      const data2 = await this.$view.dialog.progressbar({ progressId, title: this.$text('Working') });
+      console.log(data2);
     },
   },
 };
