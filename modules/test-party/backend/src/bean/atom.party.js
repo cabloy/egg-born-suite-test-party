@@ -37,12 +37,6 @@ module.exports = app => {
       // update party
       const data = await this.ctx.model.party.prepareData(item);
       await this.ctx.model.party.update(data);
-      // area scope
-      await this.ctx.bean.atom.setAreaScopeValue({
-        atomId: key.atomId,
-        atomClass,
-        atomAreaValue: [item.partyCountry, item.partyCity],
-      });
     }
 
     async delete({ atomClass, key, options, user }) {
@@ -64,24 +58,6 @@ module.exports = app => {
       const item = await this.ctx.model.party.get({ id: atom.itemId });
       if (action === 101 && item.partyOver === 0) return res;
       return null;
-    }
-
-    async translateAreaScopeValue({ /* atomClass, areaScopeMeta, atomAreaKey,*/ atomAreaValue }) {
-      // not invoke super
-      const [partyCountry, partyCity] = atomAreaValue;
-      // partyCountry
-      let dictItem = await this._translateDictPartyCountry({ partyCountry });
-      const partyCountryTitle = dictItem ? dictItem.titleFull : '';
-      const partyCountryTitleLocale = dictItem ? dictItem.titleLocaleFull : '';
-      // partyCity
-      dictItem = await this._translateDictPartyCity({ partyCountry, partyCity });
-      const partyCityTitle = dictItem ? dictItem.titleFull : '';
-      const partyCityTitleLocale = dictItem ? dictItem.titleLocaleFull : '';
-      // ok
-      return {
-        title: [partyCountryTitle, partyCityTitle],
-        titleLocale: [partyCountryTitleLocale, partyCityTitleLocale],
-      };
     }
 
     async _translateDictPartyCountry({ partyCountry }) {

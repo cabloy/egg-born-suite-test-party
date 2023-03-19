@@ -209,15 +209,6 @@ module.exports = (/* app */) => {
       meta: { auth: { enable: false } },
     },
 
-    // test/feat/areaScope
-    {
-      method: 'get',
-      path: 'test/feat/areaScope',
-      controller: 'testFeatAreaScope',
-      middlewares: 'test',
-      meta: { auth: { enable: false } },
-    },
-
     // test/feat/bean
     {
       method: 'get',
