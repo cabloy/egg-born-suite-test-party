@@ -297,6 +297,15 @@ module.exports = (/* app */) => {
       meta: { auth: { enable: false } },
     },
 
+    // test/feat/summer
+    {
+      method: 'post',
+      path: 'test/feat/summer',
+      controller: 'testFeatSummer',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
     // test/feat/validation
     {
       method: 'post',

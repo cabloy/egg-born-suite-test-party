@@ -29,6 +29,7 @@ const testFeatSequence = require('./controller/test/feat/sequence.js');
 const testFeatSettings = require('./controller/test/feat/settings.js');
 const testFeatStats = require('./controller/test/feat/stats.js');
 const testFeatStatus = require('./controller/test/feat/status.js');
+const testFeatSummer = require('./controller/test/feat/summer.js');
 const testFeatValidation = require('./controller/test/feat/validation.js');
 const testFeatMiddleware = require('./controller/test/feat/middleware.js');
 const testFeatQueue = require('./controller/test/feat/queue.js');
@@ -76,6 +77,7 @@ module.exports = app => {
     testFeatSettings,
     testFeatStats,
     testFeatStatus,
+    testFeatSummer,
     testFeatValidation,
     testFeatMiddleware,
     testFeatQueue,
