@@ -62,7 +62,7 @@ module.exports = appInfo => {
     caches: {
       test: {
         bean: 'test',
-        type: 'all', // mem/redis/all
+        mode: 'all', // mem/redis/all
         mem: {
           max: 5,
           ttl: 5 * 1000,

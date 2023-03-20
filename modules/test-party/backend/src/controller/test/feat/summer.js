@@ -7,12 +7,33 @@ module.exports = app => {
     async summer() {
       // name
       const name = 'test';
+      const key1 = { id: 1 };
+      const key2 = { id: 2 };
+
+      // getCache
+      const cache = this.ctx.bean.summer.getCache({ name });
+      assert.equal(!!cache, true);
+      let cacheOtherModule = this.ctx.bean.summer.module(moduleInfo.relativeName).getCache({ name });
+      assert.equal(!!cacheOtherModule, true);
+      cacheOtherModule = this.ctx.bean.summer.getCache({ module: moduleInfo.relativeName, name });
+      assert.equal(!!cacheOtherModule, true);
 
       // get
-      const cache = await this.ctx.bean.summer.getCache({ name });
-      assert.equal(!!cache, true);
+      const value = await cache.get(key1);
+      assert.equal(value.id, key1.id);
 
-      // // set
+      // mget
+
+      // set
+
+      // mset
+
+      // del
+
+      // mdel
+
+      // clear
+
       // await this.ctx.bean.status.set(name, true);
 
       // // get
