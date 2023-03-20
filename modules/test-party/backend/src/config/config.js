@@ -57,6 +57,23 @@ module.exports = appInfo => {
     },
   };
 
+  // summer
+  config.summer = {
+    caches: {
+      test: {
+        bean: 'test',
+        type: 'all', // mem/redis/all
+        mem: {
+          max: 5,
+          ttl: 5 * 1000,
+        },
+        redis: {
+          ttl: 5 * 1000,
+        },
+      },
+    },
+  };
+
   // settings
   config.settings = {
     instance: {

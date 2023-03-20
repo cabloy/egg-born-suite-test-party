@@ -6,30 +6,30 @@ module.exports = app => {
   class SummerController extends app.Controller {
     async summer() {
       // name
-      const name = '__test_enable';
+      const name = 'test';
 
       // get
-      let value = await this.ctx.bean.status.get(name);
-      assert.equal(value, undefined);
+      const cache = await this.ctx.bean.summer.getCache({ name });
+      assert.equal(!!cache, true);
 
-      // set
-      await this.ctx.bean.status.set(name, true);
+      // // set
+      // await this.ctx.bean.status.set(name, true);
 
-      // get
-      value = await this.ctx.bean.status.get(name);
-      assert.equal(value, true);
+      // // get
+      // value = await this.ctx.bean.status.get(name);
+      // assert.equal(value, true);
 
-      // other module's status
-      const moduleStatus = this.ctx.bean.status.module(this.ctx.module.info.relativeName);
-      value = await moduleStatus.get(name);
-      assert.equal(value, true);
+      // // other module's status
+      // const moduleStatus = this.ctx.bean.status.module(this.ctx.module.info.relativeName);
+      // value = await moduleStatus.get(name);
+      // assert.equal(value, true);
 
-      // set
-      await this.ctx.bean.status.set(name, false);
+      // // set
+      // await this.ctx.bean.status.set(name, false);
 
-      // get
-      value = await this.ctx.bean.status.get(name);
-      assert.equal(value, false);
+      // // get
+      // value = await this.ctx.bean.status.get(name);
+      // assert.equal(value, false);
 
       // done
       this.ctx.success();
