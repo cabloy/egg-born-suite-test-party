@@ -65,10 +65,10 @@ module.exports = appInfo => {
         mode: 'all', // mem/redis/all
         mem: {
           max: 2,
-          ttl: 2 * 1000,
+          ttl: 1 * 1000,
         },
         redis: {
-          ttl: 4 * 1000,
+          ttl: 3 * 1000,
         },
       },
     },
