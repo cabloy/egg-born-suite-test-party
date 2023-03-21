@@ -82,8 +82,28 @@ module.exports = app => {
       await cache.del(key2);
 
       // mdel
+      await cache.mdel([key1, key2, key3]);
+
+      // mdel: peek
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value, undefined);
 
       // clear
+      values = await cache.mget([key1, key2, key3]);
+      assert.equal(values[2].id, key3.id);
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value.id, key3.id);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value.id, key3.id);
+
+      await cache.clear();
+
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value, undefined);
 
       // done
       this.ctx.success();
