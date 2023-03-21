@@ -77,33 +77,13 @@ module.exports = app => {
       value = await cache.peek(key2, { mode: 'redis' });
       assert.equal(value.id, key2.id);
 
-      // set
-
-      // mset
-
       // del
+      await cache.del(key1);
+      await cache.del(key2);
 
       // mdel
 
       // clear
-
-      // await this.ctx.bean.status.set(name, true);
-
-      // // get
-      // value = await this.ctx.bean.status.get(name);
-      // assert.equal(value, true);
-
-      // // other module's status
-      // const moduleStatus = this.ctx.bean.status.module(this.ctx.module.info.relativeName);
-      // value = await moduleStatus.get(name);
-      // assert.equal(value, true);
-
-      // // set
-      // await this.ctx.bean.status.set(name, false);
-
-      // // get
-      // value = await this.ctx.bean.status.get(name);
-      // assert.equal(value, false);
 
       // done
       this.ctx.success();
