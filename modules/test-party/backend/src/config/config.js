@@ -64,11 +64,11 @@ module.exports = appInfo => {
         bean: 'test',
         mode: 'all', // mem/redis/all
         mem: {
-          max: 5,
-          ttl: 5 * 1000,
+          max: 2,
+          ttl: 2 * 1000,
         },
         redis: {
-          ttl: 5 * 1000,
+          ttl: 4 * 1000,
         },
       },
     },
