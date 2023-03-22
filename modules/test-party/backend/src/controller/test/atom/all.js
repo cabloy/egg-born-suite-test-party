@@ -6,6 +6,7 @@ module.exports = app => {
     async all() {
       // atomClass
       const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });
+      this.atomClass = atomClass;
       // userIds
       const userIds = this.ctx.cache.mem.get('userIds');
 
@@ -218,7 +219,7 @@ module.exports = app => {
           options: {
             where: {
               atomName: 'test:all',
-              'b.module': 'test-party',
+              'a.atomClassId': this.atomClass.id,
             },
             orders: null,
             page: null,
