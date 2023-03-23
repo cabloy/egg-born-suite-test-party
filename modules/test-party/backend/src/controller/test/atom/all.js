@@ -4,6 +4,18 @@ const assert = require3('assert');
 module.exports = app => {
   class AllController extends app.Controller {
     async all() {
+      const totalTimes = 200;
+      const timeStart = new Date().getTime() / 1000;
+      for (let i = 0; i < totalTimes; i++) {
+        await this.__all();
+        console.log(`-----all time: ${i}`);
+      }
+      const timeEnd = new Date().getTime() / 1000;
+      console.log(`-----all time used: ${timeEnd - timeStart}s`);
+      // done
+      this.ctx.success();
+    }
+    async __all() {
       // atomClass
       const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });
       this.atomClass = atomClass;
@@ -208,18 +220,15 @@ module.exports = app => {
           assert.equal(actual, expected, userName);
         }
       );
-
-      // done
-      this.ctx.success();
     }
 
     async _testCheckList(stage, userIds, userAtoms, cb) {
       for (const [userName, atomCountExpected] of userAtoms) {
         const list = await this.ctx.bean.atom.select({
+          atomClass: this.atomClass,
           options: {
             where: {
               atomName: 'test:all',
-              'a.atomClassId': this.atomClass.id,
             },
             orders: null,
             page: null,
