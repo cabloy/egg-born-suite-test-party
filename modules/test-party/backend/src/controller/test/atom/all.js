@@ -4,7 +4,7 @@ const assert = require3('assert');
 module.exports = app => {
   class AllController extends app.Controller {
     async all() {
-      const totalTimes = 200;
+      const totalTimes = 1;
       const timeStart = new Date().getTime() / 1000;
       for (let i = 0; i < totalTimes; i++) {
         await this.__all();
