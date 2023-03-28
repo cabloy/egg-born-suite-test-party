@@ -55,7 +55,14 @@ module.exports = (/* app */) => {
       middlewares: 'test',
       meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'partyOver' } },
     },
-
+    // test/itemOnly/all
+    {
+      method: 'post',
+      path: 'test/itemOnly/all',
+      controller: 'testItemOnlyAll',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
     // test/resource/right
     {
       method: 'post',
