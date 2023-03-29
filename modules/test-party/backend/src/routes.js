@@ -360,6 +360,9 @@ module.exports = (/* app */) => {
     // test/feat/model
     { method: 'post', path: 'test/feat/model', controller: 'testFeatModel', middlewares: 'test' },
 
+    // test/feat/modelWhere
+    { method: 'post', path: 'test/feat/modelWhere', controller: 'testFeatModelWhere', middlewares: 'test' },
+
     // test/feat/category
     { method: 'post', path: 'test/feat/category', controller: 'testFeatCategory', middlewares: 'test' },
 

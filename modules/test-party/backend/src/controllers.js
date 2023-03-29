@@ -36,6 +36,7 @@ const testFeatMiddleware = require('./controller/test/feat/middleware.js');
 const testFeatQueue = require('./controller/test/feat/queue.js');
 const testFeatBroadcast = require('./controller/test/feat/broadcast.js');
 const testFeatModel = require('./controller/test/feat/model.js');
+const testFeatModelWhere = require('./controller/test/feat/modelWhere.js');
 const testFeatCategory = require('./controller/test/feat/category.js');
 const testFeatTag = require('./controller/test/feat/tag.js');
 const testOpenAuth = require('./controller/test/feat/openAuth.js');
@@ -85,6 +86,7 @@ module.exports = app => {
     testFeatQueue,
     testFeatBroadcast,
     testFeatModel,
+    testFeatModelWhere,
     testFeatCategory,
     testFeatTag,
     testOpenAuth,
