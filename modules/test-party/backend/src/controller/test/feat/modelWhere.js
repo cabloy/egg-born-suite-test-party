@@ -19,8 +19,8 @@ module.exports = app => {
       // model
       const model = this.ctx.model.module('a-base').atom;
 
-      // delete: force clear old data
-      await model.delete({ atomStaticKey });
+      // // delete: force clear old data
+      // await model.delete({ atomStaticKey });
 
       // insert one row
       await model.insert(__rows[0]);
@@ -35,8 +35,6 @@ module.exports = app => {
         },
       });
       assert.equal(list.length, 0);
-      return;
-
       // select: or false/clause
       list = await model.select({
         where: {
@@ -45,7 +43,7 @@ module.exports = app => {
         },
       });
       assert.equal(list.length, 1);
-      // select: or true/false
+      // select: or true/clause
       list = await model.select({
         where: {
           atomStaticKey: [atomStaticKey],
@@ -53,6 +51,31 @@ module.exports = app => {
         },
       });
       assert.equal(list.length, 3);
+
+      // select: and true/true
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [true, true],
+        },
+      });
+      assert.equal(list.length, 3);
+      // select: and true/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [true, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 1);
+      // select: and false/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [false, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 0);
 
       // delete
       await model.delete({ atomStaticKey });
