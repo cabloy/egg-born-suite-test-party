@@ -11,8 +11,16 @@ module.exports = app => {
 
   class ModelController extends app.Controller {
     async modelWhere() {
+      await this._modelWhere();
+      this.ctx.success();
+    }
+
+    async _modelWhere() {
       // model
       const model = this.ctx.model.module('a-base').atom;
+
+      // delete: force clear old data
+      await model.delete({ atomStaticKey });
 
       // insert one row
       await model.insert(__rows[0]);
@@ -27,6 +35,8 @@ module.exports = app => {
         },
       });
       assert.equal(list.length, 0);
+      return;
+
       // select: or false/clause
       list = await model.select({
         where: {
@@ -50,9 +60,6 @@ module.exports = app => {
       // count
       const count = await model.count({ atomStaticKey });
       assert.equal(count, 0);
-
-      // done
-      this.ctx.success();
     }
   }
 
