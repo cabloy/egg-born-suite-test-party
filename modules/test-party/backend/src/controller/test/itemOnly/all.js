@@ -30,7 +30,7 @@ module.exports = app => {
         userIds,
         [
           ['Tom', 0],
-          ['Root', 0],
+          ['root', 0],
           ['', 0],
         ],
         (actual, expected, userName) => {
@@ -226,6 +226,7 @@ module.exports = app => {
 
     async _testCheckList(userIds, userAtoms, cb) {
       for (const [userName, atomCountExpected] of userAtoms) {
+        const user = userName ? { id: userIds[userName] } : null;
         const list = await this.ctx.bean.atom.select({
           atomClass: this.atomClass,
           options: {
@@ -235,7 +236,7 @@ module.exports = app => {
             orders: null,
             page: null,
           },
-          user: userName ? { id: userIds[userName] } : null,
+          user,
         });
         // callback
         cb(list.length, atomCountExpected, userName);
