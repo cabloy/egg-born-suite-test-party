@@ -361,7 +361,7 @@ module.exports = (/* app */) => {
     { method: 'post', path: 'test/feat/model', controller: 'testFeatModel', middlewares: 'test' },
 
     // test/feat/modelWhere
-    { method: 'post', path: 'test/feat/modelWhere', controller: 'testFeatModelWhere', middlewares: 'test' },
+    { method: 'get', path: 'test/feat/modelWhere', controller: 'testFeatModelWhere', _middlewares: 'test' },
 
     // test/feat/category
     { method: 'post', path: 'test/feat/category', controller: 'testFeatCategory', middlewares: 'test' },

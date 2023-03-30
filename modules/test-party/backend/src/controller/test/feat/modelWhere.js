@@ -19,8 +19,8 @@ module.exports = app => {
       // model
       const model = this.ctx.model.module('a-base').atom;
 
-      // // delete: force clear old data
-      // await model.delete({ atomStaticKey });
+      // delete: force clear old data
+      await model.delete({ atomStaticKey });
 
       // insert one row
       await model.insert(__rows[0]);
