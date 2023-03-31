@@ -24,6 +24,13 @@ module.exports = app => {
       this.atomClass = atomClass;
       // userIds
       const userIds = this.ctx.cache.mem.get('userIds');
+      const userTom = await this._getUser({ userIds, userName: 'Tom' });
+      // const userRoot = await this._getUser({userIds, userName:'root'});
+
+      // delete: force clear old data
+      const modelHistory = this.ctx.model.module('a-useronline').userOnlineHistory;
+      await modelHistory.delete({ isLogin: 2 });
+
       // user->atom
       await this._testCheckList(
         userIds,
@@ -37,51 +44,27 @@ module.exports = app => {
         }
       );
 
-      return;
-
-      // Tom add party
-      const partyKeyDraft = await this.ctx.bean.atom.create({
+      // add useronline
+      const itemKey = await this.ctx.bean.atom.create({
         atomClass,
-        options: { preferredRole: true },
-        user: { id: userIds.Tom },
       });
       await this.ctx.bean.atom.write({
-        key: partyKeyDraft,
-        item: { atomName: 'test:all', personCount: 3 },
-        user: { id: userIds.Tom },
+        key: itemKey,
+        atomClass,
+        item: {
+          userId: userTom.id,
+          isLogin: 2,
+        },
+        options: {
+          ignoreValidate: true,
+        },
       });
 
       await this._testCheckList(
-        'draft',
         userIds,
         [
-          ['Tom', 1],
-          ['Jane', 0],
-          ['Jimmy', 0],
-          ['Smith', 0],
-          ['', 0],
-        ],
-        (actual, expected, userName) => {
-          assert.equal(actual, expected, userName);
-        }
-      );
-
-      // Tom enable(submit) party
-      const res = await this.ctx.bean.atom.submit({
-        key: partyKeyDraft,
-        options: { ignoreFlow: true },
-        user: { id: userIds.Tom },
-      });
-      const partyKeyFormal = res.formal.key;
-
-      await this._testCheckList(
-        'formal',
-        userIds,
-        [
-          ['Tom', 1],
-          ['Jane', 1],
-          ['Jimmy', 1],
-          ['Smith', 1],
+          ['Tom', 0],
+          ['root', 1],
           ['', 1],
         ],
         (actual, expected, userName) => {
@@ -89,29 +72,11 @@ module.exports = app => {
         }
       );
 
-      // Tom update party
-      await this.ctx.bean.atom.write({
-        key: partyKeyDraft,
-        item: { personCount: 8 },
-        user: { id: userIds.Tom },
-      });
+      // get useronline
+      const userOnline = await this.ctx.bean.atom.read({ key: itemKey, atomClass });
+      assert.equal(userOnline.userId, userTom.id);
 
-      // Tom get party
-      const party = await this.ctx.bean.atom.read({ key: partyKeyDraft, user: { id: userIds.Tom } });
-      assert.equal(party.personCount, 8);
-
-      // Tom list party
-      const parties = await this.ctx.bean.atom.select({
-        atomClass,
-        options: {
-          where: { atomName: { val: 'test:all', op: 'likeRight' } },
-          orders: [['a.createdAt', 'desc']],
-          page: { index: 0, size: 0 },
-          stage: 'formal',
-        },
-        user: { id: userIds.Tom },
-      });
-      assert.equal(parties.length, 1);
+      return;
 
       // checkRightRead
       const checkRightReads = [['Tom', partyKeyFormal.atomId, true]];
