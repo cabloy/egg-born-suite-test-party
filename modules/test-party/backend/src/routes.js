@@ -23,7 +23,7 @@ module.exports = (/* app */) => {
       method: 'get',
       path: 'test/atom/all',
       controller: 'testAtomAll',
-      _middlewares: 'test',
+      middlewares: 'test',
       meta: { auth: { enable: false } },
     },
     // test/atom/right(checked by middleware)
@@ -60,7 +60,7 @@ module.exports = (/* app */) => {
       method: 'get',
       path: 'test/itemOnly/all',
       controller: 'testItemOnlyAll',
-      _middlewares: 'test',
+      middlewares: 'test',
       meta: { auth: { enable: false } },
     },
     // test/resource/right
