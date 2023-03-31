@@ -242,9 +242,9 @@ module.exports = app => {
       }
     }
 
-    async _getUser(userIds, userName) {
+    async _getUser({ userIds, userName }) {
       if (!userName) return null;
-      const userId = userIds[userName];
+      const userId = userIds && userIds[userName];
       if (userId) return { id: userId };
       return await this.ctx.bean.user.get({ userName });
     }
