@@ -224,6 +224,7 @@ module.exports = app => {
 
     async _testCheckList(stage, userIds, userAtoms, cb) {
       for (const [userName, atomCountExpected] of userAtoms) {
+        const user = await this._getUser({ userIds, userName });
         const list = await this.ctx.bean.atom.select({
           atomClass: this.atomClass,
           options: {
@@ -234,11 +235,18 @@ module.exports = app => {
             page: null,
             stage,
           },
-          user: userName ? { id: userIds[userName] } : null,
+          user,
         });
         // callback
         cb(list.length, atomCountExpected, userName);
       }
+    }
+
+    async _getUser(userIds, userName) {
+      if (!userName) return null;
+      const userId = userIds[userName];
+      if (userId) return { id: userId };
+      return await this.ctx.bean.user.get({ userName });
     }
   }
 

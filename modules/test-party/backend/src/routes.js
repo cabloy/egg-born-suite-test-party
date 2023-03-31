@@ -20,10 +20,10 @@ module.exports = (/* app */) => {
     { method: 'post', path: 'test/atom/starLabel', controller: 'testAtomStarLabel', middlewares: 'test' },
     // test/atom/all
     {
-      method: 'post',
+      method: 'get',
       path: 'test/atom/all',
       controller: 'testAtomAll',
-      middlewares: 'test',
+      _middlewares: 'test',
       meta: { auth: { enable: false } },
     },
     // test/atom/right(checked by middleware)
@@ -57,10 +57,10 @@ module.exports = (/* app */) => {
     },
     // test/itemOnly/all
     {
-      method: 'post',
+      method: 'get',
       path: 'test/itemOnly/all',
       controller: 'testItemOnlyAll',
-      middlewares: 'test',
+      _middlewares: 'test',
       meta: { auth: { enable: false } },
     },
     // test/resource/right
