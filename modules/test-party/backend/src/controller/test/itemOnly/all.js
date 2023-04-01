@@ -85,27 +85,29 @@ module.exports = app => {
         const user = await this._getUser({ userIds, userName });
         const res = await this.ctx.bean.atom.checkRightRead({
           atom: { id: atomId },
+          atomClass,
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightWrite
+      const checkRightWrites = [
+        ['Tom', itemKey.atomId, false],
+        ['root', itemKey.atomId, false],
+      ];
+      for (const [userName, atomId, right] of checkRightWrites) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightAction({
+          atom: { id: atomId },
+          atomClass,
+          action: 'write',
           user,
         });
         assert.equal(!!res, right, userName);
       }
 
       return;
-
-      // checkRightWrite
-      const checkRightWrites = [
-        ['Tom', partyKeyFormal.atomId, true],
-        ['Tomson', partyKeyFormal.atomId, false],
-      ];
-      for (const [userName, atomId, right] of checkRightWrites) {
-        const user = await this._getUser({ userIds, userName });
-        const res = await this.ctx.bean.atom.checkRightAction({
-          atom: { id: atomId },
-          action: 'write',
-          user,
-        });
-        assert.equal(!!res, right, userName);
-      }
 
       // checkRightDelete
       const checkRightDeletes = [
