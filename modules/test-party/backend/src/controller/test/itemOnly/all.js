@@ -116,19 +116,17 @@ module.exports = app => {
         const user = await this._getUser({ userIds, userName });
         const res = await this.ctx.bean.atom.checkRightAction({
           atom: { id: atomId },
+          atomClass,
           action: 'delete',
           user,
         });
         assert.equal(!!res, right, userName);
       }
 
-      return;
-
       // checkRightCreate
       const checkRightCreates = [
-        ['Tom', true],
-        ['Jimmy', true],
-        ['Smith', false],
+        ['Tom', false],
+        ['root', false],
       ];
       for (const [userName, right] of checkRightCreates) {
         const user = await this._getUser({ userIds, userName });
@@ -139,20 +137,17 @@ module.exports = app => {
         assert.equal(!!res, right, userName);
       }
 
-      // Tom delete party
+      // delete useronline
       await this.ctx.bean.atom.delete({
         key: itemKey,
         atomClass,
       });
 
       await this._testCheckList(
-        'formal',
         userIds,
         [
           ['Tom', 0],
-          ['Jane', 0],
-          ['Jimmy', 0],
-          ['Smith', 0],
+          ['root', 0],
           ['', 0],
         ],
         (actual, expected, userName) => {
