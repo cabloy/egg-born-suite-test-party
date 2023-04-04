@@ -25,7 +25,7 @@ describe('test/controller/test/atom/right.test.js', () => {
         .httpRequest()
         .post(mockUrl('test/atom/checkRightCreate'))
         .send({
-          atomClass: { module: mockInfo().relativeName, atomClassName: 'party', atomClassIdParent: 0 },
+          atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
         });
       if (right) {
         assert.equal(result.body.data.id > 0, true);
@@ -54,7 +54,7 @@ describe('test/controller/test/atom/right.test.js', () => {
       .httpRequest()
       .post(mockUrl('/a/base/atom/create'))
       .send({
-        atomClass: { module: mockInfo().relativeName, atomClassName: 'party', atomClassIdParent: 0 },
+        atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
     const partyKeyDraft = res.body.data;
 

@@ -20,7 +20,7 @@ describe('test/controller/test/ctx/transaction.test.js', () => {
       .httpRequest()
       .post(mockUrl('/a/base/atom/create'))
       .send({
-        atomClass: { module: mockInfo().relativeName, atomClassName: 'party', atomClassIdParent: 0 },
+        atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
     const atomKey = res.body.data;
 
@@ -69,7 +69,7 @@ describe('test/controller/test/ctx/transaction.test.js', () => {
       .httpRequest()
       .post(mockUrl('/a/base/atom/create'))
       .send({
-        atomClass: { module: mockInfo().relativeName, atomClassName: 'party', atomClassIdParent: 0 },
+        atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
     const atomKey = res.body.data;
 

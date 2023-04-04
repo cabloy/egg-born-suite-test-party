@@ -6,8 +6,8 @@ const atomClass = {
   atomClassName: 'userOnlineHistory',
 };
 
-describe.only('test/controller/test/itemOnly/right.test.js', () => {
-  it.only('action:checkRightCreate', async () => {
+describe.skip('test/controller/test/itemOnly/right.test.js', () => {
+  it('action:checkRightCreate', async () => {
     app.mockSession({});
 
     const checkRightCreates = [
@@ -56,7 +56,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
       .httpRequest()
       .post(mockUrl('/a/base/atom/create'))
       .send({
-        atomClass: { module: mockInfo().relativeName, atomClassName: 'party', atomClassIdParent: 0 },
+        atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
     const partyKeyDraft = res.body.data;
 
