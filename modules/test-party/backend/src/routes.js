@@ -63,6 +63,28 @@ module.exports = (/* app */) => {
       middlewares: 'test',
       meta: { auth: { enable: false } },
     },
+    // test/itemOnly/right(checked by middleware)
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightCreate',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'create' } },
+    },
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightRead',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'read' } },
+    },
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightWrite',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'write' } },
+    },
     // test/resource/right
     {
       method: 'post',
