@@ -87,8 +87,8 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
 
     // check right write
     const checkRightWrites = [
-      ['Tom', true],
-      ['Tomson', false],
+      ['Tom', false],
+      ['root', false],
     ];
     for (const [userName, right] of checkRightWrites) {
       // login
@@ -103,79 +103,15 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
         });
       // checkRightWrite
       const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightWrite')).send({
-        key: partyKeyDraft,
+        key: itemKey,
+        atomClass,
       });
       if (right) {
-        assert.equal(result.body.data.atomId, partyKeyDraft.atomId);
+        assert.equal(result.body.data.atomId, itemKey.atomId);
       } else {
         assert.equal(result.status, 403);
       }
     }
-
-    // submit
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
-    res = await app.httpRequest().post(mockUrl('/a/base/itemOnly/writeSubmit')).send({
-      key: partyKeyDraft,
-    });
-    assert.equal(res.body.code, 0);
-    const partyKeyFormal = res.body.data.formal.key;
-
-    // // check right actions
-    // const checkRightActions = [
-    //   [ 'Tom', false ],
-    //   [ 'Jane', true ],
-    // ];
-    // for (const [ userName, right ] of checkRightActions) {
-    //   // login
-    //   await app.httpRequest().post(mockUrl('/a/auth/passport/a-authsimple/authsimple')).send({
-    //     data: {
-    //       auth: userName,
-    //       password: '123456',
-    //     },
-    //   });
-    //   // checkRightAction
-    //   const result = await app.httpRequest().post(mockUrl('test/atom/checkRightAction')).send({
-    //     key: partyKeyFormal,
-    //   });
-    //   if (right) {
-    //     assert.equal(result.body.data.atomId, partyKeyFormal.atomId);
-    //   } else {
-    //     assert.equal(result.status, 403);
-    //   }
-    // }
-
-    // // customActionReview
-    // const customActionReviews = [
-    //   [ 'Tom', false ],
-    //   [ 'Jane', true ],
-    // ];
-    // for (const [ userName, right ] of customActionReviews) {
-    //   // login
-    //   await app.httpRequest().post(mockUrl('/a/auth/passport/a-authsimple/authsimple')).send({
-    //     data: {
-    //       auth: userName,
-    //       password: '123456',
-    //     },
-    //   });
-    //   // action:review
-    //   const result = await app.httpRequest().post(mockUrl('/a/base/atom/action')).send({
-    //     key: partyKey,
-    //     action: 101,
-    //   });
-    //   if (right) {
-    //     assert.equal(result.body.code, 0);
-    //   } else {
-    //     assert.equal(result.status, 403);
-    //   }
-    // }
 
     // delete
     await app
@@ -183,12 +119,13 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
       .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
       .send({
         data: {
-          auth: 'Tom',
+          auth: 'root',
           password: '123456',
         },
       });
     res = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: partyKeyFormal,
+      key: itemKey,
+      atomClass,
     });
     assert.equal(res.body.code, 0);
   });
