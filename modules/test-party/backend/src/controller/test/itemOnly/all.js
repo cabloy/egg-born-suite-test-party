@@ -107,12 +107,10 @@ module.exports = app => {
         assert.equal(!!res, right, userName);
       }
 
-      return;
-
       // checkRightDelete
       const checkRightDeletes = [
-        ['Tom', partyKeyFormal.atomId, true],
-        ['Tomson', partyKeyFormal.atomId, false],
+        ['Tom', itemKey.atomId, false],
+        ['root', itemKey.atomId, true],
       ];
       for (const [userName, atomId, right] of checkRightDeletes) {
         const user = await this._getUser({ userIds, userName });
@@ -123,6 +121,8 @@ module.exports = app => {
         });
         assert.equal(!!res, right, userName);
       }
+
+      return;
 
       // checkRightCreate
       const checkRightCreates = [
