@@ -6,7 +6,7 @@ const atomClass = {
   atomClassName: 'userOnlineHistory',
 };
 
-describe.skip('test/controller/test/itemOnly/right.test.js', () => {
+describe.only('test/controller/test/itemOnly/right.test.js', () => {
   it('action:checkRightCreate', async () => {
     app.mockSession({});
 
@@ -26,7 +26,7 @@ describe.skip('test/controller/test/itemOnly/right.test.js', () => {
           },
         });
       // checkRightCreate
-      const result = await app.httpRequest().post(mockUrl('test/atom/checkRightCreate')).send({
+      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightCreate')).send({
         atomClass,
       });
       if (right) {
@@ -52,18 +52,15 @@ describe.skip('test/controller/test/itemOnly/right.test.js', () => {
       });
 
     // create
-    let res = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
-      .send({
-        atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
-      });
-    const partyKeyDraft = res.body.data;
+    let res = await app.httpRequest().post(mockUrl('test/itemOnly/createRaw')).send({
+      atomClass,
+    });
+    const itemKey = res.body.data;
 
     // check right read
     const checkRightReads = [
-      ['Tom', true],
-      ['Tomson', false],
+      ['Tom', false],
+      ['root', true],
     ];
     for (const [userName, right] of checkRightReads) {
       // login
@@ -77,11 +74,12 @@ describe.skip('test/controller/test/itemOnly/right.test.js', () => {
           },
         });
       // checkRightRead
-      const result = await app.httpRequest().post(mockUrl('test/atom/checkRightRead')).send({
-        key: partyKeyDraft,
+      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightRead')).send({
+        key: itemKey,
+        atomClass,
       });
       if (right) {
-        assert.equal(result.body.data.atomId, partyKeyDraft.atomId);
+        assert.equal(result.body.data.atomId, itemKey.atomId);
       } else {
         assert.equal(result.status, 403);
       }
@@ -104,7 +102,7 @@ describe.skip('test/controller/test/itemOnly/right.test.js', () => {
           },
         });
       // checkRightWrite
-      const result = await app.httpRequest().post(mockUrl('test/atom/checkRightWrite')).send({
+      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightWrite')).send({
         key: partyKeyDraft,
       });
       if (right) {
@@ -124,7 +122,7 @@ describe.skip('test/controller/test/itemOnly/right.test.js', () => {
           password: '123456',
         },
       });
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/writeSubmit')).send({
+    res = await app.httpRequest().post(mockUrl('/a/base/itemOnly/writeSubmit')).send({
       key: partyKeyDraft,
     });
     assert.equal(res.body.code, 0);

@@ -73,6 +73,13 @@ module.exports = (/* app */) => {
     },
     {
       method: 'post',
+      path: 'test/itemOnly/createRaw',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: {},
+    },
+    {
+      method: 'post',
       path: 'test/itemOnly/checkRightRead',
       controller: 'testItemOnlyRight',
       middlewares: 'test',
