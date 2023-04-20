@@ -5,7 +5,10 @@ export default {
       // confirm
       await ctx.$view.dialog.confirm();
       // atomClass
-      const atomClass = { id: item.atomClassId };
+      const atomClass = {
+        module: item.module,
+        atomClassName: item.atomClassName,
+      };
       // keys
       const selectedAtoms = ctx.bulk.selectedAtoms;
       const keys = selectedAtoms.map(item => {
@@ -16,7 +19,7 @@ export default {
       // change
       for (const key of res.keys) {
         // action
-        ctx.$meta.eventHub.$emit('atom:action', { key, action: { name: 'save' } });
+        ctx.$meta.eventHub.$emit('atom:action', { key, atomClass, action: { name: 'save' } });
       }
       // clear selection
       ctx.bulk_clearSelectedAtoms();
