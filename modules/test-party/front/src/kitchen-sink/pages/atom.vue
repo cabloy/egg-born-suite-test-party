@@ -86,7 +86,10 @@ export default {
           params: {
             selectMode: 'multiple',
             selectedAtomIds: this.atoms ? this.atoms.map(item => item.atomId) : null,
-            atomClass: null,
+            atomClass: {
+              module: 'test-party',
+              atomClassName: 'party',
+            },
           },
           callback: (code, selectedAtoms) => {
             if (code === 200) {
