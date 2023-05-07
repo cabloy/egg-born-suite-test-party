@@ -36,8 +36,8 @@ module.exports = app => {
             category: true,
             tag: true,
             cms: true,
-            dict: {
-              fields: {
+            fields: {
+              dicts: {
                 partyTypeCode: {
                   dictKey: 'test-party:dictPartyType',
                   // separator: '/',
