@@ -115,14 +115,9 @@ module.exports = function (ctx) {
     // auths
     async _testAuths(userIds) {
       for (const userName in userIds) {
-        await ctx.meta.util.executeBean({
-          beanModule: 'a-authsimple',
-          beanFullName: 'a-authsimple.service.auth',
-          context: {
-            userId: userIds[userName],
-            password: '',
-          },
-          fn: 'add',
+        await ctx.bean.authSimple.add({
+          userId: userIds[userName],
+          password: '',
         });
       }
     }
