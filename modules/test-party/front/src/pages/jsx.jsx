@@ -6,6 +6,29 @@ export default {
       counterComponent: null,
     };
   },
+  computed: {
+    atomClassBaseParty() {
+      const useStoreAtomClasses = this.$store.useSync('a/basestore/atomClasses');
+      if (!useStoreAtomClasses) {
+        return null;
+      }
+      const atomClassBase = useStoreAtomClasses.getAtomClassBaseSync({
+        atomClass: { module: 'test-party', atomClassName: 'party' },
+      });
+      return atomClassBase;
+    },
+    atomActionBasePartyOver() {
+      const useStoreAtomActions = this.$store.useSync('a/basestore/atomActions');
+      if (!useStoreAtomActions) {
+        return null;
+      }
+      const actionBase = useStoreAtomActions.getActionBaseSync({
+        atomClass: { module: 'test-party', atomClassName: 'party' },
+        name: 'partyOver',
+      });
+      return actionBase;
+    },
+  },
   created() {
     const options = { propsData: { name: 'dog' } };
     this.counterComponent = this.$meta.util.createComponentInstance(JsxComponent, options);
@@ -25,6 +48,8 @@ export default {
     },
   },
   render() {
+    console.log('atomClass: ', this.atomClassBaseParty?.title);
+    console.log('atomAction: ', this.atomActionBasePartyOver?.title);
     return (
       <eb-page>
         <eb-navbar large largeTransparent title="JSX" eb-back-link="Back">
