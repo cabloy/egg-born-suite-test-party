@@ -55,12 +55,8 @@ function installFactory(_Vue) {
       },
       async _initIOHelper() {
         // io helper
-        const action = {
-          actionModule: 'a-socketio',
-          actionComponent: 'io',
-          name: 'helper',
-        };
-        this.ioHelper = await this.$meta.util.performAction({ ctx: this, action });
+        const useStoreSocketIO = await this.$store.use('a/socketio/socketio');
+        this.ioHelper = useStoreSocketIO.getHelper();
       },
       _startSubscribe() {
         // socket io
