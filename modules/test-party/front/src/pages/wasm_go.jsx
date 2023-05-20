@@ -6,33 +6,20 @@ export default {
   },
   methods: {
     async onPerformRun1() {
-      // go
-      let action = {
-        actionModule: 'a-wasmgo',
-        actionComponent: 'sdk',
-        name: 'go',
-      };
-      const go = await this.$meta.util.performAction({ ctx: this, action });
+      // sdk
+      const useStoreSDK = await this.$store.use('a/wasmgo/sdk');
+      // go instance
+      const goInstance = useStoreSDK.getInstance();
       // load wasm
-      action = {
-        actionModule: 'a-wasmgo',
-        actionComponent: 'sdk',
-        name: 'loadWasm',
-      };
-      const item = { source: wasmDemo };
-      const wasmResult = await this.$meta.util.performAction({ ctx: this, action, item });
+      const wasmResult = await useStoreSDK.loadWasm({ source: wasmDemo });
       // run
-      await go.run(wasmResult.instance);
+      await goInstance.run(wasmResult.instance);
     },
     async onPerformRun2() {
+      // sdk
+      const useStoreSDK = await this.$store.use('a/wasmgo/sdk');
       // load&run wasm
-      const action = {
-        actionModule: 'a-wasmgo',
-        actionComponent: 'sdk',
-        name: 'run',
-      };
-      const item = { source: wasmDemo };
-      await this.$meta.util.performAction({ ctx: this, action, item });
+      await useStoreSDK.run({ source: wasmDemo });
     },
   },
   render() {
