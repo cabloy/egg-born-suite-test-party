@@ -25,6 +25,8 @@ module.exports = app => {
       const options = this.ctx.request.body.options;
       const message = this.ctx.request.body.message;
       message.userIdFrom = this.ctx.state.user.op.id;
+      message.userIdsTo = await this._collectUserIds();
+      // message.userIdTo = -1;
       const res = await this.ctx.bean.io.publish({
         path: _subscribePathSimpleChat,
         message,
@@ -36,6 +38,16 @@ module.exports = app => {
       });
       // done
       this.ctx.success(res);
+    }
+
+    async _collectUserIds() {
+      const ioRedis = this.ctx.bean.local.module('a-socketio').redis;
+      const userIds = await ioRedis._getPathUsersOnline({ path: _subscribePathSimpleChat });
+      const userAdmin = await this.ctx.bean.user.get({ userName: 'admin' });
+      if (userAdmin && !userIds.includes(userAdmin.id)) {
+        userIds.push(userAdmin.id);
+      }
+      return userIds;
     }
   }
 

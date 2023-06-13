@@ -181,7 +181,8 @@ function installFactory(_Vue) {
           messageType: 1, // text
           messageFilter: 0,
           messageGroup: 0,
-          userIdTo: -2, // to all users
+          // userIdTo: -1, // to online users
+          // userIdTo: -2, // to all users
           userIdFrom: this.user.id,
           content: {
             text: value,
