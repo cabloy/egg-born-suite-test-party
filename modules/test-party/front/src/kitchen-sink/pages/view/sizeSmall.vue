@@ -19,7 +19,7 @@
     </f7-block>
     <f7-block-title>Layout</f7-block-title>
     <f7-block>
-      <eb-link eb-href="kitchen-sink/view/sizeSmall">Open on the right</eb-link>
+      <eb-link :eb-href="`kitchen-sink/view/sizeSmall?t=${Date.now()}`">Open on the right</eb-link>
     </f7-block>
   </eb-page>
 </template>
