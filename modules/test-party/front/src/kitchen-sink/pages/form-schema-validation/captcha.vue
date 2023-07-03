@@ -31,8 +31,12 @@
               ></eb-component>
             </div>
           </eb-list-input>
-          <f7-list-item divider>
-            <eb-button ref="buttonSubmit" :onPerform="onPerformSignUp">{{ $text('Sign Up') }}</eb-button>
+          <f7-list-item>
+            <div slot="after">
+              <eb-button ref="buttonSubmit" :outline="true" :onPerform="onPerformSignUp">{{
+                $text('Sign Up')
+              }}</eb-button>
+            </div>
           </f7-list-item>
         </eb-list>
       </eb-validate>
@@ -66,7 +70,7 @@ export default {
   },
   computed: {
     form2() {
-      return JSON5.stringify(this.item, null, 2);
+      return window.JSON5.stringify(this.item, null, 2);
     },
   },
   created() {},
