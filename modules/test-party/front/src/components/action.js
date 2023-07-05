@@ -14,9 +14,11 @@ export default {
   ],
   methods: {
     async onAction() {
-      if (this.action.name === 'partyOver') {
+      const action = this.action;
+      const actionName = action.actionName || action.name;
+      if (actionName === 'partyOver') {
         return await this._onActionPartyOver();
-      } else if (this.action.name === 'partyOverBulk') {
+      } else if (actionName === 'partyOverBulk') {
         return await this._onActionPartyOverBulk();
       }
     },

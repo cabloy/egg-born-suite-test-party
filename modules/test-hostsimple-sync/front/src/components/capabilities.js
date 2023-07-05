@@ -10,7 +10,9 @@ export default {
   ],
   methods: {
     onAction() {
-      if (this.action.name === 'shareLink') return this._shareLink();
+      const action = this.action;
+      const actionName = action.actionName || action.name;
+      if (actionName === 'shareLink') return this._shareLink();
     },
     _shareLink() {
       const item = this.item;
