@@ -109,29 +109,11 @@ module.exports = app => {
     },
     validation: {
       validators: {
-        party: {
-          schemas: 'party',
-        },
-        partySearch: {
-          schemas: 'partySearch',
-        },
         userTest: {
           schemas: 'settingsUser,settingsUserExtra',
         },
         instanceTest: {
           schemas: 'settingsInstance',
-        },
-        formTest: {
-          schemas: 'formTest',
-        },
-        formCaptchaTest: {
-          schemas: 'formCaptchaTest',
-        },
-        formMobileVerifyTest: {
-          schemas: 'formMobileVerifyTest',
-        },
-        blockArticleCommentCount: {
-          schemas: 'blockArticleCommentCount',
         },
       },
       keywords: {
