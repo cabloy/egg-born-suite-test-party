@@ -52,7 +52,8 @@ module.exports = app => {
         let list = await this.ctx.bean.user.select({ options: {}, user: { id: userId } });
         assert.equal(list.length >= dataTest.selectTop.countMin, true, userName);
         if (dataTest.selectTop.userNameContain) {
-          assert.equal(list.map(item => item.userName).includes(dataTest.selectTop.userNameContain), true, userName);
+          const userNames = list.map(item => item.userName);
+          assert.equal(userNames.includes(dataTest.selectTop.userNameContain), true, userName);
         }
 
         const roleId = roleIds.family;
@@ -64,7 +65,8 @@ module.exports = app => {
         });
         assert.equal(list.length >= dataTest.selectRole.countMin, true, userName);
         if (dataTest.selectRole.userNameContain) {
-          assert.equal(list.map(item => item.userName).includes(dataTest.selectRole.userNameContain), true, userName);
+          const userNames = list.map(item => item.userName);
+          assert.equal(userNames.includes(dataTest.selectRole.userNameContain), true, userName);
         }
       }
 
