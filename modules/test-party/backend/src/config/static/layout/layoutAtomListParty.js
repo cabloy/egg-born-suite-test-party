@@ -30,10 +30,9 @@ module.exports = app => {
                 dataIndex: 'partyTypeCode',
                 title: 'Party Type',
                 align: 'left',
-                params: {
-                  computed: {
-                    expression: 'record._partyTypeCodeTitleLocale',
-                  },
+                component: {
+                  module: 'a-baserender',
+                  name: 'renderTableCellDict',
                 },
               },
               {
@@ -94,7 +93,7 @@ module.exports = app => {
   const layout = {
     atomName: 'Party',
     atomStaticKey: 'layoutAtomListParty',
-    atomRevision: 3,
+    atomRevision: 4,
     description: '',
     layoutTypeCode: 3,
     content: JSON.stringify(content),
