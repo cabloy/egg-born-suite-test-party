@@ -111,7 +111,9 @@ module.exports = app => {
           dictKey: 'test-party:dictPartyType',
           code: item.partyTypeCode,
         });
-        meta.summary = `${dictItem.options.emoji}${dictItem.titleLocaleFull}`;
+        if (layout !== 'table') {
+          meta.summary = `${dictItem.options.emoji}${dictItem.titleLocaleFull}`;
+        }
       }
     }
   }
