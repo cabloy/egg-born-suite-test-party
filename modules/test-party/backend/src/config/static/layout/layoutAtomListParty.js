@@ -21,10 +21,7 @@ module.exports = app => {
                 dataIndex: 'atomName',
                 title: 'Atom Name',
                 align: 'left',
-                component: {
-                  module: 'a-baserender',
-                  name: 'renderTableCellAtomName',
-                },
+                renderType: 'atomName',
               },
               {
                 dataIndex: 'partyTypeCode',
@@ -93,7 +90,7 @@ module.exports = app => {
   const layout = {
     atomName: 'Party',
     atomStaticKey: 'layoutAtomListParty',
-    atomRevision: 4,
+    atomRevision: 5,
     description: '',
     layoutTypeCode: 3,
     content: JSON.stringify(content),
