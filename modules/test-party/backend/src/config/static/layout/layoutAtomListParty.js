@@ -27,10 +27,7 @@ module.exports = app => {
                 dataIndex: 'partyTypeCode',
                 title: 'Party Type',
                 align: 'left',
-                component: {
-                  module: 'a-baserender',
-                  name: 'renderTableCellDict',
-                },
+                renderType: 'dict',
               },
               {
                 dataIndex: 'partyTime',
@@ -56,10 +53,7 @@ module.exports = app => {
                 dataIndex: 'userIdCreated',
                 title: 'Creator',
                 align: 'left',
-                component: {
-                  module: 'a-baserender',
-                  name: 'renderTableCellUserName',
-                },
+                renderType: 'userName',
               },
               {
                 dataIndex: 'atomCreatedAt',
