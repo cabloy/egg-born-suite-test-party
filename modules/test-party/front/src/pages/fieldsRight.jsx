@@ -23,6 +23,7 @@ export default {
           callback: (code, data) => {
             if (code === 200) {
               this.fieldsRight = data;
+              console.log(data);
             }
           },
         },
@@ -36,7 +37,6 @@ export default {
         <f7-block strong>
           <f7-button onClick={this.onFieldsRightSetting}>Set Schema</f7-button>
         </f7-block>
-        <pre> {this.fieldsRight} </pre>
       </eb-page>
     );
   },
