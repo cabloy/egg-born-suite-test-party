@@ -23,7 +23,7 @@ export default {
           callback: (code, data) => {
             if (code === 200) {
               this.fieldsRight = data;
-              console.log(data);
+              console.log(JSON.stringify(data, null, 2));
             }
           },
         },
