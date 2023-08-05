@@ -16,7 +16,7 @@ const __testData = {
   },
   basic: {
     read: true,
-    write: true,
+    write: false,
   },
 };
 export default {
