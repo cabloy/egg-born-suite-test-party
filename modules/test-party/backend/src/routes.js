@@ -261,6 +261,15 @@ module.exports = (/* app */) => {
       meta: { auth: { enable: false } },
     },
 
+    // test/feat/fields
+    {
+      method: 'post',
+      path: 'test/feat/fields/parseSchema',
+      controller: 'testFeatFields',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
     // test/feat/httpLog
     {
       method: 'post',

@@ -22,6 +22,7 @@ const testMultilevelAuthorizationRole = require('./controller/test/multilevelAut
 const testMultilevelAuthorizationUser = require('./controller/test/multilevelAuthorization/user.js');
 const testEventHello = require('./controller/test/event/hello.js');
 const testFeatBean = require('./controller/test/feat/bean.js');
+const testFeatFields = require('./controller/test/feat/fields.js');
 const testFeatHttpLog = require('./controller/test/feat/httpLog.js');
 const testFeatSendMail = require('./controller/test/feat/sendMail.js');
 const testFeatSocketIO = require('./controller/test/feat/socketio.js');
@@ -73,6 +74,7 @@ module.exports = app => {
     testMultilevelAuthorizationUser,
     testEventHello,
     testFeatBean,
+    testFeatFields,
     testFeatHttpLog,
     testFeatSendMail,
     testFeatSocketIO,
