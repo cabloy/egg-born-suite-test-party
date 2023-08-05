@@ -1,14 +1,36 @@
+const __testData = {
+  mode: 'allowSpecificFields',
+  fields: [
+    {
+      name: 'atomName',
+      read: true,
+      write: false,
+    },
+    'description',
+  ],
+  details: {
+    'test-flow:purchaseOrderDetail': {
+      mode: 'custom',
+      custom: ['atomName'],
+    },
+  },
+  basic: {
+    read: true,
+    write: true,
+  },
+};
 export default {
   data() {
     return {
-      fieldsRight: null,
+      // fieldsRight: null,
+      fieldsRight: __testData,
     };
   },
   methods: {
-    async onFieldsRightSetting() {
+    async onFieldsRightSetting(mode) {
       // queries
       const queries = {
-        mode: 'edit',
+        mode,
         module: 'test-flow',
         atomClassName: 'purchaseOrder',
       };
@@ -35,7 +57,8 @@ export default {
       <eb-page>
         <eb-navbar large largeTransparent title="Fields Right" eb-back-link="Back"></eb-navbar>
         <f7-block strong>
-          <f7-button onClick={this.onFieldsRightSetting}>Set Schema</f7-button>
+          <f7-button onClick={() => this.onFieldsRightSetting('edit')}>Edit Schema</f7-button>
+          <f7-button onClick={() => this.onFieldsRightSetting('view')}>View Schema</f7-button>
         </f7-block>
       </eb-page>
     );
