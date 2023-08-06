@@ -26,6 +26,33 @@ const __testData_allowSpecificFields_3 = {
     { name: 'details', read: true, write: false },
   ],
 };
+const __testData_custom_array = {
+  mode: 'custom',
+  custom: [
+    // 'atomName',
+    {
+      name: 'detailsAmount',
+      property: {
+        type: 'number',
+        ebType: 'detailsStat',
+        ebTitle: 'Amount',
+        ebParams: {
+          detailClass: {
+            module: 'test-flow',
+            atomClassName: 'purchaseOrderDetail',
+          },
+          summary: {
+            type: 'sum',
+            field: 'amount',
+          },
+          currency: true,
+        },
+        ebAutoSubmit: true,
+      },
+    },
+    'details',
+  ],
+};
 
 module.exports = app => {
   // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
@@ -49,6 +76,8 @@ module.exports = app => {
       await this._parseSchema_mode_allowSpecificFields_2({ atomClass });
       // mode: allowSpecificFields_3
       await this._parseSchema_mode_allowSpecificFields_3({ atomClass });
+      // mode: custom_array
+      await this._parseSchema_mode_custom_array({ atomClass });
       // ok
       this.ctx.success();
     }
@@ -106,6 +135,16 @@ module.exports = app => {
       assert.equal(schemaBase.schema.properties.atomName, undefined);
       assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
       assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    }
+    // mode: custom_array
+    async _parseSchema_mode_custom_array({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_custom_array,
+      });
+      assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
     }
   }
   return FieldsController;
