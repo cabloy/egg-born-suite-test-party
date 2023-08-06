@@ -4,6 +4,9 @@ const assert = require3('assert');
 const __testData_allowAllFieldsRead = {
   mode: 'allowAllFieldsRead',
 };
+const __testData_allowAllFieldsReadWrite = {
+  mode: 'allowAllFieldsReadWrite',
+};
 
 module.exports = app => {
   // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
@@ -18,13 +21,33 @@ module.exports = app => {
       // atomClass
       const atomClass = { module: 'test-flow', atomClassName: 'purchaseOrder' };
       // mode: allowAllFieldsRead
-      const schema = await this.ctx.bean.fields.parseSchema({
+      await this._parseSchema_mode_allowAllFieldsRead({ atomClass });
+      // mode: allowAllFieldsReadWrite
+      await this._parseSchema_mode_allowAllFieldsReadWrite({ atomClass });
+      // ok
+      this.ctx.success();
+    }
+
+    // mode: allowAllFieldsRead
+    async _parseSchema_mode_allowAllFieldsRead({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
         atomClass,
         fieldsRight: __testData_allowAllFieldsRead,
       });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, true);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    }
 
-      // ok
-      this.ctx.success();
+    // mode: allowAllFieldsReadWrite
+    async _parseSchema_mode_allowAllFieldsReadWrite({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowAllFieldsReadWrite,
+      });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
     }
   }
   return FieldsController;
