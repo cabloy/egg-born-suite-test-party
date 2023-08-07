@@ -53,6 +53,13 @@ const __testData_custom_array = {
     'details',
   ],
 };
+const __testData_custom_object = {
+  mode: 'custom',
+  custom: {
+    module: 'test-flow',
+    validator: 'purchaseOrder',
+  },
+};
 
 module.exports = app => {
   // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
@@ -78,6 +85,8 @@ module.exports = app => {
       await this._parseSchema_mode_allowSpecificFields_3({ atomClass });
       // mode: custom_array
       await this._parseSchema_mode_custom_array({ atomClass });
+      // mode: custom_object
+      await this._parseSchema_mode_custom_object({ atomClass });
       // ok
       this.ctx.success();
     }
@@ -143,6 +152,16 @@ module.exports = app => {
         fieldsRight: __testData_custom_array,
       });
       assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    }
+    // mode: custom_array
+    async _parseSchema_mode_custom_object({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_custom_object,
+      });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
       assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
       assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
     }
