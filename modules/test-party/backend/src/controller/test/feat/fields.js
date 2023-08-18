@@ -111,6 +111,7 @@ module.exports = app => {
       assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
       assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
       assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+      assert.equal(schemaBase.isSchemaBase, true);
     }
 
     // mode: allowSpecificFields_1
