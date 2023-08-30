@@ -1,3 +1,5 @@
+import CreateModal from '../components/createModal.jsx';
+
 export default {
   data() {
     return {};
@@ -12,7 +14,15 @@ export default {
       const sheet = await this.$view.createModal({ module: 'test-party', name: 'createModal', options });
       sheet.open();
     },
-    async onCreateModalByComponent() {},
+    async onCreateModalByComponent() {
+      const options = {
+        props: {
+          remarkInit: 'hello world',
+        },
+      };
+      const sheet = await this.$view.createModal({ component: CreateModal, options });
+      sheet.open();
+    },
   },
   render() {
     return (
