@@ -20,6 +20,7 @@ export default [
   { path: 'jsx', component: loadjsx('jsx') },
   { path: 'wasm_go', component: loadjsx('wasm_go') },
   { path: 'fieldsRight', component: loadjsx('fieldsRight') },
+  { path: 'createModal', component: loadjsx('createModal') },
   // cabloy
   { path: 'kitchen-sink/index', component: loadKitchenSink('index') },
   { path: 'kitchen-sink/guide', component: loadKitchenSink('guide') },

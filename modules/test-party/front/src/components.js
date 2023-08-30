@@ -1,5 +1,6 @@
 import action from './components/action.js';
 import renderPartyCity from './components/renderPartyCity.jsx';
+import createModal from './components/createModal.jsx';
 import helloGlobal from './kitchen-sink/components/helloGlobal.vue';
 import monkeyeeComponent from './kitchen-sink/components/monkeyeeComponent.vue';
 import widgetSales from './kitchen-sink/components/widgets/sales.vue';
@@ -16,6 +17,7 @@ import appMineLayoutBlockListMineBody from './components/appMineLayoutList/appMi
 export default {
   action,
   renderPartyCity,
+  createModal,
   helloGlobal,
   monkeyeeComponent,
   widgetSales,
