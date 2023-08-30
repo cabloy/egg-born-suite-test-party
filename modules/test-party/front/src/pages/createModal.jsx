@@ -4,9 +4,13 @@ export default {
   },
   methods: {
     async onCreateModalByName() {
-      const sheet = await this.$view.createModal({ module: 'test-party', name: 'createModal' });
+      const options = {
+        props: {
+          remarkInit: 'hello world',
+        },
+      };
+      const sheet = await this.$view.createModal({ module: 'test-party', name: 'createModal', options });
       sheet.open();
-      console.log(sheet);
     },
     async onCreateModalByComponent() {},
   },
