@@ -1,5 +1,6 @@
 const fileVersionUpdates = [1, 2];
 const fileVersionInits = [1];
+
 module.exports = app => {
   class Version extends app.meta.BeanBase {
     async update(options) {
