@@ -3,7 +3,7 @@ const testData = require('./testData.js');
 module.exports = function (ctx) {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class VersionTest {
-    async run() {
+    async run(options) {
       // role rights
       await this._testRoleRights();
       // role resource rights

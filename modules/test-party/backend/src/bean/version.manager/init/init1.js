@@ -1,9 +1,38 @@
-const testData = require('./testData.js');
+const testData = require('../test/testData.js');
 
 module.exports = function (ctx) {
   const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
   class VersionInit {
-    async run() {
+    async run(options) {
+      await this._init_rights();
+      await this._init_testData();
+    }
+
+    async _init_rights() {
+      // // types
+      // for (const name of ['Birthday', 'Dance', 'Garden']) {
+      //   await ctx.model.partyType.insert({ name });
+      // }
+      // add role rights
+      const roleRights = [
+        // basic
+        { roleName: 'system', action: 'create' },
+        { roleName: 'system', action: 'read', scopeNames: 'authenticated' },
+        { roleName: 'system', action: 'write', scopeNames: 0 },
+        { roleName: 'system', action: 'delete', scopeNames: 0 },
+        { roleName: 'system', action: 'clone', scopeNames: 0 },
+        { roleName: 'system', action: 'deleteBulk' },
+        { roleName: 'system', action: 'exportBulk' },
+        // special for cms
+        { roleName: 'anonymous', action: 'read', scopeNames: 'authenticated' },
+        // custom
+        { roleName: 'system', action: 'partyOver', scopeNames: 0 },
+        { roleName: 'system', action: 'partyOverBulk' },
+      ];
+      await ctx.bean.role.addRoleRightBatch({ atomClassName: 'party', roleRights });
+    }
+
+    async _init_testData() {
       // roles
       const roleIds = await this._testRoles();
 
