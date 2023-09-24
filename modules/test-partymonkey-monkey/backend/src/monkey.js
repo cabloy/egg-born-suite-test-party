@@ -14,7 +14,7 @@ module.exports = app => {
   }
 
   const monkey = {
-    moduleLoading({ module }) {
+    moduleLoading({ /* moduleSelf,*/ module }) {
       if (module.info.relativeName !== 'test-party') return;
       // route
       monkeyRoute(module, 'test/monkey/monkeyee/test', {
@@ -22,12 +22,15 @@ module.exports = app => {
         name: 'monkeyer',
       });
     },
-    configLoaded({ module, config }) {
+    moduleLoaded(/* { moduleSelf, module }*/) {
+      // do nothing
+    },
+    configLoaded({ /* moduleSelf,*/ module, config }) {
       if (module.info.relativeName !== 'test-party') return;
       // config
       monkeyConfig(module, config);
     },
-    moduleLoaded(/* { module }*/) {
+    metaLoaded(/* { moduleSelf, module, meta }*/) {
       // do nothing
     },
   };
