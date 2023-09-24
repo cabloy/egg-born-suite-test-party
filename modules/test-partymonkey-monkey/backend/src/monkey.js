@@ -27,6 +27,9 @@ module.exports = app => {
       // config
       monkeyConfig(module, config);
     },
+    moduleLoaded(/* { module }*/) {
+      // do nothing
+    },
   };
   return monkey;
 };
