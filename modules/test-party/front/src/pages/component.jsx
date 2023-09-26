@@ -7,11 +7,14 @@ export default {
     };
   },
   created() {
-    this.$store.dispatch('a/icon/getIcon', { icon: '::add' }).then(res => {
-      console.log(res);
-    });
+    this.getIconTest();
   },
   methods: {
+    async getIconTest() {
+      const useStoreIcon = await this.$store.use('a/icon/icon');
+      const res = await useStoreIcon.getIcon({ icon: '::add' });
+      console.log(res);
+    },
     onPerformCreate() {
       this.module = 'test-party';
       this.name = 'loadComponentAsync';
