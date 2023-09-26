@@ -1,2 +1,7601 @@
-/*! For license information please see backend.js.LICENSE.txt */
-(()=>{var t={5792:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>class{async create(t,e){return i(n().mark((function r(){return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return r.next=2,e();case 2:a.equal(!!t.result,!0);case 3:case"end":return r.stop()}}),r)})))()}async _submitDirect(t,e){return i(n().mark((function r(){return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return r.next=2,e();case 2:a.equal(!!t.result,!0);case 3:case"end":return r.stop()}}),r)})))()}}},1778:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{get__name(t,e){e(),t.value="".concat(t.value,":regexpaop")}set__name(t,e){const r=t.value.split(":"),n=r.indexOf("regexpaop");n>-1&&r.splice(n,1),t.value=r.join(":"),e()}actionSync(t,e){e(),t.result="".concat(t.result,":regexpaop")}async actionAsync(t,n){return(o=e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,n();case 2:t.result="".concat(t.result,":regexpaop");case 3:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,i){var a=o.apply(t,e);function c(t){r(a,n,i,c,u,"next",t)}function u(t){r(a,n,i,c,u,"throw",t)}c(void 0)}))})();var o}}},7480:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}class n{actionSync(t,e){e(),t.result="".concat(t.result,":simpleaop")}}t.exports=t=>class extends n{get__magic__(t,e){e(),"magic"===t.prop&&(t.value="magic:simpleaop")}get__name(t,e){e(),t.value="".concat(t.value,":simpleaop")}set__name(t,e){const r=t.value.split(":"),n=r.indexOf("simpleaop");n>-1&&r.splice(n,1),t.value=r.join(":"),e()}async actionAsync(t,n){return(o=e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,n();case 2:t.result="".concat(t.result,":simpleaop");case 3:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,i){var a=o.apply(t,e);function c(t){r(a,n,i,c,u,"next",t)}function u(t){r(a,n,i,c,u,"throw",t)}c(void 0)}))})();var o}}},3905:(t,e,r)=>{const n=r(1778),o=r(7480),i=r(5792);t.exports=t=>{const e={};return Object.assign(e,{simple:{match:"testctx",mode:"ctx",bean:o},regExp:{match:[/^test-party.test\.\w+$/,"testctx"],mode:"ctx",bean:n}}),t.meta.isTest&&Object.assign(e,{atom:{match:"atom",mode:"ctx",bean:i}}),e}},1237:t=>{function e(t,e){var n="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!n){if(Array.isArray(t)||(n=r(t))||e&&t&&"number"==typeof t.length){n&&(t=n);var o=0,i=function(){};return{s:i,n:function(){return o>=t.length?{done:!0}:{done:!1,value:t[o++]}},e:function(t){throw t},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,c=!0,u=!1;return{s:function(){n=n.call(t)},n:function(){var t=n.next();return c=t.done,t},e:function(t){u=!0,a=t},f:function(){try{c||null==n.return||n.return()}finally{if(u)throw a}}}}function r(t,e){if(t){if("string"==typeof t)return n(t,e);var r=Object.prototype.toString.call(t).slice(8,-1);return"Object"===r&&t.constructor&&(r=t.constructor.name),"Map"===r||"Set"===r?Array.from(t):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?n(t,e):void 0}}function n(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}function o(){"use strict";o=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,n=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,o){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(o||[]);return n(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function o(n,i,a,c){var u=h(t[n],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){o("next",t,a,c)}),(function(t){o("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return o("throw",t,a,c)}))}c(u.arg)}var i;n(this,"_invoke",{value:function(t,r){function n(){return new e((function(e,n){o(t,r,e,n)}))}return i=i?i.then(n,n):n()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,n(w,"constructor",{value:v,configurable:!0}),n(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function i(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function a(t){return function(){var e=this,r=arguments;return new Promise((function(n,o){var a=t.apply(e,r);function c(t){i(a,n,o,c,u,"next",t)}function u(t){i(a,n,o,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class n extends t.meta.AtomCmsBase{async create(t){var e=()=>super.create,r=this;return a(o().mark((function n(){var i,a,c,u,s,l;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atomClass,a=t.item,c=t.options,u=t.user,n.next=3,e().call(r,{atomClass:i,item:a,options:c,user:u});case 3:return s=n.sent,n.next=6,r.ctx.model.party.insert({atomId:s.atomId});case 6:return l=n.sent,n.abrupt("return",{atomId:s.atomId,itemId:l.insertId});case 8:case"end":return n.stop()}}),n)})))()}async read(t){var e=()=>super.read,r=this;return a(o().mark((function n(){var i,a,c,u,s;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atomClass,a=t.options,c=t.key,u=t.user,n.next=3,e().call(r,{atomClass:i,options:a,key:c,user:u});case 3:if(s=n.sent){n.next=6;break}return n.abrupt("return",null);case 6:return n.next=8,r._translate(s);case 8:return n.next=10,r._getMeta(s,a);case 10:return n.abrupt("return",s);case 11:case"end":return n.stop()}}),n)})))()}async select(t){var r=()=>super.select,n=this;return a(o().mark((function i(){var a,c,u,s,l,h,f;return o().wrap((function(o){for(;;)switch(o.prev=o.next){case 0:return a=t.atomClass,c=t.options,u=t.items,s=t.user,o.next=3,r().call(n,{atomClass:a,options:c,items:u,user:s});case 3:l=e(u),o.prev=4,l.s();case 6:if((h=l.n()).done){o.next=14;break}return f=h.value,o.next=10,n._translate(f);case 10:return o.next=12,n._getMeta(f,c);case 12:o.next=6;break;case 14:o.next=19;break;case 16:o.prev=16,o.t0=o.catch(4),l.e(o.t0);case 19:return o.prev=19,l.f(),o.finish(19);case 22:case"end":return o.stop()}}),i,null,[[4,16,19,22]])})))()}async write(t){var e=()=>super.write,r=this;return a(o().mark((function n(){var i,a,c,u,s,l,h;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atomClass,a=t.target,c=t.key,u=t.item,s=t.options,l=t.user,n.next=3,e().call(r,{atomClass:i,target:a,key:c,item:u,options:s,user:l});case 3:return n.next=5,r.ctx.model.party.prepareData(u);case 5:return h=n.sent,n.next=8,r.ctx.model.party.update(h);case 8:return n.next=10,r.ctx.bean.atom.setAreaScopeValue({atomId:c.atomId,atomClass:i,atomAreaValue:[u.partyCountry,u.partyCity]});case 10:case"end":return n.stop()}}),n)})))()}async delete(t){var e=()=>super.delete,r=this;return a(o().mark((function n(){var i,a,c,u;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atomClass,a=t.key,c=t.options,u=t.user,n.next=3,e().call(r,{atomClass:i,key:a,options:c,user:u});case 3:return n.next=5,r.ctx.model.party.delete({id:a.itemId});case 5:case"end":return n.stop()}}),n)})))()}async checkRightAction(t){var e=()=>super.checkRightAction,r=this;return a(o().mark((function n(){var i,a,c,u,s,l,h,f;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atom,a=t.atomClass,c=t.action,u=t.stage,s=t.user,l=t.checkFlow,n.next=3,e().call(r,{atom:i,atomClass:a,action:c,stage:u,user:s,checkFlow:l});case 3:if(h=n.sent){n.next=6;break}return n.abrupt("return",h);case 6:if(1===i.atomStage){n.next=8;break}return n.abrupt("return",h);case 8:if(101===c){n.next=10;break}return n.abrupt("return",h);case 10:return n.next=12,r.ctx.model.party.get({id:i.itemId});case 12:if(f=n.sent,101!==c||0!==f.partyOver){n.next=15;break}return n.abrupt("return",h);case 15:return n.abrupt("return",null);case 16:case"end":return n.stop()}}),n)})))()}async translateAreaScopeValue(t){var e=this;return a(o().mark((function n(){var i,a,c,u,s,l,h,f,p;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return i=t.atomAreaValue,d=2,a=function(t){if(Array.isArray(t))return t}(o=i)||function(t,e){var r=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=r){var n,o,i,a,c=[],u=!0,s=!1;try{if(i=(r=r.call(t)).next,0===e){if(Object(r)!==r)return;u=!1}else for(;!(u=(n=i.call(r)).done)&&(c.push(n.value),c.length!==e);u=!0);}catch(t){s=!0,o=t}finally{try{if(!u&&null!=r.return&&(a=r.return(),Object(a)!==a))return}finally{if(s)throw o}}return c}}(o,d)||r(o,d)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}(),c=a[0],u=a[1],n.next=4,e._translateDictPartyCountry({partyCountry:c});case 4:return s=n.sent,l=s?s.titleFull:"",h=s?s.titleLocaleFull:"",n.next=9,e._translateDictPartyCity({partyCountry:c,partyCity:u});case 9:return s=n.sent,f=s?s.titleFull:"",p=s?s.titleLocaleFull:"",n.abrupt("return",{title:[l,f],titleLocale:[h,p]});case 13:case"end":return n.stop()}var o,d}),n)})))()}async _translateDictPartyCountry(t){var e=this;return a(o().mark((function r(){var n;return o().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:if("1"===(n=t.partyCountry)||"86"===n){r.next=3;break}return r.abrupt("return",null);case 3:return r.next=5,e.ctx.bean.dict.findItem({dictKey:"a-dictbooster:countries",code:n});case 5:return r.abrupt("return",r.sent);case 6:case"end":return r.stop()}}),r)})))()}async _translateDictPartyCity(t){var e=this;return a(o().mark((function r(){var n,i,a;return o().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:if(n=t.partyCountry,i=t.partyCity,"1"===n||"86"===n){r.next=3;break}return r.abrupt("return",null);case 3:if(i){r.next=5;break}return r.abrupt("return",null);case 5:return a="1"===n?"a-dictbooster:citiesUSA":"a-dictbooster:citiesChina",r.next=8,e.ctx.bean.dict.findItem({dictKey:a,code:i,options:{separator:"/"}});case 8:return r.abrupt("return",r.sent);case 9:case"end":return r.stop()}}),r)})))()}async _translate(t){var e=this;return a(o().mark((function r(){var n;return o().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return r.next=2,e._translateDictPartyCity({partyCountry:t.partyCountry,partyCity:t.partyCity});case 2:(n=r.sent)&&(t._partyCityTitle=n.titleFull,t._partyCityTitleLocale=n.titleLocaleFull);case 4:case"end":return r.stop()}}),r)})))()}async _getMeta(t,e){var r=this;return a(o().mark((function n(){var i,a,c;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:if(i=e&&e.layout,a=r._ensureItemMeta(t),t.partyOver&&a.flags.push(r.ctx.text("PartyOverFlag")),"table"!==i&&t.personCount&&a.flags.push(t.personCount+"P"),!t.partyTypeCode){n.next=9;break}return n.next=7,r.ctx.bean.dict.findItem({dictKey:"test-party:dictPartyType",code:t.partyTypeCode});case 7:c=n.sent,a.summary="".concat(c.options.emoji).concat(c.titleLocaleFull);case 9:case"end":return n.stop()}}),n)})))()}}return n}},930:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.meta.BeanBase{async execute(t){var e,r=this;return(e=n().mark((function e(){var o;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.sameAsCaller,o=t.data,i.equal(r.ctx.locale,"zh-cn"),i.equal(o.message,"hello");case 5:case"end":return e.stop()}}),e)})),function(){var t=this,r=arguments;return new Promise((function(n,i){var a=e.apply(t,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},5492:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends(t.app.meta.CliBase(t)){async meta(t){var r=()=>super.meta,o=this;return n(e().mark((function n(){var i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=t.user,e.next=3,r().call(o,{user:i});case 3:return a=e.sent,e.abrupt("return",a);case 5:case"end":return e.stop()}}),n)})))()}async execute(t){var r=()=>super.execute,o=this;return n(e().mark((function n(){var i,a,c;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=t.user,e.next=3,r().call(o,{user:i});case 3:return a=o.helper.chalk.keyword("orange")("chalk test"),e.next=6,o.console.log({text:a});case 6:return a=o.helper.boxen({text:"boxen test"}),e.next=9,o.console.log({text:a});case 9:return(c=o.helper.newTable({head:["Name","Sex"],colWidths:[20,20]})).push(["Tom","M"]),c.push(["Jane","F"]),e.next=14,o.console.log({text:"table test"});case 14:return e.next=16,o.console.log({text:c.toString()});case 16:return e.next=18,o._levelOne({progressNo:0});case 18:case"end":return e.stop()}}),n)})))()}async _levelOne(r){var o=this;return n(e().mark((function n(){var i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:i=r.progressNo,a=2,c=0,u=0;case 4:if(!(u<a)){e.next=15;break}return s="".concat(t.text("Level One"),": ").concat(u+1),e.next=8,o.console.log({progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,t.bean.util.sleep(200);case 10:return e.next=12,o._levelTwo({progressNo:i+1});case 12:u++,e.next=4;break;case 15:case"end":return e.stop()}}),n)})))()}async _levelTwo(r){var o=this;return n(e().mark((function n(){var i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:i=r.progressNo,a=2,c=0,u=0;case 4:if(!(u<a)){e.next=15;break}return s="".concat(t.text("Level Two"),": ").concat(u+1),e.next=8,o.console.log({progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,t.bean.util.sleep(200);case 10:return e.next=12,o._levelThree({progressNo:i+1});case 12:u++,e.next=4;break;case 15:case"end":return e.stop()}}),n)})))()}async _levelThree(r){var o=this;return n(e().mark((function n(){var i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:i=r.progressNo,a=3,c=0,u=0;case 4:if(!(u<a)){e.next=13;break}return s="".concat(t.text("Level Three"),": ").concat(u+1),e.next=8,o.console.log({progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,t.bean.util.sleep(200);case 10:u++,e.next=4;break;case 13:case"end":return e.stop()}}),n)})))()}}return r}},7198:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(t,n){return(o=e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return t.data.text="hello echo",t.result="".concat(t.result,".echo"),e.next=5,n();case 5:t.result="echo.".concat(t.result);case 6:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,i){var a=o.apply(t,e);function c(t){r(a,n,i,c,u,"next",t)}function u(t){r(a,n,i,c,u,"throw",t)}c(void 0)}))})();var o}}},3112:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(n,o){return(i=e().mark((function r(){var i,a,c;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=n.data,a=i.info,(c=a.user&&a.user.provider)&&"a-authgithub"===c.module&&"authgithub"===c.providerName&&(a.config=t.bean.util.extend(a.config,{modules:{}})),e.next=6,o();case 6:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}},7171:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(n,o){return(i=e().mark((function r(){var i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=n.data,(a=i.info).config=t.bean.util.extend(a.config,{modules:{}}),e.next=5,o();case 5:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}},489:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>class{async execute(t,e){return(r=n().mark((function r(){var o;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o=t.data,i(o.profileUser.profileId>0),r.next=4,e();case 4:case"end":return r.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,i){var a=r.apply(t,e);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})();var r}}},3179:t=>{t.exports=t=>{class e extends(t.app.meta.IOMessageBase(t)){}return e}},4076:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends(t.app.meta.IOMessageBase(t)){async onSaveSync(n){var o,i=()=>super.onSaveSync,a=this;return(o=e().mark((function r(){var o,c,u,s,l,h,f,p;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(o=n.path,c=n.options,u=n.message,s=n.messageSync,l=n.messageClass,h=c&&c.scene||"",1!==s.messageDirection||0!==u.userIdTo){e.next=7;break}return f=JSON.parse(u.content),p={messageType:u.messageType,messageFilter:u.messageFilter,messageGroup:u.messageGroup,messageScene:h,userIdFrom:0,userIdTo:s.userId,content:{text:"Reply: ".concat(f.text)}},e.next=7,t.bean.io.publish({path:o,message:p,messageClass:l,options:c});case 7:return e.next=9,i().call(a,{path:o,options:c,message:u,messageSync:s,messageClass:l});case 9:return e.abrupt("return",e.sent);case 10:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,i){var a=o.apply(t,e);function c(t){r(a,n,i,c,u,"next",t)}function u(t){r(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},4921:t=>{t.exports=t=>class{get name(){return"localTest"}}},8240:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(n,o){return(i=e().mark((function r(){var n,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(n=t.request.body,i=n.a,a=n.b,void 0!==i&&void 0!==a){e.next=3;break}return e.abrupt("return",t.throw(1002));case 3:return e.next=5,o();case 5:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}},9588:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(n,o){return(i=e().mark((function r(){var n,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.request.body,i=n.a,a=n.b,t.request.body.a=parseInt(i),t.request.body.b=parseInt(a),e.next=5,o();case 5:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}},8491:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.meta.BeanBase{async execute(t){return(n=e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.data,e.abrupt("return",n.a+n.b);case 2:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})();var n}}return n}},9843:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.meta.BeanBase{async execute(t){var n,o=this;return(n=e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.job,console.log("----- Schedule Test: iid=".concat(o.ctx.instance.id,", every=").concat(n.data.jobOptions.repeat.every,", ").concat(new Date));case 2:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},7985:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async execute(t){return(n=e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.value,e.abrupt("return",++n);case 2:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})();var n}}},9619:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.meta.BeanBase{async execute(){var t,e=this;return(t=n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:console.log("test/feat/startup: all"),i.equal(e.ctx.instance,void 0);case 2:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},1683:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.meta.BeanBase{async execute(){var t,e=this;return(t=n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:console.log("test/feat/startup: instance:".concat(e.ctx.instance.id)),i(e.ctx.instance.id>0);case 2:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},772:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{const n=t.app.meta.mockUtil.parseInfoFromPackage(__dirname);return class{async execute(o){return(i=e().mark((function r(){var i,a,c;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=o.keys,a=i.join("."),e.next=4,t.bean.stats._get({module:n.relativeName,fullName:a});case 4:if(void 0!==(c=e.sent)){e.next=7;break}return e.abrupt("return",1);case 7:return e.abrupt("return",c+1);case 8:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}}},1444:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{const n=t.app.meta.mockUtil.parseInfoFromPackage(__dirname);return class{async execute(o){return(i=e().mark((function r(){var i,a,c,u;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return i=o.keys,a=o.user,c=i.join("."),e.next=4,t.bean.stats._get({module:n.relativeName,fullName:c,user:a});case 4:if(void 0!==(u=e.sent)){e.next=7;break}return e.abrupt("return",1);case 7:return e.abrupt("return",u+1);case 8:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(n,o){var a=i.apply(t,e);function c(t){r(a,n,o,c,u,"next",t)}function u(t){r(a,n,o,c,u,"throw",t)}c(void 0)}))})();var i}}}},2216:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.meta.BeanBase{actionSync(t){return t.a+t.b}async actionAsync(t){return(n=e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.a,o=t.b,e.abrupt("return",Promise.resolve(n+o));case 2:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})();var n}}return n}},6131:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}class n{constructor(t){this.ctx=t}actionSync(t){return t.a+t.b}}t.exports=class extends n{async actionAsync(t){return(n=e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.a,o=t.b,e.abrupt("return",Promise.resolve(n+o));case 2:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})();var n}}},3596:(t,e,r)=>{const n=r(5942),o=r(786);t.exports=t=>t.app.meta.util.mixinClasses(n,o,t)},5942:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>class{constructor(e){this._name=e||t.module.info.relativeName}get name(){return this._name}set name(t){this._name=t}actionSync(t){return t.a+t.b}async actionAsync(t){return n(e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.a,o=t.b,e.abrupt("return",Promise.resolve(n+o));case 2:case"end":return e.stop()}}),r)})))()}async actionAsync2(t){var r=this;return n(e().mark((function n(){var o,i,a,c;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return o=t.a,i=t.b,a=r.name,e.next=4,r.actionAsync({a:o,b:i});case 4:return c=e.sent,e.abrupt("return","".concat(a,":").concat(c));case 6:case"end":return e.stop()}}),n)})))()}}},786:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>class{async actionAsync3(t){var n,o=this;return(n=e().mark((function r(){var n,i;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.a,i=t.b,e.next=3,o.actionAsync2({a:n,b:i});case 3:return e.abrupt("return",e.sent);case 4:case"end":return e.stop()}}),r)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}},6986:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(627),c=r(79);t.exports=t=>{class e extends t.meta.BeanBase{async update(t){var e=this;return i(n().mark((function r(){var o;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:if(1!==t.version){r.next=10;break}return o="\n          CREATE TABLE testParty (\n            id int(11) NOT NULL AUTO_INCREMENT,\n            createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n            updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n            deleted int(11) DEFAULT '0',\n            iid int(11) DEFAULT '0',\n            atomId int(11) DEFAULT '0',\n            personCount int(11) DEFAULT '0',\n            partyTypeId int(11) DEFAULT '0',\n            partyOver int(11) DEFAULT '0',\n            PRIMARY KEY (id)\n          )\n        ",r.next=4,e.ctx.model.query(o);case 4:return o="\n          CREATE TABLE testPartyType (\n            id int(11) NOT NULL AUTO_INCREMENT,\n            createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n            updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n            deleted int(11) DEFAULT '0',\n            iid int(11) DEFAULT '0',\n            name varchar(255) DEFAULT NULL,\n            PRIMARY KEY (id)\n          )\n        ",r.next=7,e.ctx.model.query(o);case 7:return o="\n          CREATE VIEW testPartyView as\n            select a.*,b.name as partyTypeName from testParty a\n              left join testPartyType b on a.partyTypeId=b.id\n        ",r.next=10,e.ctx.model.query(o);case 10:if(2!==t.version){r.next=18;break}return r.next=13,e.ctx.model.query("drop view testPartyView");case 13:return r.next=15,e.ctx.model.query("drop table testPartyType");case 15:return o="\n          ALTER TABLE testParty\n            CHANGE COLUMN partyTypeId partyTypeCode INT(11) DEFAULT '0',\n            ADD COLUMN partyTime timestamp DEFAULT NULL,\n            ADD COLUMN partyCountry varchar(50) DEFAULT '',\n            ADD COLUMN partyCity varchar(50) DEFAULT ''\n        ",r.next=18,e.ctx.model.query(o);case 18:case"end":return r.stop()}}),r)})))()}async init(t){var e=this;return i(n().mark((function r(){var o,i;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:if(1!==t.version){r.next=7;break}return o=[{roleName:"system",action:"create"},{roleName:"system",action:"read",scopeNames:"authenticated"},{roleName:"system",action:"write",scopeNames:0},{roleName:"system",action:"delete",scopeNames:0},{roleName:"system",action:"clone",scopeNames:0},{roleName:"system",action:"deleteBulk"},{roleName:"system",action:"exportBulk"},{roleName:"anonymous",action:"read",scopeNames:"authenticated"},{roleName:"system",action:"partyOver",scopeNames:0},{roleName:"system",action:"partyOverBulk"}],r.next=4,e.ctx.bean.role.addRoleRightBatch({atomClassName:"party",roleRights:o});case 4:return i=new(a(e.ctx)),r.next=7,i.run();case 7:case"end":return r.stop()}}),r)})))()}async test(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return r=new(c(t.ctx)),e.next=3,r.run();case 3:case"end":return e.stop()}}),e)})))()}}return e}},627:(t,e,r)=>{function n(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var r=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=r){var n,o,i,a,c=[],u=!0,s=!1;try{if(i=(r=r.call(t)).next,0===e){if(Object(r)!==r)return;u=!1}else for(;!(u=(n=i.call(r)).done)&&(c.push(n.value),c.length!==e);u=!0);}catch(t){s=!0,o=t}finally{try{if(!u&&null!=r.return&&(a=r.return(),Object(a)!==a))return}finally{if(s)throw o}}return c}}(t,e)||i(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function o(t,e){var r="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!r){if(Array.isArray(t)||(r=i(t))||e&&t&&"number"==typeof t.length){r&&(t=r);var n=0,o=function(){};return{s:o,n:function(){return n>=t.length?{done:!0}:{done:!1,value:t[n++]}},e:function(t){throw t},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,c=!0,u=!1;return{s:function(){r=r.call(t)},n:function(){var t=r.next();return c=t.done,t},e:function(t){u=!0,a=t},f:function(){try{c||null==r.return||r.return()}finally{if(u)throw a}}}}function i(t,e){if(t){if("string"==typeof t)return a(t,e);var r=Object.prototype.toString.call(t).slice(8,-1);return"Object"===r&&t.constructor&&(r=t.constructor.name),"Map"===r||"Set"===r?Array.from(t):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?a(t,e):void 0}}function a(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}function c(){"use strict";c=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,n=Object.defineProperty||function(t,e,r){t[e]=r.value},o="function"==typeof Symbol?Symbol:{},i=o.iterator||"@@iterator",a=o.asyncIterator||"@@asyncIterator",u=o.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,o){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(o||[]);return n(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,i,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,i)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function o(n,i,a,c){var u=h(t[n],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){o("next",t,a,c)}),(function(t){o("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return o("throw",t,a,c)}))}c(u.arg)}var i;n(this,"_invoke",{value:function(t,r){function n(){return new e((function(e,n){o(t,r,e,n)}))}return i=i?i.then(n,n):n()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[i];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,n(w,"constructor",{value:v,configurable:!0}),n(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,a,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,i,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function u(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function s(t){return function(){var e=this,r=arguments;return new Promise((function(n,o){var i=t.apply(e,r);function a(t){u(i,n,o,a,c,"next",t)}function c(t){u(i,n,o,a,c,"throw",t)}a(void 0)}))}}const l=r(8121);t.exports=function(t){const e=t.app.meta.mockUtil.parseInfoFromPackage(__dirname);return class{async run(){var e=this;return s(c().mark((function r(){var n,o;return c().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return r.next=2,e._testRoles();case 2:return n=r.sent,r.next=5,e._testRoleIncs(n);case 5:return r.next=7,t.bean.role.setDirty(!0);case 7:return r.next=9,e._testUsers(n);case 9:return o=r.sent,r.next=12,e._testRoleRights(n);case 12:e._testCache(n,o);case 13:case"end":return r.stop()}}),r)})))()}_testCache(e,r){t.cache.mem.set("roleIds",e),t.cache.mem.set("userIds",r)}async _testRoles(){return s(c().mark((function r(){var i,a,u,s,h,f,p,d,v,y,m;return c().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:i={},a=o(t.constant.module("a-base").systemRoles),r.prev=2,a.s();case 4:if((u=a.n()).done){r.next=12;break}return s=u.value,r.next=8,t.bean.role.getSystemRole({roleName:s});case 8:h=r.sent,i[s]=h.id;case 10:r.next=4;break;case 12:r.next=17;break;case 14:r.prev=14,r.t0=r.catch(2),a.e(r.t0);case 17:return r.prev=17,a.f(),r.finish(17);case 20:f=o(l.roles),r.prev=21,f.s();case 23:if((p=f.n()).done){r.next=30;break}return d=n(p.value,4),s=d[0],v=d[1],y=d[2],m=d[3],r.next=27,t.bean.role.add({module:e.relativeName,roleName:s,leader:v,catalog:y,roleIdParent:i[m]});case 27:i[s]=r.sent;case 28:r.next=23;break;case 30:r.next=35;break;case 32:r.prev=32,r.t1=r.catch(21),f.e(r.t1);case 35:return r.prev=35,f.f(),r.finish(35);case 38:return r.abrupt("return",i);case 39:case"end":return r.stop()}}),r,null,[[2,14,17,20],[21,32,35,38]])})))()}async _testRoleIncs(e){return s(c().mark((function r(){var i,a,u,s,h;return c().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:i=o(l.roleIncs),r.prev=1,i.s();case 3:if((a=i.n()).done){r.next=9;break}return u=n(a.value,2),s=u[0],h=u[1],r.next=7,t.bean.role.addRoleInc({roleId:e[s],roleIdInc:e[h]});case 7:r.next=3;break;case 9:r.next=14;break;case 11:r.prev=11,r.t0=r.catch(1),i.e(r.t0);case 14:return r.prev=14,i.f(),r.finish(14);case 17:case"end":return r.stop()}}),r,null,[[1,11,14,17]])})))()}async _testUsers(e){var r=this;return s(c().mark((function i(){var a,u,s,h,f,p,d;return c().wrap((function(i){for(;;)switch(i.prev=i.next){case 0:a={},u=o(l.users),i.prev=2,u.s();case 4:if((s=u.n()).done){i.next=16;break}if(h=n(s.value,2),f=h[0],p=h[1],a[f]){i.next=12;break}return i.next=9,t.bean.user.add({userName:f,realName:f});case 9:return a[f]=i.sent,i.next=12,t.bean.user.save({user:{id:a[f],activated:1}});case 12:return i.next=14,t.bean.role.addUserRole({userId:a[f],roleId:e[p]});case 14:i.next=4;break;case 16:i.next=21;break;case 18:i.prev=18,i.t0=i.catch(2),u.e(i.t0);case 21:return i.prev=21,u.f(),i.finish(21);case 24:return i.next=26,r._testAuths(a);case 26:return i.next=28,t.bean.user.get({userName:"root"});case 28:return d=i.sent,a.root=d.id,i.abrupt("return",a);case 31:case"end":return i.stop()}}),i,null,[[2,18,21,24]])})))()}async _testRoleRights(){return s(c().mark((function e(){return c().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.bean.role.addRoleRightBatch({atomClassName:"party",roleRights:l.roleRights});case 2:return e.next=4,t.bean.role.addRoleRightBatch({module:"a-base",atomClassName:"role",roleRights:l.roleRightsRole});case 4:return e.next=6,t.bean.role.addRoleRightBatch({module:"a-base",atomClassName:"user",roleRights:l.roleRightsUser});case 6:case"end":return e.stop()}}),e)})))()}async _testAuths(e){return s(c().mark((function r(){var n;return c().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:r.t0=c().keys(e);case 1:if((r.t1=r.t0()).done){r.next=7;break}return n=r.t1.value,r.next=5,t.meta.util.executeBean({beanModule:"a-authsimple",beanFullName:"a-authsimple.service.auth",context:{userId:e[n],password:""},fn:"add"});case 5:r.next=1;break;case 7:case"end":return r.stop()}}),r)})))()}}}},79:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(8121);t.exports=function(t){return class{async run(){var t=this;return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t._testRoleRights();case 2:return e.next=4,t._testRoleResources();case 4:case"end":return e.stop()}}),e)})))()}async _testRoleRights(){return i(n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:case"end":return t.stop()}}),t)})))()}async _testRoleResources(){return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.bean.resource.addRoleResourceBatch({roleResources:a.roleResources});case 2:case"end":return e.stop()}}),e)})))()}}}},8121:t=>{t.exports={roles:[["friend",0,0,"external"],["consultant",0,1,"external"],["study",0,0,"consultant"],["work",0,0,"consultant"],["life",0,0,"consultant"],["family",0,1,"internal"],["father",0,0,"family"],["mother",1,0,"family"],["son",0,0,"family"],["daughter",0,0,"family"]],roleIncs:[["friend","family"]],users:[["Tom","father"],["Jane","mother"],["Tomson","son"],["Jannie","daughter"],["Jimmy","friend"],["Rose","friend"],["Smith","life"],["Jone","work"]],roleRights:[{roleName:"family",action:"create"},{roleName:"family",action:"read",scopeNames:"family"},{roleName:"authenticated",action:"read",scopeNames:0},{roleName:"authenticated",action:"write",scopeNames:0},{roleName:"authenticated",action:"delete",scopeNames:0},{roleName:"consultant",action:"read",scopeNames:"family"},{roleName:"RoleScopeCliDevelopment",action:"create"},{roleName:"RoleScopeCliDevelopment",action:"read"},{roleName:"RoleScopeCliDevelopment",action:"write"},{roleName:"RoleScopeCliDevelopment",action:"delete"},{roleName:"RoleScopeCliDevelopment",action:"partyOverBulk"}],roleRightsRole:[{roleName:"father",action:"read",scopeNames:"organization"},{roleName:"father",action:"write",scopeNames:"organization"},{roleName:"father",action:"delete",scopeNames:"organization"},{roleName:"father",action:"clone",scopeNames:"organization"},{roleName:"father",action:"move",scopeNames:"organization"},{roleName:"father",action:"addChild",scopeNames:"organization"},{roleName:"father",action:"roleUsers",scopeNames:"organization"},{roleName:"father",action:"includes",scopeNames:"organization"},{roleName:"father",action:"resourceAuthorizations",scopeNames:"organization"},{roleName:"father",action:"atomAuthorizations",scopeNames:"organization"}],roleRightsUser:[{roleName:"father",action:"read",scopeNames:"organization"},{roleName:"father",action:"write",scopeNames:"organization"},{roleName:"father",action:"enable",scopeNames:"organization"},{roleName:"father",action:"disable",scopeNames:"organization"},{roleName:"father",action:"userRoles",scopeNames:"organization"},{roleName:"father",action:"resourceAuthorizations",scopeNames:"organization"},{roleName:"father",action:"atomAuthorizations",scopeNames:"organization"}],roleResources:[{roleName:"father",atomStaticKey:"a-baseadmin:roleManagement"}]}},1700:(t,e,r)=>{const n=r(6986),o=r(5492),i=r(2216),a=r(6131),c=r(3596),u=r(4921),s=r(7198),l=r(489),h=r(3112),f=r(7171),p=r(930),d=r(8491),v=r(9843),y=r(9619),m=r(1683),g=r(8240),w=r(9588),x=r(1237),b=r(4076),L=r(3179),E=r(7985),_=r(1444),O=r(772);t.exports=t=>{const e={"version.manager":{mode:"app",bean:n}};return Object.assign(e,{"cli.default.demo":{mode:"ctx",bean:o},"test.app":{mode:"app",bean:i},"test.class":{mode:"app",bean:a},testctx:{mode:"ctx",bean:c,global:!0},"local.test":{mode:"ctx",bean:u},"event.helloEcho":{mode:"ctx",bean:s},"event.userVerify":{mode:"ctx",bean:l},"event.loginInfo":{mode:"ctx",bean:h},"event.loginInfoDashboard":{mode:"ctx",bean:f},"broadcast.test":{mode:"app",bean:p},"queue.test":{mode:"app",bean:d},"schedule.test":{mode:"app",bean:v},"startup.startupAll":{mode:"app",bean:y},"startup.startupInstance":{mode:"app",bean:m},"middleware.testInterception":{mode:"ctx",bean:g},"middleware.testRestructuring":{mode:"ctx",bean:w},"atom.party":{mode:"app",bean:x},"io.message.test":{mode:"ctx",bean:b},"io.message.simpleChat":{mode:"ctx",bean:L},"sequence.test":{mode:"ctx",bean:E},"stats.tasksUser":{mode:"ctx",bean:_},"stats.tasksInstance":{mode:"ctx",bean:O}}),e}},9077:t=>{t.exports=t=>({bean:"default.demo",resource:{atomStaticKey:"cliDefaultDemo"},info:{version:"4.0.0",title:"Cli Demo",welcomes:"This is a test"},options:{username:{description:"Your username",alias:"u",type:"string"},role:{description:"Your role",alias:"r",type:"string"},course:{description:"Your course",alias:"c",type:"string"},grade:{description:"Your grade",alias:"g",type:"string"}},groups:{default:{description:"Your basic info",condition:{expression:null},questions:{username:{type:"input",message:"Your username"},role:{type:"select",message:"Your role",choices:["teacher","student"]}}},teacher:{description:"The teacher info",condition:{expression:'context.argv.role==="teacher"'},questions:{course:{type:"input",message:"Your course"}}},student:{description:"The student info",condition:{expression:'context.argv.role==="student"'},questions:{grade:{type:"input",message:"Your grade"}}}}})},841:(t,e,r)=>{const n=r(9077);t.exports=t=>({default:{demo:n(t)}})},3751:t=>{t.exports=t=>{const e={};return"unittest"===t.env&&(e.startups={startupAll:{bean:"startupAll"},startupInstance:{bean:"startupInstance",instance:!0}},e.queues={queueTest:{bean:"test"}},e.broadcasts={broadcastTest:{bean:"test"}},e.monkeyed=!1),e.message="Hello World",e.middlewares={testInterception:{bean:"testInterception",global:!1,dependencies:"instance"},testRestructuring:{bean:"testRestructuring",global:!1,dependencies:"instance"}},e.schedules={test:{bean:"test",repeat:{every:3e3},disable:!0}},e.settings={instance:{groupInfo:{slogan:""}},user:{groupInfo:{username:"zhennann"},groupExtra:{panelExtra:{groupInfo:{mobile:"123",sex:1,language:"en-us"}}}}},e.captcha={scenes:{formMobileVerifyTest:{module:"a-authsms",name:"captcha"},formCaptchaTest:null}},e.cms={},e.cms.sites={},e.cms.sites.party={base:{title:"Party",subTitle:"Test",description:"",keywords:""},host:{url:"http://example.com",rootPath:""},language:!1,themes:{default:"test-party"},edit:{mode:0},env:{format:{date:"YYYY-MM-DD",time:"HH:mm:ss"},article2:{recentNum:5},comment:{order:"asc",recentNum:5},brother:{order:"desc"},loadMore:{loadOnScroll:!1}}},e}},25:t=>{t.exports={1001:"Error Test",1002:"Incomplete Parameters"}},811:t=>{t.exports={default:"birthday,dance,garden"}},5288:t=>{t.exports={PartyOver:"Party Over",PartyOverFlag:"Over",OpenIsolateApp:"Open Isolate App",OpenIsolateAppParty:"Open Isolate App (Party)",DianCaiWechat:"Wechat Ordering",UIComponents:"UI Components"}},470:t=>{t.exports={Party:"宴会",Review:"审核",Reviewing:"审核中",Reviewed:"已审核",Item:"条目",Products:"产品",Snapshots:"快照",About:"关于",Demonstration:"演示",PartyOver:"宴会结束",PartyOverFlag:"结束",OpenIsolateApp:"打开独立应用",OpenIsolateAppParty:"打开独立应用（宴会）",DianCaiWechat:"微信点菜",UIComponents:"UI组件",Guide:"指南",Components:"组件","Home(Test)":"首页（测试）","Dashboard(Test)":"仪表板（测试）","Party Test":"宴会测试","Party Name":"宴会名称","Person Count":"人数","Party Type":"宴会类型","Create Party":"新建宴会","Party List":"宴会列表","Level One":"层级1","Level Two":"层级2","Level Three":"层级3","Well Done":"干得好","Error Test":"错误测试","Hello World":"世界，您好","Fruit Sales":"水果销量","Fruit Sales(Line Chart)":"水果销量（折线图）","Fruit Sales(Pie Chart)":"水果销量（饼图）","Article Comment Count":"文章评论数","Cli Demo":"Cli演示","Your username":"您的名称","Your role":"您的角色","Your course":"您的课程","Your grade":"您的年级","Your basic info":"您的基本信息","The teacher info":"教师信息","The student info":"学生信息","This is a test":"这是一个测试","Simple Chat":"简单聊天",friend:"朋友",consultant:"咨询",study:"学习",work:"工作",life:"生活",family:"家庭",father:"父亲",mother:"母亲",son:"儿子",daughter:"女儿"}},1636:(t,e,r)=>{t.exports={"en-us":r(5288),"zh-cn":r(470)}},8507:t=>{t.exports=t=>({info:{bean:"simpleChat",title:"Simple Chat",persistence:!0,push:{channels:!1}}})},5662:t=>{t.exports=t=>({info:{bean:"test",title:"Test",persistence:!0,push:{channels:!1}}})},8360:t=>{t.exports=t=>{const e={},r={presets:{anonymous:{mobile:e,pc:e},authenticated:{mobile:e,pc:e}}};return{atomName:"UIComponents",atomStaticKey:"appComponents",atomRevision:0,atomCategoryId:"Demonstration",description:"",appIcon:":business:kitchen-set",appIsolate:!1,content:JSON.stringify(r),resourceRoles:"root",appSorting:0}}},2421:t=>{t.exports=t=>{const e={home:{mode:"dashboard",dashboard:"test-party:dashboardTest",page:null},mine:{layout:!0}},r={presets:{anonymous:{mobile:e,pc:e},authenticated:{mobile:e,pc:e}}};return{atomName:"Party",atomStaticKey:"appParty",atomRevision:2,atomCategoryId:"Demonstration",description:"",appIcon:":business:party",appIsolate:!1,content:JSON.stringify(r),resourceRoles:"authenticated",appSorting:0}}},6623:(t,e,r)=>{const n=r(2421),o=r(8360);t.exports=t=>[n(t),o(t)]},1823:t=>{const e={root:{id:"e341b99ef3bc495db8a8c09e6ad6203e",widgets:[{id:"a0031e5e2aef421f8434856512dec714",name:"widgetSales",module:"test-party",properties:{title:{type:1,value:""},height:{type:1,value:"auto"},widthLarge:{type:1,value:25},widthSmall:{type:1,value:100},widthMedium:{type:1,value:50}}},{id:"7aefb0431ef24996ba35b596b53372e7",group:!0,widgets:[{id:"fe96b7ede7f5480a9590e92184272455",name:"widgetSalesLine",module:"test-party",properties:{fruit:{bind:{widgetId:"a0031e5e2aef421f8434856512dec714",propertyName:"fruit"},type:2},title:{type:1,value:""},height:{type:1,value:"auto"},dataSource:{bind:{widgetId:"a0031e5e2aef421f8434856512dec714",propertyName:"dataSource"},type:2},widthLarge:{type:1,value:100},widthSmall:{type:1,value:100},widthMedium:{type:1,value:100}}},{id:"9ee4b1234b4a477890ce094e8eb5e332",name:"widgetSalesPie",module:"test-party",properties:{title:{type:1,value:""},height:{type:1,value:"auto"},season:{bind:{widgetId:"a0031e5e2aef421f8434856512dec714",propertyName:"season"},type:2},dataSource:{bind:{widgetId:"a0031e5e2aef421f8434856512dec714",propertyName:"dataSource"},type:2},widthLarge:{type:1,value:100},widthSmall:{type:1,value:100},widthMedium:{type:1,value:100}}}],properties:{title:{type:1,value:""},height:{type:1,value:"auto"},widthLarge:{type:1,value:25},widthSmall:{type:1,value:100},widthMedium:{type:1,value:50}}},{id:"64f7c356b78f45799e4b3072af73866e",name:"widgetSnapshot",module:"test-party",properties:{title:{type:1,value:""},height:{type:1,value:"auto"},snapshots:{type:2,binds:[{id:"fb3eac5b678e488cb4da60a2bddb0f60",widgetId:"fe96b7ede7f5480a9590e92184272455",propertyName:"snapshot"},{id:"40b8e8ea3007418992f0489cba98129e",widgetId:"9ee4b1234b4a477890ce094e8eb5e332",propertyName:"snapshot"}]},widthLarge:{type:1,value:25},widthSmall:{type:1,value:100},widthMedium:{type:1,value:50}}},{id:"8a04bfa743fb42b2a65a104e018ab924",name:"widgetAbout",module:"a-dashboard",properties:{title:{type:1,value:""},height:{type:1,value:"auto"},widthLarge:{type:1,value:25},widthSmall:{type:1,value:100},widthMedium:{type:1,value:50}}}]}};t.exports=t=>({atomName:"Dashboard(Test)",atomStaticKey:"dashboardTest",atomRevision:1,description:"",content:JSON.stringify(e),resourceRoles:"root"})},8666:t=>{const e={root:{id:"e341b99ef3bc495db8a8c09e6ad6203f",widgets:[{atomStaticKey:"test-note:widgetNote",id:"878d9687921641de880b130fa0ff5fd0",properties:{demoKey:{type:1,value:"demo-1"},height:{type:1,value:"auto"},title:{type:1,value:""},widthLarge:{type:1,value:25},widthMedium:{type:1,value:50},widthSmall:{type:1,value:100}}},{atomStaticKey:"test-note:widgetNote",id:"688725d1c2a446fea402580a5af072da",properties:{demoKey:{type:1,value:"demo-2"},height:{type:1,value:"auto"},title:{type:1,value:""},widthLarge:{type:1,value:25},widthMedium:{type:1,value:50},widthSmall:{type:1,value:100}}},{atomStaticKey:"test-party:widgetSimpleChat",id:"650acfa718f645098bf0516628d678f0",properties:{height:{type:1,value:"auto"},title:{type:1,value:""},widthLarge:{type:1,value:25},widthMedium:{type:1,value:50},widthSmall:{type:1,value:100}}},{id:"8a04bfa743fb42b2a65a104e018ab924",module:"a-dashboard",name:"widgetAbout",properties:{height:{type:1,value:"auto"},title:{type:1,value:""},widthLarge:{type:1,value:25},widthMedium:{type:1,value:50},widthSmall:{type:1,value:100}}}]}};t.exports=t=>({atomName:"Home(Test)",atomStaticKey:"homeTest",atomRevision:11,description:"",content:JSON.stringify(e),resourceRoles:"root"})},6034:(t,e,r)=>{const n=r(1823),o=r(8666);t.exports=t=>[n(t),o(t)]},319:t=>{t.exports=t=>({atomName:"Party Type",atomStaticKey:"dictPartyType",atomRevision:1,description:"",dictItems:JSON.stringify([{code:1,name:"birthday",title:"Birthday",options:{emoji:"🎂",icon:{f7:"test-party::birthday"}}},{code:2,name:"dance",title:"Dance",options:{emoji:"💃",icon:{f7:"test-party::dance"}}},{code:3,name:"garden",title:"Garden",options:{emoji:"🏡",icon:{f7:"test-party::garden"}}}]),dictLocales:JSON.stringify({"zh-cn":{Birthday:"生日",Dance:"跳舞",Garden:"花园"}}),resourceRoles:"root"})},4816:(t,e,r)=>{const n=r(319);t.exports=t=>[n(t)]},6441:t=>{t.exports=t=>({atomName:"Party",atomStaticKey:"layoutAtomItemParty",atomRevision:0,description:"",layoutTypeCode:4,content:JSON.stringify({info:{layout:{viewSize:{view:{small:"default",medium:"default",large:"default"},edit:{small:"default",medium:"default",large:"default"}}}},layouts:{}}),resourceRoles:"root"})},6212:t=>{t.exports=t=>({atomName:"Party",atomStaticKey:"layoutAtomListParty",atomRevision:1,description:"",layoutTypeCode:3,content:JSON.stringify({info:{orders:[{name:"partyTypeCode",title:"Party Type"},{name:"personCount",title:"Person Count",by:"asc"}]},layouts:{list:{blocks:{}},table:{blocks:{items:{columns:[{dataIndex:"atomName",title:"Atom Name",align:"left",component:{module:"a-baselayout",name:"listLayoutTableCellAtomName"}},{dataIndex:"partyTypeCode",title:"Party Type",align:"left",params:{computed:{expression:"record._partyTypeCodeTitleLocale"}}},{dataIndex:"partyTime",title:"Party Time",align:"center",params:{dateFormat:{lines:!0}}},{dataIndex:"_partyCityTitleLocale",title:"Party City",align:"left"},{dataIndex:"personCount",title:"Person Count",align:"left"},{dataIndex:"userName",title:"Creator",align:"left",component:{module:"a-baselayout",name:"listLayoutTableCellUserName"}},{dataIndex:"atomCreatedAt",title:"Created Time",align:"center",params:{dateFormat:{lines:!0}}},{dataIndex:"atomUpdatedAt",title:"Modification Time",align:"center",params:{dateFormat:{lines:!0}}}]}}}}}),resourceRoles:"root"})},6962:(t,e,r)=>{const n=r(6212),o=r(6441);t.exports=t=>[n(t),o(t)]},5348:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);return[{atomName:"Article Comment Count",atomStaticKey:"blockArticleCommentCount",atomRevision:0,atomCategoryId:"a-markdown:block.Demonstration",resourceType:"a-markdown:block",resourceConfig:JSON.stringify({default:{interval:1e3},validator:{module:e.relativeName,validator:"blockArticleCommentCount"}}),resourceRoles:"root"}]}},9041:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);return[{atomName:"Kitchen-sink",atomStaticKey:"kitchenSink",atomRevision:-1,atomCategoryId:"a-base:menu.Tools",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionModule:e.relativeName,actionPath:"kitchen-sink/index"}),resourceIcon:":business:kitchen-set",appKey:"test-party:appParty",resourceRoles:"root,RoleScopeCliDevelopment",resourceSorting:1}]}},9024:t=>{t.exports=t=>[{atomName:"Cli Demo",atomStaticKey:"cliDefaultDemo",atomRevision:1,atomCategoryId:"a-base:function.Cli",resourceType:"a-base:function",resourceConfig:null,resourceRoles:"template.system,RoleScopeCliDevelopment"}]},2818:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);return[{atomName:"Create Party",atomStaticKey:"createParty",atomRevision:1,atomCategoryId:"a-base:menu.Party",resourceType:"a-base:menu",resourceConfig:JSON.stringify({module:e.relativeName,atomClassName:"party",atomAction:"create"}),resourceIcon:"::add",appKey:"test-party:appParty",resourceRoles:"template.system,family"},{atomName:"Party List",atomStaticKey:"listParty",atomRevision:3,atomCategoryId:"a-base:menu.Party",resourceType:"a-base:menu",resourceConfig:JSON.stringify({module:e.relativeName,atomClassName:"party",atomAction:"read"}),resourceIcon:":outline:data-list-outline",appKey:"test-party:appParty",resourceRoles:"template.system,authenticated"},{atomName:"Party",atomStaticKey:"openIsolateAppParty",atomRevision:9,atomCategoryId:"a-base:menu.OpenIsolateApp",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionModule:"a-app",actionComponent:"actionTools",name:"openApp",appKey:"test-party:appParty",appLanguage:null,appIsolate:!0,external:!0,target:"_blank"}),resourceIcon:"::open-in-new",appKey:"test-party:appParty",resourceRoles:"root",resourceSorting:2},{atomName:"About",atomStaticKey:"appComponentsAbout",atomRevision:0,atomCategoryId:"a-base:menu.General",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionPath:"/a/basefront/base/about"}),resourceIcon:"::information",appKey:"test-party:appComponents",resourceRoles:"root",resourceSorting:1},{atomName:"Guide",atomStaticKey:"appComponentsGuide",atomRevision:0,atomCategoryId:"a-base:menu.General",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionModule:e.relativeName,actionPath:"kitchen-sink/guide"}),resourceIcon:"::book",appKey:"test-party:appComponents",resourceRoles:"root",resourceSorting:2},{atomName:"CabloyJS",atomStaticKey:"appComponentsCabloyJS",atomRevision:1,atomCategoryId:"a-base:menu.Components",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionModule:e.relativeName,actionPath:"kitchen-sink/index?mode=2"}),resourceIcon:"::cabloy",appKey:"test-party:appComponents",resourceRoles:"root",resourceSorting:1},{atomName:"Framework7",atomStaticKey:"appComponentsFramework7",atomRevision:0,atomCategoryId:"a-base:menu.Components",resourceType:"a-base:menu",resourceConfig:JSON.stringify({actionModule:e.relativeName,actionPath:"kitchen-sink/framework7/index"}),resourceIcon:":social:framework7",appKey:"test-party:appComponents",resourceRoles:"root",resourceSorting:2}]}},8527:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);return[{atomName:"Kitchen-sink",atomStaticKey:"mineKitchenSink",atomRevision:1,atomCategoryId:"a-base:mine.Tools",resourceType:"a-base:mine",resourceConfig:JSON.stringify({actionModule:e.relativeName,actionPath:"kitchen-sink/index"}),resourceIcon:":business:kitchen-set",appKey:"test-party:appParty",resourceRoles:"root,RoleScopeCliDevelopment",resourceSorting:1}]}},4997:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);return[{atomName:"Fruit Sales",atomStaticKey:"widgetSales",atomRevision:0,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetSales"}),resourceRoles:"root"},{atomName:"Fruit Sales(Line Chart)",atomStaticKey:"widgetSalesLine",atomRevision:0,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetSalesLine"}),resourceRoles:"root"},{atomName:"Fruit Sales(Pie Chart)",atomStaticKey:"widgetSalesPie",atomRevision:0,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetSalesPie"}),resourceRoles:"root"},{atomName:"Snapshots",atomStaticKey:"widgetSnapshot",atomRevision:0,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetSnapshot"}),resourceRoles:"root"},{atomName:"About",atomStaticKey:"widgetAbout",atomRevision:0,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetAbout"}),resourceRoles:"root"},{atomName:"Simple Chat",atomStaticKey:"widgetSimpleChat",atomRevision:20,atomCategoryId:"a-dashboard:widget.Demonstration",resourceType:"a-dashboard:widget",resourceConfig:JSON.stringify({module:e.relativeName,component:"widgetSimpleChat"}),resourceRoles:"root"}]}},8472:(t,e,r)=>{const n=r(9024),o=r(2818),i=r(8527),a=r(4997),c=r(5348),u=r(9041);t.exports=t=>{let e=[];return e=e.concat(n(t)),e=e.concat(o(t)),e=e.concat(i(t)),e=e.concat(a(t)),e=e.concat(c(t)),e=e.concat(u(t)),e}},2028:t=>{t.exports=t=>{const e=[];for(var r=0,n=[{atomName:"friend",roleTypeCode:1},{atomName:"consultant",roleTypeCode:1},{atomName:"study",roleTypeCode:2},{atomName:"work",roleTypeCode:2},{atomName:"life",roleTypeCode:2},{atomName:"family",roleTypeCode:1},{atomName:"father",roleTypeCode:4},{atomName:"mother",roleTypeCode:4},{atomName:"son",roleTypeCode:4},{atomName:"daughter",roleTypeCode:4}];r<n.length;r++){const t=n[r];e.push({atomName:t.atomName,atomStaticKey:"role_".concat(t.atomName),atomRevision:1,description:"",roleTypeCode:t.roleTypeCode,resourceRoles:"template.system"})}return e}},6919:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{const n={};return n.languages={async:!0,type:"string",errors:!0,compile:function(){return function(){var n,o=(n=e().mark((function r(n){var o,i;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!((o=this).bean.base.locales().findIndex((t=>t.value===n))>-1)){e.next=5;break}return e.abrupt("return",!0);case 5:throw i=[{keyword:"x-languages",params:[],message:o.text("Not Expected Value")}],new t.meta.ajv.ValidationError(i);case 7:case"end":return e.stop()}}),r,this)})),function(){var t=this,e=arguments;return new Promise((function(o,i){var a=n.apply(t,e);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))});return function(t){return o.apply(this,arguments)}}()}},n}},2723:t=>{t.exports=t=>({blockArticleCommentCount:{type:"object",properties:{interval:{type:"number",ebType:"text",ebTitle:"IntervalMS",notEmpty:!0}}}})},975:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname),r={};return r.formTest={type:"object",properties:{__groupInfo:{ebType:"group-flatten",ebTitle:"Info Group"},userName:{type:"string",ebType:"text",ebTitle:"Username",ebDescription:"Your Name",ebHelp:"Please type your name",notEmpty:!0},password:{type:"string",ebType:"text",ebTitle:"Password",ebParams:{secure:!0},notEmpty:!0,minLength:6},passwordAgain:{type:"string",ebType:"text",ebTitle:"Password Again",ebParams:{secure:!0},notEmpty:!0,const:{$data:"1/password"}},sex:{type:"number",ebType:"select",ebTitle:"Sex",ebMultiple:!1,ebOptions:[{title:"Male",value:1},{title:"Female",value:2}],ebOptionsBlankAuto:!0,ebParams:{openIn:"sheet",closeOnSelect:!0},notEmpty:!0},rememberMe:{type:"boolean",ebType:"toggle",ebTitle:"Remember Me"},__groupExtra:{ebType:"group-flatten",ebTitle:"Extra Group"},birthday:{type:["object","null"],ebType:"datePicker",ebTitle:"Birthday",ebParams:{dateFormat:"YYYY-MM-DD",header:!1,toolbar:!0},notEmpty:!0,"x-date":!0},language:{type:"string",ebType:"select",ebTitle:"Language",ebOptionsUrl:"/a/base/base/locales",ebOptionsUrlParams:null,ebOptionsBlankAuto:!0,ebParams:{openIn:"sheet",closeOnSelect:!0},"x-languages":!0},avatar:{type:"string",ebType:"image",ebTitle:"Avatar",ebParams:{fixed:{width:96,height:96}},notEmpty:!0},motto:{type:"string",ebType:"component",ebRender:{module:e.relativeName,name:"renderMotto",options:{props:{height:"100px"}}},notEmpty:!0},selfIntroduction:{type:"string",ebType:"markdown",ebTitle:"SelfIntroduction"}}},r.formCaptchaTest={type:"object",properties:{userName:{type:"string",ebType:"text",ebTitle:"Username",notEmpty:!0},password:{type:"string",ebType:"text",ebTitle:"Password",ebParams:{secure:!0},notEmpty:!0,minLength:6}}},r.formMobileVerifyTest={type:"object",properties:{mobile:{type:"string",ebType:"text",ebParams:{inputType:"tel"},ebTitle:"Phone Number",notEmpty:!0}}},r}},1660:t=>{t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname),r={};return r.party={type:"object",properties:{__groupBasicInfo:{ebType:"group-flatten",ebTitle:"Basic Info"},atomName:{type:"string",ebType:"text",ebTitle:"Party Name",notEmpty:!0},personCount:{type:"integer",ebType:"text",ebTitle:"Person Count",minimum:1,notEmpty:!0},partyTypeCode:{type:"number",ebType:"dict",ebTitle:"Party Type",ebParams:{dictKey:"test-party:dictPartyType",mode:"tree"},notEmpty:!0},partyTime:{type:["object","null"],ebType:"datePicker",ebTitle:"Party Time",ebParams:{timePicker:!0,dateFormat:"YYYY-MM-DD HH:mm:00",header:!1,toolbar:!0},notEmpty:!0,"x-date":!0},partyCountry:{type:"string",ebType:"dict",ebTitle:"Party Country",ebParams:{dictKey:"a-dictbooster:countries",mode:"select"},ebOptionsBlankAuto:!0},partyCity:{type:"string",ebType:"component",ebTitle:"Party City",ebRender:{module:e.relativeName,name:"renderPartyCity"},ebParams:{separator:"/",leafOnly:!0}},__groupExtra:{ebType:"group-flatten",ebTitle:"Extra"},atomCategoryId:{type:"number",ebType:"category",ebTitle:"Category"},atomTags:{type:["string","null"],ebType:"tags",ebTitle:"Tags"},partyOver:{ebType:"toggle",ebTitle:"PartyOver",ebDisplay:{host:{stage:"formal"}},ebReadOnly:!0}}},r.partySearch={type:"object",properties:{partyTypeCode:{type:"number",ebType:"dict",ebTitle:"Party Type",ebParams:{dictKey:"test-party:dictPartyType",mode:"tree"},ebOptionsBlankAuto:!0},partyTime:{type:"string",ebType:"dateRange",ebTitle:"Party Time",ebParams:{dateFormat:"YYYY-MM-DD",header:!1,toolbar:!0},ebSearch:{combine:{actionModule:"a-basefront",actionComponent:"combineSearch",name:"dateRange"}}},partyCountry:{type:"string",ebType:"dict",ebTitle:"Party Country",ebParams:{dictKey:"a-dictbooster:countries",mode:"select"},ebOptionsBlankAuto:!0},partyCity:{type:"string",ebType:"component",ebTitle:"Party City",ebRender:{module:e.relativeName,name:"renderPartyCity"},ebParams:{separator:"/",leafOnly:!1},ebSearch:{operators:"likeRight"}}}},r}},2287:t=>{t.exports=t=>({settingsUser:{type:"object",properties:{_myInfo_:{ebType:"text",ebTitle:"My Info",ebComputed:{expression:'groupInfo.username + "(" + (groupExtra.panelExtra.groupInfo.mobile || "-") + ")"',dependencies:["groupInfo.username","groupExtra.panelExtra.groupInfo.mobile"],immediate:!0},ebReadOnly:!0},groupInfo:{type:"object",ebType:"group",ebTitle:"Info Group",properties:{username:{type:"string",ebType:"text",ebTitle:"My Name",notEmpty:!0}}},groupExtra:{type:"object",ebType:"group",ebTitle:"Extra Group",properties:{panelExtra:{type:"object",ebType:"panel",ebTitle:"Extra",$ref:"settingsUserExtra"}}}}},settingsUserExtra:{type:"object",properties:{groupInfo:{type:"object",ebType:"group",ebTitle:"Info Group",ebGroupWhole:!0,properties:{mobile:{type:"string",ebType:"text",ebTitle:"Mobile",notEmpty:!0},sex:{type:"number",ebType:"select",ebTitle:"Sex",ebMultiple:!1,ebOptions:[{title:"Male",value:1},{title:"Female",value:2}],ebParams:{openIn:"page",closeOnSelect:!0},notEmpty:!0},language:{type:"string",ebType:"select",ebTitle:"Language",ebOptionsUrl:"/a/base/base/locales",ebOptionsUrlParams:null,"x-languages":!0,notEmpty:!0}}}}},settingsInstance:{type:"object",properties:{groupInfo:{type:"object",ebType:"group",ebTitle:"Info Group",properties:{slogan:{type:"string",ebType:"text",ebTitle:"Slogan",notEmpty:!0}}}}}})},7189:(t,e,r)=>{const n=r(2723),o=r(975),i=r(1660),a=r(2287);t.exports=t=>{const e={};return Object.assign(e,n(t)),Object.assign(e,o(t)),Object.assign(e,i(t)),Object.assign(e,a(t)),e}},5555:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(3614);t.exports=t=>{class e extends t.Controller{async languages(){var t,e=this;return(t=n().mark((function t(){var r,o;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:r=e.ctx.params.query,o=r?i.filter((t=>0===t.name.toLowerCase().indexOf(r.toLowerCase()))):[],e.ctx.success(o);case 3:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},3311:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}const o={userName:"",password:"",passwordAgain:"",sex:0,birthday:null,language:"",avatar:"",rememberMe:!1,motto:""};t.exports=t=>{class r extends t.Controller{async load(){var t=this;return n(e().mark((function r(){var n,i;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t._getCacheName(),e.next=3,t.ctx.cache.db.get(n);case 3:i=e.sent,i=t.ctx.bean.util.extend({},o,i),t.ctx.success(i);case 6:case"end":return e.stop()}}),r)})))()}async saveSimple(){var t=this;return n(e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.ctx.request.body.data,o=t._getCacheName(),e.next=4,t.ctx.cache.db.set(o,n);case 4:t.ctx.success();case 5:case"end":return e.stop()}}),r)})))()}async saveValidation(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.saveSimple();case 2:case"end":return e.stop()}}),r)})))()}signup(){this.ctx.success()}mobileVerify(){this.ctx.success()}_getCacheName(){const t=this.ctx.state.user.op;return"__formTest:".concat(t.id)}}return r}},1719:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async echo(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success("Hello World");case 2:case"end":return e.stop()}}),r)})))()}async echo2(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.config.message,t.ctx.success(n);case 2:case"end":return e.stop()}}),r)})))()}async echo3(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.text("Hello World"),t.ctx.success(n);case 2:case"end":return e.stop()}}),r)})))()}async echo4(){var t=this;return n(e().mark((function r(){var n,o,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.request.body,o=n.message,i=n.markCount,a="".concat(o).concat(new Array(i+1).join("!")),t.ctx.success(a);case 3:case"end":return e.stop()}}),r)})))()}async echo6(){var t=this;return n(e().mark((function r(){var n,o,i;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.db.insert("testParty",{iid:t.ctx.instance.id,deleted:0,personCount:3});case 2:return n=e.sent,o=n.insertId,e.next=6,t.ctx.db.update("testParty",{id:o,personCount:5});case 6:return e.next=8,t.ctx.db.get("testParty",{id:o});case 8:return i=e.sent,e.next=11,t.ctx.db.delete("testParty",{id:o});case 11:t.ctx.success(i);case 12:case"end":return e.stop()}}),r)})))()}async echo7(){var t=this;return n(e().mark((function r(){var n,o,i;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.model.party.insert({personCount:3});case 2:return n=e.sent,o=n.insertId,e.next=6,t.ctx.model.party.update({id:o,personCount:6});case 6:return e.next=8,t.ctx.model.party.get({id:o});case 8:return i=e.sent,e.next=11,t.ctx.model.party.delete({id:o});case 11:t.ctx.success(i);case 12:case"end":return e.stop()}}),r)})))()}async echo8(){var t=this;return n(e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.model.party.insert({personCount:3});case 2:return n=e.sent,o=n.insertId,e.next=6,t.ctx.model.party.update({id:o,personCountA:6});case 6:t.ctx.success();case 7:case"end":return e.stop()}}),r)})))()}async echo9(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success("ok");case 1:case"end":return e.stop()}}),r)})))()}}return r}},9354:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async list(){var t,n=this;return(t=e().mark((function t(){var r,o,i,a;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:r=n.ctx.request.body.page,r=n.ctx.bean.util.page(r,!1),o=[],i=0;case 4:if(!(i<r.size)){t.next=12;break}if(!((a=r.index+i+1)>89)){t.next=8;break}return t.abrupt("break",12);case 8:o.push({id:a,title:"".concat(n.ctx.text("Item")," - ").concat(a)});case 9:i++,t.next=4;break;case 12:n.ctx.successMore(o,r.index,r.size);case 13:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},3624:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async over(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.service.party.over({key:t.ctx.request.body.key,user:t.ctx.state.user.op});case 2:n=e.sent,t.ctx.success(n);case 4:case"end":return e.stop()}}),r)})))()}async overBulk(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.service.party.overBulk({keys:t.ctx.request.body.keys,user:t.ctx.state.user.op});case 2:n=e.sent,t.ctx.success(n);case 4:case"end":return e.stop()}}),r)})))()}}return r}},9724:(t,e,r)=>{function n(t,e){var r="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!r){if(Array.isArray(t)||(r=a(t))||e&&t&&"number"==typeof t.length){r&&(t=r);var n=0,o=function(){};return{s:o,n:function(){return n>=t.length?{done:!0}:{done:!1,value:t[n++]}},e:function(t){throw t},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,c=!0,u=!1;return{s:function(){r=r.call(t)},n:function(){var t=r.next();return c=t.done,t},e:function(t){u=!0,i=t},f:function(){try{c||null==r.return||r.return()}finally{if(u)throw i}}}}function o(){"use strict";o=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,n=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,o){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(o||[]);return n(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function o(n,i,a,c){var u=h(t[n],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){o("next",t,a,c)}),(function(t){o("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return o("throw",t,a,c)}))}c(u.arg)}var i;n(this,"_invoke",{value:function(t,r){function n(){return new e((function(e,n){o(t,r,e,n)}))}return i=i?i.then(n,n):n()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,n(w,"constructor",{value:v,configurable:!0}),n(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function i(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var r=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=r){var n,o,i,a,c=[],u=!0,s=!1;try{if(i=(r=r.call(t)).next,0===e){if(Object(r)!==r)return;u=!1}else for(;!(u=(n=i.call(r)).done)&&(c.push(n.value),c.length!==e);u=!0);}catch(t){s=!0,o=t}finally{try{if(!u&&null!=r.return&&(a=r.return(),Object(a)!==a))return}finally{if(s)throw o}}return c}}(t,e)||a(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function a(t,e){if(t){if("string"==typeof t)return c(t,e);var r=Object.prototype.toString.call(t).slice(8,-1);return"Object"===r&&t.constructor&&(r=t.constructor.name),"Map"===r||"Set"===r?Array.from(t):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?c(t,e):void 0}}function c(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}function u(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function s(t){return function(){var e=this,r=arguments;return new Promise((function(n,o){var i=t.apply(e,r);function a(t){u(i,n,o,a,c,"next",t)}function c(t){u(i,n,o,a,c,"throw",t)}a(void 0)}))}}const l=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async all(){var t=this;return s(o().mark((function e(){var r,n,a,c,u,s,h,f,p,d,v,y,m,g,w,x,b,L,E,_,O,k,j,N,P;return o().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.bean.atomClass.get({atomClassName:"party"});case 2:return r=e.sent,n=t.ctx.cache.mem.get("userIds"),e.next=6,t._testCheckList("formal",n,[["Tom",0],["Jane",0],["Jimmy",0],["Smith",0],["",0]],((t,e,r)=>{l.equal(t,e,r)}));case 6:return e.next=8,t.ctx.bean.atom.create({atomClass:r,options:{preferredRole:!0},user:{id:n.Tom}});case 8:return a=e.sent,e.next=11,t.ctx.bean.atom.write({key:a,item:{atomName:"test:all",personCount:3},user:{id:n.Tom}});case 11:return e.next=13,t._testCheckList("draft",n,[["Tom",1],["Jane",0],["Jimmy",0],["Smith",0],["",0]],((t,e,r)=>{l.equal(t,e,r)}));case 13:return e.next=15,t.ctx.bean.atom.submit({key:a,options:{ignoreFlow:!0},user:{id:n.Tom}});case 15:return c=e.sent,u=c.formal.key,e.next=19,t._testCheckList("formal",n,[["Tom",1],["Jane",1],["Jimmy",1],["Smith",1],["",1]],((t,e,r)=>{l.equal(t,e,r)}));case 19:return e.next=21,t.ctx.bean.atom.write({key:a,item:{personCount:8},user:{id:n.Tom}});case 21:return e.next=23,t.ctx.bean.atom.read({key:a,user:{id:n.Tom}});case 23:return s=e.sent,l.equal(s.personCount,8),e.next=27,t.ctx.bean.atom.select({atomClass:r,options:{where:{atomName:{val:"test:all",op:"likeRight"}},orders:[["a.createdAt","desc"]],page:{index:0,size:0},stage:"formal"},user:{id:n.Tom}});case 27:h=e.sent,l.equal(h.length,1),f=[["Tom",u.atomId,!0]],p=0,d=f;case 31:if(!(p<d.length)){e.next=40;break}return v=i(d[p],3),y=v[0],m=v[1],g=v[2],e.next=35,t.ctx.bean.atom.checkRightRead({atom:{id:m},user:{id:n[y]}});case 35:c=e.sent,l.equal(!!c,g,y);case 37:p++,e.next=31;break;case 40:w=[["Tom",u.atomId,!0],["Tomson",u.atomId,!1]],x=0,b=w;case 42:if(!(x<b.length)){e.next=51;break}return L=i(b[x],3),y=L[0],m=L[1],g=L[2],e.next=46,t.ctx.bean.atom.checkRightAction({atom:{id:m},action:"write",user:{id:n[y]}});case 46:c=e.sent,l.equal(!!c,g,y);case 48:x++,e.next=42;break;case 51:E=[["Tom",u.atomId,!0],["Tomson",u.atomId,!1]],_=0,O=E;case 53:if(!(_<O.length)){e.next=62;break}return k=i(O[_],3),y=k[0],m=k[1],g=k[2],e.next=57,t.ctx.bean.atom.checkRightAction({atom:{id:m},action:"delete",user:{id:n[y]}});case 57:c=e.sent,l.equal(!!c,g,y);case 59:_++,e.next=53;break;case 62:j=0,N=[["Tom",!0],["Jimmy",!0],["Smith",!1]];case 64:if(!(j<N.length)){e.next=73;break}return P=i(N[j],2),y=P[0],g=P[1],e.next=68,t.ctx.bean.atom.checkRightCreate({atomClass:r,user:{id:n[y]}});case 68:c=e.sent,l.equal(!!c,g,y);case 70:j++,e.next=64;break;case 73:return e.next=75,t.ctx.bean.atom.delete({key:u,user:{id:n.Tom}});case 75:return e.next=77,t._testCheckList("formal",n,[["Tom",0],["Jane",0],["Jimmy",0],["Smith",0],["",0]],((t,e,r)=>{l.equal(t,e,r)}));case 77:t.ctx.success();case 78:case"end":return e.stop()}}),e)})))()}async _testCheckList(t,e,r,a){var c=this;return s(o().mark((function u(){var s,l,h,f,p,d;return o().wrap((function(o){for(;;)switch(o.prev=o.next){case 0:s=n(r),o.prev=1,s.s();case 3:if((l=s.n()).done){o.next=11;break}return h=i(l.value,2),f=h[0],p=h[1],o.next=7,c.ctx.bean.atom.select({options:{where:{atomName:"test:all","b.module":"test-party"},orders:null,page:null,stage:t},user:f?{id:e[f]}:null});case 7:d=o.sent,a(d.length,p,f);case 9:o.next=3;break;case 11:o.next=16;break;case 13:o.prev=13,o.t0=o.catch(1),s.e(o.t0);case 16:return o.prev=16,s.f(),o.finish(16);case 19:case"end":return o.stop()}}),u,null,[[1,13,16,19]])})))()}}return e}},5632:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async checkRightCreate(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success(t.ctx.request.body.atomClass);case 1:case"end":return e.stop()}}),r)})))()}async checkRightRead(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success(t.ctx.request.body.key);case 1:case"end":return e.stop()}}),r)})))()}async checkRightWrite(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success(t.ctx.request.body.key);case 1:case"end":return e.stop()}}),r)})))()}async checkRightAction(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success(t.ctx.request.body.key);case 1:case"end":return e.stop()}}),r)})))()}}return r}},1986:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async starLabel(){var t,e=this;return(t=n().mark((function t(){var r,o,a,c,u,s,l;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,e.ctx.bean.atomClass.get({atomClassName:"party"});case 2:return r=t.sent,o=e.ctx.state.user.op,t.next=6,e.ctx.bean.atom.create({atomClass:r,options:{preferredRole:!0},user:o});case 6:return a=t.sent,t.next=9,e.ctx.bean.atom.write({key:a,item:{atomName:"test:starLabel"},user:o});case 9:return t.next=11,e.ctx.bean.atom.submit({key:a,options:{ignoreFlow:!0},user:o});case 11:return c=t.sent,u=c.formal.key,t.next=15,e.ctx.bean.atom.read({key:u,user:o});case 15:return s=t.sent,i.equal(s.star,null),i.equal(s.labels,null),t.next=20,e.ctx.bean.atom.star({key:u,atom:{star:1},user:o});case 20:return t.next=22,e.ctx.bean.atom.labels({key:u,atom:{labels:[1]},user:o});case 22:return t.next=24,e.ctx.bean.atom.read({key:u,user:o});case 24:return s=t.sent,i.equal(s.star,1),i.equal(s.labels,"[1]"),t.next=29,e.ctx.bean.atom.select({user:o,options:{star:1,where:{atomName:"test:starLabel"},stage:"formal"}});case 29:return l=t.sent,i.equal(l.length,1),t.next=33,e.ctx.bean.atom.select({user:o,options:{label:1,where:{atomName:"test:starLabel"},stage:"formal"}});case 33:return l=t.sent,i.equal(l.length,1),t.next=37,e.ctx.bean.atom.select({user:o,options:{label:2,where:{atomName:"test:starLabel"},stage:"formal"}});case 37:return l=t.sent,i.equal(l.length,0),t.next=41,e.ctx.bean.atom.star({key:u,atom:{star:0},user:o});case 41:return t.next=43,e.ctx.bean.atom.labels({key:u,atom:{labels:null},user:o});case 43:return t.next=45,e.ctx.bean.atom.read({key:u,user:o});case 45:return s=t.sent,i.equal(s.star,null),i.equal(s.labels,null),t.next=50,e.ctx.bean.atom.delete({key:u,user:o});case 50:e.ctx.success();case 51:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},8621:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");function a(t){return new Promise((e=>setTimeout(e,t)))}t.exports=t=>{class e extends t.Controller{async db(){var t,e=this;return(t=n().mark((function t(){var r,o,c,u;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return c="__test:name:db",t.next=3,e.ctx.cache._db.getset(c,"zhen.nann");case 3:return o=t.sent,i.equal(o,void 0),t.next=7,e.ctx.cache._db.getset(c,"zhennann");case 7:return o=t.sent,i.equal(o,"zhen.nann"),t.next=11,e.ctx.cache._db.has(c);case 11:return r=t.sent,i.equal(r,!0),t.next=15,e.ctx.cache._db.get(c);case 15:return o=t.sent,i.equal(o,"zhennann"),t.next=19,e.ctx.cache._db.remove(c);case 19:return t.next=21,e.ctx.cache._db.has(c);case 21:return r=t.sent,i.equal(r,!1),t.next=25,e.ctx.cache._db.set(c,"zhennann",2e3);case 25:return t.next=27,e.ctx.cache._db.get(c);case 27:return o=t.sent,i.equal(o,"zhennann"),u=e.ctx.cache._db.module(e.ctx.module.info.relativeName),t.next=32,u.get(c);case 32:return o=t.sent,i.equal(o,"zhennann"),t.next=36,a(3e3);case 36:return t.next=38,e.ctx.cache._db.get(c);case 38:o=t.sent,i.equal(o,void 0),e.ctx.success();case 41:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},5234:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");function a(t){return new Promise((e=>setTimeout(e,t)))}t.exports=t=>{class e extends t.Controller{async mem(){var t,e=this;return(t=n().mark((function t(){var r,o,c,u;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return c="__test:name:mem",o=e.ctx.cache.mem.getset(c,"zhen.nann"),i.equal(o,void 0),o=e.ctx.cache.mem.getset(c,"zhennann"),i.equal(o,"zhen.nann"),r=e.ctx.cache.mem.has(c),i.equal(!!r,!0),o=e.ctx.cache.mem.get(c),i.equal(o,"zhennann"),e.ctx.cache.mem.remove(c),r=e.ctx.cache.mem.has(c),i.equal(r,null),e.ctx.cache.mem.set(c,"zhennann",1e3),o=e.ctx.cache.mem.get(c),i.equal(o,"zhennann"),u=e.ctx.cache.mem.module(e.ctx.module.info.relativeName),o=u.get(c),i.equal(o,"zhennann"),t.next=20,a(1500);case 20:o=e.ctx.cache.mem.get(c),i.equal(o,null),e.ctx.success();case 23:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},3778:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");function a(t){return new Promise((e=>setTimeout(e,t)))}t.exports=t=>{class e extends t.Controller{async redis(){var t,e=this;return(t=n().mark((function t(){var r,o,c,u;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return c="__test:name:redis",t.next=3,e.ctx.cache.redis.getset(c,"zhen.nann");case 3:return o=t.sent,i.equal(o,void 0),t.next=7,e.ctx.cache.redis.getset(c,"zhennann");case 7:return o=t.sent,i.equal(o,"zhen.nann"),t.next=11,e.ctx.cache.redis.has(c);case 11:return r=t.sent,i.equal(r,!0),t.next=15,e.ctx.cache.redis.get(c);case 15:return o=t.sent,i.equal(o,"zhennann"),t.next=19,e.ctx.cache.redis.remove(c);case 19:return t.next=21,e.ctx.cache.redis.has(c);case 21:return r=t.sent,i.equal(r,!1),t.next=25,e.ctx.cache.redis.set(c,"zhennann",2e3);case 25:return t.next=27,e.ctx.cache.redis.get(c);case 27:return o=t.sent,i.equal(o,"zhennann"),u=e.ctx.cache.redis.module(e.ctx.module.info.relativeName),t.next=32,u.get(c);case 32:return o=t.sent,i.equal(o,"zhennann"),t.next=36,a(3e3);case 36:return t.next=38,e.ctx.cache.redis.get(c);case 38:o=t.sent,i.equal(o,void 0),e.ctx.success();case 41:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},546:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async test(){var t,e=this;return(t=n().mark((function t(){var r;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:r=e.ctx.config.message,i.equal(r,"Hello World"),r=e.ctx.config.module("test-party").message,i.equal(r,"Hello World"),e.ctx.success();case 5:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},9618:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}r(5638)("assert"),t.exports=t=>{class e extends t.Controller{async enus(){var t=this;return i(n().mark((function e(){var r,o;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=t.ctx.config.message,o={enus:t.ctx.text(r),zhcn:t.ctx.text.locale("zh-cn",r)},t.ctx.success(o);case 3:case"end":return e.stop()}}),e)})))()}async zhcn(){var t=this;return i(n().mark((function e(){var r,o;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=t.ctx.config.message,o={zhcn:t.ctx.text(r),enus:t.ctx.text.locale("en-us",r)},t.ctx.success(o);case 3:case"end":return e.stop()}}),e)})))()}}return e}},2791:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async performAction(){var t=this;return n(e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=t.ctx.request.body.id,e.next=3,t.ctx.meta.util.performAction({method:"post",url:"test/ctx/performAction/echo",body:{id:n}});case 3:o=e.sent,t.ctx.success(o);case 5:case"end":return e.stop()}}),r)})))()}async echo(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.request.body.id,t.ctx.success(n);case 2:case"end":return e.stop()}}),r)})))()}}return r}},6240:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async request(){var t=this;return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:a.equal(t.ctx.params.id,"1"),a.equal(t.ctx.getInt("id"),1),a.equal(t.ctx.query.age,"18"),a.equal(t.ctx.getInt("age"),18),a.equal(t.ctx.request.body.userName,"zhennann"),a.equal(t.ctx.getStr("userName"),"zhennann"),t.ctx.success();case 7:case"end":return e.stop()}}),e)})))()}async requestXML(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.getPayload();case 2:r=e.sent,t.ctx.status=200,t.ctx.type="text/xml",t.ctx.body=r.toString();case 6:case"end":return e.stop()}}),e)})))()}}return e}},7772:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async success(){var t=this;return n(e().mark((function r(){var n;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n={userName:"zhennann"},t.ctx.success(n);case 2:case"end":return e.stop()}}),r)})))()}async successMore(){var t=this;return n(e().mark((function r(){var n,o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.request.body.page,o=[{userName:"zhennann"},{userName:"root"}],t.ctx.successMore(o,n.index,n.size);case 3:case"end":return e.stop()}}),r)})))()}async fail(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.fail(1001);case 1:case"end":return e.stop()}}),r)})))()}async throwError(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.throw(1001);case 1:case"end":return e.stop()}}),r)})))()}}return r}},5484:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async session(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return t.ctx.session._key1=1,e.next=3,t.ctx.meta.util.performAction({method:"post",url:"test/ctx/session/echo1"});case 3:r=e.sent,a.equal(r.user.op.id,t.ctx.state.user.op.id),a.equal(r.instance.id,t.ctx.instance.id),a.equal(t.ctx.session._key2,2),t.ctx.success();case 8:case"end":return e.stop()}}),e)})))()}async echo1(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.meta.util.performAction({method:"post",url:"test/ctx/session/echo2"});case 2:r=e.sent,t.ctx.success(r);case 4:case"end":return e.stop()}}),e)})))()}async echo2(){var t=this;return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:a.equal(t.ctx.session._key1,1),t.ctx.session._key2=2,t.ctx.success({user:t.ctx.state.user,instance:t.ctx.instance});case 3:case"end":return e.stop()}}),e)})))()}}return e}},5055:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async tail(){var t,e=this;return(t=n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:e.ctx.meta._tail_test=1,e.ctx.tail((()=>{i.equal(e.ctx.meta._tail_test,2),e.ctx.tail((()=>{i.equal(e.ctx.meta._tail_test,3)})),e.ctx.meta._tail_test=3})),e.ctx.meta._tail_test=2,e.ctx.success();case 4:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},5656:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async transaction(){var t,n=this;return(t=e().mark((function t(){var r,o,i;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=n.ctx.state.user.op,o=n.ctx.request.body.key,i=n.ctx.request.body.item,t.next=5,n.ctx.bean.atom.write({key:o,item:{atomName:i.atomName},user:r});case 5:return t.next=7,n.ctx.bean.atom.write({key:o,item:{personCount:i.personCount},user:r});case 7:n.ctx.success();case 8:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},2779:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);class r extends t.Controller{async hello(){var t=this;return i(n().mark((function r(){var o,c;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o={text:"hello"},c="world",r.next=4,t.ctx.bean.event.invoke({module:e.relativeName,name:"hello",data:o,result:c,next:function(){var t=i(n().mark((function t(e,r){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return e.result="".concat(e.result,".hello"),t.next=3,r();case 3:e.result="hello.".concat(e.result);case 4:case"end":return t.stop()}}),t)})));return function(e,r){return t.apply(this,arguments)}}()});case 4:c=r.sent,a.equal(o.text,"hello echo"),a.equal(c,"echo.hello.world.echo.hello"),t.ctx.success();case 8:case"end":return r.stop()}}),r)})))()}}return r}},5728:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{const e={module:t.meta.mockUtil.parseInfoFromPackage(__dirname).relativeName,atomClassName:"party"};class r extends t.Controller{async areaScope(){var t=this;return i(n().mark((function r(){var o,i,c,u,s,l,h,f,p,d;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:if(t.ctx.bean.areaScope.areaScopeEnabled()){r.next=3;break}return t.ctx.success(),r.abrupt("return");case 3:return r.next=5,t.ctx.bean.user.get({userName:"root"});case 5:return o=r.sent,r.next=8,t.ctx.bean.user.get({userName:"jimmy"});case 8:return i=r.sent,r.next=11,t.ctx.bean.user.get({userName:"rose"});case 11:return c=r.sent,r.next=14,t.ctx.bean.role.parseRoleName({roleName:"friend"});case 14:return u=r.sent,a.equal(!!i,!0),a.equal(!!c,!0),a.equal(!!u,!0),s="areaScopeTest001",r.next=21,t.ctx.bean.atom.create({atomClass:e,roleIdOwner:u.id,options:{},user:i});case 21:return l=r.sent,r.next=24,t.ctx.bean.atom.write({key:l,item:{atomName:s,partyCountry:"86",partyCity:"410000/410900/410902"},user:i});case 24:return r.next=26,t.ctx.bean.atom.submit({key:l,options:{ignoreFlow:!0},user:i});case 26:return h=r.sent,f=h.formal.key,r.next=30,t.ctx.bean.atom.read({key:f,user:i});case 30:return p=r.sent,a.equal(p.atomName,s),r.next=34,t._checkRight({user:c,party:p,shouldExists:!1,step:2});case 34:return r.next=36,t.ctx.bean.role.addRoleRight({roleId:u.id,atomClassId:p.atomClassId,action:2,scope:[u.id],user:o});case 36:return d=r.sent,r.next=39,t._checkRight({user:c,party:p,shouldExists:!0,step:4});case 39:return r.next=41,t.ctx.bean.role.deleteRoleRight({roleId:u.id,roleRightId:d,user:o});case 41:return r.next=43,t.ctx.bean.role.addRoleRight({roleId:u.id,atomClassId:p.atomClassId,action:2,scope:[u.id],areaKey:"partyCountry|partyCity",areaScope:"86|510000",user:o});case 43:return d=r.sent,r.next=46,t._checkRight({user:c,party:p,shouldExists:!1,step:6});case 46:return r.next=48,t.ctx.bean.role.deleteRoleRight({roleId:u.id,roleRightId:d,user:o});case 48:return r.next=50,t.ctx.bean.role.addRoleRight({roleId:u.id,atomClassId:p.atomClassId,action:2,scope:[u.id],areaKey:"partyCountry|partyCity",areaScope:"86|410000",user:o});case 50:return d=r.sent,r.next=53,t._checkRight({user:c,party:p,shouldExists:!0,step:8});case 53:return r.next=55,t.ctx.bean.atom.delete({key:f,user:i});case 55:return r.next=57,t.ctx.bean.role.deleteRoleRight({roleId:u.id,roleRightId:d,user:o});case 57:t.ctx.success();case 58:case"end":return r.stop()}}),r)})))()}async _checkRight(t){var e=this;return i(n().mark((function r(){var o,i,c,u,s,l,h;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o=t.user,i=t.party,c=t.shouldExists,u=t.step,s="step: ".concat(u),r.next=4,e.ctx.bean.atom.select({user:o,options:{where:{atomName:i.atomName},stage:"formal"}});case 4:return l=r.sent,a.equal(l.length>0,c,s),r.next=8,e.ctx.bean.atom.checkRightRead({atom:{id:i.atomId},user:o});case 8:h=r.sent,a.equal(!!h,c,s);case 10:case"end":return r.stop()}}),r)})))()}}return r}},5744:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname);class r extends t.Controller{async bean(){var e=this;return i(n().mark((function r(){var o,i,c;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o=3,i=4,a.equal(t.bean["test-party.test.app"],t.bean["test-party.test.app"]),c=t.bean["test-party.test.app"].actionSync({a:o,b:i}),a.equal(c,"".concat(o+i,":regexpaop")),r.next=7,t.bean["test-party.test.app"].actionAsync({a:o,b:i});case 7:return c=r.sent,a.equal(c,"".concat(o+i,":regexpaop")),a.equal(e.ctx.bean.testctx,e.ctx.bean.testctx),c=e.ctx.bean.testctx.magic,a.equal(c,"magic:simpleaop"),e.ctx.bean.testctx.name="test-party:regexpaop:simpleaop",c=e.ctx.bean.testctx.name,a.equal(c,"test-party:regexpaop:simpleaop"),c=e.ctx.bean.testctx.actionSync({a:o,b:i}),a.equal(c,"".concat(o+i,":regexpaop:simpleaop")),r.next=19,e.ctx.bean.testctx.actionAsync({a:o,b:i});case 19:return c=r.sent,a.equal(c,"".concat(o+i,":regexpaop:simpleaop")),r.next=23,e.ctx.bean.testctx.actionAsync2({a:o,b:i});case 23:return c=r.sent,a.equal(c,"test-party:regexpaop:simpleaop:".concat(o+i,":regexpaop:simpleaop")),r.next=27,e.ctx.bean.testctx.actionAsync3({a:o,b:i});case 27:return c=r.sent,a.equal(c,"test-party:regexpaop:simpleaop:".concat(o+i,":regexpaop:simpleaop")),a.equal(e.ctx.bean["test-party.test.class"],e.ctx.bean["test-party.test.class"]),c=e.ctx.bean["test-party.test.class"].actionSync({a:o,b:i}),a.equal(c,"".concat(o+i,":regexpaop")),r.next=34,e.ctx.bean["test-party.test.class"].actionAsync({a:o,b:i});case 34:c=r.sent,a.equal(c,"".concat(o+i,":regexpaop")),e.ctx.success();case 37:case"end":return r.stop()}}),r)})))()}async local(){var t=this;return i(n().mark((function r(){var o;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:o=t.ctx.bean._getBean(e.relativeName,"local.test").name,a.equal(o,"localTest"),o=t.ctx.bean.local.test.name,a.equal(o,"localTest"),o=t.ctx.bean.local.module(e.relativeName).test.name,a.equal(o,"localTest"),t.ctx.success();case 7:case"end":return r.stop()}}),r)})))()}}return r}},2289:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async emit(){var t,n=this;return(t=e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:n.ctx.meta.util.broadcastEmit({locale:"zh-cn",module:"test-party",broadcastName:"broadcastTest",data:{message:"hello"}}),n.ctx.success();case 2:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},481:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async category(){var t,e=this;return(t=n().mark((function t(){var r,o,a;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r={module:"test-party",atomClassName:"party"},t.next=3,e.ctx.bean.category.add({atomClass:r,data:{language:"en-us",categoryName:"levelOne",categoryIdParent:0}});case 3:return o=t.sent,i(o>0),t.next=7,e.ctx.bean.category.parseCategoryName({atomClass:r,language:"en-us",categoryName:"levelOne.levelTwo.levelThree",force:!0});case 7:a=t.sent,i.equal(a.categoryName,"levelThree"),e.ctx.success();case 10:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},5655:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async httpLog(){var t,n=this;return(t=e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:n.ctx.success("this is a test for httpLog");case 1:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},3282:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async instance(){var t,e=this;return(t=n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:i.equal(!!e.ctx.instance.id,!0),i.equal(!!e.ctx.instance.config,!0),e.ctx.success();case 3:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},8315:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async interception(){var t=this;return n(e().mark((function r(){var n,o,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.request.body,o=n.a,i=n.b,a=parseInt(o)+parseInt(i),t.ctx.success(a);case 3:case"end":return e.stop()}}),r)})))()}async restructuring(){var t=this;return n(e().mark((function r(){var n,o,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:n=t.ctx.request.body,o=n.a,i=n.b,a=o+i,t.ctx.success(a);case 3:case"end":return e.stop()}}),r)})))()}}return r}},2362:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{const e="--model--test--",r=[{atomStaticKey:e,atomName:"atom-one",atomStage:0},{atomStaticKey:e,atomName:"atom-two",atomStage:1},{atomStaticKey:e,atomName:"atom-three",atomStage:2}];class a extends t.Controller{async model(){var t,a=this;return(t=n().mark((function t(){var o,c,u,s;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return o=a.ctx.model.module("a-base").atom,t.next=3,o.insert(r[0]);case 3:return t.next=5,o.insert(r.slice(1));case 5:return t.next=7,o.select({where:{atomStaticKey:e}});case 7:return c=t.sent,i.equal(c.length,3),t.next=11,o.get({atomStaticKey:e,atomName:"atom-one"});case 11:return u=t.sent,t.next=14,o.update({id:u.id,readCount:u.readCount+1});case 14:return t.next=16,o.update({readCount:1},{where:{atomStaticKey:e},columns:["readCount"]});case 16:return t.next=18,o.select({where:{atomStaticKey:[e]}});case 18:return c=t.sent,i.equal(c.length,3),t.next=22,o.select({where:{atomStaticKey:{op:"in",val:[e]}}});case 22:return c=t.sent,i.equal(c.length,3),t.next=26,o.select({where:{atomStaticKey:[e],atomName:null}});case 26:return c=t.sent,i.equal(c.length,0),t.next=30,o.select({where:{atomStaticKey:[e],atomName:{op:"notNull"}}});case 30:return c=t.sent,i.equal(c.length,3),t.next=34,o.select({where:{atomStaticKey:[e],atomName:{op:"likeRight",val:"atom-"}}});case 34:return c=t.sent,i.equal(c.length,3),t.next=38,o.select({where:{atomStaticKey:[e],__or__:[{atomName:"atom-one"},{atomName:"atom-two"}]}});case 38:return c=t.sent,i.equal(c.length,2),t.next=42,o.delete({atomStaticKey:e});case 42:return t.next=44,o.count({atomStaticKey:e});case 44:s=t.sent,i.equal(s,0),a.ctx.success();case 47:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return a}},1590:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async resourceCheckSuccess(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=t.ctx.state.user.op,a.equal(r.userName,"root"),t.ctx.success();case 3:case"end":return e.stop()}}),e)})))()}async resourceCheckFail(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:r=t.ctx.state.user.op,a.equal(r.userName,"root"),t.ctx.success();case 3:case"end":return e.stop()}}),e)})))()}}return e}},3648:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async progress(){var t=this;return n(e().mark((function r(){var o;return e().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return r.next=2,t.ctx.bean.progress.create();case 2:o=r.sent,t.ctx.runInBackground(n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t._progressInBackground({progressId:o});case 2:case"end":return e.stop()}}),r)})))),t.ctx.success({progressId:o});case 5:case"end":return r.stop()}}),r)})))()}async _progressInBackground(t){var r=this;return n(e().mark((function n(){var o;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return o=t.progressId,e.prev=1,e.next=4,r._levelOne({progressId:o,progressNo:0});case 4:return e.next=6,r.ctx.bean.progress.done({progressId:o,message:r.ctx.text("Well Done")});case 6:r.ctx.success(!0),e.next=14;break;case 9:return e.prev=9,e.t0=e.catch(1),e.next=13,r.ctx.bean.progress.error({progressId:o,message:e.t0.message});case 13:throw e.t0;case 14:case"end":return e.stop()}}),n,null,[[1,9]])})))()}async _levelOne(t){var r=this;return n(e().mark((function n(){var o,i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:o=t.progressId,i=t.progressNo,a=2,c=0,u=0;case 4:if(!(u<a)){e.next=15;break}return s="".concat(r.ctx.text("Level One"),": ").concat(u+1),e.next=8,r.ctx.bean.progress.update({progressId:o,progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,r.ctx.bean.util.sleep(1500);case 10:return e.next=12,r._levelTwo({progressId:o,progressNo:i+1});case 12:u++,e.next=4;break;case 15:case"end":return e.stop()}}),n)})))()}async _levelTwo(t){var r=this;return n(e().mark((function n(){var o,i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:o=t.progressId,i=t.progressNo,a=2,c=0,u=0;case 4:if(!(u<a)){e.next=15;break}return s="".concat(r.ctx.text("Level Two"),": ").concat(u+1),e.next=8,r.ctx.bean.progress.update({progressId:o,progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,r.ctx.bean.util.sleep(1500);case 10:return e.next=12,r._levelThree({progressId:o,progressNo:i+1});case 12:u++,e.next=4;break;case 15:case"end":return e.stop()}}),n)})))()}async _levelThree(t){var r=this;return n(e().mark((function n(){var o,i,a,c,u,s;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:o=t.progressId,i=t.progressNo,a=3,c=0,u=0;case 4:if(!(u<a)){e.next=13;break}return s="".concat(r.ctx.text("Level Three"),": ").concat(u+1),e.next=8,r.ctx.bean.progress.update({progressId:o,progressNo:i,total:a,progress:c++,text:s});case 8:return e.next=10,r.ctx.bean.util.sleep(1500);case 10:u++,e.next=4;break;case 13:case"end":return e.stop()}}),n)})))()}}return r}},1077:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async pushAsync(){var t=this;return i(n().mark((function e(){var r;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.meta.util.queuePushAsync({module:"test-party",queueName:"queueTest",data:{a:1,b:2}});case 2:r=e.sent,a.equal(r,3),t.ctx.success();case 5:case"end":return e.stop()}}),e)})))()}async push(){var t=this;return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.meta.util.queuePush({module:"test-party",queueName:"queueTest",data:{a:1,b:2}}),t.ctx.success();case 2:case"end":return e.stop()}}),e)})))()}}return e}},5047:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async sendMail(){var t,n=this;return(t=e().mark((function t(){var r;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=n.ctx.request.body.data,t.next=3,n.ctx.bean.mail.send({scene:"test",message:r});case 3:n.ctx.success();case 4:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},2462:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638),c=a("assert"),u=a("p-map");t.exports=t=>{class e extends t.Controller{async sequence(){var t=this;return i(n().mark((function e(){var r,o,a,s,l;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return r=[1,2,3,4,5],e.next=3,t.ctx.bean.sequence.current("test");case 3:return a=e.sent,c.equal(a,0),e.next=7,t.ctx.bean.sequence.next("test");case 7:return s=e.sent,c.equal(s,1),e.next=11,t.ctx.bean.sequence.current("test");case 11:return a=e.sent,c.equal(a,1),e.next=15,t.ctx.bean.sequence.reset("test");case 15:return l=t.ctx.bean.sequence.module(t.ctx.module.info.relativeName),e.next=18,l.next("test");case 18:return s=e.sent,c.equal(s,1),e.next=22,l.current("test");case 22:return a=e.sent,c.equal(a,1),e.next=26,l.reset("test");case 26:return e.next=28,u(r,i(n().mark((function t(){return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,l.next("test");case 2:return t.abrupt("return",t.sent);case 3:case"end":return t.stop()}}),t)}))));case 28:return o=e.sent,c.equal(new Set(o).size,new Set(r).size),e.next=32,l.reset("test");case 32:return e.next=34,u(r,i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,t.ctx.meta.util.executeBeanIsolate({beanModule:t.ctx.module.info.relativeName,transaction:!0,fn:function(){var t=i(n().mark((function t(e){var r,o;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=e.ctx,t.next=3,r.bean.sequence.next("test");case 3:return o=t.sent,t.next=6,r.bean.util.sleep(50);case 6:return t.abrupt("return",o);case 7:case"end":return t.stop()}}),t)})));return function(e){return t.apply(this,arguments)}}()});case 2:return e.abrupt("return",e.sent);case 3:case"end":return e.stop()}}),e)}))));case 34:return o=e.sent,c.equal(new Set(o).size,new Set(r).size,"sequence next: ".concat(o)),e.next=38,l.reset("test");case 38:t.ctx.success();case 39:case"end":return e.stop()}}),e)})))()}}return e}},8855:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async settings(){var t,e=this;return(t=n().mark((function t(){var r;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,e.ctx.bean.settings.getUser({name:"/groupInfo/username"});case 2:return r=t.sent,i.equal(r,"zhennann"),t.next=6,e.ctx.bean.settings.getUser({name:"/groupExtra/panelExtra/groupInfo/language"});case 6:return r=t.sent,i.equal(r,"en-us"),t.next=10,e.ctx.bean.settings.loadSettingsUser();case 10:return r=t.sent,i.equal(r.groupInfo.username,"zhennann"),r.groupExtra.panelExtra.groupInfo.language="zh-cn",t.next=15,e.ctx.bean.settings.saveSettingsUser({data:r});case 15:return t.next=17,e.ctx.bean.settings.getUser({name:"/groupExtra/panelExtra/groupInfo/language"});case 17:return r=t.sent,i.equal(r,"zh-cn"),t.next=21,e.ctx.bean.settings.getInstance({name:"/groupInfo/slogan"});case 21:return r=t.sent,i.equal(r,""),t.next=25,e.ctx.bean.settings.loadSettingsInstance();case 25:return r=t.sent,i.equal(r.groupInfo.slogan,""),r.groupInfo.slogan="Less is more, while more is less",t.next=30,e.ctx.bean.settings.saveSettingsInstance({data:r});case 30:return t.next=32,e.ctx.bean.settings.getInstance({name:"/groupInfo/slogan"});case 32:r=t.sent,i.equal(r,"Less is more, while more is less"),e.ctx.success();case 35:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},1742:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{const r=t.meta.mockUtil.parseInfoFromPackage(__dirname);class o extends t.Controller{async publish(){var t=this;return n(e().mark((function n(){var o,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return o=t.ctx.request.body.options,(i=t.ctx.request.body.message).userIdFrom=t.ctx.state.user.op.id,e.next=5,t.ctx.bean.io.publish({path:"/test/party/test",message:i,messageClass:{module:r.relativeName,messageClassName:"test"},options:o});case 5:a=e.sent,t.ctx.success(a);case 7:case"end":return e.stop()}}),n)})))()}async simpleChat(){var t=this;return n(e().mark((function n(){var o,i,a;return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return o=t.ctx.request.body.options,(i=t.ctx.request.body.message).userIdFrom=t.ctx.state.user.op.id,e.next=5,t.ctx.bean.io.publish({path:"/test/party/simpleChat",message:i,messageClass:{module:r.relativeName,messageClassName:"simpleChat"},options:o});case 5:a=e.sent,t.ctx.success(a);case 7:case"end":return e.stop()}}),n)})))()}}return o}},1504:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}const a=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async stats(){var t=this;return i(n().mark((function e(){var r,o,i;return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return r=t.ctx.cache.mem.get("userIds"),o={id:r.Tom},e.next=4,t.ctx.bean.stats.get({name:"tasksUser",nameSub:"department.project",user:o});case 4:return i=e.sent,a.equal(i,void 0),e.next=8,t.ctx.bean.stats.notifyAsync({name:"tasksUser",nameSub:"department.project",user:o});case 8:return e.next=10,t.ctx.bean.stats.get({name:"tasksUser",nameSub:"department.project",user:o});case 10:return i=e.sent,a.equal(i,1),e.next=14,t.ctx.bean.stats.get({name:"tasksInstance",user:o});case 14:i=e.sent,a.equal(i,1),t.ctx.success();case 17:case"end":return e.stop()}}),e)})))()}async plus(){var t=this;return i(n().mark((function e(){return n().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.bean.stats.notify({name:"tasksUser",nameSub:"department.project"}),t.ctx.success();case 2:case"end":return e.stop()}}),e)})))()}}return e}},2251:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async status(){var t,e=this;return(t=n().mark((function t(){var r,o,a;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r="__test_enable",t.next=3,e.ctx.bean.status.get(r);case 3:return o=t.sent,i.equal(o,void 0),t.next=7,e.ctx.bean.status.set(r,!0);case 7:return t.next=9,e.ctx.bean.status.get(r);case 9:return o=t.sent,i.equal(o,!0),a=e.ctx.bean.status.module(e.ctx.module.info.relativeName),t.next=14,a.get(r);case 14:return o=t.sent,i.equal(o,!0),t.next=18,e.ctx.bean.status.set(r,!1);case 18:return t.next=20,e.ctx.bean.status.get(r);case 20:o=t.sent,i.equal(o,!1),e.ctx.success();case 23:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},1288:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async tag(){var t,e=this;return(t=n().mark((function t(){var r,o,a;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r={module:"test-party",atomClassName:"party"},t.next=3,e.ctx.bean.tag.add({atomClass:r,data:{tagName:"tagOne"}});case 3:return o=t.sent,i(o>0),t.next=7,e.ctx.bean.tag.parseTags({atomClass:r,tagName:"tagOne,tagTwo,tagThree",force:!0});case 7:a=t.sent,i.equal(a.length,3),e.ctx.success();case 10:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},9124:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Controller{async success(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success();case 1:case"end":return e.stop()}}),r)})))()}async fail(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success();case 1:case"end":return e.stop()}}),r)})))()}async schema(){var t=this;return n(e().mark((function r(){return e().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:t.ctx.success();case 1:case"end":return e.stop()}}),r)})))()}}return r}},6013:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{const n=t.meta.mockUtil.parseInfoFromPackage(__dirname);class o extends t.Controller{async test(){var t,o=this;return(t=e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:o.ctx.success(n.relativeName);case 1:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return o}},1796:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async role(){var t,e=this;return(t=n().mark((function t(){var r,o,a,c,u,s,l,h,f;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:r=e.ctx.cache.mem.get("userIds"),o=[0,1,2,3,4],a=0,c=[{userName:"root",childrenTop:{count:1,roleNames:"root"},children:{count:2,roleNames:"anonymous,authenticated"}},{userName:"Tomson",childrenTop:{count:0,roleNames:""},children:{count:2,roleNames:"anonymous,authenticated"}},{userName:"Tom",childrenTop:{count:1,roleNames:"organization"},children:{count:2,roleNames:"internal,external"}}];case 4:if(!(a<c.length)){t.next=23;break}return u=c[a],s=u.userName,l=r[s],t.next=10,e.ctx.bean.role.childrenTop({roleTypes:o,page:null,user:{id:l}});case 10:if(h=t.sent,i.equal(h.length,u.childrenTop.count,s),i.equal(h.map((t=>t.roleName)).join(","),u.childrenTop.roleNames,s),!(h.length>0)){t.next=20;break}return f=h[0],t.next=17,e.ctx.bean.role.children({roleTypes:o,roleId:f.id,page:null,user:{id:l}});case 17:h=t.sent,i.equal(h.length,u.children.count,s),i.equal(h.map((t=>t.roleName)).join(","),u.children.roleNames,s);case 20:a++,t.next=4;break;case 23:e.ctx.success();case 24:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},482:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async user(){var t,e=this;return(t=n().mark((function t(){var r,o,a,c,u,s,l,h,f;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:r=e.ctx.cache.mem.get("userIds"),o=e.ctx.cache.mem.get("roleIds"),a=0,c=[{userName:"root",selectTop:{countMin:9,userNameContain:"Jannie"},selectRole:{countMin:4,userNameContain:"Jannie"}},{userName:"Tomson",selectTop:{countMin:0,userNameContain:""},selectRole:{countMin:0,userNameContain:""}},{userName:"Tom",selectTop:{countMin:8,userNameContain:"Jannie"},selectRole:{countMin:4,userNameContain:"Jannie"}}];case 4:if(!(a<c.length)){t.next=22;break}return u=c[a],s=u.userName,l=r[s],t.next=10,e.ctx.bean.user.select({options:{},user:{id:l}});case 10:return h=t.sent,i.equal(h.length>=u.selectTop.countMin,!0,s),u.selectTop.userNameContain&&i.equal(h.map((t=>t.userName)).includes(u.selectTop.userNameContain),!0,s),f=o.family,t.next=16,e.ctx.bean.user.select({options:{role:f},user:{id:l}});case 16:h=t.sent,i.equal(h.length>=u.selectRole.countMin,!0,s),u.selectRole.userNameContain&&i.equal(h.map((t=>t.userName)).includes(u.selectRole.userNameContain),!0,s);case 19:a++,t.next=4;break;case 22:e.ctx.success();case 23:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},2363:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async all(){var t,e=this;return(t=n().mark((function t(){var r,o,a,c,u,s,l,h;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=e.ctx.cache.mem.get("userIds"),o={id:r.root},a=(a=e.ctx.module.main.meta.base.statics["a-base.resource"].items).filter((t=>t.atomRevision>-1)),c=a.length,t.next=7,e.ctx.bean.resource.select({options:{where:{"a.atomStaticKey":{op:"likeRight",val:"test-party:"}},orders:[["a.id","asc"]],page:{index:0,size:0},locale:"en-us"},user:o});case 7:return u=t.sent,i.equal(u.length,c),i.equal(!!u[0].atomNameLocale,!0),s=u[0],t.next=13,e.ctx.bean.resource.checkRightResource({atomStaticKey:s.atomStaticKey,user:o});case 13:return l=t.sent,i.equal(!!l,!0),t.next=17,e.ctx.bean.resource.check({atomStaticKeys:[s.atomStaticKey],user:o});case 17:return u=t.sent,i.equal(u[0].passed,!0),t.next=21,e.ctx.bean.resource.read({key:{atomId:s.atomId},options:{locale:"en-us"},user:o});case 21:h=t.sent,i.equal(!!h.atomNameLocale,!0),e.ctx.success();case 24:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},4511:t=>{function e(){"use strict";e=function(){return t};var t={},r=Object.prototype,n=r.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==r&&n.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function r(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new e((function(e,o){r(t,n,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,o=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}t.exports=t=>{class n extends t.Controller{async checkRightResourceUser(){var t,n=this;return(t=e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:n.ctx.success(n.ctx.meta._resource);case 1:case"end":return t.stop()}}),t)})),function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))})()}}return n}},5010:(t,e,r)=>{function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}const i=r(5638)("assert");t.exports=t=>{class e extends t.Controller{async userRole(){var t,e=this;return(t=n().mark((function t(){var r,o,a,c;return n().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=e.ctx.cache.mem.get("userIds"),o=e.ctx.cache.mem.get("roleIds"),t.next=4,e.ctx.bean.role.getUserRolesDirect({userId:r.root});case 4:return a=t.sent,i.equal(a.length,1),t.next=8,e.ctx.bean.role.getUserRolesParent({userId:r.root});case 8:return a=t.sent,i.equal(a.length,3),t.next=12,e.ctx.bean.role.getUserRolesExpand({userId:r.root});case 12:return a=t.sent,i(a.length>3),t.next=16,e.ctx.bean.role.userInRoleDirect({userId:r.root,roleId:o.superuser});case 16:return c=t.sent,i.equal(c,!0),t.next=20,e.ctx.bean.role.userInRoleParent({userId:r.root,roleId:o.root});case 20:return c=t.sent,i.equal(c,!0),t.next=24,e.ctx.bean.role.userInRoleExpand({userId:r.root,roleId:o.system});case 24:c=t.sent,i.equal(c,!0),e.ctx.success();case 27:case"end":return t.stop()}}),t)})),function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))})()}}return e}},5509:(t,e,r)=>{const n=r(3624),o=r(1986),i=r(9724),a=r(5632),c=r(4511),u=r(2363),s=r(2791),l=r(5656),h=r(5055),f=r(5484),p=r(6240),d=r(7772),v=r(546),y=r(9618),m=r(5234),g=r(8621),w=r(3778),x=r(5010),b=r(1796),L=r(482),E=r(2779),_=r(5744),O=r(5655),k=r(5047),j=r(1742),N=r(3282),P=r(3648),S=r(2462),T=r(8855),G=r(1504),I=r(2251),C=r(9124),F=r(8315),A=r(1077),R=r(2289),q=r(2362),M=r(481),Y=r(1288),U=r(5728),D=r(1590),K=r(6013),B=r(5555),z=r(1719),J=r(3311),V=r(9354);t.exports=t=>({party:n,testAtomStarLabel:o,testAtomAll:i,testAtomRight:a,testResourceRight:c,testResourceAll:u,testCtxPerformAction:s,testCtxTransaction:l,testCtxTail:h,testCtxSession:f,testCtxRequest:p,testCtxResponse:d,testCtxConfig:v,testCtxLocale:y,testCacheMem:m,testCacheDb:g,testCacheRedis:w,testRoleUserRole:x,testMultilevelAuthorizationRole:b,testMultilevelAuthorizationUser:L,testEventHello:E,testFeatBean:_,testFeatHttpLog:O,testFeatSendMail:k,testFeatSocketIO:j,testFeatInstance:N,testFeatProgress:P,testFeatSequence:S,testFeatSettings:T,testFeatStats:G,testFeatStatus:I,testFeatValidation:C,testFeatMiddleware:F,testFeatQueue:A,testFeatBroadcast:R,testFeatModel:q,testFeatCategory:M,testFeatTag:Y,testFeatAreaScope:U,testOpenAuth:D,testMonkeyee:K,testKitchensinkAutocomplete:B,testKitchensinkGuide:z,testKitchensinkFormSchemaValidation:J,testKitchensinkPtrIsLoadMore:V})},2880:(t,e,r)=>{const n=r(3751),o=r(1636),i=r(25);t.exports=t=>{const e=r(3905)(t),a=r(1700)(t),c=r(1808)(t),u=r(5509)(t),s=r(9788)(t),l=r(6554)(t),h=r(4437)(t);return{aops:e,beans:a,routes:c,controllers:u,services:s,models:l,config:n,locales:o,errors:i,meta:h}}},4437:(t,e,r)=>{const n=r(5638)("@zhennann/extend");t.exports=t=>{const e=t.meta.mockUtil.parseInfoFromPackage(__dirname),o={},i=r(7189)(t),a=r(6919)(t),c=r(5662)(t),u=r(8507)(t),s=r(6623)(t),l=r(6034)(t),h=r(6962)(t),f=r(8472)(t),p=r(4816)(t),d=r(2028)(t),v=r(841)(t),y=r(811);return n(!0,o,{base:{atoms:{party:{info:{bean:"party",title:"Party",tableName:"testParty",tableNameModes:{},language:!1,category:!0,tag:!0,cms:!0,dict:{fields:{partyTypeCode:{dictKey:"test-party:dictPartyType"},partyCountry:{dictKey:"a-dictbooster:countries"},partyCity:{translate:!1}}},layout:{config:{atomList:"layoutAtomListParty",atomItem:"layoutAtomItemParty"}},areaScope:{sameAs:{module:e.relativeName,atomClassName:"party"},schemas:{partyCountry:{type:"string",ebType:"dict",ebTitle:"Party Country",ebParams:{dictKey:"a-dictbooster:countries",mode:"select"},ebOptionsBlankAuto:!0},partyCity:{type:"string",ebType:"component",ebTitle:"Party City",ebRender:{module:e.relativeName,name:"renderPartyCity"},ebParams:{separator:"/",leafOnly:!1}}}}},actions:{partyOver:{code:101,title:"PartyOver",actionModule:e.relativeName,actionComponent:"action",icon:{f7:":outline:check-circle-outline"},enableOnOpened:!0,directShowOnList:!0,directShowOnItem:!0,stage:"formal"},partyOverBulk:{code:201,title:"PartyOver",actionModule:e.relativeName,actionComponent:"action",icon:{f7:":outline:check-circle-outline"},bulk:!0,select:!0,stage:"formal"}},validator:"party",search:{validator:"partySearch"}}},statics:{"a-app.app":{items:s},"a-dashboard.dashboard":{items:l},"a-baselayout.layout":{items:h},"a-base.resource":{items:f},"a-dict.dict":{items:p},"a-base.role":{items:d}}},validation:{validators:{party:{schemas:"party"},partySearch:{schemas:"partySearch"},userTest:{schemas:"settingsUser,settingsUserExtra"},instanceTest:{schemas:"settingsInstance"},formTest:{schemas:"formTest"},formCaptchaTest:{schemas:"formCaptchaTest"},formMobileVerifyTest:{schemas:"formMobileVerifyTest"},blockArticleCommentCount:{schemas:"blockArticleCommentCount"}},keywords:{"x-languages":a.languages},schemas:i},cli:{commands:v},settings:{user:{validator:"userTest"},instance:{validator:"instanceTest"}},event:{implementations:{"a-base:loginInfo":"loginInfoDashboard"}},index:{indexes:{testParty:"createdAt,updatedAt,atomId,partyTypeCode"}},socketio:{messages:{test:c,simpleChat:u}},stats:{providers:{tasksUser:{user:!0,bean:"tasksUser"},tasksInstance:{user:!1,bean:"tasksInstance",dependencies:"tasksUser"}}},icon:{groups:y}}),t.meta.isTest&&n(!0,o,{base:{},event:{declarations:{hello:"This is a test for event"},implementations:{"test-party:hello":"helloEcho","a-base:userVerify":"userVerify","a-base:loginInfo":"loginInfo"}},sequence:{providers:{test:{bean:"test",start:0}}}}),o}},5115:t=>{t.exports=t=>{class e extends t.meta.Model{constructor(t){super(t,{table:"testParty",options:{disableDeleted:!1}})}}return e}},6554:(t,e,r)=>{const n=r(5115);t.exports=t=>{const e={};return Object.assign(e,{party:n}),e}},1808:t=>{t.exports=()=>{let t=[];return t=t.concat([{method:"post",path:"party/over",controller:"party",middlewares:"transaction",meta:{right:{type:"atom",atomClass:"test-party:party",action:"partyOver"}}},{method:"post",path:"party/overBulk",controller:"party",middlewares:"transaction",meta:{right:{type:"atom",atomClass:"test-party:party",action:"partyOverBulk"}}},{method:"post",path:"test/atom/starLabel",controller:"testAtomStarLabel",middlewares:"test"},{method:"post",path:"test/atom/all",controller:"testAtomAll",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/atom/checkRightCreate",controller:"testAtomRight",middlewares:"test",meta:{right:{type:"atom",atomClass:"test-party:party",action:"create"}}},{method:"post",path:"test/atom/checkRightRead",controller:"testAtomRight",middlewares:"test",meta:{right:{type:"atom",atomClass:"test-party:party",action:"read"}}},{method:"post",path:"test/atom/checkRightWrite",controller:"testAtomRight",middlewares:"test",meta:{right:{type:"atom",atomClass:"test-party:party",action:"write"}}},{method:"post",path:"test/atom/checkRightAction",controller:"testAtomRight",middlewares:"test",meta:{right:{type:"atom",atomClass:"test-party:party",action:"partyOver"}}},{method:"post",path:"test/resource/checkRightResourceUser",controller:"testResourceRight",middlewares:"test",meta:{right:{type:"resource",module:"test-party",name:"createParty"}}},{method:"post",path:"test/resource/all",controller:"testResourceAll",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/role/userRole",controller:"testRoleUserRole",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/multilevelAuthorization/role",controller:"testMultilevelAuthorizationRole",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/multilevelAuthorization/user",controller:"testMultilevelAuthorizationUser",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/performAction",controller:"testCtxPerformAction",middlewares:"test"},{method:"post",path:"test/ctx/performAction/echo",controller:"testCtxPerformAction",middlewares:"test"},{method:"post",path:"test/ctx/transaction",controller:"testCtxTransaction",middlewares:"test,transaction"},{method:"post",path:"test/ctx/tail",controller:"testCtxTail",middlewares:"test"},{method:"post",path:"test/ctx/session",controller:"testCtxSession",middlewares:"test"},{method:"post",path:"test/ctx/session/echo1",controller:"testCtxSession",middlewares:"test"},{method:"post",path:"test/ctx/session/echo2",controller:"testCtxSession",middlewares:"test"},{method:"post",path:"test/ctx/request/:id",controller:"testCtxRequest",action:"request",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/requestXML",controller:"testCtxRequest",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/response/success",controller:"testCtxResponse",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/response/successMore",controller:"testCtxResponse",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/response/fail",controller:"testCtxResponse",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/response/throwError",controller:"testCtxResponse",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/config/test",controller:"testCtxConfig",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/locale/enus",controller:"testCtxLocale",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/ctx/locale/zhcn",controller:"testCtxLocale",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/event/hello",controller:"testEventHello",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/cache/mem",controller:"testCacheMem",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/cache/db",controller:"testCacheDb",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/cache/redis",controller:"testCacheRedis",middlewares:"test",meta:{auth:{enable:!1}}},{method:"get",path:"test/feat/areaScope",controller:"testFeatAreaScope",middlewares:"test",meta:{auth:{enable:!1}}},{method:"get",path:"test/feat/bean",controller:"testFeatBean",middlewares:"test",meta:{auth:{enable:!1}}},{method:"get",path:"test/feat/bean/local",controller:"testFeatBean",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/httpLog",controller:"testFeatHttpLog",middlewares:"test,httpLog",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/sendMail",controller:"testFeatSendMail",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/socketio/publish",controller:"testFeatSocketIO",middlewares:"",meta:{auth:{user:!0}}},{method:"post",path:"test/feat/socketio/simpleChat",controller:"testFeatSocketIO",middlewares:"",meta:{auth:{user:!0}}},{method:"post",path:"test/feat/instance",controller:"testFeatInstance",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/progress",controller:"testFeatProgress"},{method:"post",path:"test/feat/sequence",controller:"testFeatSequence",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/settings",controller:"testFeatSettings",middlewares:"test"},{method:"post",path:"test/feat/stats",controller:"testFeatStats",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/stats/plus",controller:"testFeatStats"},{method:"post",path:"test/feat/status",controller:"testFeatStatus",middlewares:"test",meta:{auth:{enable:!1}}},{method:"post",path:"test/feat/validation/success",controller:"testFeatValidation",middlewares:"test,validate",meta:{auth:{enable:!1},validate:{validator:"userTest"}}},{method:"post",path:"test/feat/validation/fail",controller:"testFeatValidation",middlewares:"test,validate",meta:{auth:{enable:!1},validate:{validator:"userTest"}}},{method:"post",path:"test/feat/validation/schema",controller:"testFeatValidation",middlewares:"test,validate",meta:{auth:{enable:!1},validate:{validator:"userTest",schema:"settingsUserExtra"}}},{method:"post",path:"test/feat/middleware/interception",controller:"testFeatMiddleware",middlewares:"test,testInterception"},{method:"post",path:"test/feat/middleware/restructuring",controller:"testFeatMiddleware",middlewares:"test,testInterception,testRestructuring"},{method:"post",path:"test/feat/pushAsync",controller:"testFeatQueue",middlewares:"test"},{method:"post",path:"test/feat/push",controller:"testFeatQueue",middlewares:"test"},{method:"post",path:"test/feat/broadcast/emit",controller:"testFeatBroadcast",middlewares:"test"},{method:"post",path:"test/feat/model",controller:"testFeatModel",middlewares:"test"},{method:"post",path:"test/feat/category",controller:"testFeatCategory",middlewares:"test"},{method:"post",path:"test/feat/tag",controller:"testFeatTag",middlewares:"test"},{method:"post",path:"test/feat/openAuth/resourceCheckSuccess",controller:"testOpenAuth",middlewares:"test",meta:{right:{type:"resource",name:"mineKitchenSink"}}},{method:"post",path:"test/feat/openAuth/resourceCheckFail",controller:"testOpenAuth",middlewares:"test",meta:{right:{type:"resource",module:"test-party",name:"createParty"}}},{method:"post",path:"test/monkey/monkeyee/test",controller:"testMonkeyee",middlewares:"test"},{method:"post",path:"kitchen-sink/guide/echo",controller:"testKitchensinkGuide"},{method:"post",path:"kitchen-sink/guide/echo3",controller:"testKitchensinkGuide"},{method:"post",path:"kitchen-sink/guide/echo4",controller:"testKitchensinkGuide"},{method:"post",path:"kitchen-sink/guide/echo6",controller:"testKitchensinkGuide"},{method:"post",path:"kitchen-sink/guide/echo7",controller:"testKitchensinkGuide"},{method:"post",path:"kitchen-sink/guide/echo8",controller:"testKitchensinkGuide",middlewares:"transaction"},{method:"post",path:"kitchen-sink/guide/echo9",controller:"testKitchensinkGuide",meta:{right:{type:"resource",name:"appComponentsGuide"}}},{method:"get",path:"kitchen-sink/autocomplete/languages/:query",controller:"testKitchensinkAutocomplete",action:"languages",meta:{auth:{enable:!1}}},{method:"get",path:"kitchen-sink/form-schema-validation/load",controller:"testKitchensinkFormSchemaValidation"},{method:"post",path:"kitchen-sink/form-schema-validation/saveSimple",controller:"testKitchensinkFormSchemaValidation"},{method:"post",path:"kitchen-sink/form-schema-validation/saveValidation",controller:"testKitchensinkFormSchemaValidation",middlewares:"validate",meta:{validate:{validator:"formTest"}}},{method:"post",path:"kitchen-sink/form-captcha/signup",controller:"testKitchensinkFormSchemaValidation",middlewares:"captchaVerify,validate",meta:{captchaVerify:{scene:{name:"formCaptchaTest"}},validate:{validator:"formCaptchaTest"}}},{method:"post",path:"kitchen-sink/form-mobile-verify/mobileVerify",controller:"testKitchensinkFormSchemaValidation",middlewares:"captchaVerify,validate",meta:{captchaVerify:{scene:{name:"formMobileVerifyTest"}},validate:{validator:"formMobileVerifyTest"}}},{method:"post",path:"kitchen-sink/ptr-is-loadmore/list",controller:"testKitchensinkPtrIsLoadMore"}]),t}},7305:t=>{function e(t,e){var n="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!n){if(Array.isArray(t)||(n=function(t,e){if(t){if("string"==typeof t)return r(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?r(t,e):void 0}}(t))||e&&t&&"number"==typeof t.length){n&&(t=n);var o=0,i=function(){};return{s:i,n:function(){return o>=t.length?{done:!0}:{done:!1,value:t[o++]}},e:function(t){throw t},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,c=!0,u=!1;return{s:function(){n=n.call(t)},n:function(){var t=n.next();return c=t.done,t},e:function(t){u=!0,a=t},f:function(){try{c||null==n.return||n.return()}finally{if(u)throw a}}}}function r(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}function n(){"use strict";n=function(){return t};var t={},e=Object.prototype,r=e.hasOwnProperty,o=Object.defineProperty||function(t,e,r){t[e]=r.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function l(t,e,r,n){var i=e&&e.prototype instanceof p?e:p,a=Object.create(i.prototype),c=new k(n||[]);return o(a,"_invoke",{value:L(t,r,c)}),a}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=l;var f={};function p(){}function d(){}function v(){}var y={};s(y,a,(function(){return this}));var m=Object.getPrototypeOf,g=m&&m(m(j([])));g&&g!==e&&r.call(g,a)&&(y=g);var w=v.prototype=p.prototype=Object.create(y);function x(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){function n(o,i,a,c){var u=h(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&r.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,a,c)}),(function(t){n("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return n("throw",t,a,c)}))}c(u.arg)}var i;o(this,"_invoke",{value:function(t,r){function o(){return new e((function(e,o){n(t,r,e,o)}))}return i=i?i.then(o,o):o()}})}function L(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(r.method=o,r.arg=i;;){var a=r.delegate;if(a){var c=E(a,r);if(c){if(c===f)continue;return c}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=h(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===f)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}function E(t,e){var r=e.method,n=t.iterator[r];if(void 0===n)return e.delegate=null,"throw"===r&&t.iterator.return&&(e.method="return",e.arg=void 0,E(t,e),"throw"===e.method)||"return"!==r&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+r+"' method")),f;var o=h(n,t.iterator,e.arg);if("throw"===o.type)return e.method="throw",e.arg=o.arg,e.delegate=null,f;var i=o.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,f):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,f)}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function k(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function j(t){if(t){var e=t[a];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return d.prototype=v,o(w,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:d,configurable:!0}),d.displayName=s(v,u,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===d||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,v):(t.__proto__=v,s(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},t.awrap=function(t){return{__await:t}},x(b.prototype),s(b.prototype,c,(function(){return this})),t.AsyncIterator=b,t.async=function(e,r,n,o,i){void 0===i&&(i=Promise);var a=new b(l(e,r,n,o),i);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},x(w),s(w,u,"Generator"),s(w,a,(function(){return this})),s(w,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},t.values=j,k.prototype={constructor:k,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var c=r.call(i,"catchLoc"),u=r.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,f):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),f},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),f}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;O(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:j(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),f}},t}function o(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function i(t){return function(){var e=this,r=arguments;return new Promise((function(n,i){var a=t.apply(e,r);function c(t){o(a,n,i,c,u,"next",t)}function u(t){o(a,n,i,c,u,"throw",t)}c(void 0)}))}}t.exports=t=>{class r extends t.Service{async over(t){var e=this;return i(n().mark((function r(){var o;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o=t.key,t.user,r.next=3,e.ctx.model.party.update({id:o.itemId,partyOver:1});case 3:return r.next=5,e.ctx.bean.cms.render._renderArticlePush({key:o,inner:!1});case 5:case"end":return r.stop()}}),r)})))()}async overBulk(t){var r=this;return i(n().mark((function o(){var i,a,c,u,s,l;return n().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:i=t.keys,a=t.user,c=[],u=e(i),n.prev=3,u.s();case 5:if((s=u.n()).done){n.next=13;break}return l=s.value,n.next=9,r._overBulk_item({key:l,user:a});case 9:n.sent&&c.push(l);case 11:n.next=5;break;case 13:n.next=18;break;case 15:n.prev=15,n.t0=n.catch(3),u.e(n.t0);case 18:return n.prev=18,u.f(),n.finish(18);case 21:return n.abrupt("return",{keys:c});case 22:case"end":return n.stop()}}),o,null,[[3,15,18,21]])})))()}async _overBulk_item(t){var e=this;return i(n().mark((function r(){var o,i;return n().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return o=t.key,i=t.user,r.next=3,e.ctx.bean.atom.checkRightAction({atom:{id:o.atomId},action:101,user:i});case 3:if(r.sent){r.next=6;break}return r.abrupt("return",!1);case 6:return r.next=8,e.over({key:o,user:i});case 8:return r.abrupt("return",!0);case 9:case"end":return r.stop()}}),r)})))()}}return r}},9788:(t,e,r)=>{const n=r(7305);t.exports=t=>{const e={};return Object.assign(e,{party:n}),e}},5638:t=>{"use strict";t.exports=require("require3")},3614:t=>{"use strict";t.exports=JSON.parse('[{"id":0,"name":"A# .NET"},{"id":1,"name":"A# (Axiom)"},{"id":2,"name":"A-0 System"},{"id":3,"name":"A+"},{"id":4,"name":"A++"},{"id":5,"name":"ABAP"},{"id":6,"name":"ABC"},{"id":7,"name":"ABC ALGOL"},{"id":8,"name":"ABLE"},{"id":9,"name":"ABSET"},{"id":10,"name":"ABSYS"},{"id":11,"name":"ACC"},{"id":12,"name":"Accent"},{"id":13,"name":"Ace DASL"},{"id":14,"name":"ACL2"},{"id":15,"name":"ACT-III"},{"id":16,"name":"Action!"},{"id":17,"name":"ActionScript"},{"id":18,"name":"Ada"},{"id":19,"name":"Adenine"},{"id":20,"name":"Agda"},{"id":21,"name":"Agilent VEE"},{"id":22,"name":"Agora"},{"id":23,"name":"AIMMS"},{"id":24,"name":"Alef"},{"id":25,"name":"ALF"},{"id":26,"name":"ALGOL 58"},{"id":27,"name":"ALGOL 60"},{"id":28,"name":"ALGOL 68"},{"id":29,"name":"ALGOL W"},{"id":30,"name":"Alice"},{"id":31,"name":"Alma-0"},{"id":32,"name":"AmbientTalk"},{"id":33,"name":"Amiga E"},{"id":34,"name":"AMOS"},{"id":35,"name":"AMPL"},{"id":36,"name":"Apex"},{"id":37,"name":"APL"},{"id":38,"name":"App Inventor for Android\'s visual block language"},{"id":39,"name":"AppleScript"},{"id":40,"name":"Arc"},{"id":41,"name":"ARexx"},{"id":42,"name":"Argus"},{"id":43,"name":"AspectJ"},{"id":44,"name":"Assembly language"},{"id":45,"name":"ATS"},{"id":46,"name":"Ateji PX"},{"id":47,"name":"AutoHotkey"},{"id":48,"name":"Autocoder"},{"id":49,"name":"AutoIt"},{"id":50,"name":"AutoLISP / Visual LISP"},{"id":51,"name":"Averest"},{"id":52,"name":"AWK"},{"id":53,"name":"Axum"},{"id":54,"name":"B"},{"id":55,"name":"Babbage"},{"id":56,"name":"Bash"},{"id":57,"name":"BASIC"},{"id":58,"name":"bc"},{"id":59,"name":"BCPL"},{"id":60,"name":"BeanShell"},{"id":61,"name":"Batch (Windows/Dos)"},{"id":62,"name":"Bertrand"},{"id":63,"name":"BETA"},{"id":64,"name":"Bigwig"},{"id":65,"name":"Bistro"},{"id":66,"name":"BitC"},{"id":67,"name":"BLISS"},{"id":68,"name":"Blue"},{"id":69,"name":"Boo"},{"id":70,"name":"Boomerang"},{"id":71,"name":"Bourne shell"},{"id":72,"name":"bash"},{"id":73,"name":"ksh"},{"id":74,"name":"BREW"},{"id":75,"name":"BPEL"},{"id":76,"name":"C"},{"id":77,"name":"C--"},{"id":78,"name":"C++"},{"id":79,"name":"C#"},{"id":80,"name":"C/AL"},{"id":81,"name":"Caché ObjectScript"},{"id":82,"name":"C Shell"},{"id":83,"name":"Caml"},{"id":84,"name":"Cayenne"},{"id":85,"name":"CDuce"},{"id":86,"name":"Cecil"},{"id":87,"name":"Cel"},{"id":88,"name":"Cesil"},{"id":89,"name":"Ceylon"},{"id":90,"name":"CFEngine"},{"id":91,"name":"CFML"},{"id":92,"name":"Cg"},{"id":93,"name":"Ch"},{"id":94,"name":"Chapel"},{"id":95,"name":"CHAIN"},{"id":96,"name":"Charity"},{"id":97,"name":"Charm"},{"id":98,"name":"Chef"},{"id":99,"name":"CHILL"},{"id":100,"name":"CHIP-8"},{"id":101,"name":"chomski"},{"id":102,"name":"ChucK"},{"id":103,"name":"CICS"},{"id":104,"name":"Cilk"},{"id":105,"name":"CL"},{"id":106,"name":"Claire"},{"id":107,"name":"Clarion"},{"id":108,"name":"Clean"},{"id":109,"name":"Clipper"},{"id":110,"name":"CLIST"},{"id":111,"name":"Clojure"},{"id":112,"name":"CLU"},{"id":113,"name":"CMS-2"},{"id":114,"name":"COBOL"},{"id":115,"name":"Cobra"},{"id":116,"name":"CODE"},{"id":117,"name":"CoffeeScript"},{"id":118,"name":"Cola"},{"id":119,"name":"ColdC"},{"id":120,"name":"ColdFusion"},{"id":121,"name":"COMAL"},{"id":122,"name":"Combined Programming Language"},{"id":123,"name":"COMIT"},{"id":124,"name":"Common Intermediate Language"},{"id":125,"name":"Common Lisp"},{"id":126,"name":"COMPASS"},{"id":127,"name":"Component Pascal"},{"id":128,"name":"Constraint Handling Rules"},{"id":129,"name":"Converge"},{"id":130,"name":"Cool"},{"id":131,"name":"Coq"},{"id":132,"name":"Coral 66"},{"id":133,"name":"Corn"},{"id":134,"name":"CorVision"},{"id":135,"name":"COWSEL"},{"id":136,"name":"CPL"},{"id":137,"name":"csh"},{"id":138,"name":"CSP"},{"id":139,"name":"Cryptol"},{"id":140,"name":"Csound"},{"id":141,"name":"CUDA"},{"id":142,"name":"Curl"},{"id":143,"name":"Curry"},{"id":144,"name":"Cyclone"},{"id":145,"name":"Cython"},{"id":146,"name":"D"},{"id":147,"name":"DASL"},{"id":148,"name":"DASL"},{"id":149,"name":"Dart"},{"id":150,"name":"DataFlex"},{"id":151,"name":"Datalog"},{"id":152,"name":"DATATRIEVE"},{"id":153,"name":"dBase"},{"id":154,"name":"dc"},{"id":155,"name":"DCL"},{"id":156,"name":"Deesel"},{"id":157,"name":"Delphi"},{"id":158,"name":"DinkC"},{"id":159,"name":"DIBOL"},{"id":160,"name":"Dog"},{"id":161,"name":"Draco"},{"id":162,"name":"DRAKON"},{"id":163,"name":"Dylan"},{"id":164,"name":"DYNAMO"},{"id":165,"name":"E"},{"id":166,"name":"E#"},{"id":167,"name":"Ease"},{"id":168,"name":"Easy PL/I"},{"id":169,"name":"Easy Programming Language"},{"id":170,"name":"EASYTRIEVE PLUS"},{"id":171,"name":"ECMAScript"},{"id":172,"name":"Edinburgh IMP"},{"id":173,"name":"EGL"},{"id":174,"name":"Eiffel"},{"id":175,"name":"ELAN"},{"id":176,"name":"Elixir"},{"id":177,"name":"Elm"},{"id":178,"name":"Emacs Lisp"},{"id":179,"name":"Emerald"},{"id":180,"name":"Epigram"},{"id":181,"name":"EPL"},{"id":182,"name":"Erlang"},{"id":183,"name":"es"},{"id":184,"name":"Escher"},{"id":185,"name":"ESPOL"},{"id":186,"name":"Esterel"},{"id":187,"name":"Etoys"},{"id":188,"name":"Euclid"},{"id":189,"name":"Euler"},{"id":190,"name":"Euphoria"},{"id":191,"name":"EusLisp Robot Programming Language"},{"id":192,"name":"CMS EXEC"},{"id":193,"name":"EXEC 2"},{"id":194,"name":"Executable UML"},{"id":195,"name":"F"},{"id":196,"name":"F#"},{"id":197,"name":"Factor"},{"id":198,"name":"Falcon"},{"id":199,"name":"Fantom"},{"id":200,"name":"FAUST"},{"id":201,"name":"FFP"},{"id":202,"name":"Fjölnir"},{"id":203,"name":"FL"},{"id":204,"name":"Flavors"},{"id":205,"name":"Flex"},{"id":206,"name":"FLOW-MATIC"},{"id":207,"name":"FOCAL"},{"id":208,"name":"FOCUS"},{"id":209,"name":"FOIL"},{"id":210,"name":"FORMAC"},{"id":211,"name":"@Formula"},{"id":212,"name":"Forth"},{"id":213,"name":"Fortran"},{"id":214,"name":"Fortress"},{"id":215,"name":"FoxBase"},{"id":216,"name":"FoxPro"},{"id":217,"name":"FP"},{"id":218,"name":"FPr"},{"id":219,"name":"Franz Lisp"},{"id":220,"name":"Frege"},{"id":221,"name":"F-Script"},{"id":222,"name":"G"},{"id":223,"name":"Google Apps Script"},{"id":224,"name":"Game Maker Language"},{"id":225,"name":"GameMonkey Script"},{"id":226,"name":"GAMS"},{"id":227,"name":"GAP"},{"id":228,"name":"G-code"},{"id":229,"name":"Genie"},{"id":230,"name":"GDL"},{"id":231,"name":"GJ"},{"id":232,"name":"GEORGE"},{"id":233,"name":"GLSL"},{"id":234,"name":"GNU E"},{"id":235,"name":"GM"},{"id":236,"name":"Go"},{"id":237,"name":"Go!"},{"id":238,"name":"GOAL"},{"id":239,"name":"Gödel"},{"id":240,"name":"Godiva"},{"id":241,"name":"GOM (Good Old Mad)"},{"id":242,"name":"Goo"},{"id":243,"name":"Gosu"},{"id":244,"name":"GOTRAN"},{"id":245,"name":"GPSS"},{"id":246,"name":"GraphTalk"},{"id":247,"name":"GRASS"},{"id":248,"name":"Groovy"},{"id":249,"name":"Hack"},{"id":250,"name":"HAL/S"},{"id":251,"name":"Hamilton C shell"},{"id":252,"name":"Harbour"},{"id":253,"name":"Hartmann pipelines"},{"id":254,"name":"Haskell"},{"id":255,"name":"Haxe"},{"id":256,"name":"High Level Assembly"},{"id":257,"name":"HLSL"},{"id":258,"name":"Hop"},{"id":259,"name":"Hope"},{"id":260,"name":"Hugo"},{"id":261,"name":"Hume"},{"id":262,"name":"HyperTalk"},{"id":263,"name":"IBM Basic assembly language"},{"id":264,"name":"IBM HAScript"},{"id":265,"name":"IBM Informix-4GL"},{"id":266,"name":"IBM RPG"},{"id":267,"name":"ICI"},{"id":268,"name":"Icon"},{"id":269,"name":"Id"},{"id":270,"name":"IDL"},{"id":271,"name":"Idris"},{"id":272,"name":"IMP"},{"id":273,"name":"Inform"},{"id":274,"name":"Io"},{"id":275,"name":"Ioke"},{"id":276,"name":"IPL"},{"id":277,"name":"IPTSCRAE"},{"id":278,"name":"ISLISP"},{"id":279,"name":"ISPF"},{"id":280,"name":"ISWIM"},{"id":281,"name":"J"},{"id":282,"name":"J#"},{"id":283,"name":"J++"},{"id":284,"name":"JADE"},{"id":285,"name":"Jako"},{"id":286,"name":"JAL"},{"id":287,"name":"Janus"},{"id":288,"name":"JASS"},{"id":289,"name":"Java"},{"id":290,"name":"JavaScript"},{"id":291,"name":"JCL"},{"id":292,"name":"JEAN"},{"id":293,"name":"Join Java"},{"id":294,"name":"JOSS"},{"id":295,"name":"Joule"},{"id":296,"name":"JOVIAL"},{"id":297,"name":"Joy"},{"id":298,"name":"JScript"},{"id":299,"name":"JScript .NET"},{"id":300,"name":"JavaFX Script"},{"id":301,"name":"Julia"},{"id":302,"name":"Jython"},{"id":303,"name":"K"},{"id":304,"name":"Kaleidoscope"},{"id":305,"name":"Karel"},{"id":306,"name":"Karel++"},{"id":307,"name":"KEE"},{"id":308,"name":"Kixtart"},{"id":309,"name":"Klerer-May System"},{"id":310,"name":"KIF"},{"id":311,"name":"Kojo"},{"id":312,"name":"Kotlin"},{"id":313,"name":"KRC"},{"id":314,"name":"KRL"},{"id":315,"name":"KUKA"},{"id":316,"name":"KRYPTON"},{"id":317,"name":"ksh"},{"id":318,"name":"L"},{"id":319,"name":"L# .NET"},{"id":320,"name":"LabVIEW"},{"id":321,"name":"Ladder"},{"id":322,"name":"Lagoona"},{"id":323,"name":"LANSA"},{"id":324,"name":"Lasso"},{"id":325,"name":"LaTeX"},{"id":326,"name":"Lava"},{"id":327,"name":"LC-3"},{"id":328,"name":"Leda"},{"id":329,"name":"Legoscript"},{"id":330,"name":"LIL"},{"id":331,"name":"LilyPond"},{"id":332,"name":"Limbo"},{"id":333,"name":"Limnor"},{"id":334,"name":"LINC"},{"id":335,"name":"Lingo"},{"id":336,"name":"Linoleum"},{"id":337,"name":"LIS"},{"id":338,"name":"LISA"},{"id":339,"name":"Lisaac"},{"id":340,"name":"Lisp"},{"id":341,"name":"Lite-C"},{"id":342,"name":"Lithe"},{"id":343,"name":"Little b"},{"id":344,"name":"Logo"},{"id":345,"name":"Logtalk"},{"id":346,"name":"LotusScript"},{"id":347,"name":"LPC"},{"id":348,"name":"LSE"},{"id":349,"name":"LSL"},{"id":350,"name":"LiveCode"},{"id":351,"name":"LiveScript"},{"id":352,"name":"Lua"},{"id":353,"name":"Lucid"},{"id":354,"name":"Lustre"},{"id":355,"name":"LYaPAS"},{"id":356,"name":"Lynx"},{"id":357,"name":"M2001"},{"id":358,"name":"M4"},{"id":359,"name":"M#"},{"id":360,"name":"Machine code"},{"id":361,"name":"MAD"},{"id":362,"name":"MAD/I"},{"id":363,"name":"Magik"},{"id":364,"name":"Magma"},{"id":365,"name":"make"},{"id":366,"name":"Maple"},{"id":367,"name":"MAPPER"},{"id":368,"name":"MARK-IV"},{"id":369,"name":"Mary"},{"id":370,"name":"MASM Microsoft Assembly x86"},{"id":371,"name":"Mathematica"},{"id":372,"name":"MATLAB"},{"id":373,"name":"Maxima"},{"id":374,"name":"Macsyma"},{"id":375,"name":"Max"},{"id":376,"name":"MaxScript"},{"id":377,"name":"Maya (MEL)"},{"id":378,"name":"MDL"},{"id":379,"name":"Mercury"},{"id":380,"name":"Mesa"},{"id":381,"name":"Metacard"},{"id":382,"name":"Metafont"},{"id":383,"name":"Microcode"},{"id":384,"name":"MicroScript"},{"id":385,"name":"MIIS"},{"id":386,"name":"MillScript"},{"id":387,"name":"MIMIC"},{"id":388,"name":"Mirah"},{"id":389,"name":"Miranda"},{"id":390,"name":"MIVA Script"},{"id":391,"name":"ML"},{"id":392,"name":"Moby"},{"id":393,"name":"Model 204"},{"id":394,"name":"Modelica"},{"id":395,"name":"Modula"},{"id":396,"name":"Modula-2"},{"id":397,"name":"Modula-3"},{"id":398,"name":"Mohol"},{"id":399,"name":"MOO"},{"id":400,"name":"Mortran"},{"id":401,"name":"Mouse"},{"id":402,"name":"MPD"},{"id":403,"name":"CIL"},{"id":404,"name":"MSL"},{"id":405,"name":"MUMPS"},{"id":406,"name":"Mystic Programming Language"},{"id":407,"name":"NASM"},{"id":408,"name":"NATURAL"},{"id":409,"name":"Napier88"},{"id":410,"name":"Neko"},{"id":411,"name":"Nemerle"},{"id":412,"name":"nesC"},{"id":413,"name":"NESL"},{"id":414,"name":"Net.Data"},{"id":415,"name":"NetLogo"},{"id":416,"name":"NetRexx"},{"id":417,"name":"NewLISP"},{"id":418,"name":"NEWP"},{"id":419,"name":"Newspeak"},{"id":420,"name":"NewtonScript"},{"id":421,"name":"NGL"},{"id":422,"name":"Nial"},{"id":423,"name":"Nice"},{"id":424,"name":"Nickle"},{"id":425,"name":"Nim"},{"id":426,"name":"NPL"},{"id":427,"name":"Not eXactly C"},{"id":428,"name":"Not Quite C"},{"id":429,"name":"NSIS"},{"id":430,"name":"Nu"},{"id":431,"name":"NWScript"},{"id":432,"name":"NXT-G"},{"id":433,"name":"o:XML"},{"id":434,"name":"Oak"},{"id":435,"name":"Oberon"},{"id":436,"name":"OBJ2"},{"id":437,"name":"Object Lisp"},{"id":438,"name":"ObjectLOGO"},{"id":439,"name":"Object REXX"},{"id":440,"name":"Object Pascal"},{"id":441,"name":"Objective-C"},{"id":442,"name":"Objective-J"},{"id":443,"name":"Obliq"},{"id":444,"name":"OCaml"},{"id":445,"name":"occam"},{"id":446,"name":"occam-π"},{"id":447,"name":"Octave"},{"id":448,"name":"OmniMark"},{"id":449,"name":"Onyx"},{"id":450,"name":"Opa"},{"id":451,"name":"Opal"},{"id":452,"name":"OpenCL"},{"id":453,"name":"OpenEdge ABL"},{"id":454,"name":"OPL"},{"id":455,"name":"OPS5"},{"id":456,"name":"OptimJ"},{"id":457,"name":"Orc"},{"id":458,"name":"ORCA/Modula-2"},{"id":459,"name":"Oriel"},{"id":460,"name":"Orwell"},{"id":461,"name":"Oxygene"},{"id":462,"name":"Oz"},{"id":463,"name":"P′′"},{"id":464,"name":"P#"},{"id":465,"name":"ParaSail (programming language)"},{"id":466,"name":"PARI/GP"},{"id":467,"name":"Pascal"},{"id":468,"name":"PCASTL"},{"id":469,"name":"PCF"},{"id":470,"name":"PEARL"},{"id":471,"name":"PeopleCode"},{"id":472,"name":"Perl"},{"id":473,"name":"PDL"},{"id":474,"name":"Perl6"},{"id":475,"name":"PHP"},{"id":476,"name":"Phrogram"},{"id":477,"name":"Pico"},{"id":478,"name":"Picolisp"},{"id":479,"name":"Pict"},{"id":480,"name":"Pike"},{"id":481,"name":"PIKT"},{"id":482,"name":"PILOT"},{"id":483,"name":"Pipelines"},{"id":484,"name":"Pizza"},{"id":485,"name":"PL-11"},{"id":486,"name":"PL/0"},{"id":487,"name":"PL/B"},{"id":488,"name":"PL/C"},{"id":489,"name":"PL/I"},{"id":490,"name":"PL/M"},{"id":491,"name":"PL/P"},{"id":492,"name":"PL/SQL"},{"id":493,"name":"PL360"},{"id":494,"name":"PLANC"},{"id":495,"name":"Plankalkül"},{"id":496,"name":"Planner"},{"id":497,"name":"PLEX"},{"id":498,"name":"PLEXIL"},{"id":499,"name":"Plus"},{"id":500,"name":"POP-11"},{"id":501,"name":"PostScript"},{"id":502,"name":"PortablE"},{"id":503,"name":"Powerhouse"},{"id":504,"name":"PowerBuilder"},{"id":505,"name":"PowerShell"},{"id":506,"name":"PPL"},{"id":507,"name":"Processing"},{"id":508,"name":"Processing.js"},{"id":509,"name":"Prograph"},{"id":510,"name":"PROIV"},{"id":511,"name":"Prolog"},{"id":512,"name":"PROMAL"},{"id":513,"name":"Promela"},{"id":514,"name":"PROSE modeling language"},{"id":515,"name":"PROTEL"},{"id":516,"name":"ProvideX"},{"id":517,"name":"Pro*C"},{"id":518,"name":"Pure"},{"id":519,"name":"Python"},{"id":520,"name":"Q (equational programming language)"},{"id":521,"name":"Q (programming language from Kx Systems)"},{"id":522,"name":"Qalb"},{"id":523,"name":"QtScript"},{"id":524,"name":"QuakeC"},{"id":525,"name":"QPL"},{"id":526,"name":"R"},{"id":527,"name":"R++"},{"id":528,"name":"Racket"},{"id":529,"name":"RAPID"},{"id":530,"name":"Rapira"},{"id":531,"name":"Ratfiv"},{"id":532,"name":"Ratfor"},{"id":533,"name":"rc"},{"id":534,"name":"REBOL"},{"id":535,"name":"Red"},{"id":536,"name":"Redcode"},{"id":537,"name":"REFAL"},{"id":538,"name":"Reia"},{"id":539,"name":"Revolution"},{"id":540,"name":"rex"},{"id":541,"name":"REXX"},{"id":542,"name":"Rlab"},{"id":543,"name":"ROOP"},{"id":544,"name":"RPG"},{"id":545,"name":"RPL"},{"id":546,"name":"RSL"},{"id":547,"name":"RTL/2"},{"id":548,"name":"Ruby"},{"id":549,"name":"RuneScript"},{"id":550,"name":"Rust"},{"id":551,"name":"S"},{"id":552,"name":"S2"},{"id":553,"name":"S3"},{"id":554,"name":"S-Lang"},{"id":555,"name":"S-PLUS"},{"id":556,"name":"SA-C"},{"id":557,"name":"SabreTalk"},{"id":558,"name":"SAIL"},{"id":559,"name":"SALSA"},{"id":560,"name":"SAM76"},{"id":561,"name":"SAS"},{"id":562,"name":"SASL"},{"id":563,"name":"Sather"},{"id":564,"name":"Sawzall"},{"id":565,"name":"SBL"},{"id":566,"name":"Scala"},{"id":567,"name":"Scheme"},{"id":568,"name":"Scilab"},{"id":569,"name":"Scratch"},{"id":570,"name":"Script.NET"},{"id":571,"name":"Sed"},{"id":572,"name":"Seed7"},{"id":573,"name":"Self"},{"id":574,"name":"SenseTalk"},{"id":575,"name":"SequenceL"},{"id":576,"name":"SETL"},{"id":577,"name":"SIMPOL"},{"id":578,"name":"SIGNAL"},{"id":579,"name":"SiMPLE"},{"id":580,"name":"SIMSCRIPT"},{"id":581,"name":"Simula"},{"id":582,"name":"Simulink"},{"id":583,"name":"SISAL"},{"id":584,"name":"SLIP"},{"id":585,"name":"SMALL"},{"id":586,"name":"Smalltalk"},{"id":587,"name":"Small Basic"},{"id":588,"name":"SML"},{"id":589,"name":"Snap!"},{"id":590,"name":"SNOBOL"},{"id":591,"name":"SPITBOL"},{"id":592,"name":"Snowball"},{"id":593,"name":"SOL"},{"id":594,"name":"Span"},{"id":595,"name":"SPARK"},{"id":596,"name":"Speedcode"},{"id":597,"name":"SPIN"},{"id":598,"name":"SP/k"},{"id":599,"name":"SPS"},{"id":600,"name":"SQR"},{"id":601,"name":"Squeak"},{"id":602,"name":"Squirrel"},{"id":603,"name":"SR"},{"id":604,"name":"S/SL"},{"id":605,"name":"Stackless Python"},{"id":606,"name":"Starlogo"},{"id":607,"name":"Strand"},{"id":608,"name":"Stata"},{"id":609,"name":"Stateflow"},{"id":610,"name":"Subtext"},{"id":611,"name":"SuperCollider"},{"id":612,"name":"SuperTalk"},{"id":613,"name":"Swift (Apple programming language)"},{"id":614,"name":"Swift (parallel scripting language)"},{"id":615,"name":"SYMPL"},{"id":616,"name":"SyncCharts"},{"id":617,"name":"SystemVerilog"},{"id":618,"name":"T"},{"id":619,"name":"TACL"},{"id":620,"name":"TACPOL"},{"id":621,"name":"TADS"},{"id":622,"name":"TAL"},{"id":623,"name":"Tcl"},{"id":624,"name":"Tea"},{"id":625,"name":"TECO"},{"id":626,"name":"TELCOMP"},{"id":627,"name":"TeX"},{"id":628,"name":"TEX"},{"id":629,"name":"TIE"},{"id":630,"name":"Timber"},{"id":631,"name":"TMG"},{"id":632,"name":"Tom"},{"id":633,"name":"TOM"},{"id":634,"name":"TouchDevelop"},{"id":635,"name":"Topspeed"},{"id":636,"name":"TPU"},{"id":637,"name":"Trac"},{"id":638,"name":"TTM"},{"id":639,"name":"T-SQL"},{"id":640,"name":"TTCN"},{"id":641,"name":"Turing"},{"id":642,"name":"TUTOR"},{"id":643,"name":"TXL"},{"id":644,"name":"TypeScript"},{"id":645,"name":"Turbo C++"},{"id":646,"name":"Ubercode"},{"id":647,"name":"UCSD Pascal"},{"id":648,"name":"Umple"},{"id":649,"name":"Unicon"},{"id":650,"name":"Uniface"},{"id":651,"name":"UNITY"},{"id":652,"name":"Unix shell"},{"id":653,"name":"UnrealScript"},{"id":654,"name":"Vala"},{"id":655,"name":"VBA"},{"id":656,"name":"VBScript"},{"id":657,"name":"Verilog"},{"id":658,"name":"VHDL"},{"id":659,"name":"Visual Basic"},{"id":660,"name":"Visual Basic .NET"},{"id":661,"name":"Visual DataFlex"},{"id":662,"name":"Visual DialogScript"},{"id":663,"name":"Visual Fortran"},{"id":664,"name":"Visual FoxPro"},{"id":665,"name":"Visual J++"},{"id":666,"name":"Visual J#"},{"id":667,"name":"Visual Objects"},{"id":668,"name":"Visual Prolog"},{"id":669,"name":"VSXu"},{"id":670,"name":"vvvv"},{"id":671,"name":"WATFIV, WATFOR"},{"id":672,"name":"WebDNA"},{"id":673,"name":"WebQL"},{"id":674,"name":"Windows PowerShell"},{"id":675,"name":"Winbatch"},{"id":676,"name":"Wolfram Language"},{"id":677,"name":"Wyvern"},{"id":678,"name":"X++"},{"id":679,"name":"X#"},{"id":680,"name":"X10"},{"id":681,"name":"XBL"},{"id":682,"name":"XC"},{"id":683,"name":"XMOS architecture"},{"id":684,"name":"xHarbour"},{"id":685,"name":"XL"},{"id":686,"name":"Xojo"},{"id":687,"name":"XOTcl"},{"id":688,"name":"XPL"},{"id":689,"name":"XPL0"},{"id":690,"name":"XQuery"},{"id":691,"name":"XSB"},{"id":692,"name":"XSLT"},{"id":693,"name":"XPath"},{"id":694,"name":"Xtend"},{"id":695,"name":"Yorick"},{"id":696,"name":"YQL"},{"id":697,"name":"Z notation"},{"id":698,"name":"Zeno"},{"id":699,"name":"ZOPL"},{"id":700,"name":"ZPL"}]')}},e={},r=function r(n){var o=e[n];if(void 0!==o)return o.exports;var i=e[n]={exports:{}};return t[n](i,i.exports,r),i.exports}(2880);module.exports=r})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 1644:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+const objectHash = __webpack_require__(7551);
+
+module.exports = ctx => {
+  class Atom {
+    async create(context, next) {
+      await next();
+      assert.equal(!!context.result, true);
+    }
+    async _submitDirect(context, next) {
+      await next();
+      assert.equal(!!context.result, true);
+    }
+  }
+
+  return Atom;
+};
+
+
+/***/ }),
+
+/***/ 287:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class regExpAop {
+    get__name(context, next) {
+      next();
+      context.value = `${context.value}:regexpaop`;
+    }
+
+    set__name(context, next) {
+      const parts = context.value.split(':');
+      const index = parts.indexOf('regexpaop');
+      if (index > -1) {
+        parts.splice(index, 1);
+      }
+      context.value = parts.join(':');
+      next();
+    }
+
+    actionSync(context, next) {
+      next();
+      context.result = `${context.result}:regexpaop`;
+    }
+
+    async actionAsync(context, next) {
+      await next();
+      context.result = `${context.result}:regexpaop`;
+    }
+  }
+
+  return regExpAop;
+};
+
+
+/***/ }),
+
+/***/ 2594:
+/***/ ((module) => {
+
+class simpleAopBase {
+  actionSync(context, next) {
+    next();
+    context.result = `${context.result}:simpleaop`;
+  }
+}
+
+module.exports = ctx => {
+  class simpleAop extends simpleAopBase {
+    // magic
+    get__magic__(context, next) {
+      next();
+      const prop = context.prop;
+      if (prop === 'magic') {
+        context.value = 'magic:simpleaop';
+      }
+    }
+
+    get__name(context, next) {
+      next();
+      context.value = `${context.value}:simpleaop`;
+    }
+
+    set__name(context, next) {
+      const parts = context.value.split(':');
+      const index = parts.indexOf('simpleaop');
+      if (index > -1) {
+        parts.splice(index, 1);
+      }
+      context.value = parts.join(':');
+      next();
+    }
+
+    async actionAsync(context, next) {
+      await next();
+      context.result = `${context.result}:simpleaop`;
+    }
+  }
+
+  return simpleAop;
+};
+
+
+/***/ }),
+
+/***/ 5224:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const regExp = __webpack_require__(287);
+const simple = __webpack_require__(2594);
+const atom = __webpack_require__(1644);
+
+module.exports = app => {
+  const aops = {};
+  Object.assign(aops, {
+    simple: {
+      match: 'testctx',
+      mode: 'ctx',
+      bean: simple,
+    },
+    regExp: {
+      match: [/^test-party.test\.\w+$/, 'testctx'],
+      mode: 'ctx',
+      bean: regExp,
+    },
+  });
+  if (app.meta.isTest) {
+    Object.assign(aops, {
+      atom: {
+        match: 'atom',
+        mode: 'ctx',
+        bean: atom,
+      },
+    });
+  }
+  return aops;
+};
+
+
+/***/ }),
+
+/***/ 6118:
+/***/ ((module) => {
+
+module.exports = app => {
+  class Atom extends app.meta.AtomCmsBase {
+    async create({ atomClass, item, options, user }) {
+      // super
+      const key = await super.create({ atomClass, item, options, user });
+      // add party
+      const res = await this.ctx.model.party.insert({
+        atomId: key.atomId,
+      });
+      return { atomId: key.atomId, itemId: res.insertId };
+    }
+
+    async read({ atomClass, options, key, user }) {
+      // super
+      const item = await super.read({ atomClass, options, key, user });
+      if (!item) return null;
+      // read
+      await this._translate(item);
+      await this._getMeta(item, options);
+      // ok
+      return item;
+    }
+
+    async select({ atomClass, options, items, user }) {
+      // super
+      await super.select({ atomClass, options, items, user });
+      // select
+      for (const item of items) {
+        await this._translate(item);
+        await this._getMeta(item, options);
+      }
+    }
+
+    async write({ atomClass, target, key, item, options, user }) {
+      // super
+      await super.write({ atomClass, target, key, item, options, user });
+      // update party
+      const data = await this.ctx.model.party.prepareData(item);
+      await this.ctx.model.party.update(data);
+    }
+
+    async delete({ atomClass, key, options, user }) {
+      // super
+      await super.delete({ atomClass, key, options, user });
+      // delete party
+      await this.ctx.model.party.delete({
+        id: key.itemId,
+      });
+    }
+
+    async checkRightAction({ atom, atomClass, action, options, user }) {
+      // super
+      const res = await super.checkRightAction({ atom, atomClass, action, options, user });
+      if (!res) return res;
+      if (atom.atomStage !== 1) return res;
+      if (action !== 101) return res;
+      // partyOver
+      const item = await this.ctx.model.party.get({ id: atom.itemId });
+      if (action === 101 && item.partyOver === 0) return res;
+      return null;
+    }
+
+    async _translateDictPartyCountry({ partyCountry }) {
+      // dictKey
+      if (partyCountry !== '1' && partyCountry !== '86') return null;
+      // findItem
+      return await this.ctx.bean.dict.findItem({
+        dictKey: 'a-dictbooster:countries',
+        code: partyCountry,
+      });
+    }
+
+    async _translateDictPartyCity({ partyCountry, partyCity }) {
+      if (partyCountry !== '1' && partyCountry !== '86') return null;
+      if (!partyCity) return null;
+      // findItem
+      const dictKey = partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina';
+      return await this.ctx.bean.dict.findItem({
+        dictKey,
+        code: partyCity,
+        options: { separator: '/' },
+      });
+    }
+
+    async _translate(item) {
+      const dictItem = await this._translateDictPartyCity({
+        partyCountry: item.partyCountry,
+        partyCity: item.partyCity,
+      });
+      if (dictItem) {
+        item._partyCityTitle = dictItem.titleFull;
+        item._partyCityTitleLocale = dictItem.titleLocaleFull;
+      }
+    }
+
+    async _getMeta(item, options) {
+      // layout: list/table/mobile/pc
+      const layout = options && options.layout;
+      // meta
+      const meta = this._ensureItemMeta(item);
+      // meta.flags
+      if (item.partyOver) {
+        meta.flags.push(this.ctx.text('PartyOverFlag'));
+      }
+      if (layout !== 'table' && item.personCount) {
+        meta.flags.push(item.personCount + 'P');
+      }
+      // meta.summary
+      if (item.partyTypeCode) {
+        const dictItem = await this.ctx.bean.dict.findItem({
+          dictKey: 'test-party:dictPartyType',
+          code: item.partyTypeCode,
+        });
+        if (layout !== 'table') {
+          meta.summary = `${dictItem.options.emoji}${dictItem.titleLocaleFull}`;
+        }
+      }
+    }
+  }
+
+  return Atom;
+};
+
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class Broadcast extends app.meta.BeanBase {
+    async execute(context) {
+      const sameAsCaller = context.sameAsCaller;
+      const data = context.data;
+      if (!sameAsCaller) {
+        // do something
+      }
+      // locale
+      assert.equal(this.ctx.locale, 'zh-cn');
+      // data
+      assert.equal(data.message, 'hello');
+    }
+  }
+
+  return Broadcast;
+};
+
+
+/***/ }),
+
+/***/ 5561:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class Cli extends ctx.app.meta.CliBase(ctx) {
+    async meta({ user }) {
+      const meta = await super.meta({ user });
+      return meta;
+    }
+    async execute({ user }) {
+      // super
+      await super.execute({ user });
+      // chalk
+      let text = this.helper.chalk.keyword('orange')('chalk test');
+      await this.console.log({ text });
+      // boxen
+      text = this.helper.boxen({ text: 'boxen test' });
+      await this.console.log({ text });
+      // table
+      const table = this.helper.newTable({
+        head: ['Name', 'Sex'],
+        colWidths: [20, 20],
+      });
+      table.push(['Tom', 'M']);
+      table.push(['Jane', 'F']);
+      await this.console.log({ text: 'table test' });
+      await this.console.log({ text: table.toString() });
+      //  level one
+      await this._levelOne({ progressNo: 0 });
+    }
+
+    async _levelOne({ progressNo }) {
+      const total = 2;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${ctx.text('Level One')}: ${i + 1}`;
+        await this.console.log({
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await ctx.bean.util.sleep(200);
+        // level two
+        await this._levelTwo({ progressNo: progressNo + 1 });
+      }
+    }
+
+    async _levelTwo({ progressNo }) {
+      const total = 2;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${ctx.text('Level Two')}: ${i + 1}`;
+        await this.console.log({
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await ctx.bean.util.sleep(200);
+        // level two
+        await this._levelThree({ progressNo: progressNo + 1 });
+      }
+    }
+
+    async _levelThree({ progressNo }) {
+      const total = 3;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${ctx.text('Level Three')}: ${i + 1}`;
+        await this.console.log({
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await ctx.bean.util.sleep(200);
+      }
+    }
+  }
+
+  return Cli;
+};
+
+
+/***/ }),
+
+/***/ 7229:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class EventBean {
+    async execute(context, next) {
+      const data = context.data;
+      data.text = 'hello echo';
+      context.result = `${context.result}.echo`;
+      await next();
+      context.result = `echo.${context.result}`;
+    }
+  }
+
+  return EventBean;
+};
+
+
+/***/ }),
+
+/***/ 6427:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class EventBean {
+    async execute(context, next) {
+      const data = context.data;
+      const info = data.info;
+      const provider = info.user && info.user.provider;
+      if (provider && provider.module === 'a-authgithub' && provider.providerName === 'authgithub') {
+        info.config = ctx.bean.util.extend(info.config, {
+          modules: {},
+        });
+      }
+      // next
+      await next();
+    }
+  }
+
+  return EventBean;
+};
+
+
+/***/ }),
+
+/***/ 8020:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class EventBean {
+    async execute(context, next) {
+      const data = context.data;
+      const info = data.info;
+      info.config = ctx.bean.util.extend(info.config, {
+        modules: {},
+      });
+      // next
+      await next();
+    }
+  }
+
+  return EventBean;
+};
+
+
+/***/ }),
+
+/***/ 398:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = ctx => {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class EventBean {
+    async execute(context, next) {
+      const data = context.data;
+      assert(data.profileUser.profileId > 0);
+      // next
+      await next();
+    }
+  }
+
+  return EventBean;
+};
+
+
+/***/ }),
+
+/***/ 3558:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class IOMessage extends ctx.app.meta.IOMessageBase(ctx) {}
+  return IOMessage;
+};
+
+
+/***/ }),
+
+/***/ 5558:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class IOMessage extends ctx.app.meta.IOMessageBase(ctx) {
+    async onSaveSync({ path, options, message, messageSync, messageClass }) {
+      // options
+      const messageScene = (options && options.scene) || '';
+      // send back
+      if (messageSync.messageDirection === 1 && message.userIdTo === 0) {
+        const content = JSON.parse(message.content);
+        const _message = {
+          messageType: message.messageType,
+          messageFilter: message.messageFilter,
+          messageGroup: message.messageGroup,
+          messageScene,
+          userIdFrom: 0,
+          userIdTo: messageSync.userId,
+          content: {
+            text: `Reply: ${content.text}`,
+          },
+        };
+        await ctx.bean.io.publish({ path, message: _message, messageClass, options });
+      }
+      return await super.onSaveSync({ path, options, message, messageSync, messageClass });
+    }
+  }
+  return IOMessage;
+};
+
+
+/***/ }),
+
+/***/ 95:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class LocalTest {
+    get name() {
+      return 'localTest';
+    }
+  }
+
+  return LocalTest;
+};
+
+
+/***/ }),
+
+/***/ 8997:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class Middleware {
+    async execute(options, next) {
+      const { a, b } = ctx.request.body;
+      if (a === undefined || b === undefined) return ctx.throw(1002); // 1002: 'Incomplete Parameters'
+      // next
+      await next();
+    }
+  }
+  return Middleware;
+};
+
+
+/***/ }),
+
+/***/ 8120:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class Middleware {
+    async execute(options, next) {
+      const { a, b } = ctx.request.body;
+      ctx.request.body.a = parseInt(a);
+      ctx.request.body.b = parseInt(b);
+      // next
+      await next();
+    }
+  }
+  return Middleware;
+};
+
+
+/***/ }),
+
+/***/ 3929:
+/***/ ((module) => {
+
+module.exports = app => {
+  class Queue extends app.meta.BeanBase {
+    async execute(context) {
+      const data = context.data;
+      return data.a + data.b;
+    }
+  }
+
+  return Queue;
+};
+
+
+/***/ }),
+
+/***/ 770:
+/***/ ((module) => {
+
+module.exports = app => {
+  class Schedule extends app.meta.BeanBase {
+    async execute(context) {
+      const job = context.job;
+      console.log(
+        `----- Schedule Test: iid=${this.ctx.instance.id}, every=${job.data.jobOptions.repeat.every}, ${new Date()}`
+      );
+    }
+  }
+
+  return Schedule;
+};
+
+
+/***/ }),
+
+/***/ 7679:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class Sequence {
+    async execute(context) {
+      let value = context.value;
+      return ++value;
+    }
+  }
+
+  return Sequence;
+};
+
+
+/***/ }),
+
+/***/ 940:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class Startup extends app.meta.BeanBase {
+    async execute() {
+      console.log('test/feat/startup: all');
+      assert.equal(this.ctx.instance, undefined);
+    }
+  }
+
+  return Startup;
+};
+
+
+/***/ }),
+
+/***/ 3310:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class Startup extends app.meta.BeanBase {
+    async execute() {
+      console.log(`test/feat/startup: instance:${this.ctx.instance.id}`);
+      assert(this.ctx.instance.id > 0);
+    }
+  }
+
+  return Startup;
+};
+
+
+/***/ }),
+
+/***/ 7477:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class Stats {
+    async execute(context) {
+      const { keys } = context;
+      const fullName = keys.join('.');
+      const valueOld = await ctx.bean.stats._get({
+        module: moduleInfo.relativeName,
+        fullName,
+      });
+      if (valueOld === undefined) return 1;
+      return valueOld + 1;
+    }
+  }
+
+  return Stats;
+};
+
+
+/***/ }),
+
+/***/ 5268:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class Stats {
+    async execute(context) {
+      const { keys, user } = context;
+      const fullName = keys.join('.');
+      const valueOld = await ctx.bean.stats._get({
+        module: moduleInfo.relativeName,
+        fullName,
+        user,
+      });
+      if (valueOld === undefined) return 1;
+      return valueOld + 1;
+    }
+  }
+
+  return Stats;
+};
+
+
+/***/ }),
+
+/***/ 9711:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class SummerCache {
+    constructor({ cacheBase }) {
+      this._cacheBase = cacheBase;
+    }
+
+    async get(key) {
+      return {
+        id: key.id,
+        name: `name_${key.id}`,
+      };
+    }
+  }
+
+  return SummerCache;
+};
+
+
+/***/ }),
+
+/***/ 8713:
+/***/ ((module) => {
+
+module.exports = app => {
+  class appBean extends app.meta.BeanBase {
+    actionSync({ a, b }) {
+      return a + b;
+    }
+
+    async actionAsync({ a, b }) {
+      return Promise.resolve(a + b);
+    }
+  }
+
+  return appBean;
+};
+
+
+/***/ }),
+
+/***/ 5811:
+/***/ ((module) => {
+
+class classBeanBase {
+  constructor(ctx) {
+    this.ctx = ctx;
+  }
+
+  actionSync({ a, b }) {
+    return a + b;
+  }
+}
+
+class classBean extends classBeanBase {
+  async actionAsync({ a, b }) {
+    return Promise.resolve(a + b);
+  }
+}
+
+module.exports = classBean;
+
+
+/***/ }),
+
+/***/ 3774:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const ctx_0 = __webpack_require__(7791);
+const ctx_1 = __webpack_require__(1107);
+
+module.exports = ctx => {
+  return ctx.app.meta.util.mixinClasses(ctx_0, ctx_1, ctx);
+};
+
+
+/***/ }),
+
+/***/ 7791:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class ctxBean {
+    constructor(moduleName) {
+      this._name = moduleName || ctx.module.info.relativeName;
+    }
+
+    get name() {
+      return this._name;
+    }
+
+    set name(value) {
+      this._name = value;
+    }
+
+    actionSync({ a, b }) {
+      return a + b;
+    }
+
+    async actionAsync({ a, b }) {
+      return Promise.resolve(a + b);
+    }
+
+    async actionAsync2({ a, b }) {
+      const name = this.name;
+      const value = await this.actionAsync({ a, b });
+      return `${name}:${value}`;
+    }
+  }
+
+  return ctxBean;
+};
+
+
+/***/ }),
+
+/***/ 1107:
+/***/ ((module) => {
+
+module.exports = ctx => {
+  class ctxBean {
+    async actionAsync3({ a, b }) {
+      return await this.actionAsync2({ a, b });
+    }
+  }
+
+  return ctxBean;
+};
+
+
+/***/ }),
+
+/***/ 6899:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const fileVersionUpdates = [1, 2];
+const fileVersionInits = [1];
+
+module.exports = app => {
+  class Version extends app.meta.BeanBase {
+    async update(options) {
+      if (fileVersionUpdates.includes(options.version)) {
+        const VersionUpdateFn = __webpack_require__(9380)(`./update${options.version}.js`);
+        const versionUpdate = new (VersionUpdateFn(this.ctx))();
+        await versionUpdate.run(options);
+      }
+    }
+
+    async init(options) {
+      if (fileVersionInits.includes(options.version)) {
+        const VersionInitFn = __webpack_require__(692)(`./init${options.version}.js`);
+        const versionInit = new (VersionInitFn(this.ctx))();
+        await versionInit.run(options);
+      }
+    }
+
+    async test() {
+      const VersionTestFn = __webpack_require__(5293);
+      const versionTest = new (VersionTestFn(this.ctx))();
+      await versionTest.run();
+    }
+  }
+
+  return Version;
+};
+
+
+/***/ }),
+
+/***/ 3355:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const testData = __webpack_require__(6742);
+
+module.exports = function (ctx) {
+  const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class VersionInit {
+    async run(options) {
+      await this._init_rights();
+      await this._init_testData();
+    }
+
+    async _init_rights() {
+      // // types
+      // for (const name of ['Birthday', 'Dance', 'Garden']) {
+      //   await ctx.model.partyType.insert({ name });
+      // }
+      // add role rights
+      const roleRights = [
+        // basic
+        { roleName: 'system', action: 'create' },
+        { roleName: 'system', action: 'read', scopeNames: 'authenticated' },
+        { roleName: 'system', action: 'write', scopeNames: 0 },
+        { roleName: 'system', action: 'delete', scopeNames: 0 },
+        { roleName: 'system', action: 'clone', scopeNames: 0 },
+        { roleName: 'system', action: 'deleteBulk' },
+        { roleName: 'system', action: 'exportBulk' },
+        // special for cms
+        { roleName: 'anonymous', action: 'read', scopeNames: 'authenticated' },
+        // custom
+        { roleName: 'system', action: 'partyOver', scopeNames: 0 },
+        { roleName: 'system', action: 'partyOverBulk' },
+      ];
+      await ctx.bean.role.addRoleRightBatch({ atomClassName: 'party', roleRights });
+    }
+
+    async _init_testData() {
+      // roles
+      const roleIds = await this._testRoles();
+
+      // role includes
+      await this._testRoleIncs(roleIds);
+
+      // set role dirty
+      await ctx.bean.role.setDirty(true);
+
+      // users
+      const userIds = await this._testUsers(roleIds);
+
+      // role rights
+      await this._testRoleRights(roleIds);
+
+      // cache
+      this._testCache(roleIds, userIds);
+    }
+
+    _testCache(roleIds, userIds) {
+      // cache roles
+      ctx.cache.mem.set('roleIds', roleIds);
+      // cache users
+      ctx.cache.mem.set('userIds', userIds);
+    }
+
+    // roles
+    async _testRoles() {
+      const roleIds = {};
+      // system roles
+      for (const roleName of ctx.constant.module('a-base').systemRoles) {
+        const role = await ctx.bean.role.getSystemRole({ roleName });
+        roleIds[roleName] = role.id;
+      }
+      // roles
+      for (const [roleName, leader, catalog, roleNameParent] of testData.roles) {
+        roleIds[roleName] = await ctx.bean.role.add({
+          module: moduleInfo.relativeName,
+          roleName,
+          leader,
+          catalog,
+          roleIdParent: roleIds[roleNameParent],
+        });
+      }
+
+      return roleIds;
+    }
+
+    // role incs
+    async _testRoleIncs(roleIds) {
+      for (const [roleId, roleIdInc] of testData.roleIncs) {
+        await ctx.bean.role.addRoleInc({
+          roleId: roleIds[roleId],
+          roleIdInc: roleIds[roleIdInc],
+        });
+      }
+    }
+
+    // users
+    async _testUsers(roleIds) {
+      // userIds
+      const userIds = {};
+      for (const [userName, roleName] of testData.users) {
+        // add
+        if (!userIds[userName]) {
+          userIds[userName] = await ctx.bean.user.add({
+            userName,
+            realName: userName,
+          });
+          // activated
+          await ctx.bean.user.save({
+            user: { id: userIds[userName], activated: 1 },
+          });
+        }
+        // role
+        await ctx.bean.role.addUserRole({
+          userId: userIds[userName],
+          roleId: roleIds[roleName],
+        });
+      }
+
+      // auths
+      await this._testAuths(userIds);
+
+      // root
+      const userRoot = await ctx.bean.user.get({ userName: 'root' });
+      userIds.root = userRoot.id;
+      return userIds;
+    }
+
+    // role rights
+    async _testRoleRights() {
+      // atomClass: party
+      await ctx.bean.role.addRoleRightBatch({ atomClassName: 'party', roleRights: testData.roleRights });
+      // atomClass: role
+      await ctx.bean.role.addRoleRightBatch({
+        module: 'a-base',
+        atomClassName: 'role',
+        roleRights: testData.roleRightsRole,
+      });
+      // atomClass: user
+      await ctx.bean.role.addRoleRightBatch({
+        module: 'a-base',
+        atomClassName: 'user',
+        roleRights: testData.roleRightsUser,
+      });
+    }
+
+    // auths
+    async _testAuths(userIds) {
+      for (const userName in userIds) {
+        await ctx.bean.authSimple.add({
+          userId: userIds[userName],
+          password: '',
+        });
+      }
+    }
+  }
+
+  return VersionInit;
+};
+
+
+/***/ }),
+
+/***/ 692:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./init1.js": 3355
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 692;
+
+/***/ }),
+
+/***/ 5293:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const testData = __webpack_require__(6742);
+
+module.exports = function (ctx) {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class VersionTest {
+    async run(options) {
+      // role rights
+      await this._testRoleRights();
+      // role resource rights
+      await this._testRoleResources();
+    }
+
+    // role rights
+    async _testRoleRights() {
+      // // atomClass: role
+      // await ctx.bean.role.addRoleRightBatch({
+      //   module: 'a-base',
+      //   atomClassName: 'role',
+      //   roleRights: testData.roleRightsRole,
+      // });
+    }
+
+    // role resource rights
+    async _testRoleResources() {
+      await ctx.bean.resource.addRoleResourceBatch({
+        roleResources: testData.roleResources,
+      });
+    }
+  }
+
+  return VersionTest;
+};
+
+
+/***/ }),
+
+/***/ 6742:
+/***/ ((module) => {
+
+// roleName, leader, catalog, roleNameParent
+const roles = [
+  ['friend', 0, 0, 'external'],
+  ['consultant', 0, 1, 'external'],
+  ['study', 0, 0, 'consultant'],
+  ['work', 0, 0, 'consultant'],
+  ['life', 0, 0, 'consultant'],
+  ['family', 0, 1, 'internal'],
+  ['father', 0, 0, 'family'],
+  ['mother', 1, 0, 'family'],
+  ['son', 0, 0, 'family'],
+  ['daughter', 0, 0, 'family'],
+];
+
+// friend->family
+const roleIncs = [['friend', 'family']];
+
+// family and friend
+//   userName, roleName
+const users = [
+  ['Tom', 'father'],
+  ['Jane', 'mother'],
+  ['Tomson', 'son'],
+  ['Jannie', 'daughter'],
+  ['Jimmy', 'friend'],
+  ['Rose', 'friend'],
+  ['Smith', 'life'],
+  ['Jone', 'work'],
+];
+
+// roleRights
+const roleRights = [
+  { roleName: 'family', action: 'create' },
+  { roleName: 'family', action: 'read', scopeNames: 'family' },
+  { roleName: 'authenticated', action: 'read', scopeNames: 0 },
+  { roleName: 'authenticated', action: 'write', scopeNames: 0 },
+  { roleName: 'authenticated', action: 'delete', scopeNames: 0 },
+  { roleName: 'consultant', action: 'read', scopeNames: 'family' },
+  //
+  { roleName: 'RoleScopeCliDevelopment', action: 'create' },
+  { roleName: 'RoleScopeCliDevelopment', action: 'read' },
+  { roleName: 'RoleScopeCliDevelopment', action: 'write' },
+  { roleName: 'RoleScopeCliDevelopment', action: 'delete' },
+  { roleName: 'RoleScopeCliDevelopment', action: 'partyOverBulk' },
+];
+
+const roleResources = [
+  //
+  { roleName: 'father', atomStaticKey: 'a-baseadmin:roleManagement' },
+];
+
+const roleRightsRole = [
+  // { roleName: 'father', action: 'create' },
+  { roleName: 'father', action: 'read', scopeNames: 'organization' },
+  { roleName: 'father', action: 'write', scopeNames: 'organization' },
+  { roleName: 'father', action: 'delete', scopeNames: 'organization' },
+  { roleName: 'father', action: 'clone', scopeNames: 'organization' },
+  { roleName: 'father', action: 'move', scopeNames: 'organization' },
+  { roleName: 'father', action: 'addChild', scopeNames: 'organization' },
+  { roleName: 'father', action: 'roleUsers', scopeNames: 'organization' },
+  { roleName: 'father', action: 'includes', scopeNames: 'organization' },
+  { roleName: 'father', action: 'resourceAuthorizations', scopeNames: 'organization' },
+  { roleName: 'father', action: 'atomAuthorizations', scopeNames: 'organization' },
+];
+
+const roleRightsUser = [
+  // { roleName: 'father', action: 'create' },
+  { roleName: 'father', action: 'read', scopeNames: 'organization' },
+  { roleName: 'father', action: 'write', scopeNames: 'organization' },
+  // { roleName: 'father', action: 'delete', scopeNames: 'organization' },
+  { roleName: 'father', action: 'enable', scopeNames: 'organization' },
+  { roleName: 'father', action: 'disable', scopeNames: 'organization' },
+  { roleName: 'father', action: 'userRoles', scopeNames: 'organization' },
+  { roleName: 'father', action: 'resourceAuthorizations', scopeNames: 'organization' },
+  { roleName: 'father', action: 'atomAuthorizations', scopeNames: 'organization' },
+];
+
+module.exports = {
+  roles,
+  roleIncs,
+  users,
+  roleRights,
+  roleRightsRole,
+  roleRightsUser,
+  roleResources,
+};
+
+
+/***/ }),
+
+/***/ 2367:
+/***/ ((module) => {
+
+module.exports = function SelfFactory(ctx) {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class VersionUpdate {
+    async run(options) {
+      let sql = `
+          CREATE TABLE testParty (
+            id int(11) NOT NULL AUTO_INCREMENT,
+            createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            deleted int(11) DEFAULT '0',
+            iid int(11) DEFAULT '0',
+            atomId int(11) DEFAULT '0',
+            personCount int(11) DEFAULT '0',
+            partyTypeId int(11) DEFAULT '0',
+            partyOver int(11) DEFAULT '0',
+            PRIMARY KEY (id)
+          )
+        `;
+      await ctx.model.query(sql);
+
+      sql = `
+          CREATE TABLE testPartyType (
+            id int(11) NOT NULL AUTO_INCREMENT,
+            createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            deleted int(11) DEFAULT '0',
+            iid int(11) DEFAULT '0',
+            name varchar(255) DEFAULT NULL,
+            PRIMARY KEY (id)
+          )
+        `;
+      await ctx.model.query(sql);
+
+      sql = `
+          CREATE VIEW testPartyView as
+            select a.*,b.name as partyTypeName from testParty a
+              left join testPartyType b on a.partyTypeId=b.id
+        `;
+      await ctx.model.query(sql);
+    }
+  }
+
+  return VersionUpdate;
+};
+
+
+/***/ }),
+
+/***/ 6366:
+/***/ ((module) => {
+
+module.exports = function SelfFactory(ctx) {
+  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class VersionUpdate {
+    async run(options) {
+      // drop view: testPartyView
+      await ctx.model.query('drop view testPartyView');
+      // drop table: testPartyType
+      await ctx.model.query('drop table testPartyType');
+      // partyTypeId->partyTypeCode
+      const sql = `
+        ALTER TABLE testParty
+          CHANGE COLUMN partyTypeId partyTypeCode INT(11) DEFAULT '0',
+          ADD COLUMN partyTime timestamp DEFAULT NULL,
+          ADD COLUMN partyCountry varchar(50) DEFAULT '',
+          ADD COLUMN partyCity varchar(50) DEFAULT ''
+      `;
+      await ctx.model.query(sql);
+    }
+  }
+
+  return VersionUpdate;
+};
+
+
+/***/ }),
+
+/***/ 9380:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./update1.js": 2367,
+	"./update2.js": 6366
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 9380;
+
+/***/ }),
+
+/***/ 5187:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const versionManager = __webpack_require__(6899);
+const cliDefaultDemo = __webpack_require__(5561);
+const testApp = __webpack_require__(8713);
+const testClass = __webpack_require__(5811);
+const testCtx = __webpack_require__(3774);
+const localTest = __webpack_require__(95);
+const eventHelloEcho = __webpack_require__(7229);
+const eventUserVerify = __webpack_require__(398);
+const eventLoginInfo = __webpack_require__(6427);
+const eventLoginInfoDashboard = __webpack_require__(8020);
+const broadcastTest = __webpack_require__(333);
+const queueTest = __webpack_require__(3929);
+const scheduleTest = __webpack_require__(770);
+const startupStartupAll = __webpack_require__(940);
+const startupStartupInstance = __webpack_require__(3310);
+const middlewareTestInterception = __webpack_require__(8997);
+const middlewareTestRestructuring = __webpack_require__(8120);
+const atomParty = __webpack_require__(6118);
+const ioMessageTest = __webpack_require__(5558);
+const ioMessageSimpleChat = __webpack_require__(3558);
+const sequenceTest = __webpack_require__(7679);
+const statsTasksUser = __webpack_require__(5268);
+const statsTasksInstance = __webpack_require__(7477);
+const summerCacheTest = __webpack_require__(9711);
+
+module.exports = app => {
+  const beans = {
+    // version
+    'version.manager': {
+      mode: 'app',
+      bean: versionManager,
+    },
+  };
+  Object.assign(beans, {
+    // cli
+    'cli.default.demo': {
+      mode: 'ctx',
+      bean: cliDefaultDemo,
+    },
+    // test
+    'test.app': {
+      mode: 'app',
+      bean: testApp,
+    },
+    'test.class': {
+      mode: 'app',
+      bean: testClass,
+    },
+    testctx: {
+      mode: 'ctx',
+      bean: testCtx,
+      global: true,
+    },
+    'local.test': {
+      mode: 'ctx',
+      bean: localTest,
+    },
+    // event
+    'event.helloEcho': {
+      mode: 'ctx',
+      bean: eventHelloEcho,
+    },
+    'event.userVerify': {
+      mode: 'ctx',
+      bean: eventUserVerify,
+    },
+    'event.loginInfo': {
+      mode: 'ctx',
+      bean: eventLoginInfo,
+    },
+    'event.loginInfoDashboard': {
+      mode: 'ctx',
+      bean: eventLoginInfoDashboard,
+    },
+    // broadcast
+    'broadcast.test': {
+      mode: 'app',
+      bean: broadcastTest,
+    },
+    // queue
+    'queue.test': {
+      mode: 'app',
+      bean: queueTest,
+    },
+    // schedule
+    'schedule.test': {
+      mode: 'app',
+      bean: scheduleTest,
+    },
+    // startup
+    'startup.startupAll': {
+      mode: 'app',
+      bean: startupStartupAll,
+    },
+    'startup.startupInstance': {
+      mode: 'app',
+      bean: startupStartupInstance,
+    },
+    // middleware
+    'middleware.testInterception': {
+      mode: 'ctx',
+      bean: middlewareTestInterception,
+    },
+    'middleware.testRestructuring': {
+      mode: 'ctx',
+      bean: middlewareTestRestructuring,
+    },
+    // atom
+    'atom.party': {
+      mode: 'app',
+      bean: atomParty,
+    },
+    // io
+    'io.message.test': {
+      mode: 'ctx',
+      bean: ioMessageTest,
+    },
+    'io.message.simpleChat': {
+      mode: 'ctx',
+      bean: ioMessageSimpleChat,
+    },
+    // sequence
+    'sequence.test': {
+      mode: 'ctx',
+      bean: sequenceTest,
+    },
+    // stats
+    'stats.tasksUser': {
+      mode: 'ctx',
+      bean: statsTasksUser,
+    },
+    'stats.tasksInstance': {
+      mode: 'ctx',
+      bean: statsTasksInstance,
+    },
+    // summer
+    'summer.cache.test': {
+      mode: 'ctx',
+      bean: summerCacheTest,
+    },
+  });
+
+  return beans;
+};
+
+
+/***/ }),
+
+/***/ 3917:
+/***/ ((module) => {
+
+module.exports = app => {
+  return {
+    bean: 'default.demo',
+    resource: {
+      atomStaticKey: 'cliDefaultDemo',
+    },
+    info: {
+      version: '4.0.0',
+      title: 'Cli Demo',
+      welcomes: 'This is a test',
+    },
+    options: {
+      username: {
+        description: 'Your username',
+        alias: 'u',
+        type: 'string',
+      },
+      role: {
+        description: 'Your role',
+        alias: 'r',
+        type: 'string',
+      },
+      course: {
+        description: 'Your course',
+        alias: 'c',
+        type: 'string',
+      },
+      grade: {
+        description: 'Your grade',
+        alias: 'g',
+        type: 'string',
+      },
+    },
+    groups: {
+      default: {
+        description: 'Your basic info',
+        condition: {
+          expression: null,
+        },
+        questions: {
+          username: {
+            type: 'input',
+            message: 'Your username',
+          },
+          role: {
+            type: 'select',
+            message: 'Your role',
+            choices: ['teacher', 'student'],
+          },
+        },
+      },
+      teacher: {
+        description: 'The teacher info',
+        condition: {
+          expression: 'context.argv.role==="teacher"',
+        },
+        questions: {
+          course: {
+            type: 'input',
+            message: 'Your course',
+          },
+        },
+      },
+      student: {
+        description: 'The student info',
+        condition: {
+          expression: 'context.argv.role==="student"',
+        },
+        questions: {
+          grade: {
+            type: 'input',
+            message: 'Your grade',
+          },
+        },
+      },
+    },
+  };
+};
+
+
+/***/ }),
+
+/***/ 4407:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const defaultDemo = __webpack_require__(3917);
+
+module.exports = app => {
+  const commands = {
+    default: {
+      demo: defaultDemo(app),
+    },
+  };
+  return commands;
+};
+
+
+/***/ }),
+
+/***/ 7076:
+/***/ ((module) => {
+
+// eslint-disable-next-line
+module.exports = appInfo => {
+  const config = {};
+
+  if (appInfo.env === 'unittest') {
+    // startups
+    config.startups = {
+      startupAll: {
+        bean: 'startupAll',
+      },
+      startupInstance: {
+        bean: 'startupInstance',
+        instance: true,
+      },
+    };
+    // queues
+    config.queues = {
+      queueTest: {
+        bean: 'test',
+      },
+    };
+    // broadcasts
+    config.broadcasts = {
+      broadcastTest: {
+        bean: 'test',
+      },
+    };
+    // monkey
+    config.monkeyed = false;
+  }
+
+  // config
+  config.message = 'Hello World';
+
+  // middlewares
+  config.middlewares = {
+    testInterception: {
+      bean: 'testInterception',
+      global: false,
+      dependencies: 'instance',
+    },
+    testRestructuring: {
+      bean: 'testRestructuring',
+      global: false,
+      dependencies: 'instance',
+    },
+  };
+
+  // schedules
+  config.schedules = {
+    test: {
+      bean: 'test',
+      repeat: {
+        every: 3000,
+      },
+      disable: true,
+    },
+  };
+
+  // summer
+  config.summer = {
+    caches: {
+      test: {
+        bean: 'test',
+        mode: 'all', // mem/redis/all
+        mem: {
+          max: 2,
+          ttl: 1 * 1000,
+        },
+        redis: {
+          ttl: 3 * 1000,
+        },
+      },
+    },
+  };
+
+  // settings
+  config.settings = {
+    instance: {
+      groupInfo: {
+        slogan: '',
+      },
+    },
+    user: {
+      groupInfo: {
+        username: 'zhennann',
+      },
+      groupExtra: {
+        panelExtra: {
+          groupInfo: {
+            mobile: '123',
+            sex: 1,
+            language: 'en-us',
+          },
+        },
+      },
+    },
+  };
+
+  // captcha scenes
+  const _captchaSMS = {
+    module: 'a-authsms',
+    name: 'captcha',
+  };
+  config.captcha = {
+    scenes: {
+      formMobileVerifyTest: _captchaSMS,
+      formCaptchaTest: null, // means using default
+      // formCaptchaTest: {
+      //   module: 'a-captchasimple',
+      //   name: 'captcha',
+      // },
+    },
+  };
+
+  // cms site
+  config.cms = {};
+  config.cms.sites = {};
+  config.cms.sites.party = {
+    base: {
+      title: 'Party',
+      subTitle: 'Test',
+      description: '',
+      keywords: '',
+    },
+    host: {
+      url: 'http://example.com',
+      rootPath: '',
+    },
+    language: false,
+    themes: {
+      default: 'test-party',
+    },
+    edit: {
+      mode: 0, // custom
+    },
+    env: {
+      format: {
+        date: 'YYYY-MM-DD',
+        time: 'HH:mm:ss',
+      },
+      article2: {
+        recentNum: 5,
+      },
+      comment: {
+        order: 'asc',
+        recentNum: 5,
+      },
+      brother: {
+        order: 'desc',
+      },
+      loadMore: {
+        loadOnScroll: false,
+      },
+    },
+  };
+
+  return config;
+};
+
+
+/***/ }),
+
+/***/ 5624:
+/***/ ((module) => {
+
+// error code should start from 1001
+module.exports = {
+  1001: 'Error Test',
+  1002: 'Incomplete Parameters',
+};
+
+
+/***/ }),
+
+/***/ 7487:
+/***/ ((module) => {
+
+module.exports = {
+  default: 'birthday,dance,garden',
+};
+
+
+/***/ }),
+
+/***/ 6327:
+/***/ ((module) => {
+
+module.exports = {
+  PartyOver: 'Party Over',
+  PartyOverFlag: 'Over',
+  OpenIsolateApp: 'Open Isolate App',
+  OpenIsolateAppParty: 'Open Isolate App (Party)',
+  DianCaiWechat: 'Wechat Ordering',
+  UIComponents: 'UI Components',
+};
+
+
+/***/ }),
+
+/***/ 3072:
+/***/ ((module) => {
+
+module.exports = {
+  Party: '宴会',
+  Review: '审核',
+  Reviewing: '审核中',
+  Reviewed: '已审核',
+  Item: '条目',
+  Products: '产品',
+  Snapshots: '快照',
+  About: '关于',
+  Demonstration: '演示',
+  PartyOver: '宴会结束',
+  PartyOverFlag: '已结束',
+  OpenIsolateApp: '打开独立应用',
+  OpenIsolateAppParty: '打开独立应用（宴会）',
+  DianCaiWechat: '微信点菜',
+  UIComponents: 'UI组件',
+  Guide: '指南',
+  Components: '组件',
+  'Home(Test)': '首页（测试）',
+  'Dashboard(Test)': '仪表板（测试）',
+  'Party Test': '宴会测试',
+  'Party Name': '宴会名称',
+  'Person Count': '人数',
+  'Party Type': '宴会类型',
+  'Create Party': '新建宴会',
+  'Party List': '宴会列表',
+  'Level One': '层级1',
+  'Level Two': '层级2',
+  'Level Three': '层级3',
+  'Well Done': '干得好',
+  'Error Test': '错误测试',
+  'Hello World': '世界，您好',
+  'Fruit Sales': '水果销量',
+  'Fruit Sales(Line Chart)': '水果销量（折线图）',
+  'Fruit Sales(Pie Chart)': '水果销量（饼图）',
+  'Article Comment Count': '文章评论数',
+  'Cli Demo': 'Cli演示',
+  'Your username': '您的名称',
+  'Your role': '您的角色',
+  'Your course': '您的课程',
+  'Your grade': '您的年级',
+  'Your basic info': '您的基本信息',
+  'The teacher info': '教师信息',
+  'The student info': '学生信息',
+  'This is a test': '这是一个测试',
+  'Simple Chat': '简单聊天',
+  // role name
+  friend: '朋友',
+  consultant: '咨询',
+  study: '学习',
+  work: '工作',
+  life: '生活',
+  family: '家庭',
+  father: '父亲',
+  mother: '母亲',
+  son: '儿子',
+  daughter: '女儿',
+};
+
+
+/***/ }),
+
+/***/ 25:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = {
+  'en-us': __webpack_require__(6327),
+  'zh-cn': __webpack_require__(3072),
+};
+
+
+/***/ }),
+
+/***/ 2513:
+/***/ ((module) => {
+
+module.exports = app => {
+  const simpleChat = {
+    info: {
+      bean: 'simpleChat',
+      title: 'Simple Chat',
+      persistence: true,
+      push: {
+        channels: false,
+      },
+    },
+  };
+  return simpleChat;
+};
+
+
+/***/ }),
+
+/***/ 4160:
+/***/ ((module) => {
+
+module.exports = app => {
+  const test = {
+    info: {
+      bean: 'test',
+      title: 'Test',
+      persistence: true,
+      push: {
+        channels: false,
+      },
+    },
+  };
+  return test;
+};
+
+
+/***/ }),
+
+/***/ 1258:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const info = {};
+  const content = {
+    presets: {
+      anonymous: {
+        mobile: info,
+        pc: info,
+      },
+      authenticated: {
+        mobile: info,
+        pc: info,
+      },
+    },
+  };
+  const _app = {
+    atomName: 'UIComponents',
+    atomStaticKey: 'appComponents',
+    atomRevision: 0,
+    atomCategoryId: 'Demonstration',
+    description: '',
+    appIcon: ':business:kitchen-set',
+    appIsolate: false,
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+    appSorting: 0,
+  };
+  return _app;
+};
+
+
+/***/ }),
+
+/***/ 1979:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const info = {
+    // layout: null,
+    // menu: {
+    //   layout: null,
+    // },
+    home: {
+      mode: 'dashboard', // dashboard/page
+      dashboard: 'test-party:dashboardTest',
+      page: null,
+    },
+    mine: {
+      layout: true,
+    },
+  };
+  const content = {
+    presets: {
+      anonymous: {
+        mobile: info,
+        pc: info,
+      },
+      authenticated: {
+        mobile: info,
+        pc: info,
+      },
+    },
+  };
+  const _app = {
+    atomName: 'Party',
+    atomStaticKey: 'appParty',
+    atomRevision: 2,
+    atomCategoryId: 'Demonstration',
+    description: '',
+    appIcon: ':business:party',
+    appIsolate: false,
+    content: JSON.stringify(content),
+    resourceRoles: 'authenticated',
+    appSorting: 0,
+  };
+  return _app;
+};
+
+
+/***/ }),
+
+/***/ 8241:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const appParty = __webpack_require__(1979);
+const appComponents = __webpack_require__(1258);
+
+module.exports = app => {
+  const apps = [
+    //
+    appParty(app),
+    appComponents(app),
+  ];
+  return apps;
+};
+
+
+/***/ }),
+
+/***/ 2589:
+/***/ ((module) => {
+
+const content = {
+  root: {
+    id: 'e341b99ef3bc495db8a8c09e6ad6203e',
+    widgets: [
+      {
+        id: 'a0031e5e2aef421f8434856512dec714',
+        name: 'widgetSales',
+        module: 'test-party',
+        properties: {
+          title: {
+            type: 1,
+            value: '',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+        },
+      },
+      {
+        id: '7aefb0431ef24996ba35b596b53372e7',
+        group: true,
+        widgets: [
+          {
+            id: 'fe96b7ede7f5480a9590e92184272455',
+            name: 'widgetSalesLine',
+            module: 'test-party',
+            properties: {
+              fruit: {
+                bind: {
+                  widgetId: 'a0031e5e2aef421f8434856512dec714',
+                  propertyName: 'fruit',
+                },
+                type: 2,
+              },
+              title: {
+                type: 1,
+                value: '',
+              },
+              height: {
+                type: 1,
+                value: 'auto',
+              },
+              dataSource: {
+                bind: {
+                  widgetId: 'a0031e5e2aef421f8434856512dec714',
+                  propertyName: 'dataSource',
+                },
+                type: 2,
+              },
+              widthLarge: {
+                type: 1,
+                value: 100,
+              },
+              widthSmall: {
+                type: 1,
+                value: 100,
+              },
+              widthMedium: {
+                type: 1,
+                value: 100,
+              },
+            },
+          },
+          {
+            id: '9ee4b1234b4a477890ce094e8eb5e332',
+            name: 'widgetSalesPie',
+            module: 'test-party',
+            properties: {
+              title: {
+                type: 1,
+                value: '',
+              },
+              height: {
+                type: 1,
+                value: 'auto',
+              },
+              season: {
+                bind: {
+                  widgetId: 'a0031e5e2aef421f8434856512dec714',
+                  propertyName: 'season',
+                },
+                type: 2,
+              },
+              dataSource: {
+                bind: {
+                  widgetId: 'a0031e5e2aef421f8434856512dec714',
+                  propertyName: 'dataSource',
+                },
+                type: 2,
+              },
+              widthLarge: {
+                type: 1,
+                value: 100,
+              },
+              widthSmall: {
+                type: 1,
+                value: 100,
+              },
+              widthMedium: {
+                type: 1,
+                value: 100,
+              },
+            },
+          },
+        ],
+        properties: {
+          title: {
+            type: 1,
+            value: '',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+        },
+      },
+      {
+        id: '64f7c356b78f45799e4b3072af73866e',
+        name: 'widgetSnapshot',
+        module: 'test-party',
+        properties: {
+          title: {
+            type: 1,
+            value: '',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          snapshots: {
+            type: 2,
+            binds: [
+              {
+                id: 'fb3eac5b678e488cb4da60a2bddb0f60',
+                widgetId: 'fe96b7ede7f5480a9590e92184272455',
+                propertyName: 'snapshot',
+              },
+              {
+                id: '40b8e8ea3007418992f0489cba98129e',
+                widgetId: '9ee4b1234b4a477890ce094e8eb5e332',
+                propertyName: 'snapshot',
+              },
+            ],
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+        },
+      },
+      {
+        id: '8a04bfa743fb42b2a65a104e018ab924',
+        name: 'widgetAbout',
+        module: 'a-dashboard',
+        properties: {
+          title: {
+            type: 1,
+            value: '',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+        },
+      },
+    ],
+  },
+};
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const dashboard = {
+    atomName: 'Dashboard(Test)',
+    atomStaticKey: 'dashboardTest',
+    atomRevision: 1,
+    description: '',
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return dashboard;
+};
+
+
+/***/ }),
+
+/***/ 4790:
+/***/ ((module) => {
+
+const content = {
+  root: {
+    id: 'e341b99ef3bc495db8a8c09e6ad6203f',
+    widgets: [
+      {
+        atomStaticKey: 'test-note:widgetNote',
+        id: '878d9687921641de880b130fa0ff5fd0',
+        properties: {
+          demoKey: {
+            type: 1,
+            value: 'demo-1',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          title: {
+            type: 1,
+            value: '',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+        },
+      },
+      {
+        atomStaticKey: 'test-note:widgetNote',
+        id: '688725d1c2a446fea402580a5af072da',
+        properties: {
+          demoKey: {
+            type: 1,
+            value: 'demo-2',
+          },
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          title: {
+            type: 1,
+            value: '',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+        },
+      },
+      {
+        atomStaticKey: 'test-party:widgetSimpleChat',
+        id: '650acfa718f645098bf0516628d678f0',
+        properties: {
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          title: {
+            type: 1,
+            value: '',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+        },
+      },
+      {
+        id: '8a04bfa743fb42b2a65a104e018ab924',
+        module: 'a-dashboard',
+        name: 'widgetAbout',
+        properties: {
+          height: {
+            type: 1,
+            value: 'auto',
+          },
+          title: {
+            type: 1,
+            value: '',
+          },
+          widthLarge: {
+            type: 1,
+            value: 25,
+          },
+          widthMedium: {
+            type: 1,
+            value: 50,
+          },
+          widthSmall: {
+            type: 1,
+            value: 100,
+          },
+        },
+      },
+    ],
+  },
+};
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const dashboard = {
+    atomName: 'Home(Test)',
+    atomStaticKey: 'homeTest',
+    atomRevision: 11,
+    description: '',
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return dashboard;
+};
+
+
+/***/ }),
+
+/***/ 3937:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const dashboardTest = __webpack_require__(2589);
+const homeTest = __webpack_require__(4790);
+
+module.exports = app => {
+  const dashboards = [
+    dashboardTest(app), //
+    homeTest(app),
+  ];
+  return dashboards;
+};
+
+
+/***/ }),
+
+/***/ 4013:
+/***/ ((module) => {
+
+module.exports = app => {
+  const dictItems = [
+    {
+      code: 1,
+      name: 'birthday',
+      title: 'Birthday',
+      options: {
+        emoji: '🎂',
+        icon: { f7: 'test-party::birthday' },
+      },
+    },
+    {
+      code: 2,
+      name: 'dance',
+      title: 'Dance',
+      options: {
+        emoji: '💃',
+        icon: { f7: 'test-party::dance' },
+      },
+    },
+    {
+      code: 3,
+      name: 'garden',
+      title: 'Garden',
+      options: {
+        emoji: '🏡',
+        icon: { f7: 'test-party::garden' },
+      },
+    },
+  ];
+  const dictLocales = {
+    'zh-cn': {
+      Birthday: '生日',
+      Dance: '跳舞',
+      Garden: '花园',
+    },
+  };
+  const dict = {
+    atomName: 'Party Type',
+    atomStaticKey: 'dictPartyType',
+    atomRevision: 1,
+    description: '',
+    dictItems: JSON.stringify(dictItems),
+    dictLocales: JSON.stringify(dictLocales),
+    resourceRoles: 'root',
+  };
+  return dict;
+};
+
+
+/***/ }),
+
+/***/ 3715:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const partyType = __webpack_require__(4013);
+
+module.exports = app => {
+  const dicts = [
+    partyType(app), //
+  ];
+  return dicts;
+};
+
+
+/***/ }),
+
+/***/ 1536:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    info: {
+      layout: {
+        viewSize: {
+          view: {
+            small: 'default',
+            medium: 'default',
+            large: 'default',
+          },
+          edit: {
+            small: 'default',
+            medium: 'default',
+            large: 'default',
+          },
+        },
+      },
+    },
+    layouts: {},
+  };
+  const layout = {
+    atomName: 'Party',
+    atomStaticKey: 'layoutAtomItemParty',
+    atomRevision: 0,
+    description: '',
+    layoutTypeCode: 4,
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return layout;
+};
+
+
+/***/ }),
+
+/***/ 1063:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const content = {
+    info: {
+      orders: [
+        { name: 'partyTypeCode', title: 'Party Type' },
+        { name: 'personCount', title: 'Person Count', by: 'asc' },
+      ],
+    },
+    layouts: {
+      list: {
+        blocks: {
+          // title: false,
+        },
+      },
+      table: {
+        blocks: {
+          items: {
+            columns: [
+              {
+                dataIndex: 'atomName',
+                title: 'Atom Name',
+                align: 'left',
+                renderType: 'atomName',
+              },
+              {
+                dataIndex: 'partyTypeCode',
+                title: 'Party Type',
+                align: 'left',
+                renderType: 'dict',
+              },
+              {
+                dataIndex: 'partyTime',
+                title: 'Party Time',
+                align: 'center',
+                params: {
+                  dateFormat: {
+                    lines: true,
+                  },
+                },
+              },
+              {
+                dataIndex: '_partyCityTitleLocale',
+                title: 'Party City',
+                align: 'left',
+              },
+              {
+                dataIndex: 'personCount',
+                title: 'Person Count',
+                align: 'left',
+              },
+              {
+                dataIndex: 'userIdCreated',
+                title: 'Creator',
+                align: 'left',
+                renderType: 'userName',
+              },
+              {
+                dataIndex: 'atomCreatedAt',
+                title: 'Created Time',
+                align: 'center',
+                params: {
+                  dateFormat: {
+                    lines: true,
+                  },
+                },
+              },
+              {
+                dataIndex: 'atomUpdatedAt',
+                title: 'Modification Time',
+                align: 'center',
+                params: {
+                  dateFormat: {
+                    lines: true,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      },
+    },
+  };
+  const layout = {
+    atomName: 'Party',
+    atomStaticKey: 'layoutAtomListParty',
+    atomRevision: 5,
+    description: '',
+    layoutTypeCode: 3,
+    content: JSON.stringify(content),
+    resourceRoles: 'root',
+  };
+  return layout;
+};
+
+
+/***/ }),
+
+/***/ 3512:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const layoutAtomListParty = __webpack_require__(1063);
+const layoutAtomItemParty = __webpack_require__(1536);
+// const layoutAppMineParty = require('./layout/layoutAppMineParty.js');
+
+module.exports = app => {
+  const layouts = [
+    //
+    layoutAtomListParty(app),
+    layoutAtomItemParty(app),
+    // layoutAppMineParty(app),
+  ];
+  return layouts;
+};
+
+
+/***/ }),
+
+/***/ 2159:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    {
+      atomName: 'Article Comment Count',
+      atomStaticKey: 'blockArticleCommentCount',
+      atomRevision: 0,
+      atomCategoryId: 'a-markdown:block.Demonstration',
+      resourceType: 'a-markdown:block',
+      resourceConfig: JSON.stringify({
+        default: {
+          interval: 1000,
+        },
+        validator: {
+          module: moduleInfo.relativeName,
+          validator: 'blockArticleCommentCount',
+        },
+      }),
+      resourceRoles: 'root',
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 8537:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    // menu
+    {
+      atomName: 'Kitchen-sink',
+      atomStaticKey: 'kitchenSink',
+      atomRevision: -1,
+      atomCategoryId: 'a-base:menu.Tools',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/index',
+      }),
+      resourceIcon: ':business:kitchen-set',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root,RoleScopeCliDevelopment',
+      resourceSorting: 1,
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 1850:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    // function
+    {
+      atomName: 'Cli Demo',
+      atomStaticKey: 'cliDefaultDemo',
+      atomRevision: 1,
+      atomCategoryId: 'a-base:function.Cli',
+      resourceType: 'a-base:function',
+      resourceConfig: null,
+      resourceRoles: 'template.system,RoleScopeCliDevelopment',
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 8748:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    //
+    {
+      atomName: 'Create Party',
+      atomStaticKey: 'createParty',
+      atomRevision: 1,
+      atomCategoryId: 'a-base:menu.Party',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        atomClassName: 'party',
+        atomAction: 'create',
+      }),
+      resourceIcon: '::add',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'template.system,family',
+    },
+    {
+      atomName: 'Party List',
+      atomStaticKey: 'listParty',
+      atomRevision: 3,
+      atomCategoryId: 'a-base:menu.Party',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        atomClassName: 'party',
+        atomAction: 'read',
+      }),
+      resourceIcon: ':outline:data-list-outline',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'template.system,authenticated',
+    },
+    //
+    {
+      atomName: 'Party',
+      atomStaticKey: 'openIsolateAppParty',
+      atomRevision: 9,
+      atomCategoryId: 'a-base:menu.OpenIsolateApp',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: 'a-app',
+        actionComponent: 'actionTools',
+        name: 'openApp',
+        appKey: 'test-party:appParty',
+        appLanguage: null,
+        appIsolate: true,
+        external: true,
+        target: '_blank',
+      }),
+      resourceIcon: '::open-in-new',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root',
+      resourceSorting: 2,
+    },
+    // app: appComponents
+    {
+      atomName: 'About',
+      atomStaticKey: 'appComponentsAbout',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.General',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionPath: '/a/basefront/base/about',
+      }),
+      resourceIcon: '::information',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 1,
+    },
+    {
+      atomName: 'Guide',
+      atomStaticKey: 'appComponentsGuide',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.General',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/guide',
+      }),
+      resourceIcon: '::book',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 2,
+    },
+    {
+      atomName: 'CabloyJS',
+      atomStaticKey: 'appComponentsCabloyJS',
+      atomRevision: 1,
+      atomCategoryId: 'a-base:menu.Components',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/index?mode=2',
+      }),
+      resourceIcon: '::cabloy',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 1,
+    },
+    {
+      atomName: 'Framework7',
+      atomStaticKey: 'appComponentsFramework7',
+      atomRevision: 0,
+      atomCategoryId: 'a-base:menu.Components',
+      resourceType: 'a-base:menu',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/framework7/index',
+      }),
+      resourceIcon: ':social:framework7',
+      appKey: 'test-party:appComponents',
+      resourceRoles: 'root',
+      resourceSorting: 2,
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 4562:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    {
+      atomName: 'Kitchen-sink',
+      atomStaticKey: 'mineKitchenSink',
+      atomRevision: 1,
+      atomCategoryId: 'a-base:mine.Tools',
+      resourceType: 'a-base:mine',
+      resourceConfig: JSON.stringify({
+        actionModule: moduleInfo.relativeName,
+        actionPath: 'kitchen-sink/index',
+      }),
+      resourceIcon: ':business:kitchen-set',
+      appKey: 'test-party:appParty',
+      resourceRoles: 'root,RoleScopeCliDevelopment',
+      resourceSorting: 1,
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 6944:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const resources = [
+    {
+      atomName: 'Fruit Sales',
+      atomStaticKey: 'widgetSales',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSales',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'Fruit Sales(Line Chart)',
+      atomStaticKey: 'widgetSalesLine',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSalesLine',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'Fruit Sales(Pie Chart)',
+      atomStaticKey: 'widgetSalesPie',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSalesPie',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'Snapshots',
+      atomStaticKey: 'widgetSnapshot',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSnapshot',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'About',
+      atomStaticKey: 'widgetAbout',
+      atomRevision: 0,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetAbout',
+      }),
+      resourceRoles: 'root',
+    },
+    {
+      atomName: 'Simple Chat',
+      atomStaticKey: 'widgetSimpleChat',
+      atomRevision: 20,
+      atomCategoryId: 'a-dashboard:widget.Demonstration',
+      resourceType: 'a-dashboard:widget',
+      resourceConfig: JSON.stringify({
+        module: moduleInfo.relativeName,
+        component: 'widgetSimpleChat',
+      }),
+      resourceRoles: 'root',
+    },
+  ];
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 5429:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const functions = __webpack_require__(1850);
+const menus = __webpack_require__(8748);
+const mines = __webpack_require__(4562);
+const widgets = __webpack_require__(6944);
+const blocks = __webpack_require__(2159);
+const deprecateds = __webpack_require__(8537);
+
+module.exports = app => {
+  let resources = [];
+  resources = resources.concat(functions(app));
+  resources = resources.concat(menus(app));
+  resources = resources.concat(mines(app));
+  resources = resources.concat(widgets(app));
+  resources = resources.concat(blocks(app));
+  resources = resources.concat(deprecateds(app));
+  return resources;
+};
+
+
+/***/ }),
+
+/***/ 5835:
+/***/ ((module) => {
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const __rolesAll = [
+    { atomName: 'friend', roleTypeCode: 1 },
+    { atomName: 'consultant', roleTypeCode: 1 },
+    { atomName: 'study', roleTypeCode: 2 },
+    { atomName: 'work', roleTypeCode: 2 },
+    { atomName: 'life', roleTypeCode: 2 },
+    { atomName: 'family', roleTypeCode: 1 },
+    { atomName: 'father', roleTypeCode: 4 },
+    { atomName: 'mother', roleTypeCode: 4 },
+    { atomName: 'son', roleTypeCode: 4 },
+    { atomName: 'daughter', roleTypeCode: 4 },
+  ];
+  const roles = [];
+  for (const __role of __rolesAll) {
+    roles.push({
+      atomName: __role.atomName,
+      atomStaticKey: `role_${__role.atomName}`,
+      atomRevision: 1,
+      description: '',
+      roleTypeCode: __role.roleTypeCode,
+      resourceRoles: 'template.system',
+    });
+  }
+  // ok
+  return roles;
+};
+
+
+/***/ }),
+
+/***/ 2415:
+/***/ ((module) => {
+
+module.exports = app => {
+  const keywords = {};
+  keywords.languages = {
+    async: true,
+    type: 'string',
+    errors: true,
+    compile(/* sch, parentSchema*/) {
+      return async function (data) {
+        const ctx = this;
+        const locales = ctx.bean.base.locales();
+        const index = locales.findIndex(item => item.value === data);
+        if (index > -1) return true;
+        const errors = [{ keyword: 'x-languages', params: [], message: ctx.text('Not Expected Value') }];
+        throw new app.meta.ajv.ValidationError(errors);
+      };
+    },
+  };
+  return keywords;
+};
+
+
+/***/ }),
+
+/***/ 607:
+/***/ ((module) => {
+
+module.exports = app => {
+  const schemas = {};
+  // blockArticleCommentCount
+  schemas.blockArticleCommentCount = {
+    type: 'object',
+    properties: {
+      interval: {
+        type: 'number',
+        ebType: 'text',
+        ebTitle: 'IntervalMS',
+        notEmpty: true,
+      },
+    },
+  };
+  return schemas;
+};
+
+
+/***/ }),
+
+/***/ 7429:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const schemas = {};
+  // formTest
+  schemas.formTest = {
+    type: 'object',
+    properties: {
+      __groupInfo: {
+        ebType: 'group-flatten',
+        ebTitle: 'Info Group',
+      },
+      userName: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Username',
+        ebDescription: 'Your Name',
+        ebHelp: 'Please type your name',
+        notEmpty: true,
+      },
+      password: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Password',
+        ebParams: {
+          secure: true,
+        },
+        notEmpty: true,
+        minLength: 6,
+      },
+      passwordAgain: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Password Again',
+        ebParams: {
+          secure: true,
+        },
+        notEmpty: true,
+        const: { $data: '1/password' },
+      },
+      sex: {
+        type: 'number',
+        ebType: 'select',
+        ebTitle: 'Sex',
+        ebMultiple: false,
+        ebOptions: [
+          { title: 'Male', value: 1 },
+          { title: 'Female', value: 2 },
+        ],
+        ebOptionsBlankAuto: true,
+        ebParams: {
+          openIn: 'sheet',
+          closeOnSelect: true,
+        },
+        notEmpty: true,
+      },
+      rememberMe: {
+        type: 'boolean',
+        ebType: 'toggle',
+        ebTitle: 'Remember Me',
+      },
+      __groupExtra: {
+        ebType: 'group-flatten',
+        ebTitle: 'Extra Group',
+      },
+      birthday: {
+        type: ['object', 'null'],
+        ebType: 'datePicker',
+        ebTitle: 'Birthday',
+        ebParams: {
+          dateFormat: 'YYYY-MM-DD',
+          header: false,
+          toolbar: true,
+          // backdrop: true,
+        },
+        // format: 'date-time',
+        notEmpty: true,
+        'x-date': true,
+      },
+      language: {
+        type: 'string',
+        ebType: 'select',
+        ebTitle: 'Language',
+        ebOptionsUrl: '/a/base/base/locales',
+        ebOptionsUrlParams: null,
+        ebOptionsBlankAuto: true,
+        ebParams: {
+          openIn: 'sheet',
+          closeOnSelect: true,
+        },
+        'x-languages': true,
+        // notEmpty: true,
+      },
+      avatar: {
+        type: 'string',
+        ebType: 'image',
+        ebTitle: 'Avatar',
+        ebParams: {
+          fixed: {
+            width: 96,
+            height: 96,
+          },
+        },
+        notEmpty: true,
+      },
+      motto: {
+        type: 'string',
+        ebType: 'component',
+        ebRender: {
+          module: moduleInfo.relativeName,
+          name: 'renderMotto',
+          options: {
+            props: {
+              height: '100px',
+            },
+          },
+        },
+        notEmpty: true,
+      },
+      selfIntroduction: {
+        type: 'string',
+        ebType: 'markdown',
+        ebTitle: 'SelfIntroduction',
+      },
+    },
+  };
+  // formCaptchaTest
+  schemas.formCaptchaTest = {
+    type: 'object',
+    properties: {
+      userName: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Username',
+        notEmpty: true,
+      },
+      password: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Password',
+        ebParams: {
+          secure: true,
+        },
+        notEmpty: true,
+        minLength: 6,
+      },
+    },
+  };
+  // formMobileVerifyTest
+  schemas.formMobileVerifyTest = {
+    type: 'object',
+    properties: {
+      mobile: {
+        type: 'string',
+        ebType: 'text',
+        ebParams: {
+          inputType: 'tel',
+        },
+        ebTitle: 'Phone Number',
+        notEmpty: true,
+      },
+    },
+  };
+  return schemas;
+};
+
+
+/***/ }),
+
+/***/ 5304:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const schemas = {};
+  // party
+  schemas.party = {
+    type: 'object',
+    properties: {
+      // Basic Info
+      __groupBasicInfo: {
+        ebType: 'group-flatten',
+        ebTitle: 'Basic Info',
+      },
+      atomName: {
+        type: 'string',
+        ebType: 'text',
+        ebTitle: 'Party Name',
+        notEmpty: true,
+      },
+      personCount: {
+        type: 'integer',
+        ebType: 'text',
+        ebTitle: 'Person Count',
+        minimum: 1,
+        notEmpty: true,
+      },
+      partyTypeCode: {
+        type: 'number',
+        ebType: 'dict',
+        ebTitle: 'Party Type',
+        ebParams: {
+          dictKey: 'test-party:dictPartyType',
+          mode: 'tree',
+        },
+        notEmpty: true,
+      },
+      partyTime: {
+        type: ['object', 'null'],
+        ebType: 'datePicker',
+        ebTitle: 'Party Time',
+        ebParams: {
+          timePicker: true,
+          dateFormat: 'YYYY-MM-DD HH:mm:00',
+          header: false,
+          toolbar: true,
+        },
+        notEmpty: true,
+        'x-date': true,
+      },
+      partyCountry: {
+        type: 'string',
+        ebType: 'dict',
+        ebTitle: 'Party Country',
+        ebParams: {
+          dictKey: 'a-dictbooster:countries',
+          mode: 'select',
+        },
+        ebOptionsBlankAuto: true,
+      },
+      partyCity: {
+        type: 'string',
+        ebType: 'component',
+        ebTitle: 'Party City',
+        ebRender: {
+          module: moduleInfo.relativeName,
+          name: 'renderPartyCity',
+        },
+        ebParams: {
+          separator: '/',
+          leafOnly: true,
+        },
+      },
+      // Extra
+      __groupExtra: {
+        ebType: 'group-flatten',
+        ebTitle: 'Extra',
+      },
+      atomCategoryId: {
+        type: 'number',
+        ebType: 'category',
+        ebTitle: 'Category',
+      },
+      atomTags: {
+        type: ['string', 'null'],
+        ebType: 'tags',
+        ebTitle: 'Tags',
+      },
+      partyOver: {
+        ebType: 'toggle',
+        ebTitle: 'PartyOver',
+        ebDisplay: {
+          // expression: 'status===0',
+          // dependencies: ['status'],
+          host: {
+            stage: 'formal',
+            // mode: 'view',
+          },
+        },
+        ebReadOnly: true,
+      },
+    },
+  };
+  // party search
+  schemas.partySearch = {
+    type: 'object',
+    properties: {
+      partyTypeCode: {
+        type: 'number',
+        ebType: 'dict',
+        ebTitle: 'Party Type',
+        ebParams: {
+          dictKey: 'test-party:dictPartyType',
+          mode: 'tree',
+        },
+        ebOptionsBlankAuto: true,
+      },
+      partyTime: {
+        type: 'string',
+        ebType: 'dateRange',
+        ebTitle: 'Party Time',
+        ebParams: {
+          dateFormat: 'YYYY-MM-DD',
+          header: false,
+          toolbar: true,
+        },
+        ebSearch: {
+          combine: {
+            actionModule: 'a-basefront',
+            actionComponent: 'combineSearch',
+            name: 'dateRange',
+          },
+        },
+      },
+      partyCountry: {
+        type: 'string',
+        ebType: 'dict',
+        ebTitle: 'Party Country',
+        ebParams: {
+          dictKey: 'a-dictbooster:countries',
+          mode: 'select',
+        },
+        ebOptionsBlankAuto: true,
+      },
+      partyCity: {
+        type: 'string',
+        ebType: 'component',
+        ebTitle: 'Party City',
+        ebRender: {
+          module: moduleInfo.relativeName,
+          name: 'renderPartyCity',
+        },
+        ebParams: {
+          separator: '/',
+          leafOnly: false,
+        },
+        ebSearch: {
+          operators: 'likeRight',
+        },
+      },
+    },
+  };
+  return schemas;
+};
+
+
+/***/ }),
+
+/***/ 3754:
+/***/ ((module) => {
+
+module.exports = app => {
+  const schemas = {};
+  // settings
+  schemas.settingsUser = {
+    type: 'object',
+    properties: {
+      _myInfo_: {
+        // not set 'type', so as not to post back to the backend
+        ebType: 'text',
+        ebTitle: 'My Info',
+        ebComputed: {
+          expression: 'groupInfo.username + "(" + (groupExtra.panelExtra.groupInfo.mobile || "-") + ")"',
+          dependencies: ['groupInfo.username', 'groupExtra.panelExtra.groupInfo.mobile'],
+          immediate: true,
+        },
+        ebReadOnly: true,
+      },
+      groupInfo: {
+        type: 'object',
+        ebType: 'group',
+        ebTitle: 'Info Group',
+        properties: {
+          username: {
+            type: 'string',
+            ebType: 'text',
+            ebTitle: 'My Name',
+            notEmpty: true,
+          },
+        },
+      },
+      groupExtra: {
+        type: 'object',
+        ebType: 'group',
+        ebTitle: 'Extra Group',
+        properties: {
+          panelExtra: {
+            type: 'object',
+            ebType: 'panel',
+            ebTitle: 'Extra',
+            $ref: 'settingsUserExtra',
+          },
+        },
+      },
+    },
+  };
+  schemas.settingsUserExtra = {
+    type: 'object',
+    properties: {
+      groupInfo: {
+        type: 'object',
+        ebType: 'group',
+        ebTitle: 'Info Group',
+        ebGroupWhole: true,
+        properties: {
+          mobile: {
+            type: 'string',
+            ebType: 'text',
+            ebTitle: 'Mobile',
+            notEmpty: true,
+          },
+          sex: {
+            type: 'number',
+            ebType: 'select',
+            ebTitle: 'Sex',
+            ebMultiple: false,
+            ebOptions: [
+              { title: 'Male', value: 1 },
+              { title: 'Female', value: 2 },
+            ],
+            ebParams: {
+              openIn: 'page',
+              closeOnSelect: true,
+            },
+            notEmpty: true,
+          },
+          language: {
+            type: 'string',
+            ebType: 'select',
+            ebTitle: 'Language',
+            ebOptionsUrl: '/a/base/base/locales',
+            ebOptionsUrlParams: null,
+            'x-languages': true,
+            notEmpty: true,
+          },
+        },
+      },
+    },
+  };
+  schemas.settingsInstance = {
+    type: 'object',
+    properties: {
+      groupInfo: {
+        type: 'object',
+        ebType: 'group',
+        ebTitle: 'Info Group',
+        properties: {
+          slogan: {
+            type: 'string',
+            ebType: 'text',
+            ebTitle: 'Slogan',
+            notEmpty: true,
+          },
+        },
+      },
+    },
+  };
+  return schemas;
+};
+
+
+/***/ }),
+
+/***/ 8232:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const blocks = __webpack_require__(607);
+const formTest = __webpack_require__(7429);
+const party = __webpack_require__(5304);
+const settings = __webpack_require__(3754);
+
+module.exports = app => {
+  const schemas = {};
+  // blocks
+  Object.assign(schemas, blocks(app));
+  // formTest
+  Object.assign(schemas, formTest(app));
+  // party
+  Object.assign(schemas, party(app));
+  // settings
+  Object.assign(schemas, settings(app));
+  // ok
+  return schemas;
+};
+
+
+/***/ }),
+
+/***/ 7361:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const languages = __webpack_require__(3614);
+
+module.exports = app => {
+  class AutocompleteController extends app.Controller {
+    async languages() {
+      const query = this.ctx.params.query;
+      let data;
+      if (!query) {
+        data = [];
+      } else {
+        data = languages.filter(item => {
+          return item.name.toLowerCase().indexOf(query.toLowerCase()) === 0;
+        });
+      }
+      this.ctx.success(data);
+    }
+  }
+
+  return AutocompleteController;
+};
+
+
+/***/ }),
+
+/***/ 8664:
+/***/ ((module) => {
+
+const __ItemDefault = {
+  userName: '',
+  password: '',
+  passwordAgain: '',
+  sex: 0,
+  birthday: null,
+  language: '',
+  avatar: '',
+  rememberMe: false,
+  motto: '',
+};
+
+module.exports = app => {
+  class FormSchemaValidationController extends app.Controller {
+    async load() {
+      // try load from db cache
+      const cacheName = this._getCacheName();
+      let item = await this.ctx.cache.db.get(cacheName);
+      item = this.ctx.bean.util.extend({}, __ItemDefault, item);
+      // ok
+      this.ctx.success(item);
+    }
+
+    async saveSimple() {
+      // item
+      const item = this.ctx.request.body.data;
+      // save to db cache
+      const cacheName = this._getCacheName();
+      await this.ctx.cache.db.set(cacheName, item);
+      // ok
+      this.ctx.success();
+    }
+
+    async saveValidation() {
+      await this.saveSimple();
+    }
+
+    // form-captcha signup
+    signup() {
+      this.ctx.success();
+    }
+
+    // form-mobile-verify
+    mobileVerify() {
+      this.ctx.success();
+    }
+
+    _getCacheName() {
+      // get the operation user
+      const user = this.ctx.state.user.op;
+      return `__formTest:${user.id}`;
+    }
+  }
+
+  return FormSchemaValidationController;
+};
+
+
+/***/ }),
+
+/***/ 7350:
+/***/ ((module) => {
+
+module.exports = app => {
+  class GuideController extends app.Controller {
+    async echo() {
+      const message = 'Hello World';
+      this.ctx.success(message);
+    }
+
+    async echo2() {
+      const message = this.ctx.config.message;
+      this.ctx.success(message);
+    }
+
+    async echo3() {
+      const message = this.ctx.text('Hello World');
+      this.ctx.success(message);
+    }
+
+    async echo4() {
+      const { message, markCount } = this.ctx.request.body;
+      const res = `${message}${new Array(markCount + 1).join('!')}`;
+      this.ctx.success(res);
+    }
+
+    async echo6() {
+      // testParty: insert/udpate/delete/get
+
+      // insert
+      const res = await this.ctx.db.insert('testParty', {
+        iid: this.ctx.instance.id,
+        deleted: 0,
+        personCount: 3,
+      });
+      const id = res.insertId;
+      // update
+      await this.ctx.db.update('testParty', {
+        id,
+        personCount: 5,
+      });
+      // get
+      const item = await this.ctx.db.get('testParty', {
+        id,
+      });
+      // delete
+      await this.ctx.db.delete('testParty', {
+        id,
+      });
+      // ok
+      this.ctx.success(item);
+    }
+
+    async echo7() {
+      // testParty: insert/udpate/delete/get
+
+      // insert
+      const res = await this.ctx.model.party.insert({ personCount: 3 });
+      const id = res.insertId;
+      // update
+      await this.ctx.model.party.update({ id, personCount: 6 });
+      // get
+      const item = await this.ctx.model.party.get({ id });
+      // delete
+      await this.ctx.model.party.delete({ id });
+      // ok
+      this.ctx.success(item);
+    }
+
+    async echo8() {
+      // transaction
+
+      // insert
+      const res = await this.ctx.model.party.insert({ personCount: 3 });
+      const id = res.insertId;
+      // will throw error
+      await this.ctx.model.party.update({ id, personCountA: 6 });
+      // never here
+      this.ctx.success();
+    }
+
+    async echo9() {
+      // Menu Authorization
+      // ok
+      this.ctx.success('ok');
+    }
+  }
+
+  return GuideController;
+};
+
+
+/***/ }),
+
+/***/ 7708:
+/***/ ((module) => {
+
+const gTestListMax = 89;
+
+module.exports = app => {
+  class PtrIsLoadMoreController extends app.Controller {
+    async list() {
+      // page
+      let page = this.ctx.request.body.page;
+      // adjust page
+      page = this.ctx.bean.util.page(page, false);
+      // items
+      const items = [];
+      for (let i = 0; i < page.size; i++) {
+        const itemId = page.index + i + 1;
+        if (itemId > gTestListMax) break;
+        items.push({
+          id: itemId,
+          title: `${this.ctx.text('Item')} - ${itemId}`,
+        });
+      }
+      // ok
+      this.ctx.successMore(items, page.index, page.size);
+    }
+  }
+
+  return PtrIsLoadMoreController;
+};
+
+
+/***/ }),
+
+/***/ 1653:
+/***/ ((module) => {
+
+module.exports = app => {
+  class PartyController extends app.Controller {
+    async over() {
+      const res = await this.ctx.service.party.over({
+        key: this.ctx.request.body.key,
+        user: this.ctx.state.user.op,
+      });
+      this.ctx.success(res);
+    }
+
+    async overBulk() {
+      const res = await this.ctx.service.party.overBulk({
+        keys: this.ctx.request.body.keys,
+        user: this.ctx.state.user.op,
+      });
+      this.ctx.success(res);
+    }
+  }
+
+  return PartyController;
+};
+
+
+/***/ }),
+
+/***/ 9503:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class AllController extends app.Controller {
+    async all() {
+      const totalTimes = 1;
+      const timeStart = new Date().getTime() / 1000;
+      for (let i = 0; i < totalTimes; i++) {
+        await this.__all();
+        console.log(`-----all time: ${i}`);
+      }
+      const timeEnd = new Date().getTime() / 1000;
+      console.log(`-----all time used: ${timeEnd - timeStart}s`);
+      // done
+      this.ctx.success();
+    }
+    async __all() {
+      // atomClass
+      const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });
+      this.atomClass = atomClass;
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      const userTom = await this._getUser({ userIds, userName: 'Tom' });
+      // user->atom
+      await this._testCheckList(
+        'formal',
+        userIds,
+        [
+          ['Tom', 0],
+          ['Jane', 0],
+          ['Jimmy', 0],
+          ['Smith', 0],
+          ['', 0],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+
+      // Tom add party
+      const partyKeyDraft = await this.ctx.bean.atom.create({
+        atomClass,
+        options: { preferredRole: true },
+        user: userTom,
+      });
+      await this.ctx.bean.atom.write({
+        key: partyKeyDraft,
+        item: { atomName: 'test:all', personCount: 3 },
+        user: userTom,
+      });
+
+      await this._testCheckList(
+        'draft',
+        userIds,
+        [
+          ['Tom', 1],
+          ['Jane', 0],
+          ['Jimmy', 0],
+          ['Smith', 0],
+          ['', 0],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+
+      // Tom enable(submit) party
+      const res = await this.ctx.bean.atom.submit({
+        key: partyKeyDraft,
+        options: { ignoreFlow: true },
+        user: userTom,
+      });
+      const partyKeyFormal = res.formal.key;
+
+      await this._testCheckList(
+        'formal',
+        userIds,
+        [
+          ['Tom', 1],
+          ['Jane', 1],
+          ['Jimmy', 1],
+          ['Smith', 1],
+          ['', 1],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+
+      // Tom update party
+      await this.ctx.bean.atom.write({
+        key: partyKeyDraft,
+        item: { personCount: 8 },
+        user: userTom,
+      });
+
+      // Tom get party
+      const party = await this.ctx.bean.atom.read({ key: partyKeyDraft, user: userTom });
+      assert.equal(party.personCount, 8);
+
+      // Tom list party
+      const parties = await this.ctx.bean.atom.select({
+        atomClass,
+        options: {
+          where: { atomName: { val: 'test:all', op: 'likeRight' } },
+          orders: [['a.createdAt', 'desc']],
+          page: { index: 0, size: 0 },
+          stage: 'formal',
+        },
+        user: userTom,
+      });
+      assert.equal(parties.length, 1);
+
+      // checkRightRead
+      const checkRightReads = [['Tom', partyKeyFormal.atomId, true]];
+      for (const [userName, atomId, right] of checkRightReads) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightRead({
+          atom: { id: atomId },
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightWrite
+      const checkRightWrites = [
+        ['Tom', partyKeyFormal.atomId, true],
+        ['Tomson', partyKeyFormal.atomId, false],
+      ];
+      for (const [userName, atomId, right] of checkRightWrites) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightAction({
+          atom: { id: atomId },
+          action: 'write',
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightDelete
+      const checkRightDeletes = [
+        ['Tom', partyKeyFormal.atomId, true],
+        ['Tomson', partyKeyFormal.atomId, false],
+      ];
+      for (const [userName, atomId, right] of checkRightDeletes) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightAction({
+          atom: { id: atomId },
+          action: 'delete',
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightCreate
+      const checkRightCreates = [
+        ['Tom', true],
+        ['Jimmy', true],
+        ['Smith', false],
+      ];
+      for (const [userName, right] of checkRightCreates) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightCreate({
+          atomClass,
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // // checkRightAction:review(flag=1)
+      // const checkRightActions_1 = [[ 'Tom', partyKey.atomId, false ], [ 'Jane', partyKey.atomId, true ]];
+      // for (const [ userName, atomId, right ] of checkRightActions_1) {
+      //   const res = await this.ctx.bean.atom.checkRightAction({
+      //     atom: { id: atomId },
+      //     action: 101,
+      //     user: { id: userIds[userName] },
+      //   });
+      //   assert.equal(!!res, right, userName);
+      // }
+
+      // // action: review
+      // await this.ctx.bean.atom.action({
+      //   action: 101,
+      //   key: partyKey,
+      //   user: { id: userIds.Jane },
+      // });
+
+      // // checkRightAction:review(flag=2)
+      // const checkRightActions_2 = [[ 'Tom', partyKey.atomId, false ], [ 'Jane', partyKey.atomId, false ]];
+      // for (const [ userName, atomId, right ] of checkRightActions_2) {
+      //   const res = await this.ctx.bean.atom.checkRightAction({
+      //     atom: { id: atomId },
+      //     action: 101,
+      //     user: { id: userIds[userName] },
+      //   });
+      //   assert.equal(!!res, right, userName);
+      // }
+
+      // // action: review again
+      // await this.ctx.bean.atom.action({
+      //   action: 101,
+      //   key: partyKey,
+      //   user: { id: userIds.Jane },
+      // });
+
+      // Tom delete party
+      await this.ctx.bean.atom.delete({
+        key: partyKeyFormal,
+        user: userTom,
+      });
+
+      await this._testCheckList(
+        'formal',
+        userIds,
+        [
+          ['Tom', 0],
+          ['Jane', 0],
+          ['Jimmy', 0],
+          ['Smith', 0],
+          ['', 0],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+    }
+
+    async _testCheckList(stage, userIds, userAtoms, cb) {
+      for (const [userName, atomCountExpected] of userAtoms) {
+        const user = await this._getUser({ userIds, userName });
+        const list = await this.ctx.bean.atom.select({
+          atomClass: this.atomClass,
+          options: {
+            where: {
+              atomName: 'test:all',
+            },
+            orders: null,
+            page: null,
+            stage,
+          },
+          user,
+        });
+        // callback
+        cb(list.length, atomCountExpected, userName);
+      }
+    }
+
+    async _getUser({ userIds, userName }) {
+      if (!userName) return null;
+      const userId = userIds && userIds[userName];
+      if (userId) return { id: userId };
+      return await this.ctx.bean.user.get({ userName });
+    }
+  }
+
+  return AllController;
+};
+
+
+/***/ }),
+
+/***/ 9754:
+/***/ ((module) => {
+
+module.exports = app => {
+  class RightController extends app.Controller {
+    async checkRightCreate() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.atomClass);
+    }
+
+    async checkRightRead() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+
+    async checkRightWrite() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+
+    async checkRightAction() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+  }
+
+  return RightController;
+};
+
+
+/***/ }),
+
+/***/ 421:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class StarLabelController extends app.Controller {
+    async starLabel() {
+      // atomClass
+      const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });
+      // user
+      const user = this.ctx.state.user.op;
+
+      // add party:star
+      const partyKeyDraft = await this.ctx.bean.atom.create({
+        atomClass,
+        options: { preferredRole: true },
+        user,
+      });
+
+      // write party
+      await this.ctx.bean.atom.write({
+        key: partyKeyDraft,
+        item: { atomName: 'test:starLabel' },
+        user,
+      });
+
+      // submit party
+      const res = await this.ctx.bean.atom.submit({
+        key: partyKeyDraft,
+        options: { ignoreFlow: true },
+        user,
+      });
+      const partyKeyFormal = res.formal.key;
+
+      // get party
+      let party = await this.ctx.bean.atom.read({ key: partyKeyFormal, user });
+      assert.equal(party.star, null);
+      assert.equal(party.labels, null);
+
+      // set star/label
+      await this.ctx.bean.atom.star({ key: partyKeyFormal, atom: { star: 1 }, user });
+      await this.ctx.bean.atom.labels({ key: partyKeyFormal, atom: { labels: [1] }, user });
+
+      // get party
+      party = await this.ctx.bean.atom.read({ key: partyKeyFormal, user });
+      assert.equal(party.star, 1);
+      assert.equal(party.labels, '[1]');
+
+      // select parties
+      let parties = await this.ctx.bean.atom.select({
+        user,
+        options: {
+          star: 1,
+          where: { atomName: 'test:starLabel' },
+          stage: 'formal',
+        },
+      });
+      assert.equal(parties.length, 1);
+
+      parties = await this.ctx.bean.atom.select({
+        user,
+        options: {
+          label: 1,
+          where: { atomName: 'test:starLabel' },
+          stage: 'formal',
+        },
+      });
+      assert.equal(parties.length, 1);
+
+      parties = await this.ctx.bean.atom.select({
+        user,
+        options: {
+          label: 2,
+          where: { atomName: 'test:starLabel' },
+          stage: 'formal',
+        },
+      });
+      assert.equal(parties.length, 0);
+
+      // clear star/label
+      await this.ctx.bean.atom.star({ key: partyKeyFormal, atom: { star: 0 }, user });
+      await this.ctx.bean.atom.labels({ key: partyKeyFormal, atom: { labels: null }, user });
+
+      // get party
+      party = await this.ctx.bean.atom.read({ key: partyKeyFormal, user });
+      assert.equal(party.star, null);
+      assert.equal(party.labels, null);
+
+      // delete party
+      await this.ctx.bean.atom.delete({ key: partyKeyFormal, user });
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return StarLabelController;
+};
+
+
+/***/ }),
+
+/***/ 6720:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class DbController extends app.Controller {
+    async db() {
+      let res;
+      let value;
+
+      // name
+      const name = '__test:name:db';
+
+      // getset
+      value = await this.ctx.cache._db.getset(name, 'zhen.nann');
+      assert.equal(value, undefined);
+
+      value = await this.ctx.cache._db.getset(name, 'zhennann');
+      assert.equal(value, 'zhen.nann');
+
+      // has
+      res = await this.ctx.cache._db.has(name);
+      assert.equal(res, true);
+
+      // get
+      value = await this.ctx.cache._db.get(name);
+      assert.equal(value, 'zhennann');
+
+      // remove
+      await this.ctx.cache._db.remove(name);
+      res = await this.ctx.cache._db.has(name);
+      assert.equal(res, false);
+
+      // set with timeout
+      await this.ctx.cache._db.set(name, 'zhennann', 2000);
+
+      // get
+      value = await this.ctx.cache._db.get(name);
+      assert.equal(value, 'zhennann');
+
+      // other module's cache
+      const moduleCache = this.ctx.cache._db.module(this.ctx.module.info.relativeName);
+      value = await moduleCache.get(name);
+      assert.equal(value, 'zhennann');
+
+      // get after timeout
+      await sleep(3000);
+      value = await this.ctx.cache._db.get(name);
+      assert.equal(value, undefined);
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return DbController;
+};
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+/***/ }),
+
+/***/ 1308:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class MemController extends app.Controller {
+    async mem() {
+      let res;
+      let value;
+
+      // name
+      const name = '__test:name:mem';
+
+      // set
+      value = this.ctx.cache.mem.getset(name, 'zhen.nann');
+      assert.equal(value, undefined);
+
+      value = this.ctx.cache.mem.getset(name, 'zhennann');
+      assert.equal(value, 'zhen.nann');
+
+      // has
+      res = this.ctx.cache.mem.has(name);
+      assert.equal(!!res, true);
+
+      // get
+      value = this.ctx.cache.mem.get(name);
+      assert.equal(value, 'zhennann');
+
+      // remove
+      this.ctx.cache.mem.remove(name);
+      res = this.ctx.cache.mem.has(name);
+      assert.equal(res, null);
+
+      // set with timeout
+      this.ctx.cache.mem.set(name, 'zhennann', 1000);
+
+      // get
+      value = this.ctx.cache.mem.get(name);
+      assert.equal(value, 'zhennann');
+
+      // other module's cache
+      const moduleCache = this.ctx.cache.mem.module(this.ctx.module.info.relativeName);
+      value = moduleCache.get(name);
+      assert.equal(value, 'zhennann');
+
+      // get after timeout
+      await sleep(1500);
+      value = this.ctx.cache.mem.get(name);
+      assert.equal(value, null);
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return MemController;
+};
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+/***/ }),
+
+/***/ 1884:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class RedisController extends app.Controller {
+    async redis() {
+      let res;
+      let value;
+
+      // name
+      const name = '__test:name:redis';
+
+      // getset
+      value = await this.ctx.cache.redis.getset(name, 'zhen.nann');
+      assert.equal(value, undefined);
+
+      value = await this.ctx.cache.redis.getset(name, 'zhennann');
+      assert.equal(value, 'zhen.nann');
+
+      // has
+      res = await this.ctx.cache.redis.has(name);
+      assert.equal(res, true);
+
+      // get
+      value = await this.ctx.cache.redis.get(name);
+      assert.equal(value, 'zhennann');
+
+      // remove
+      await this.ctx.cache.redis.remove(name);
+      res = await this.ctx.cache.redis.has(name);
+      assert.equal(res, false);
+
+      // set with timeout
+      await this.ctx.cache.redis.set(name, 'zhennann', 2000);
+
+      // get
+      value = await this.ctx.cache.redis.get(name);
+      assert.equal(value, 'zhennann');
+
+      // other module's cache
+      const moduleCache = this.ctx.cache.redis.module(this.ctx.module.info.relativeName);
+      value = await moduleCache.get(name);
+      assert.equal(value, 'zhennann');
+
+      // get after timeout
+      await sleep(3000);
+      value = await this.ctx.cache.redis.get(name);
+      assert.equal(value, undefined);
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return RedisController;
+};
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+/***/ }),
+
+/***/ 4463:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class ConfigController extends app.Controller {
+    async test() {
+      // current module
+      let message = this.ctx.config.message;
+      assert.equal(message, 'Hello World');
+
+      // other module
+      message = this.ctx.config.module('test-party').message;
+      assert.equal(message, 'Hello World');
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return ConfigController;
+};
+
+
+/***/ }),
+
+/***/ 3:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class LocaleController extends app.Controller {
+    async enus() {
+      const message = this.ctx.config.message;
+      const data = {
+        enus: this.ctx.text(message),
+        zhcn: this.ctx.text.locale('zh-cn', message),
+      };
+
+      // done
+      this.ctx.success(data);
+    }
+
+    async zhcn() {
+      const message = this.ctx.config.message;
+      const data = {
+        zhcn: this.ctx.text(message),
+        enus: this.ctx.text.locale('en-us', message),
+      };
+
+      // done
+      this.ctx.success(data);
+    }
+  }
+
+  return LocaleController;
+};
+
+
+/***/ }),
+
+/***/ 8954:
+/***/ ((module) => {
+
+module.exports = app => {
+  class PerformActionController extends app.Controller {
+    async performAction() {
+      // param: id
+      const id = this.ctx.request.body.id;
+      // performAction
+      const res = await this.ctx.meta.util.performAction({
+        method: 'post',
+        url: 'test/ctx/performAction/echo',
+        body: {
+          id,
+        },
+      });
+      this.ctx.success(res);
+    }
+
+    async echo() {
+      // body: id
+      const id = this.ctx.request.body.id;
+      // echo back
+      this.ctx.success(id);
+    }
+  }
+
+  return PerformActionController;
+};
+
+
+/***/ }),
+
+/***/ 9456:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class RequestController extends app.Controller {
+    async request() {
+      // param
+      assert.equal(this.ctx.params.id, '1');
+      assert.equal(this.ctx.getInt('id'), 1);
+
+      // query
+      assert.equal(this.ctx.query.age, '18');
+      assert.equal(this.ctx.getInt('age'), 18);
+
+      // body
+      assert.equal(this.ctx.request.body.userName, 'zhennann');
+      assert.equal(this.ctx.getStr('userName'), 'zhennann');
+
+      // done
+      this.ctx.success();
+    }
+
+    async requestXML() {
+      // payload
+      const payload = await this.ctx.getPayload();
+      // return
+      this.ctx.status = 200;
+      this.ctx.type = 'text/xml';
+      this.ctx.body = payload.toString();
+    }
+  }
+
+  return RequestController;
+};
+
+
+/***/ }),
+
+/***/ 4902:
+/***/ ((module) => {
+
+module.exports = app => {
+  class ResponseController extends app.Controller {
+    async success() {
+      const res = {
+        userName: 'zhennann',
+      };
+      this.ctx.success(res);
+    }
+
+    async successMore() {
+      const page = this.ctx.request.body.page;
+      const items = [{ userName: 'zhennann' }, { userName: 'root' }];
+      this.ctx.successMore(items, page.index, page.size);
+    }
+
+    async fail() {
+      // Error Test
+      this.ctx.fail(1001);
+    }
+
+    async throwError() {
+      this.ctx.throw(1001);
+    }
+  }
+
+  return ResponseController;
+};
+
+
+/***/ }),
+
+/***/ 4316:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class SessionController extends app.Controller {
+    async session() {
+      // key1
+      this.ctx.session._key1 = 1;
+      // echo1
+      const res = await this.ctx.meta.util.performAction({
+        method: 'post',
+        url: 'test/ctx/session/echo1',
+      });
+      assert.equal(res.user.op.id, this.ctx.state.user.op.id);
+      assert.equal(res.instance.id, this.ctx.instance.id);
+      assert.equal(this.ctx.session._key2, 2);
+      // done
+      this.ctx.success();
+    }
+
+    async echo1() {
+      // echo2
+      const res = await this.ctx.meta.util.performAction({
+        method: 'post',
+        url: 'test/ctx/session/echo2',
+      });
+      // echo back
+      this.ctx.success(res);
+    }
+
+    async echo2() {
+      // check
+      assert.equal(this.ctx.session._key1, 1);
+      // key2
+      this.ctx.session._key2 = 2;
+      // echo back
+      this.ctx.success({
+        user: this.ctx.state.user,
+        instance: this.ctx.instance,
+      });
+    }
+  }
+
+  return SessionController;
+};
+
+
+/***/ }),
+
+/***/ 5918:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class TailController extends app.Controller {
+    async tail() {
+      // 1
+      this.ctx.meta._tail_test = 1;
+
+      // tail
+      this.ctx.tail(() => {
+        assert.equal(this.ctx.meta._tail_test, 2);
+        this.ctx.tail(() => {
+          assert.equal(this.ctx.meta._tail_test, 3);
+        });
+        this.ctx.meta._tail_test = 3;
+      });
+
+      // 2
+      this.ctx.meta._tail_test = 2;
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return TailController;
+};
+
+
+/***/ }),
+
+/***/ 4741:
+/***/ ((module) => {
+
+module.exports = app => {
+  class TransactionController extends app.Controller {
+    async transaction() {
+      // user
+      const user = this.ctx.state.user.op;
+      // atomKey
+      const atomKey = this.ctx.request.body.key;
+      // itemNew
+      const itemNew = this.ctx.request.body.item;
+
+      // write
+      await this.ctx.bean.atom.write({
+        key: atomKey,
+        item: { atomName: itemNew.atomName },
+        user,
+      });
+      // write: throw error when personCount is 0
+      await this.ctx.bean.atom.write({
+        key: atomKey,
+        item: { personCount: itemNew.personCount },
+        user,
+      });
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return TransactionController;
+};
+
+
+/***/ }),
+
+/***/ 1189:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+
+  class HelloController extends app.Controller {
+    async hello() {
+      const data = {
+        text: 'hello',
+      };
+      let result = 'world';
+      result = await this.ctx.bean.event.invoke({
+        module: moduleInfo.relativeName,
+        name: 'hello',
+        data,
+        result,
+        next: async (context, next) => {
+          context.result = `${context.result}.hello`;
+          await next();
+          context.result = `hello.${context.result}`;
+        },
+      });
+      assert.equal(data.text, 'hello echo');
+      assert.equal(result, 'echo.hello.world.echo.hello');
+      this.ctx.success();
+    }
+  }
+
+  return HelloController;
+};
+
+
+/***/ }),
+
+/***/ 2267:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class BeanController extends app.Controller {
+    async bean() {
+      const a = 3;
+      const b = 4;
+      let res;
+
+      // app.bean
+      assert.equal(app.bean['test-party.test.app'], app.bean['test-party.test.app']);
+
+      res = app.bean['test-party.test.app'].actionSync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop`);
+
+      res = await app.bean['test-party.test.app'].actionAsync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop`);
+
+      // ctx.bean: global
+      assert.equal(this.ctx.bean.testctx, this.ctx.bean.testctx);
+
+      // magic
+      res = this.ctx.bean.testctx.magic;
+      assert.equal(res, 'magic:simpleaop');
+
+      // name
+      this.ctx.bean.testctx.name = 'test-party:regexpaop:simpleaop';
+      res = this.ctx.bean.testctx.name;
+      assert.equal(res, 'test-party:regexpaop:simpleaop');
+
+      res = this.ctx.bean.testctx.actionSync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop:simpleaop`);
+
+      res = await this.ctx.bean.testctx.actionAsync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop:simpleaop`);
+
+      res = await this.ctx.bean.testctx.actionAsync2({ a, b });
+      assert.equal(res, `test-party:regexpaop:simpleaop:${a + b}:regexpaop:simpleaop`);
+
+      res = await this.ctx.bean.testctx.actionAsync3({ a, b });
+      assert.equal(res, `test-party:regexpaop:simpleaop:${a + b}:regexpaop:simpleaop`);
+
+      // ctx.bean: class
+      assert.equal(this.ctx.bean['test-party.test.class'], this.ctx.bean['test-party.test.class']);
+
+      res = this.ctx.bean['test-party.test.class'].actionSync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop`);
+
+      res = await this.ctx.bean['test-party.test.class'].actionAsync({ a, b });
+      assert.equal(res, `${a + b}:regexpaop`);
+
+      // ok
+      this.ctx.success();
+    }
+
+    async local() {
+      let res;
+
+      // general way
+      res = this.ctx.bean._getBean(moduleInfo.relativeName, 'local.test').name;
+      assert.equal(res, 'localTest');
+
+      // this module
+      res = this.ctx.bean.local.test.name;
+      assert.equal(res, 'localTest');
+
+      // other module
+      res = this.ctx.bean.local.module(moduleInfo.relativeName).test.name;
+      assert.equal(res, 'localTest');
+
+      // ok
+      this.ctx.success();
+    }
+  }
+
+  return BeanController;
+};
+
+
+/***/ }),
+
+/***/ 8589:
+/***/ ((module) => {
+
+module.exports = app => {
+  class BroadcastController extends app.Controller {
+    async emit() {
+      this.ctx.meta.util.broadcastEmit({
+        locale: 'zh-cn',
+        module: 'test-party',
+        broadcastName: 'broadcastTest',
+        data: { message: 'hello' },
+      });
+      this.ctx.success();
+    }
+  }
+
+  return BroadcastController;
+};
+
+
+/***/ }),
+
+/***/ 8358:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class CategoryController extends app.Controller {
+    async category() {
+      // atomClass
+      const atomClass = {
+        module: 'test-party',
+        atomClassName: 'party',
+      };
+
+      // add
+      const categoryId = await this.ctx.bean.category.add({
+        atomClass,
+        data: {
+          language: 'en-us',
+          categoryName: 'levelOne',
+          categoryIdParent: 0,
+        },
+      });
+      assert(categoryId > 0);
+
+      // parseCategoryName: levelOne.levelTwo.levelThree
+      const category = await this.ctx.bean.category.parseCategoryName({
+        atomClass,
+        language: 'en-us',
+        categoryName: 'levelOne.levelTwo.levelThree',
+        force: true,
+      });
+      assert.equal(category.categoryName, 'levelThree');
+
+      // ok
+      this.ctx.success();
+    }
+  }
+
+  return CategoryController;
+};
+
+
+/***/ }),
+
+/***/ 1137:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+const __testData_allowAllFieldsRead = {
+  mode: 'allowAllFieldsRead',
+};
+const __testData_allowAllFieldsReadWrite = {
+  mode: 'allowAllFieldsReadWrite',
+};
+const __testData_allowSpecificFields_1 = {
+  mode: 'allowSpecificFields',
+  basic: { read: true, write: true },
+  fields: ['atomName', { name: 'detailsAmount', read: true, write: false }],
+};
+const __testData_allowSpecificFields_2 = {
+  mode: 'allowSpecificFields',
+  basic: { read: true, write: false },
+  fields: ['atomName', { name: 'detailsAmount', read: true, write: true }, 'details'],
+};
+const __testData_allowSpecificFields_3 = {
+  mode: 'allowSpecificFields',
+  basic: { read: false, write: false },
+  fields: [
+    'atomName',
+    { name: 'detailsAmount', read: true, write: true },
+    { name: 'details', read: true, write: false },
+  ],
+};
+const __testData_custom_array = {
+  mode: 'custom',
+  custom: [
+    // 'atomName',
+    {
+      name: 'detailsAmount',
+      property: {
+        type: 'number',
+        ebType: 'detailsStat',
+        ebTitle: 'Amount',
+        ebParams: {
+          detailClass: {
+            module: 'test-flow',
+            atomClassName: 'purchaseOrderDetail',
+          },
+          summary: {
+            type: 'sum',
+            field: 'amount',
+          },
+          currency: true,
+        },
+        ebAutoSubmit: true,
+      },
+    },
+    'details',
+  ],
+};
+const __testData_custom_object = {
+  mode: 'custom',
+  custom: {
+    module: 'test-flow',
+    validator: 'purchaseOrder',
+  },
+};
+
+module.exports = app => {
+  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class FieldsController extends app.Controller {
+    async parseSchema() {
+      const moduleTestFlow = app.meta.modules['test-flow'];
+      if (!moduleTestFlow) {
+        // do nothing
+        this.ctx.success();
+        return;
+      }
+      // atomClass
+      const atomClass = { module: 'test-flow', atomClassName: 'purchaseOrder' };
+      // mode: allowAllFieldsRead
+      await this._parseSchema_mode_allowAllFieldsRead({ atomClass });
+      // mode: allowAllFieldsReadWrite
+      await this._parseSchema_mode_allowAllFieldsReadWrite({ atomClass });
+      // mode: allowSpecificFields_1
+      await this._parseSchema_mode_allowSpecificFields_1({ atomClass });
+      // mode: allowSpecificFields_2
+      await this._parseSchema_mode_allowSpecificFields_2({ atomClass });
+      // mode: allowSpecificFields_3
+      await this._parseSchema_mode_allowSpecificFields_3({ atomClass });
+      // mode: custom_array
+      await this._parseSchema_mode_custom_array({ atomClass });
+      // mode: custom_object
+      await this._parseSchema_mode_custom_object({ atomClass });
+      // ok
+      this.ctx.success();
+    }
+
+    // mode: allowAllFieldsRead
+    async _parseSchema_mode_allowAllFieldsRead({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowAllFieldsRead,
+      });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, true);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    }
+
+    // mode: allowAllFieldsReadWrite
+    async _parseSchema_mode_allowAllFieldsReadWrite({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowAllFieldsReadWrite,
+      });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+      assert.equal(schemaBase.isSchemaBase, true);
+    }
+
+    // mode: allowSpecificFields_1
+    async _parseSchema_mode_allowSpecificFields_1({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowSpecificFields_1,
+      });
+      assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    }
+
+    // mode: allowSpecificFields_2
+    async _parseSchema_mode_allowSpecificFields_2({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowSpecificFields_2,
+      });
+      assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
+      assert.equal(schemaBase.schema.properties.details, undefined);
+    }
+
+    // mode: allowSpecificFields_3
+    async _parseSchema_mode_allowSpecificFields_3({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_allowSpecificFields_3,
+      });
+      assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    }
+    // mode: custom_array
+    async _parseSchema_mode_custom_array({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_custom_array,
+      });
+      assert.equal(schemaBase.schema.properties.atomName, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    }
+    // mode: custom_array
+    async _parseSchema_mode_custom_object({ atomClass }) {
+      const schemaBase = await this.ctx.bean.fields.parseSchema({
+        atomClass,
+        fieldsRight: __testData_custom_object,
+      });
+      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    }
+  }
+  return FieldsController;
+};
+
+
+/***/ }),
+
+/***/ 6766:
+/***/ ((module) => {
+
+module.exports = app => {
+  class HttpLogController extends app.Controller {
+    async httpLog() {
+      // please see: {projectDir}/src/backend/logs/{projectName}/{projectName}-web.log
+      this.ctx.success('this is a test for httpLog');
+    }
+  }
+
+  return HttpLogController;
+};
+
+
+/***/ }),
+
+/***/ 8316:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class InstanceController extends app.Controller {
+    async instance() {
+      assert.equal(!!this.ctx.instance.id, true);
+      assert.equal(!!this.ctx.instance.config, true);
+      this.ctx.success();
+    }
+  }
+  return InstanceController;
+};
+
+
+/***/ }),
+
+/***/ 3777:
+/***/ ((module) => {
+
+module.exports = app => {
+  class TestController extends app.Controller {
+    async interception() {
+      const { a, b } = this.ctx.request.body;
+      const c = parseInt(a) + parseInt(b);
+      this.ctx.success(c);
+    }
+
+    async restructuring() {
+      const { a, b } = this.ctx.request.body;
+      const c = a + b;
+      this.ctx.success(c);
+    }
+  }
+
+  return TestController;
+};
+
+
+/***/ }),
+
+/***/ 3058:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  const atomStaticKey = '--model--test--';
+  const __rows = [
+    { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
+    { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
+    { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
+  ];
+
+  class ModelController extends app.Controller {
+    async model() {
+      // model
+      const model = this.ctx.model.module('a-base').atom;
+
+      // insert one row
+      await model.insert(__rows[0]);
+      // insert multi rows
+      await model.insert(__rows.slice(1));
+
+      // select
+      let list = await model.select({
+        where: { atomStaticKey },
+      });
+      assert.equal(list.length, 3);
+
+      // read
+      const item = await model.get({
+        atomStaticKey,
+        atomName: 'atom-one',
+      });
+
+      // update one row
+      await model.update({
+        id: item.id,
+        readCount: item.readCount + 1,
+      });
+
+      // update with options.where and options.columns
+      await model.update(
+        {
+          readCount: 1,
+        },
+        {
+          where: { atomStaticKey },
+          columns: ['readCount'],
+        }
+      );
+
+      // select: in
+      list = await model.select({
+        where: { atomStaticKey: [atomStaticKey] },
+      });
+      assert.equal(list.length, 3);
+      list = await model.select({
+        where: {
+          atomStaticKey: {
+            op: 'in',
+            val: [atomStaticKey],
+          },
+        },
+      });
+      assert.equal(list.length, 3);
+
+      // select: is null
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          atomName: null,
+        },
+      });
+      assert.equal(list.length, 0);
+
+      // select: is not null
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          atomName: {
+            op: 'notNull',
+          },
+        },
+      });
+      assert.equal(list.length, 3);
+
+      // select: like
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          atomName: {
+            op: 'likeRight',
+            val: 'atom-',
+          },
+        },
+      });
+      assert.equal(list.length, 3);
+
+      // select: or
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __or__: [{ atomName: 'atom-one' }, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 2);
+
+      // delete
+      await model.delete({ atomStaticKey });
+
+      // count
+      const count = await model.count({ atomStaticKey });
+      assert.equal(count, 0);
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return ModelController;
+};
+
+
+/***/ }),
+
+/***/ 5438:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  const atomStaticKey = '--modelWhere--test--';
+  const __rows = [
+    { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
+    { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
+    { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
+  ];
+
+  class ModelController extends app.Controller {
+    async modelWhere() {
+      await this._modelWhere();
+      this.ctx.success();
+    }
+
+    async _modelWhere() {
+      // model
+      const model = this.ctx.model.module('a-base').atom;
+
+      // delete: force clear old data
+      await model.delete({ atomStaticKey });
+
+      // insert one row
+      await model.insert(__rows[0]);
+      // insert multi rows
+      await model.insert(__rows.slice(1));
+
+      // select: or false/false
+      let list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __or__: [false, false],
+        },
+      });
+      assert.equal(list.length, 0);
+      // select: or false/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __or__: [false, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 1);
+      // select: or true/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __or__: [true, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 3);
+
+      // select: and true/true
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [true, true],
+        },
+      });
+      assert.equal(list.length, 3);
+      // select: and true/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [true, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 1);
+      // select: and false/clause
+      list = await model.select({
+        where: {
+          atomStaticKey: [atomStaticKey],
+          __and__: [false, { atomName: 'atom-two' }],
+        },
+      });
+      assert.equal(list.length, 0);
+
+      // delete
+      await model.delete({ atomStaticKey });
+
+      // count
+      const count = await model.count({ atomStaticKey });
+      assert.equal(count, 0);
+    }
+  }
+
+  return ModelController;
+};
+
+
+/***/ }),
+
+/***/ 746:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class TestController extends app.Controller {
+    async resourceCheckSuccess() {
+      const user = this.ctx.state.user.op;
+      assert.equal(user.userName, 'root');
+      this.ctx.success();
+    }
+
+    async resourceCheckFail() {
+      const user = this.ctx.state.user.op;
+      assert.equal(user.userName, 'root');
+      this.ctx.success();
+    }
+  }
+
+  return TestController;
+};
+
+
+/***/ }),
+
+/***/ 816:
+/***/ ((module) => {
+
+module.exports = app => {
+  class ProgressController extends app.Controller {
+    async progress() {
+      // create progress
+      const progressId = await this.ctx.bean.progress.create();
+      // background
+      this.ctx.runInBackground(async () => {
+        await this._progressInBackground({ progressId });
+      });
+      // return progressId
+      this.ctx.success({ progressId });
+    }
+
+    async _progressInBackground({ progressId }) {
+      try {
+        // level one
+        await this._levelOne({ progressId, progressNo: 0 });
+        // progress done
+        await this.ctx.bean.progress.done({ progressId, message: this.ctx.text('Well Done') });
+        // ok
+        this.ctx.success(true);
+      } catch (err) {
+        // progress error
+        await this.ctx.bean.progress.error({ progressId, message: err.message });
+        // throw err
+        throw err;
+      }
+    }
+
+    async _levelOne({ progressId, progressNo }) {
+      const total = 2;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${this.ctx.text('Level One')}: ${i + 1}`;
+        await this.ctx.bean.progress.update({
+          progressId,
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await this.ctx.bean.util.sleep(1500);
+        // level two
+        await this._levelTwo({ progressId, progressNo: progressNo + 1 });
+      }
+    }
+
+    async _levelTwo({ progressId, progressNo }) {
+      const total = 2;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${this.ctx.text('Level Two')}: ${i + 1}`;
+        await this.ctx.bean.progress.update({
+          progressId,
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await this.ctx.bean.util.sleep(1500);
+        // level two
+        await this._levelThree({ progressId, progressNo: progressNo + 1 });
+      }
+    }
+
+    async _levelThree({ progressId, progressNo }) {
+      const total = 3;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const text = `${this.ctx.text('Level Three')}: ${i + 1}`;
+        await this.ctx.bean.progress.update({
+          progressId,
+          progressNo,
+          total,
+          progress: current++,
+          text,
+        });
+        // sleep
+        await this.ctx.bean.util.sleep(1500);
+      }
+    }
+  }
+  return ProgressController;
+};
+
+
+/***/ }),
+
+/***/ 4828:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class QueueController extends app.Controller {
+    async pushAsync() {
+      const res = await this.ctx.meta.util.queuePushAsync({
+        module: 'test-party',
+        queueName: 'queueTest',
+        data: { a: 1, b: 2 },
+      });
+      assert.equal(res, 3);
+      this.ctx.success();
+    }
+
+    async push() {
+      this.ctx.meta.util.queuePush({
+        module: 'test-party',
+        queueName: 'queueTest',
+        data: { a: 1, b: 2 },
+      });
+      this.ctx.success();
+    }
+  }
+
+  return QueueController;
+};
+
+
+/***/ }),
+
+/***/ 7375:
+/***/ ((module) => {
+
+module.exports = app => {
+  class SendMailController extends app.Controller {
+    async sendMail() {
+      // send
+      const message = this.ctx.request.body.data;
+      await this.ctx.bean.mail.send({
+        scene: 'test',
+        message,
+      });
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return SendMailController;
+};
+
+
+/***/ }),
+
+/***/ 9557:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+const pMap = require3('p-map');
+
+module.exports = app => {
+  class SequenceController extends app.Controller {
+    async sequence() {
+      const arr = [1, 2, 3, 4, 5];
+      let results;
+
+      // current
+      let current = await this.ctx.bean.sequence.current('test');
+      assert.equal(current, 0);
+
+      // next
+      let next = await this.ctx.bean.sequence.next('test');
+      assert.equal(next, 1);
+
+      // current
+      current = await this.ctx.bean.sequence.current('test');
+      assert.equal(current, 1);
+
+      // reset
+      await this.ctx.bean.sequence.reset('test');
+
+      // other module's sequence
+      const moduleSequence = this.ctx.bean.sequence.module(this.ctx.module.info.relativeName);
+
+      // next
+      next = await moduleSequence.next('test');
+      assert.equal(next, 1);
+
+      // current
+      current = await moduleSequence.current('test');
+      assert.equal(current, 1);
+
+      // reset
+      await moduleSequence.reset('test');
+
+      // concurrency
+      results = await pMap(arr, async () => {
+        return await moduleSequence.next('test');
+      });
+      assert.equal(new Set(results).size, new Set(arr).size);
+
+      // reset
+      await moduleSequence.reset('test');
+
+      // concurrency transaction
+      results = await pMap(arr, async () => {
+        return await this.ctx.meta.util.executeBeanIsolate({
+          beanModule: this.ctx.module.info.relativeName,
+          transaction: true,
+          fn: async ({ ctx }) => {
+            const res = await ctx.bean.sequence.next('test');
+            await ctx.bean.util.sleep(50);
+            return res;
+          },
+        });
+      });
+      assert.equal(new Set(results).size, new Set(arr).size, `sequence next: ${results}`);
+
+      // reset
+      await moduleSequence.reset('test');
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return SequenceController;
+};
+
+
+/***/ }),
+
+/***/ 9076:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class SettingsController extends app.Controller {
+    async settings() {
+      // user
+
+      // get settings from config
+      let data = await this.ctx.bean.settings.getUser({ name: '/groupInfo/username' });
+      assert.equal(data, 'zhennann');
+      data = await this.ctx.bean.settings.getUser({ name: '/groupExtra/panelExtra/groupInfo/language' });
+      assert.equal(data, 'en-us');
+
+      // load settings
+      data = await this.ctx.bean.settings.loadSettingsUser();
+      assert.equal(data.groupInfo.username, 'zhennann');
+      // save settings
+      data.groupExtra.panelExtra.groupInfo.language = 'zh-cn';
+      await this.ctx.bean.settings.saveSettingsUser({ data });
+
+      // get settings from db
+      data = await this.ctx.bean.settings.getUser({ name: '/groupExtra/panelExtra/groupInfo/language' });
+      assert.equal(data, 'zh-cn');
+
+      // instance
+
+      // get settings from config
+      data = await this.ctx.bean.settings.getInstance({ name: '/groupInfo/slogan' });
+      assert.equal(data, '');
+
+      // load settings
+      data = await this.ctx.bean.settings.loadSettingsInstance();
+      assert.equal(data.groupInfo.slogan, '');
+      // save settings
+      data.groupInfo.slogan = 'Less is more, while more is less';
+      await this.ctx.bean.settings.saveSettingsInstance({ data });
+
+      // get settings from db
+      data = await this.ctx.bean.settings.getInstance({ name: '/groupInfo/slogan' });
+      assert.equal(data, 'Less is more, while more is less');
+
+      // ok
+      this.ctx.success();
+    }
+  }
+  return SettingsController;
+};
+
+
+/***/ }),
+
+/***/ 5563:
+/***/ ((module) => {
+
+const _subscribePathTest = '/test/party/test';
+const _subscribePathSimpleChat = '/test/party/simpleChat';
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class SocketIOController extends app.Controller {
+    async publish() {
+      const options = this.ctx.request.body.options;
+      const message = this.ctx.request.body.message;
+      message.userIdFrom = this.ctx.state.user.op.id;
+      const res = await this.ctx.bean.io.publish({
+        path: _subscribePathTest,
+        message,
+        messageClass: {
+          module: moduleInfo.relativeName,
+          messageClassName: 'test',
+        },
+        options,
+      });
+      // done
+      this.ctx.success(res);
+    }
+
+    async simpleChat() {
+      const options = this.ctx.request.body.options;
+      const message = this.ctx.request.body.message;
+      message.userIdFrom = this.ctx.state.user.op.id;
+      message.userIdsTo = await this._collectUserIds();
+      // message.userIdTo = -1;
+      const res = await this.ctx.bean.io.publish({
+        path: _subscribePathSimpleChat,
+        message,
+        messageClass: {
+          module: moduleInfo.relativeName,
+          messageClassName: 'simpleChat',
+        },
+        options,
+      });
+      // done
+      this.ctx.success(res);
+    }
+
+    async _collectUserIds() {
+      const ioRedis = this.ctx.bean.local.module('a-socketio').redis;
+      const userIds = await ioRedis._getPathUsersOnline({ path: _subscribePathSimpleChat });
+      const userAdmin = await this.ctx.bean.user.get({ userName: 'admin' });
+      if (userAdmin && !userIds.includes(userAdmin.id)) {
+        userIds.push(userAdmin.id);
+      }
+      return userIds;
+    }
+  }
+
+  return SocketIOController;
+};
+
+
+/***/ }),
+
+/***/ 7687:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class StatsController extends app.Controller {
+    async stats() {
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      const user = { id: userIds.Tom };
+
+      // old
+      let value = await this.ctx.bean.stats.get({
+        name: 'tasksUser',
+        nameSub: 'department.project',
+        user,
+      });
+      assert.equal(value, undefined);
+
+      // notify
+      await this.ctx.bean.stats.notifyAsync({
+        name: 'tasksUser',
+        nameSub: 'department.project',
+        user,
+      });
+
+      // new
+      value = await this.ctx.bean.stats.get({
+        name: 'tasksUser',
+        nameSub: 'department.project',
+        user,
+      });
+      assert.equal(value, 1);
+
+      // instance
+      value = await this.ctx.bean.stats.get({
+        name: 'tasksInstance',
+        user,
+      });
+      assert.equal(value, 1);
+
+      // done
+      this.ctx.success();
+    }
+
+    async plus() {
+      this.ctx.bean.stats.notify({
+        name: 'tasksUser',
+        nameSub: 'department.project',
+      });
+      this.ctx.success();
+    }
+  }
+  return StatsController;
+};
+
+
+/***/ }),
+
+/***/ 8142:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class StatusController extends app.Controller {
+    async status() {
+      // name
+      const name = '__test_enable';
+
+      // get
+      let value = await this.ctx.bean.status.get(name);
+      assert.equal(value, undefined);
+
+      // set
+      await this.ctx.bean.status.set(name, true);
+
+      // get
+      value = await this.ctx.bean.status.get(name);
+      assert.equal(value, true);
+
+      // other module's status
+      const moduleStatus = this.ctx.bean.status.module(this.ctx.module.info.relativeName);
+      value = await moduleStatus.get(name);
+      assert.equal(value, true);
+
+      // set
+      await this.ctx.bean.status.set(name, false);
+
+      // get
+      value = await this.ctx.bean.status.get(name);
+      assert.equal(value, false);
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return StatusController;
+};
+
+
+/***/ }),
+
+/***/ 4419:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class SummerController extends app.Controller {
+    async summer() {
+      // name
+      const name = 'test';
+      const key1 = { id: 1 };
+      const key2 = { id: 2 };
+      const key3 = { id: 3 };
+
+      // getCache
+      const cache = this.ctx.bean.summer.getCache({ name });
+      assert.equal(!!cache, true);
+      let cacheOtherModule = this.ctx.bean.summer.module(moduleInfo.relativeName).getCache({ name });
+      assert.equal(!!cacheOtherModule, true);
+      cacheOtherModule = this.ctx.bean.summer.getCache({ module: moduleInfo.relativeName, name });
+      assert.equal(!!cacheOtherModule, true);
+
+      let value;
+      let values;
+
+      // get: peek
+      value = await cache.peek(key1);
+      assert.equal(value, undefined);
+
+      // get
+      value = await cache.get(key1);
+      assert.equal(value.id, key1.id);
+
+      // get: peek
+      value = await cache.peek(key1);
+      assert.equal(value.id, key1.id);
+      value = await cache.peek(key1, { mode: 'mem' });
+      assert.equal(value.id, key1.id);
+      value = await cache.peek(key1, { mode: 'redis' });
+      assert.equal(value.id, key1.id);
+
+      // get: peek sleep for mem stale
+      await this.ctx.bean.util.sleep(1000);
+
+      // get: peek again
+      value = await cache.peek(key1, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key1, { mode: 'redis' });
+      assert.equal(value.id, key1.id);
+
+      // get: peek sleep for redis stale
+      await this.ctx.bean.util.sleep(2000);
+
+      // get: peek again
+      value = await cache.peek(key1, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key1, { mode: 'redis' });
+      assert.equal(value, undefined);
+
+      // mget
+      //   mem cache graph: key1
+      value = await cache.get(key1);
+      assert.equal(value.id, key1.id);
+      //   mem cache graph: key2 key3
+      values = await cache.mget([key1, key2, key3]);
+      assert.equal(values[0].id, key1.id);
+      assert.equal(values[1].id, key2.id);
+      assert.equal(values[2].id, key3.id);
+      //   mem cache graph: key3 key1
+      values = await cache.mget([key1, key2, key3]);
+      assert.equal(values[0].id, key1.id);
+      assert.equal(values[1].id, key2.id);
+      assert.equal(values[2].id, key3.id);
+
+      // mget: peek
+      value = await cache.peek(key2, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key2, { mode: 'redis' });
+      assert.equal(value.id, key2.id);
+
+      // del
+      await cache.del(key1);
+      await cache.del(key2);
+
+      // mdel
+      await cache.mdel([key1, key2, key3]);
+
+      // mdel: peek
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value, undefined);
+
+      // clear
+      values = await cache.mget([key1, key2, key3]);
+      assert.equal(values[2].id, key3.id);
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value.id, key3.id);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value.id, key3.id);
+
+      await cache.clear();
+
+      value = await cache.peek(key3, { mode: 'mem' });
+      assert.equal(value, undefined);
+      value = await cache.peek(key3, { mode: 'redis' });
+      assert.equal(value, undefined);
+
+      // done
+      this.ctx.success();
+    }
+  }
+  return SummerController;
+};
+
+
+/***/ }),
+
+/***/ 9240:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class TagController extends app.Controller {
+    async tag() {
+      // atomClass
+      const atomClass = {
+        module: 'test-party',
+        atomClassName: 'party',
+      };
+
+      // add
+      const tagId = await this.ctx.bean.tag.add({
+        atomClass,
+        data: {
+          // language: 'en-us', // neednot set language
+          tagName: 'tagOne',
+        },
+      });
+      assert(tagId > 0);
+
+      // parseTags: 'tagOne,tagTwo,tagThree'
+      const tagIds = await this.ctx.bean.tag.parseTags({
+        atomClass,
+        // language: 'en-us',// neednot set language
+        tagName: 'tagOne,tagTwo,tagThree',
+        force: true,
+      });
+      assert.equal(tagIds.length, 3);
+
+      // ok
+      this.ctx.success();
+    }
+  }
+
+  return TagController;
+};
+
+
+/***/ }),
+
+/***/ 2433:
+/***/ ((module) => {
+
+module.exports = app => {
+  class ValidationController extends app.Controller {
+    async success() {
+      this.ctx.success();
+    }
+
+    async fail() {
+      this.ctx.success();
+    }
+
+    async schema() {
+      this.ctx.success();
+    }
+  }
+
+  return ValidationController;
+};
+
+
+/***/ }),
+
+/***/ 3330:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class AllController extends app.Controller {
+    async all() {
+      const totalTimes = 1;
+      const timeStart = new Date().getTime() / 1000;
+      for (let i = 0; i < totalTimes; i++) {
+        await this.__all();
+        console.log(`-----all time: ${i}`);
+      }
+      const timeEnd = new Date().getTime() / 1000;
+      console.log(`-----all time used: ${timeEnd - timeStart}s`);
+      // done
+      this.ctx.success();
+    }
+    async __all() {
+      // atomClass
+      const atomClass = await this.ctx.bean.atomClass.get({
+        module: 'a-useronline',
+        atomClassName: 'userOnlineHistory',
+      });
+      this.atomClass = atomClass;
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      const userTom = await this._getUser({ userIds, userName: 'Tom' });
+      // const userRoot = await this._getUser({userIds, userName:'root'});
+
+      // delete: force clear old data
+      const modelHistory = this.ctx.model.module('a-useronline').userOnlineHistory;
+      await modelHistory.delete({ isLogin: 2 });
+
+      // user->atom
+      await this._testCheckList(
+        userIds,
+        [
+          ['Tom', 0],
+          ['root', 0],
+          ['', 0],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+
+      // add useronline
+      const itemKey = await this.ctx.bean.atom.create({
+        atomClass,
+      });
+      await this.ctx.bean.atom.write({
+        key: itemKey,
+        atomClass,
+        item: {
+          userId: userTom.id,
+          isLogin: 2,
+        },
+        options: {
+          ignoreValidate: true,
+        },
+      });
+
+      await this._testCheckList(
+        userIds,
+        [
+          ['Tom', 0],
+          ['root', 1],
+          ['', 1],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+
+      // get useronline
+      const userOnline = await this.ctx.bean.atom.read({ key: itemKey, atomClass });
+      assert.equal(userOnline.userId, userTom.id);
+
+      // checkRightRead
+      const checkRightReads = [
+        ['Tom', itemKey.atomId, false],
+        ['root', itemKey.atomId, true],
+      ];
+      for (const [userName, atomId, right] of checkRightReads) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightRead({
+          atom: { id: atomId },
+          atomClass,
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightWrite
+      const checkRightWrites = [
+        ['Tom', itemKey.atomId, false],
+        ['root', itemKey.atomId, false],
+      ];
+      for (const [userName, atomId, right] of checkRightWrites) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightAction({
+          atom: { id: atomId },
+          atomClass,
+          action: 'write',
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightDelete
+      const checkRightDeletes = [
+        ['Tom', itemKey.atomId, false],
+        ['root', itemKey.atomId, true],
+      ];
+      for (const [userName, atomId, right] of checkRightDeletes) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightAction({
+          atom: { id: atomId },
+          atomClass,
+          action: 'delete',
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // checkRightCreate
+      const checkRightCreates = [
+        ['Tom', false],
+        ['root', false],
+      ];
+      for (const [userName, right] of checkRightCreates) {
+        const user = await this._getUser({ userIds, userName });
+        const res = await this.ctx.bean.atom.checkRightCreate({
+          atomClass,
+          user,
+        });
+        assert.equal(!!res, right, userName);
+      }
+
+      // delete useronline
+      await this.ctx.bean.atom.delete({
+        key: itemKey,
+        atomClass,
+      });
+
+      await this._testCheckList(
+        userIds,
+        [
+          ['Tom', 0],
+          ['root', 0],
+          ['', 0],
+        ],
+        (actual, expected, userName) => {
+          assert.equal(actual, expected, userName);
+        }
+      );
+    }
+
+    async _testCheckList(userIds, userAtoms, cb) {
+      for (const [userName, atomCountExpected] of userAtoms) {
+        const user = await this._getUser({ userIds, userName });
+        const list = await this.ctx.bean.atom.select({
+          atomClass: this.atomClass,
+          options: {
+            where: {
+              isLogin: 2,
+            },
+            orders: null,
+            page: null,
+          },
+          user,
+        });
+        // callback
+        cb(list.length, atomCountExpected, userName);
+      }
+    }
+
+    async _getUser({ userIds, userName }) {
+      if (!userName) return null;
+      const userId = userIds && userIds[userName];
+      if (userId) return { id: userId };
+      return await this.ctx.bean.user.get({ userName });
+    }
+  }
+
+  return AllController;
+};
+
+
+/***/ }),
+
+/***/ 8541:
+/***/ ((module) => {
+
+module.exports = app => {
+  class RightController extends app.Controller {
+    async checkRightCreate() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.atomClass);
+    }
+
+    async checkRightRead() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+
+    async createRaw() {
+      const itemKey = await this.ctx.bean.atom.create({
+        atomClass: this.ctx.request.body.atomClass,
+      });
+      this.ctx.success(itemKey);
+    }
+
+    async checkRightWrite() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+
+    async checkRightAction() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.request.body.key);
+    }
+  }
+
+  return RightController;
+};
+
+
+/***/ }),
+
+/***/ 5594:
+/***/ ((module) => {
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class MonkeyeeController extends app.Controller {
+    async test() {
+      this.ctx.success(moduleInfo.relativeName);
+    }
+  }
+
+  return MonkeyeeController;
+};
+
+
+/***/ }),
+
+/***/ 5196:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class RoleController extends app.Controller {
+    async role() {
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      // // roleIds
+      // const roleIds = this.ctx.cache.mem.get('roleIds');
+
+      const dataTests = [
+        {
+          userName: 'root',
+          childrenTop: {
+            count: 1,
+            roleNames: 'root',
+          },
+          children: {
+            count: 2,
+            roleNames: 'anonymous,authenticated',
+          },
+        },
+        {
+          userName: 'Tomson',
+          childrenTop: {
+            count: 0,
+            roleNames: '',
+          },
+          children: {
+            count: 2,
+            roleNames: 'anonymous,authenticated',
+          },
+        },
+        {
+          userName: 'Tom',
+          childrenTop: {
+            count: 1,
+            roleNames: 'organization',
+          },
+          children: {
+            count: 2,
+            roleNames: 'internal,external',
+          },
+        },
+      ];
+      const roleTypes = [0, 1, 2, 3, 4];
+      for (const dataTest of dataTests) {
+        // childrenTop
+        const userName = dataTest.userName;
+        const userId = userIds[userName];
+        let list = await this.ctx.bean.role.childrenTop({
+          roleTypes,
+          page: null,
+          user: { id: userId },
+        });
+        assert.equal(list.length, dataTest.childrenTop.count, userName);
+        assert.equal(list.map(item => item.roleName).join(','), dataTest.childrenTop.roleNames, userName);
+
+        if (list.length > 0) {
+          const roleOne = list[0];
+          list = await this.ctx.bean.role.children({ roleTypes, roleId: roleOne.id, page: null, user: { id: userId } });
+          assert.equal(list.length, dataTest.children.count, userName);
+          assert.equal(list.map(item => item.roleName).join(','), dataTest.children.roleNames, userName);
+        }
+      }
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return RoleController;
+};
+
+
+/***/ }),
+
+/***/ 8351:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class UserController extends app.Controller {
+    async user() {
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      // roleIds
+      const roleIds = this.ctx.cache.mem.get('roleIds');
+
+      const dataTests = [
+        {
+          userName: 'root',
+          selectTop: {
+            countMin: 9,
+            userNameContain: 'Jannie',
+          },
+          selectRole: {
+            countMin: 4,
+            userNameContain: 'Jannie',
+          },
+        },
+        {
+          userName: 'Tomson',
+          selectTop: {
+            countMin: 0,
+            userNameContain: '',
+          },
+          selectRole: {
+            countMin: 0,
+            userNameContain: '',
+          },
+        },
+        {
+          userName: 'Tom',
+          selectTop: {
+            countMin: 8,
+            userNameContain: 'Jannie',
+          },
+          selectRole: {
+            countMin: 4,
+            userNameContain: 'Jannie',
+          },
+        },
+      ];
+
+      for (const dataTest of dataTests) {
+        // childrenTop
+        const userName = dataTest.userName;
+        const userId = userIds[userName];
+        let list = await this.ctx.bean.user.select({ options: {}, user: { id: userId } });
+        assert.equal(list.length >= dataTest.selectTop.countMin, true, userName);
+        if (dataTest.selectTop.userNameContain) {
+          const userNames = list.map(item => item.userName);
+          assert.equal(userNames.includes(dataTest.selectTop.userNameContain), true, userName);
+        }
+
+        const roleId = roleIds.family;
+        list = await this.ctx.bean.user.select({
+          options: {
+            role: roleId,
+          },
+          user: { id: userId },
+        });
+        assert.equal(list.length >= dataTest.selectRole.countMin, true, userName);
+        if (dataTest.selectRole.userNameContain) {
+          const userNames = list.map(item => item.userName);
+          assert.equal(userNames.includes(dataTest.selectRole.userNameContain), true, userName);
+        }
+      }
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return UserController;
+};
+
+
+/***/ }),
+
+/***/ 180:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class AllController extends app.Controller {
+    async all() {
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      const userRoot = { id: userIds.root };
+
+      // function all: including widgets
+      let resourceStaticsAll = this.ctx.module.main.meta.base.statics['a-base.resource'].items;
+      resourceStaticsAll = resourceStaticsAll.filter(item => item.atomRevision > -1);
+      const resourceCount = resourceStaticsAll.length;
+
+      // Tom list all
+      let list = await this.ctx.bean.resource.select({
+        options: {
+          where: {
+            'a.atomStaticKey': {
+              op: 'likeRight',
+              val: 'test-party:',
+            },
+          },
+          orders: [['a.id', 'asc']],
+          page: { index: 0, size: 0 },
+          locale: 'en-us',
+        },
+        user: userRoot,
+      });
+      assert.equal(list.length, resourceCount);
+      assert.equal(!!list[0].atomNameLocale, true);
+
+      // hold first
+      const resource_one = list[0];
+
+      // checkRightResource
+      const res = await this.ctx.bean.resource.checkRightResource({
+        atomStaticKey: resource_one.atomStaticKey,
+        user: userRoot,
+      });
+      assert.equal(!!res, true);
+
+      // check
+      list = await this.ctx.bean.resource.check({
+        atomStaticKeys: [resource_one.atomStaticKey],
+        user: userRoot,
+      });
+      assert.equal(list[0].passed, true);
+
+      // read
+      const item = await this.ctx.bean.resource.read({
+        key: { atomId: resource_one.atomId },
+        options: { locale: 'en-us' },
+        user: userRoot,
+      });
+      assert.equal(!!item.atomNameLocale, true);
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return AllController;
+};
+
+
+/***/ }),
+
+/***/ 4298:
+/***/ ((module) => {
+
+module.exports = app => {
+  class RightController extends app.Controller {
+    async checkRightResourceUser() {
+      // checked by route/middleware
+      this.ctx.success(this.ctx.meta._resource);
+    }
+  }
+
+  return RightController;
+};
+
+
+/***/ }),
+
+/***/ 6950:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const assert = require3('assert');
+
+module.exports = app => {
+  class UserRoleController extends app.Controller {
+    async userRole() {
+      // userIds
+      const userIds = this.ctx.cache.mem.get('userIds');
+      // roleIds
+      const roleIds = this.ctx.cache.mem.get('roleIds');
+
+      // direct
+      let list = await this.ctx.bean.role.getUserRolesDirect({ userId: userIds.root });
+      assert.equal(list.length, 1);
+      // parent
+      list = await this.ctx.bean.role.getUserRolesParent({ userId: userIds.root });
+      assert.equal(list.length, 3);
+      // expand
+      list = await this.ctx.bean.role.getUserRolesExpand({ userId: userIds.root });
+      assert(list.length > 3);
+
+      // direct
+      let res = await this.ctx.bean.role.userInRoleDirect({
+        userId: userIds.root,
+        roleId: roleIds.superuser,
+      });
+      assert.equal(res, true);
+      // parent
+      res = await this.ctx.bean.role.userInRoleParent({
+        userId: userIds.root,
+        roleId: roleIds.root,
+      });
+      assert.equal(res, true);
+      // expand
+      res = await this.ctx.bean.role.userInRoleExpand({
+        userId: userIds.root,
+        roleId: roleIds.system,
+      });
+      assert.equal(res, true);
+
+      // done
+      this.ctx.success();
+    }
+  }
+
+  return UserRoleController;
+};
+
+
+/***/ }),
+
+/***/ 7095:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const party = __webpack_require__(1653);
+const testAtomStarLabel = __webpack_require__(421);
+const testAtomAll = __webpack_require__(9503);
+const testAtomRight = __webpack_require__(9754);
+const testItemOnlyAll = __webpack_require__(3330);
+const testItemOnlyRight = __webpack_require__(8541);
+const testResourceRight = __webpack_require__(4298);
+const testResourceAll = __webpack_require__(180);
+const testCtxPerformAction = __webpack_require__(8954);
+const testCtxTransaction = __webpack_require__(4741);
+const testCtxTail = __webpack_require__(5918);
+const testCtxSession = __webpack_require__(4316);
+const testCtxRequest = __webpack_require__(9456);
+const testCtxResponse = __webpack_require__(4902);
+const testCtxConfig = __webpack_require__(4463);
+const testCtxLocale = __webpack_require__(3);
+const testCacheMem = __webpack_require__(1308);
+const testCacheDb = __webpack_require__(6720);
+const testCacheRedis = __webpack_require__(1884);
+const testRoleUserRole = __webpack_require__(6950);
+const testMultilevelAuthorizationRole = __webpack_require__(5196);
+const testMultilevelAuthorizationUser = __webpack_require__(8351);
+const testEventHello = __webpack_require__(1189);
+const testFeatBean = __webpack_require__(2267);
+const testFeatFields = __webpack_require__(1137);
+const testFeatHttpLog = __webpack_require__(6766);
+const testFeatSendMail = __webpack_require__(7375);
+const testFeatSocketIO = __webpack_require__(5563);
+const testFeatInstance = __webpack_require__(8316);
+const testFeatProgress = __webpack_require__(816);
+const testFeatSequence = __webpack_require__(9557);
+const testFeatSettings = __webpack_require__(9076);
+const testFeatStats = __webpack_require__(7687);
+const testFeatStatus = __webpack_require__(8142);
+const testFeatSummer = __webpack_require__(4419);
+const testFeatValidation = __webpack_require__(2433);
+const testFeatMiddleware = __webpack_require__(3777);
+const testFeatQueue = __webpack_require__(4828);
+const testFeatBroadcast = __webpack_require__(8589);
+const testFeatModel = __webpack_require__(3058);
+const testFeatModelWhere = __webpack_require__(5438);
+const testFeatCategory = __webpack_require__(8358);
+const testFeatTag = __webpack_require__(9240);
+const testOpenAuth = __webpack_require__(746);
+const testMonkeyee = __webpack_require__(5594);
+const testKitchensinkAutocomplete = __webpack_require__(7361);
+const testKitchensinkGuide = __webpack_require__(7350);
+const testKitchensinkFormSchemaValidation = __webpack_require__(8664);
+const testKitchensinkPtrIsLoadMore = __webpack_require__(7708);
+
+module.exports = app => {
+  const controllers = {
+    party,
+    testAtomStarLabel,
+    testAtomAll,
+    testAtomRight,
+    testItemOnlyAll,
+    testItemOnlyRight,
+    testResourceRight,
+    testResourceAll,
+    testCtxPerformAction,
+    testCtxTransaction,
+    testCtxTail,
+    testCtxSession,
+    testCtxRequest,
+    testCtxResponse,
+    testCtxConfig,
+    testCtxLocale,
+    testCacheMem,
+    testCacheDb,
+    testCacheRedis,
+    testRoleUserRole,
+    testMultilevelAuthorizationRole,
+    testMultilevelAuthorizationUser,
+    testEventHello,
+    testFeatBean,
+    testFeatFields,
+    testFeatHttpLog,
+    testFeatSendMail,
+    testFeatSocketIO,
+    testFeatInstance,
+    testFeatProgress,
+    testFeatSequence,
+    testFeatSettings,
+    testFeatStats,
+    testFeatStatus,
+    testFeatSummer,
+    testFeatValidation,
+    testFeatMiddleware,
+    testFeatQueue,
+    testFeatBroadcast,
+    testFeatModel,
+    testFeatModelWhere,
+    testFeatCategory,
+    testFeatTag,
+    testOpenAuth,
+    testMonkeyee,
+    testKitchensinkAutocomplete,
+    testKitchensinkGuide,
+    testKitchensinkFormSchemaValidation,
+    testKitchensinkPtrIsLoadMore,
+  };
+  return controllers;
+};
+
+
+/***/ }),
+
+/***/ 9421:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const config = __webpack_require__(7076);
+const locales = __webpack_require__(25);
+const errors = __webpack_require__(5624);
+
+module.exports = app => {
+  // aops
+  const aops = __webpack_require__(5224)(app);
+  // beans
+  const beans = __webpack_require__(5187)(app);
+  // routes
+  const routes = __webpack_require__(3825)(app);
+  // controllers
+  const controllers = __webpack_require__(7095)(app);
+  // services
+  const services = __webpack_require__(7214)(app);
+  // models
+  const models = __webpack_require__(3230)(app);
+  // meta
+  const meta = __webpack_require__(458)(app);
+
+  return {
+    aops,
+    beans,
+    routes,
+    controllers,
+    services,
+    models,
+    config,
+    locales,
+    errors,
+    meta,
+  };
+};
+
+
+/***/ }),
+
+/***/ 458:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const require3 = __webpack_require__(3173);
+const extend = require3('@zhennann/extend');
+
+module.exports = app => {
+  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const meta = {};
+  // schemas
+  const schemas = __webpack_require__(8232)(app);
+  // keywords
+  const keywords = __webpack_require__(2415)(app);
+  // socketio
+  const socketioTest = __webpack_require__(4160)(app);
+  const socketioSimpleChat = __webpack_require__(2513)(app);
+  // static
+  const staticApps = __webpack_require__(8241)(app);
+  const staticDashboards = __webpack_require__(3937)(app);
+  const staticLayouts = __webpack_require__(3512)(app);
+  const staticResources = __webpack_require__(5429)(app);
+  const staticDicts = __webpack_require__(3715)(app);
+  const staticRoles = __webpack_require__(5835)(app);
+  // cli commands
+  const cliCommands = __webpack_require__(4407)(app);
+  // icons
+  const iconGroups = __webpack_require__(7487);
+  // meta
+  extend(true, meta, {
+    base: {
+      atoms: {
+        party: {
+          info: {
+            bean: 'party',
+            title: 'Party',
+            tableName: 'testParty',
+            tableNameModes: {},
+            language: false,
+            category: true,
+            tag: true,
+            cms: true,
+            fields: {
+              dicts: {
+                partyTypeCode: {
+                  dictKey: 'test-party:dictPartyType',
+                  // separator: '/',
+                },
+                partyCountry: {
+                  dictKey: 'a-dictbooster:countries',
+                },
+                partyCity: {
+                  translate: false,
+                },
+              },
+            },
+            layout: {
+              config: {
+                atomList: 'layoutAtomListParty',
+                atomItem: 'layoutAtomItemParty',
+              },
+            },
+          },
+          actions: {
+            partyOver: {
+              code: 101,
+              title: 'PartyOver',
+              actionModule: moduleInfo.relativeName,
+              actionComponent: 'action',
+              icon: { f7: ':outline:check-circle-outline' },
+              enableOnOpened: true,
+              directShowOnList: true,
+              directShowOnItem: true,
+              stage: 'formal',
+            },
+            partyOverBulk: {
+              code: 201,
+              title: 'PartyOver',
+              actionModule: moduleInfo.relativeName,
+              actionComponent: 'action',
+              icon: { f7: ':outline:check-circle-outline' },
+              bulk: true,
+              select: true,
+              stage: 'formal',
+            },
+          },
+          validator: 'party',
+          search: {
+            validator: 'partySearch',
+          },
+        },
+      },
+      statics: {
+        'a-app.app': {
+          items: staticApps,
+        },
+        'a-dashboard.dashboard': {
+          items: staticDashboards,
+        },
+        'a-baselayout.layout': {
+          items: staticLayouts,
+        },
+        'a-base.resource': {
+          items: staticResources,
+        },
+        'a-dict.dict': {
+          items: staticDicts,
+        },
+        'a-base.role': {
+          items: staticRoles,
+        },
+      },
+    },
+    validation: {
+      validators: {
+        userTest: {
+          schemas: 'settingsUser,settingsUserExtra',
+        },
+        instanceTest: {
+          schemas: 'settingsInstance',
+        },
+      },
+      keywords: {
+        'x-languages': keywords.languages,
+      },
+      schemas,
+    },
+    cli: {
+      commands: cliCommands,
+    },
+    settings: {
+      user: {
+        validator: 'userTest',
+      },
+      instance: {
+        validator: 'instanceTest',
+      },
+    },
+    event: {
+      implementations: {
+        'a-base:loginInfo': 'loginInfoDashboard',
+      },
+    },
+    index: {
+      indexes: {
+        testParty: 'createdAt,updatedAt,atomId,partyTypeCode',
+      },
+    },
+    socketio: {
+      messages: {
+        test: socketioTest,
+        simpleChat: socketioSimpleChat,
+      },
+    },
+    stats: {
+      providers: {
+        tasksUser: {
+          user: true,
+          bean: 'tasksUser',
+        },
+        tasksInstance: {
+          user: false,
+          bean: 'tasksInstance',
+          dependencies: 'tasksUser',
+        },
+      },
+    },
+    icon: {
+      groups: iconGroups,
+    },
+  });
+
+  // only for test
+  if (app.meta.isTest) {
+    // meta
+    extend(true, meta, {
+      base: {},
+      event: {
+        declarations: {
+          hello: 'This is a test for event',
+        },
+        implementations: {
+          'test-party:hello': 'helloEcho',
+          'a-base:userVerify': 'userVerify',
+          'a-base:loginInfo': 'loginInfo',
+        },
+      },
+      sequence: {
+        providers: {
+          test: {
+            bean: 'test',
+            start: 0,
+          },
+        },
+      },
+    });
+  }
+
+  return meta;
+};
+
+
+/***/ }),
+
+/***/ 6893:
+/***/ ((module) => {
+
+module.exports = app => {
+  class Party extends app.meta.Model {
+    constructor(ctx) {
+      super(ctx, { table: 'testParty', options: { disableDeleted: false } });
+    }
+  }
+
+  return Party;
+};
+
+
+/***/ }),
+
+/***/ 3230:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const party = __webpack_require__(6893);
+
+module.exports = app => {
+  const models = {};
+  Object.assign(models, {
+    party,
+  });
+  return models;
+};
+
+
+/***/ }),
+
+/***/ 3825:
+/***/ ((module) => {
+
+module.exports = (/* app */) => {
+  let routes = [];
+  routes = routes.concat([
+    // atom: party
+    {
+      method: 'post',
+      path: 'party/over',
+      controller: 'party',
+      middlewares: 'transaction',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'partyOver' } },
+    },
+    {
+      method: 'post',
+      path: 'party/overBulk',
+      controller: 'party',
+      middlewares: 'transaction',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'partyOverBulk' } },
+    },
+    // test/atom/starLabel
+    { method: 'post', path: 'test/atom/starLabel', controller: 'testAtomStarLabel', middlewares: 'test' },
+    // test/atom/all
+    {
+      method: 'get',
+      path: 'test/atom/all',
+      controller: 'testAtomAll',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/atom/right(checked by middleware)
+    {
+      method: 'post',
+      path: 'test/atom/checkRightCreate',
+      controller: 'testAtomRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'create' } },
+    },
+    {
+      method: 'post',
+      path: 'test/atom/checkRightRead',
+      controller: 'testAtomRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'read' } },
+    },
+    {
+      method: 'post',
+      path: 'test/atom/checkRightWrite',
+      controller: 'testAtomRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'write' } },
+    },
+    {
+      method: 'post',
+      path: 'test/atom/checkRightAction',
+      controller: 'testAtomRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'partyOver' } },
+    },
+    // test/itemOnly/all
+    {
+      method: 'get',
+      path: 'test/itemOnly/all',
+      controller: 'testItemOnlyAll',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/itemOnly/right(checked by middleware)
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightCreate',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'create' } },
+    },
+    {
+      method: 'post',
+      path: 'test/itemOnly/createRaw',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: {},
+    },
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightRead',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'read' } },
+    },
+    {
+      method: 'post',
+      path: 'test/itemOnly/checkRightWrite',
+      controller: 'testItemOnlyRight',
+      middlewares: 'test',
+      meta: { right: { type: 'atom', atomClass: 'a-useronline:userOnlineHistory', action: 'write' } },
+    },
+    // test/resource/right
+    {
+      method: 'post',
+      path: 'test/resource/checkRightResourceUser',
+      controller: 'testResourceRight',
+      middlewares: 'test',
+      meta: { right: { type: 'resource', module: 'test-party', name: 'createParty' } },
+    },
+    // test/resource/all
+    {
+      method: 'post',
+      path: 'test/resource/all',
+      controller: 'testResourceAll',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/role/userRole
+    {
+      method: 'post',
+      path: 'test/role/userRole',
+      controller: 'testRoleUserRole',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/multilevelAuthorization/role
+    {
+      method: 'post',
+      path: 'test/multilevelAuthorization/role',
+      controller: 'testMultilevelAuthorizationRole',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/multilevelAuthorization/user
+    {
+      method: 'post',
+      path: 'test/multilevelAuthorization/user',
+      controller: 'testMultilevelAuthorizationUser',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/ctx/performAction
+    { method: 'post', path: 'test/ctx/performAction', controller: 'testCtxPerformAction', middlewares: 'test' },
+    { method: 'post', path: 'test/ctx/performAction/echo', controller: 'testCtxPerformAction', middlewares: 'test' },
+    // test/ctx/transaction
+    { method: 'post', path: 'test/ctx/transaction', controller: 'testCtxTransaction', middlewares: 'test,transaction' },
+    // test/ctx/tail
+    { method: 'post', path: 'test/ctx/tail', controller: 'testCtxTail', middlewares: 'test' },
+    // test/ctx/session
+    { method: 'post', path: 'test/ctx/session', controller: 'testCtxSession', middlewares: 'test' },
+    { method: 'post', path: 'test/ctx/session/echo1', controller: 'testCtxSession', middlewares: 'test' },
+    { method: 'post', path: 'test/ctx/session/echo2', controller: 'testCtxSession', middlewares: 'test' },
+    // test/ctx/request
+    {
+      method: 'post',
+      path: 'test/ctx/request/:id',
+      controller: 'testCtxRequest',
+      action: 'request',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/ctx/requestXML',
+      controller: 'testCtxRequest',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/ctx/response
+    {
+      method: 'post',
+      path: 'test/ctx/response/success',
+      controller: 'testCtxResponse',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/ctx/response/successMore',
+      controller: 'testCtxResponse',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/ctx/response/fail',
+      controller: 'testCtxResponse',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/ctx/response/throwError',
+      controller: 'testCtxResponse',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/ctx/config
+    {
+      method: 'post',
+      path: 'test/ctx/config/test',
+      controller: 'testCtxConfig',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/ctx/locale
+    {
+      method: 'post',
+      path: 'test/ctx/locale/enus',
+      controller: 'testCtxLocale',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/ctx/locale/zhcn',
+      controller: 'testCtxLocale',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/event/hello
+    {
+      method: 'post',
+      path: 'test/event/hello',
+      controller: 'testEventHello',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    // test/cache
+    {
+      method: 'post',
+      path: 'test/cache/mem',
+      controller: 'testCacheMem',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/cache/db',
+      controller: 'testCacheDb',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'post',
+      path: 'test/cache/redis',
+      controller: 'testCacheRedis',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/bean
+    {
+      method: 'get',
+      path: 'test/feat/bean',
+      controller: 'testFeatBean',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    {
+      method: 'get',
+      path: 'test/feat/bean/local',
+      controller: 'testFeatBean',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/fields
+    {
+      method: 'post',
+      path: 'test/feat/fields/parseSchema',
+      controller: 'testFeatFields',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/httpLog
+    {
+      method: 'post',
+      path: 'test/feat/httpLog',
+      controller: 'testFeatHttpLog',
+      middlewares: 'test,httpLog',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/sendMail
+    { method: 'post', path: 'test/feat/sendMail', controller: 'testFeatSendMail', meta: { auth: { enable: false } } },
+
+    // test/feat/socketio
+    {
+      method: 'post',
+      path: 'test/feat/socketio/publish',
+      controller: 'testFeatSocketIO',
+      middlewares: '',
+      meta: { auth: { user: true } },
+    },
+    // simpleChat
+    {
+      method: 'post',
+      path: 'test/feat/socketio/simpleChat',
+      controller: 'testFeatSocketIO',
+      middlewares: '',
+      meta: { auth: { user: true } },
+    },
+
+    // test/feat/instance
+    {
+      method: 'post',
+      path: 'test/feat/instance',
+      controller: 'testFeatInstance',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/progress
+    { method: 'post', path: 'test/feat/progress', controller: 'testFeatProgress' },
+
+    // test/feat/sequence
+    {
+      method: 'post',
+      path: 'test/feat/sequence',
+      controller: 'testFeatSequence',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/settings
+    { method: 'post', path: 'test/feat/settings', controller: 'testFeatSettings', middlewares: 'test' },
+
+    // test/feat/stats
+    {
+      method: 'post',
+      path: 'test/feat/stats',
+      controller: 'testFeatStats',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+    { method: 'post', path: 'test/feat/stats/plus', controller: 'testFeatStats' },
+
+    // test/feat/status
+    {
+      method: 'post',
+      path: 'test/feat/status',
+      controller: 'testFeatStatus',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/summer
+    {
+      method: 'post',
+      path: 'test/feat/summer',
+      controller: 'testFeatSummer',
+      middlewares: 'test',
+      meta: { auth: { enable: false } },
+    },
+
+    // test/feat/validation
+    {
+      method: 'post',
+      path: 'test/feat/validation/success',
+      controller: 'testFeatValidation',
+      middlewares: 'test,validate',
+      meta: { auth: { enable: false }, validate: { validator: 'userTest' } },
+    },
+    {
+      method: 'post',
+      path: 'test/feat/validation/fail',
+      controller: 'testFeatValidation',
+      middlewares: 'test,validate',
+      meta: { auth: { enable: false }, validate: { validator: 'userTest' } },
+    },
+    {
+      method: 'post',
+      path: 'test/feat/validation/schema',
+      controller: 'testFeatValidation',
+      middlewares: 'test,validate',
+      meta: { auth: { enable: false }, validate: { validator: 'userTest', schema: 'settingsUserExtra' } },
+    },
+
+    // test/feat/middleware
+    {
+      method: 'post',
+      path: 'test/feat/middleware/interception',
+      controller: 'testFeatMiddleware',
+      middlewares: 'test,testInterception',
+    },
+    {
+      method: 'post',
+      path: 'test/feat/middleware/restructuring',
+      controller: 'testFeatMiddleware',
+      middlewares: 'test,testInterception,testRestructuring',
+    },
+
+    // test/feat/queue
+    { method: 'post', path: 'test/feat/pushAsync', controller: 'testFeatQueue', middlewares: 'test' },
+    { method: 'post', path: 'test/feat/push', controller: 'testFeatQueue', middlewares: 'test' },
+
+    // test/feat/broadcast
+    { method: 'post', path: 'test/feat/broadcast/emit', controller: 'testFeatBroadcast', middlewares: 'test' },
+
+    // test/feat/model
+    { method: 'post', path: 'test/feat/model', controller: 'testFeatModel', middlewares: 'test' },
+
+    // test/feat/modelWhere
+    { method: 'get', path: 'test/feat/modelWhere', controller: 'testFeatModelWhere', middlewares: 'test' },
+
+    // test/feat/category
+    { method: 'post', path: 'test/feat/category', controller: 'testFeatCategory', middlewares: 'test' },
+
+    // test/feat/tag
+    { method: 'post', path: 'test/feat/tag', controller: 'testFeatTag', middlewares: 'test' },
+
+    // test/feat/openAuth
+    {
+      method: 'post',
+      path: 'test/feat/openAuth/resourceCheckSuccess',
+      controller: 'testOpenAuth',
+      middlewares: 'test',
+      meta: {
+        right: { type: 'resource', name: 'mineKitchenSink' },
+      },
+    },
+    {
+      method: 'post',
+      path: 'test/feat/openAuth/resourceCheckFail',
+      controller: 'testOpenAuth',
+      middlewares: 'test',
+      meta: {
+        right: { type: 'resource', module: 'test-party', name: 'createParty' },
+      },
+    },
+
+    // test/monkey/monkeyee
+    { method: 'post', path: 'test/monkey/monkeyee/test', controller: 'testMonkeyee', middlewares: 'test' },
+
+    // kitchen-sink/guide
+    { method: 'post', path: 'kitchen-sink/guide/echo', controller: 'testKitchensinkGuide' },
+    { method: 'post', path: 'kitchen-sink/guide/echo3', controller: 'testKitchensinkGuide' },
+    { method: 'post', path: 'kitchen-sink/guide/echo4', controller: 'testKitchensinkGuide' },
+    { method: 'post', path: 'kitchen-sink/guide/echo6', controller: 'testKitchensinkGuide' },
+    { method: 'post', path: 'kitchen-sink/guide/echo7', controller: 'testKitchensinkGuide' },
+    {
+      method: 'post',
+      path: 'kitchen-sink/guide/echo8',
+      controller: 'testKitchensinkGuide',
+      middlewares: 'transaction',
+    },
+    {
+      method: 'post',
+      path: 'kitchen-sink/guide/echo9',
+      controller: 'testKitchensinkGuide',
+      meta: {
+        right: { type: 'resource', name: 'appComponentsGuide' },
+      },
+    },
+
+    // kitchen-sink/autocomplete
+    {
+      method: 'get',
+      path: 'kitchen-sink/autocomplete/languages/:query',
+      controller: 'testKitchensinkAutocomplete',
+      action: 'languages',
+      meta: { auth: { enable: false } },
+    },
+    // kitchen-sink/form-schema-validation
+    {
+      method: 'get',
+      path: 'kitchen-sink/form-schema-validation/load',
+      controller: 'testKitchensinkFormSchemaValidation',
+    },
+    {
+      method: 'post',
+      path: 'kitchen-sink/form-schema-validation/saveSimple',
+      controller: 'testKitchensinkFormSchemaValidation',
+    },
+    {
+      method: 'post',
+      path: 'kitchen-sink/form-schema-validation/saveValidation',
+      controller: 'testKitchensinkFormSchemaValidation',
+      middlewares: 'validate',
+      meta: { validate: { validator: 'formTest' } },
+    },
+    {
+      method: 'post',
+      path: 'kitchen-sink/form-captcha/signup',
+      controller: 'testKitchensinkFormSchemaValidation',
+      middlewares: 'captchaVerify,validate',
+      meta: {
+        captchaVerify: { scene: { name: 'formCaptchaTest' } },
+        validate: { validator: 'formCaptchaTest' },
+      },
+    },
+    {
+      method: 'post',
+      path: 'kitchen-sink/form-mobile-verify/mobileVerify',
+      controller: 'testKitchensinkFormSchemaValidation',
+      middlewares: 'captchaVerify,validate',
+      meta: {
+        captchaVerify: { scene: { name: 'formMobileVerifyTest' } },
+        validate: { validator: 'formMobileVerifyTest' },
+      },
+    },
+    // kitchen-sink/ptr-is-loadmore
+    { method: 'post', path: 'kitchen-sink/ptr-is-loadmore/list', controller: 'testKitchensinkPtrIsLoadMore' },
+  ]);
+
+  return routes;
+};
+
+
+/***/ }),
+
+/***/ 9939:
+/***/ ((module) => {
+
+module.exports = app => {
+  class Party extends app.Service {
+    async over({ key, user }) {
+      await this.ctx.model.party.update({
+        id: key.itemId,
+        partyOver: 1,
+      });
+      await this.ctx.bean.cms.render._renderArticlePush({ key, inner: false });
+    }
+
+    async overBulk({ keys, user }) {
+      const resKeys = [];
+      for (const key of keys) {
+        const res = await this._overBulk_item({ key, user });
+        if (res) {
+          resKeys.push(key);
+        }
+      }
+      return { keys: resKeys };
+    }
+
+    async _overBulk_item({ key, user }) {
+      // check right
+      const res = await this.ctx.bean.atom.checkRightAction({
+        atom: { id: key.atomId },
+        action: 101,
+        user,
+      });
+      if (!res) return false;
+      // over
+      await this.over({ key, user });
+      // ok
+      return true;
+    }
+  }
+
+  return Party;
+};
+
+
+/***/ }),
+
+/***/ 7214:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const party = __webpack_require__(9939);
+
+module.exports = app => {
+  const services = {};
+  Object.assign(services, {
+    party,
+  });
+  return services;
+};
+
+
+/***/ }),
+
+/***/ 3173:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = function (path) {
+  return __webpack_require__(6712)(path);
+};
+
+
+/***/ }),
+
+/***/ 6712:
+/***/ ((module) => {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = () => ([]);
+webpackEmptyContext.resolve = webpackEmptyContext;
+webpackEmptyContext.id = 6712;
+module.exports = webpackEmptyContext;
+
+/***/ }),
+
+/***/ 7551:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("object-hash");
+
+/***/ }),
+
+/***/ 3614:
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('[{"id":0,"name":"A# .NET"},{"id":1,"name":"A# (Axiom)"},{"id":2,"name":"A-0 System"},{"id":3,"name":"A+"},{"id":4,"name":"A++"},{"id":5,"name":"ABAP"},{"id":6,"name":"ABC"},{"id":7,"name":"ABC ALGOL"},{"id":8,"name":"ABLE"},{"id":9,"name":"ABSET"},{"id":10,"name":"ABSYS"},{"id":11,"name":"ACC"},{"id":12,"name":"Accent"},{"id":13,"name":"Ace DASL"},{"id":14,"name":"ACL2"},{"id":15,"name":"ACT-III"},{"id":16,"name":"Action!"},{"id":17,"name":"ActionScript"},{"id":18,"name":"Ada"},{"id":19,"name":"Adenine"},{"id":20,"name":"Agda"},{"id":21,"name":"Agilent VEE"},{"id":22,"name":"Agora"},{"id":23,"name":"AIMMS"},{"id":24,"name":"Alef"},{"id":25,"name":"ALF"},{"id":26,"name":"ALGOL 58"},{"id":27,"name":"ALGOL 60"},{"id":28,"name":"ALGOL 68"},{"id":29,"name":"ALGOL W"},{"id":30,"name":"Alice"},{"id":31,"name":"Alma-0"},{"id":32,"name":"AmbientTalk"},{"id":33,"name":"Amiga E"},{"id":34,"name":"AMOS"},{"id":35,"name":"AMPL"},{"id":36,"name":"Apex"},{"id":37,"name":"APL"},{"id":38,"name":"App Inventor for Android\'s visual block language"},{"id":39,"name":"AppleScript"},{"id":40,"name":"Arc"},{"id":41,"name":"ARexx"},{"id":42,"name":"Argus"},{"id":43,"name":"AspectJ"},{"id":44,"name":"Assembly language"},{"id":45,"name":"ATS"},{"id":46,"name":"Ateji PX"},{"id":47,"name":"AutoHotkey"},{"id":48,"name":"Autocoder"},{"id":49,"name":"AutoIt"},{"id":50,"name":"AutoLISP / Visual LISP"},{"id":51,"name":"Averest"},{"id":52,"name":"AWK"},{"id":53,"name":"Axum"},{"id":54,"name":"B"},{"id":55,"name":"Babbage"},{"id":56,"name":"Bash"},{"id":57,"name":"BASIC"},{"id":58,"name":"bc"},{"id":59,"name":"BCPL"},{"id":60,"name":"BeanShell"},{"id":61,"name":"Batch (Windows/Dos)"},{"id":62,"name":"Bertrand"},{"id":63,"name":"BETA"},{"id":64,"name":"Bigwig"},{"id":65,"name":"Bistro"},{"id":66,"name":"BitC"},{"id":67,"name":"BLISS"},{"id":68,"name":"Blue"},{"id":69,"name":"Boo"},{"id":70,"name":"Boomerang"},{"id":71,"name":"Bourne shell"},{"id":72,"name":"bash"},{"id":73,"name":"ksh"},{"id":74,"name":"BREW"},{"id":75,"name":"BPEL"},{"id":76,"name":"C"},{"id":77,"name":"C--"},{"id":78,"name":"C++"},{"id":79,"name":"C#"},{"id":80,"name":"C/AL"},{"id":81,"name":"Caché ObjectScript"},{"id":82,"name":"C Shell"},{"id":83,"name":"Caml"},{"id":84,"name":"Cayenne"},{"id":85,"name":"CDuce"},{"id":86,"name":"Cecil"},{"id":87,"name":"Cel"},{"id":88,"name":"Cesil"},{"id":89,"name":"Ceylon"},{"id":90,"name":"CFEngine"},{"id":91,"name":"CFML"},{"id":92,"name":"Cg"},{"id":93,"name":"Ch"},{"id":94,"name":"Chapel"},{"id":95,"name":"CHAIN"},{"id":96,"name":"Charity"},{"id":97,"name":"Charm"},{"id":98,"name":"Chef"},{"id":99,"name":"CHILL"},{"id":100,"name":"CHIP-8"},{"id":101,"name":"chomski"},{"id":102,"name":"ChucK"},{"id":103,"name":"CICS"},{"id":104,"name":"Cilk"},{"id":105,"name":"CL"},{"id":106,"name":"Claire"},{"id":107,"name":"Clarion"},{"id":108,"name":"Clean"},{"id":109,"name":"Clipper"},{"id":110,"name":"CLIST"},{"id":111,"name":"Clojure"},{"id":112,"name":"CLU"},{"id":113,"name":"CMS-2"},{"id":114,"name":"COBOL"},{"id":115,"name":"Cobra"},{"id":116,"name":"CODE"},{"id":117,"name":"CoffeeScript"},{"id":118,"name":"Cola"},{"id":119,"name":"ColdC"},{"id":120,"name":"ColdFusion"},{"id":121,"name":"COMAL"},{"id":122,"name":"Combined Programming Language"},{"id":123,"name":"COMIT"},{"id":124,"name":"Common Intermediate Language"},{"id":125,"name":"Common Lisp"},{"id":126,"name":"COMPASS"},{"id":127,"name":"Component Pascal"},{"id":128,"name":"Constraint Handling Rules"},{"id":129,"name":"Converge"},{"id":130,"name":"Cool"},{"id":131,"name":"Coq"},{"id":132,"name":"Coral 66"},{"id":133,"name":"Corn"},{"id":134,"name":"CorVision"},{"id":135,"name":"COWSEL"},{"id":136,"name":"CPL"},{"id":137,"name":"csh"},{"id":138,"name":"CSP"},{"id":139,"name":"Cryptol"},{"id":140,"name":"Csound"},{"id":141,"name":"CUDA"},{"id":142,"name":"Curl"},{"id":143,"name":"Curry"},{"id":144,"name":"Cyclone"},{"id":145,"name":"Cython"},{"id":146,"name":"D"},{"id":147,"name":"DASL"},{"id":148,"name":"DASL"},{"id":149,"name":"Dart"},{"id":150,"name":"DataFlex"},{"id":151,"name":"Datalog"},{"id":152,"name":"DATATRIEVE"},{"id":153,"name":"dBase"},{"id":154,"name":"dc"},{"id":155,"name":"DCL"},{"id":156,"name":"Deesel"},{"id":157,"name":"Delphi"},{"id":158,"name":"DinkC"},{"id":159,"name":"DIBOL"},{"id":160,"name":"Dog"},{"id":161,"name":"Draco"},{"id":162,"name":"DRAKON"},{"id":163,"name":"Dylan"},{"id":164,"name":"DYNAMO"},{"id":165,"name":"E"},{"id":166,"name":"E#"},{"id":167,"name":"Ease"},{"id":168,"name":"Easy PL/I"},{"id":169,"name":"Easy Programming Language"},{"id":170,"name":"EASYTRIEVE PLUS"},{"id":171,"name":"ECMAScript"},{"id":172,"name":"Edinburgh IMP"},{"id":173,"name":"EGL"},{"id":174,"name":"Eiffel"},{"id":175,"name":"ELAN"},{"id":176,"name":"Elixir"},{"id":177,"name":"Elm"},{"id":178,"name":"Emacs Lisp"},{"id":179,"name":"Emerald"},{"id":180,"name":"Epigram"},{"id":181,"name":"EPL"},{"id":182,"name":"Erlang"},{"id":183,"name":"es"},{"id":184,"name":"Escher"},{"id":185,"name":"ESPOL"},{"id":186,"name":"Esterel"},{"id":187,"name":"Etoys"},{"id":188,"name":"Euclid"},{"id":189,"name":"Euler"},{"id":190,"name":"Euphoria"},{"id":191,"name":"EusLisp Robot Programming Language"},{"id":192,"name":"CMS EXEC"},{"id":193,"name":"EXEC 2"},{"id":194,"name":"Executable UML"},{"id":195,"name":"F"},{"id":196,"name":"F#"},{"id":197,"name":"Factor"},{"id":198,"name":"Falcon"},{"id":199,"name":"Fantom"},{"id":200,"name":"FAUST"},{"id":201,"name":"FFP"},{"id":202,"name":"Fjölnir"},{"id":203,"name":"FL"},{"id":204,"name":"Flavors"},{"id":205,"name":"Flex"},{"id":206,"name":"FLOW-MATIC"},{"id":207,"name":"FOCAL"},{"id":208,"name":"FOCUS"},{"id":209,"name":"FOIL"},{"id":210,"name":"FORMAC"},{"id":211,"name":"@Formula"},{"id":212,"name":"Forth"},{"id":213,"name":"Fortran"},{"id":214,"name":"Fortress"},{"id":215,"name":"FoxBase"},{"id":216,"name":"FoxPro"},{"id":217,"name":"FP"},{"id":218,"name":"FPr"},{"id":219,"name":"Franz Lisp"},{"id":220,"name":"Frege"},{"id":221,"name":"F-Script"},{"id":222,"name":"G"},{"id":223,"name":"Google Apps Script"},{"id":224,"name":"Game Maker Language"},{"id":225,"name":"GameMonkey Script"},{"id":226,"name":"GAMS"},{"id":227,"name":"GAP"},{"id":228,"name":"G-code"},{"id":229,"name":"Genie"},{"id":230,"name":"GDL"},{"id":231,"name":"GJ"},{"id":232,"name":"GEORGE"},{"id":233,"name":"GLSL"},{"id":234,"name":"GNU E"},{"id":235,"name":"GM"},{"id":236,"name":"Go"},{"id":237,"name":"Go!"},{"id":238,"name":"GOAL"},{"id":239,"name":"Gödel"},{"id":240,"name":"Godiva"},{"id":241,"name":"GOM (Good Old Mad)"},{"id":242,"name":"Goo"},{"id":243,"name":"Gosu"},{"id":244,"name":"GOTRAN"},{"id":245,"name":"GPSS"},{"id":246,"name":"GraphTalk"},{"id":247,"name":"GRASS"},{"id":248,"name":"Groovy"},{"id":249,"name":"Hack"},{"id":250,"name":"HAL/S"},{"id":251,"name":"Hamilton C shell"},{"id":252,"name":"Harbour"},{"id":253,"name":"Hartmann pipelines"},{"id":254,"name":"Haskell"},{"id":255,"name":"Haxe"},{"id":256,"name":"High Level Assembly"},{"id":257,"name":"HLSL"},{"id":258,"name":"Hop"},{"id":259,"name":"Hope"},{"id":260,"name":"Hugo"},{"id":261,"name":"Hume"},{"id":262,"name":"HyperTalk"},{"id":263,"name":"IBM Basic assembly language"},{"id":264,"name":"IBM HAScript"},{"id":265,"name":"IBM Informix-4GL"},{"id":266,"name":"IBM RPG"},{"id":267,"name":"ICI"},{"id":268,"name":"Icon"},{"id":269,"name":"Id"},{"id":270,"name":"IDL"},{"id":271,"name":"Idris"},{"id":272,"name":"IMP"},{"id":273,"name":"Inform"},{"id":274,"name":"Io"},{"id":275,"name":"Ioke"},{"id":276,"name":"IPL"},{"id":277,"name":"IPTSCRAE"},{"id":278,"name":"ISLISP"},{"id":279,"name":"ISPF"},{"id":280,"name":"ISWIM"},{"id":281,"name":"J"},{"id":282,"name":"J#"},{"id":283,"name":"J++"},{"id":284,"name":"JADE"},{"id":285,"name":"Jako"},{"id":286,"name":"JAL"},{"id":287,"name":"Janus"},{"id":288,"name":"JASS"},{"id":289,"name":"Java"},{"id":290,"name":"JavaScript"},{"id":291,"name":"JCL"},{"id":292,"name":"JEAN"},{"id":293,"name":"Join Java"},{"id":294,"name":"JOSS"},{"id":295,"name":"Joule"},{"id":296,"name":"JOVIAL"},{"id":297,"name":"Joy"},{"id":298,"name":"JScript"},{"id":299,"name":"JScript .NET"},{"id":300,"name":"JavaFX Script"},{"id":301,"name":"Julia"},{"id":302,"name":"Jython"},{"id":303,"name":"K"},{"id":304,"name":"Kaleidoscope"},{"id":305,"name":"Karel"},{"id":306,"name":"Karel++"},{"id":307,"name":"KEE"},{"id":308,"name":"Kixtart"},{"id":309,"name":"Klerer-May System"},{"id":310,"name":"KIF"},{"id":311,"name":"Kojo"},{"id":312,"name":"Kotlin"},{"id":313,"name":"KRC"},{"id":314,"name":"KRL"},{"id":315,"name":"KUKA"},{"id":316,"name":"KRYPTON"},{"id":317,"name":"ksh"},{"id":318,"name":"L"},{"id":319,"name":"L# .NET"},{"id":320,"name":"LabVIEW"},{"id":321,"name":"Ladder"},{"id":322,"name":"Lagoona"},{"id":323,"name":"LANSA"},{"id":324,"name":"Lasso"},{"id":325,"name":"LaTeX"},{"id":326,"name":"Lava"},{"id":327,"name":"LC-3"},{"id":328,"name":"Leda"},{"id":329,"name":"Legoscript"},{"id":330,"name":"LIL"},{"id":331,"name":"LilyPond"},{"id":332,"name":"Limbo"},{"id":333,"name":"Limnor"},{"id":334,"name":"LINC"},{"id":335,"name":"Lingo"},{"id":336,"name":"Linoleum"},{"id":337,"name":"LIS"},{"id":338,"name":"LISA"},{"id":339,"name":"Lisaac"},{"id":340,"name":"Lisp"},{"id":341,"name":"Lite-C"},{"id":342,"name":"Lithe"},{"id":343,"name":"Little b"},{"id":344,"name":"Logo"},{"id":345,"name":"Logtalk"},{"id":346,"name":"LotusScript"},{"id":347,"name":"LPC"},{"id":348,"name":"LSE"},{"id":349,"name":"LSL"},{"id":350,"name":"LiveCode"},{"id":351,"name":"LiveScript"},{"id":352,"name":"Lua"},{"id":353,"name":"Lucid"},{"id":354,"name":"Lustre"},{"id":355,"name":"LYaPAS"},{"id":356,"name":"Lynx"},{"id":357,"name":"M2001"},{"id":358,"name":"M4"},{"id":359,"name":"M#"},{"id":360,"name":"Machine code"},{"id":361,"name":"MAD"},{"id":362,"name":"MAD/I"},{"id":363,"name":"Magik"},{"id":364,"name":"Magma"},{"id":365,"name":"make"},{"id":366,"name":"Maple"},{"id":367,"name":"MAPPER"},{"id":368,"name":"MARK-IV"},{"id":369,"name":"Mary"},{"id":370,"name":"MASM Microsoft Assembly x86"},{"id":371,"name":"Mathematica"},{"id":372,"name":"MATLAB"},{"id":373,"name":"Maxima"},{"id":374,"name":"Macsyma"},{"id":375,"name":"Max"},{"id":376,"name":"MaxScript"},{"id":377,"name":"Maya (MEL)"},{"id":378,"name":"MDL"},{"id":379,"name":"Mercury"},{"id":380,"name":"Mesa"},{"id":381,"name":"Metacard"},{"id":382,"name":"Metafont"},{"id":383,"name":"Microcode"},{"id":384,"name":"MicroScript"},{"id":385,"name":"MIIS"},{"id":386,"name":"MillScript"},{"id":387,"name":"MIMIC"},{"id":388,"name":"Mirah"},{"id":389,"name":"Miranda"},{"id":390,"name":"MIVA Script"},{"id":391,"name":"ML"},{"id":392,"name":"Moby"},{"id":393,"name":"Model 204"},{"id":394,"name":"Modelica"},{"id":395,"name":"Modula"},{"id":396,"name":"Modula-2"},{"id":397,"name":"Modula-3"},{"id":398,"name":"Mohol"},{"id":399,"name":"MOO"},{"id":400,"name":"Mortran"},{"id":401,"name":"Mouse"},{"id":402,"name":"MPD"},{"id":403,"name":"CIL"},{"id":404,"name":"MSL"},{"id":405,"name":"MUMPS"},{"id":406,"name":"Mystic Programming Language"},{"id":407,"name":"NASM"},{"id":408,"name":"NATURAL"},{"id":409,"name":"Napier88"},{"id":410,"name":"Neko"},{"id":411,"name":"Nemerle"},{"id":412,"name":"nesC"},{"id":413,"name":"NESL"},{"id":414,"name":"Net.Data"},{"id":415,"name":"NetLogo"},{"id":416,"name":"NetRexx"},{"id":417,"name":"NewLISP"},{"id":418,"name":"NEWP"},{"id":419,"name":"Newspeak"},{"id":420,"name":"NewtonScript"},{"id":421,"name":"NGL"},{"id":422,"name":"Nial"},{"id":423,"name":"Nice"},{"id":424,"name":"Nickle"},{"id":425,"name":"Nim"},{"id":426,"name":"NPL"},{"id":427,"name":"Not eXactly C"},{"id":428,"name":"Not Quite C"},{"id":429,"name":"NSIS"},{"id":430,"name":"Nu"},{"id":431,"name":"NWScript"},{"id":432,"name":"NXT-G"},{"id":433,"name":"o:XML"},{"id":434,"name":"Oak"},{"id":435,"name":"Oberon"},{"id":436,"name":"OBJ2"},{"id":437,"name":"Object Lisp"},{"id":438,"name":"ObjectLOGO"},{"id":439,"name":"Object REXX"},{"id":440,"name":"Object Pascal"},{"id":441,"name":"Objective-C"},{"id":442,"name":"Objective-J"},{"id":443,"name":"Obliq"},{"id":444,"name":"OCaml"},{"id":445,"name":"occam"},{"id":446,"name":"occam-π"},{"id":447,"name":"Octave"},{"id":448,"name":"OmniMark"},{"id":449,"name":"Onyx"},{"id":450,"name":"Opa"},{"id":451,"name":"Opal"},{"id":452,"name":"OpenCL"},{"id":453,"name":"OpenEdge ABL"},{"id":454,"name":"OPL"},{"id":455,"name":"OPS5"},{"id":456,"name":"OptimJ"},{"id":457,"name":"Orc"},{"id":458,"name":"ORCA/Modula-2"},{"id":459,"name":"Oriel"},{"id":460,"name":"Orwell"},{"id":461,"name":"Oxygene"},{"id":462,"name":"Oz"},{"id":463,"name":"P′′"},{"id":464,"name":"P#"},{"id":465,"name":"ParaSail (programming language)"},{"id":466,"name":"PARI/GP"},{"id":467,"name":"Pascal"},{"id":468,"name":"PCASTL"},{"id":469,"name":"PCF"},{"id":470,"name":"PEARL"},{"id":471,"name":"PeopleCode"},{"id":472,"name":"Perl"},{"id":473,"name":"PDL"},{"id":474,"name":"Perl6"},{"id":475,"name":"PHP"},{"id":476,"name":"Phrogram"},{"id":477,"name":"Pico"},{"id":478,"name":"Picolisp"},{"id":479,"name":"Pict"},{"id":480,"name":"Pike"},{"id":481,"name":"PIKT"},{"id":482,"name":"PILOT"},{"id":483,"name":"Pipelines"},{"id":484,"name":"Pizza"},{"id":485,"name":"PL-11"},{"id":486,"name":"PL/0"},{"id":487,"name":"PL/B"},{"id":488,"name":"PL/C"},{"id":489,"name":"PL/I"},{"id":490,"name":"PL/M"},{"id":491,"name":"PL/P"},{"id":492,"name":"PL/SQL"},{"id":493,"name":"PL360"},{"id":494,"name":"PLANC"},{"id":495,"name":"Plankalkül"},{"id":496,"name":"Planner"},{"id":497,"name":"PLEX"},{"id":498,"name":"PLEXIL"},{"id":499,"name":"Plus"},{"id":500,"name":"POP-11"},{"id":501,"name":"PostScript"},{"id":502,"name":"PortablE"},{"id":503,"name":"Powerhouse"},{"id":504,"name":"PowerBuilder"},{"id":505,"name":"PowerShell"},{"id":506,"name":"PPL"},{"id":507,"name":"Processing"},{"id":508,"name":"Processing.js"},{"id":509,"name":"Prograph"},{"id":510,"name":"PROIV"},{"id":511,"name":"Prolog"},{"id":512,"name":"PROMAL"},{"id":513,"name":"Promela"},{"id":514,"name":"PROSE modeling language"},{"id":515,"name":"PROTEL"},{"id":516,"name":"ProvideX"},{"id":517,"name":"Pro*C"},{"id":518,"name":"Pure"},{"id":519,"name":"Python"},{"id":520,"name":"Q (equational programming language)"},{"id":521,"name":"Q (programming language from Kx Systems)"},{"id":522,"name":"Qalb"},{"id":523,"name":"QtScript"},{"id":524,"name":"QuakeC"},{"id":525,"name":"QPL"},{"id":526,"name":"R"},{"id":527,"name":"R++"},{"id":528,"name":"Racket"},{"id":529,"name":"RAPID"},{"id":530,"name":"Rapira"},{"id":531,"name":"Ratfiv"},{"id":532,"name":"Ratfor"},{"id":533,"name":"rc"},{"id":534,"name":"REBOL"},{"id":535,"name":"Red"},{"id":536,"name":"Redcode"},{"id":537,"name":"REFAL"},{"id":538,"name":"Reia"},{"id":539,"name":"Revolution"},{"id":540,"name":"rex"},{"id":541,"name":"REXX"},{"id":542,"name":"Rlab"},{"id":543,"name":"ROOP"},{"id":544,"name":"RPG"},{"id":545,"name":"RPL"},{"id":546,"name":"RSL"},{"id":547,"name":"RTL/2"},{"id":548,"name":"Ruby"},{"id":549,"name":"RuneScript"},{"id":550,"name":"Rust"},{"id":551,"name":"S"},{"id":552,"name":"S2"},{"id":553,"name":"S3"},{"id":554,"name":"S-Lang"},{"id":555,"name":"S-PLUS"},{"id":556,"name":"SA-C"},{"id":557,"name":"SabreTalk"},{"id":558,"name":"SAIL"},{"id":559,"name":"SALSA"},{"id":560,"name":"SAM76"},{"id":561,"name":"SAS"},{"id":562,"name":"SASL"},{"id":563,"name":"Sather"},{"id":564,"name":"Sawzall"},{"id":565,"name":"SBL"},{"id":566,"name":"Scala"},{"id":567,"name":"Scheme"},{"id":568,"name":"Scilab"},{"id":569,"name":"Scratch"},{"id":570,"name":"Script.NET"},{"id":571,"name":"Sed"},{"id":572,"name":"Seed7"},{"id":573,"name":"Self"},{"id":574,"name":"SenseTalk"},{"id":575,"name":"SequenceL"},{"id":576,"name":"SETL"},{"id":577,"name":"SIMPOL"},{"id":578,"name":"SIGNAL"},{"id":579,"name":"SiMPLE"},{"id":580,"name":"SIMSCRIPT"},{"id":581,"name":"Simula"},{"id":582,"name":"Simulink"},{"id":583,"name":"SISAL"},{"id":584,"name":"SLIP"},{"id":585,"name":"SMALL"},{"id":586,"name":"Smalltalk"},{"id":587,"name":"Small Basic"},{"id":588,"name":"SML"},{"id":589,"name":"Snap!"},{"id":590,"name":"SNOBOL"},{"id":591,"name":"SPITBOL"},{"id":592,"name":"Snowball"},{"id":593,"name":"SOL"},{"id":594,"name":"Span"},{"id":595,"name":"SPARK"},{"id":596,"name":"Speedcode"},{"id":597,"name":"SPIN"},{"id":598,"name":"SP/k"},{"id":599,"name":"SPS"},{"id":600,"name":"SQR"},{"id":601,"name":"Squeak"},{"id":602,"name":"Squirrel"},{"id":603,"name":"SR"},{"id":604,"name":"S/SL"},{"id":605,"name":"Stackless Python"},{"id":606,"name":"Starlogo"},{"id":607,"name":"Strand"},{"id":608,"name":"Stata"},{"id":609,"name":"Stateflow"},{"id":610,"name":"Subtext"},{"id":611,"name":"SuperCollider"},{"id":612,"name":"SuperTalk"},{"id":613,"name":"Swift (Apple programming language)"},{"id":614,"name":"Swift (parallel scripting language)"},{"id":615,"name":"SYMPL"},{"id":616,"name":"SyncCharts"},{"id":617,"name":"SystemVerilog"},{"id":618,"name":"T"},{"id":619,"name":"TACL"},{"id":620,"name":"TACPOL"},{"id":621,"name":"TADS"},{"id":622,"name":"TAL"},{"id":623,"name":"Tcl"},{"id":624,"name":"Tea"},{"id":625,"name":"TECO"},{"id":626,"name":"TELCOMP"},{"id":627,"name":"TeX"},{"id":628,"name":"TEX"},{"id":629,"name":"TIE"},{"id":630,"name":"Timber"},{"id":631,"name":"TMG"},{"id":632,"name":"Tom"},{"id":633,"name":"TOM"},{"id":634,"name":"TouchDevelop"},{"id":635,"name":"Topspeed"},{"id":636,"name":"TPU"},{"id":637,"name":"Trac"},{"id":638,"name":"TTM"},{"id":639,"name":"T-SQL"},{"id":640,"name":"TTCN"},{"id":641,"name":"Turing"},{"id":642,"name":"TUTOR"},{"id":643,"name":"TXL"},{"id":644,"name":"TypeScript"},{"id":645,"name":"Turbo C++"},{"id":646,"name":"Ubercode"},{"id":647,"name":"UCSD Pascal"},{"id":648,"name":"Umple"},{"id":649,"name":"Unicon"},{"id":650,"name":"Uniface"},{"id":651,"name":"UNITY"},{"id":652,"name":"Unix shell"},{"id":653,"name":"UnrealScript"},{"id":654,"name":"Vala"},{"id":655,"name":"VBA"},{"id":656,"name":"VBScript"},{"id":657,"name":"Verilog"},{"id":658,"name":"VHDL"},{"id":659,"name":"Visual Basic"},{"id":660,"name":"Visual Basic .NET"},{"id":661,"name":"Visual DataFlex"},{"id":662,"name":"Visual DialogScript"},{"id":663,"name":"Visual Fortran"},{"id":664,"name":"Visual FoxPro"},{"id":665,"name":"Visual J++"},{"id":666,"name":"Visual J#"},{"id":667,"name":"Visual Objects"},{"id":668,"name":"Visual Prolog"},{"id":669,"name":"VSXu"},{"id":670,"name":"vvvv"},{"id":671,"name":"WATFIV, WATFOR"},{"id":672,"name":"WebDNA"},{"id":673,"name":"WebQL"},{"id":674,"name":"Windows PowerShell"},{"id":675,"name":"Winbatch"},{"id":676,"name":"Wolfram Language"},{"id":677,"name":"Wyvern"},{"id":678,"name":"X++"},{"id":679,"name":"X#"},{"id":680,"name":"X10"},{"id":681,"name":"XBL"},{"id":682,"name":"XC"},{"id":683,"name":"XMOS architecture"},{"id":684,"name":"xHarbour"},{"id":685,"name":"XL"},{"id":686,"name":"Xojo"},{"id":687,"name":"XOTcl"},{"id":688,"name":"XPL"},{"id":689,"name":"XPL0"},{"id":690,"name":"XQuery"},{"id":691,"name":"XSB"},{"id":692,"name":"XSLT"},{"id":693,"name":"XPath"},{"id":694,"name":"Xtend"},{"id":695,"name":"Yorick"},{"id":696,"name":"YQL"},{"id":697,"name":"Z notation"},{"id":698,"name":"Zeno"},{"id":699,"name":"ZOPL"},{"id":700,"name":"ZPL"}]');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__(9421);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
+/******/ })()
+;
