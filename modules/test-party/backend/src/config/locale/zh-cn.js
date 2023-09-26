@@ -9,7 +9,7 @@ module.exports = {
   About: '关于',
   Demonstration: '演示',
   PartyOver: '宴会结束',
-  PartyOverFlag: '结束',
+  PartyOverFlag: '已结束',
   OpenIsolateApp: '打开独立应用',
   OpenIsolateAppParty: '打开独立应用（宴会）',
   DianCaiWechat: '微信点菜',
