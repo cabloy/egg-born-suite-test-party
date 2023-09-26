@@ -1,5 +1,4 @@
-const require3 = require('require3');
-const assert = require3('assert');
+const assert = require('assert');
 
 const __testData_allowAllFieldsRead = {
   mode: 'allowAllFieldsRead',

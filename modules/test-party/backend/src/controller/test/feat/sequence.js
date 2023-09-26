@@ -1,6 +1,5 @@
-const require3 = require('require3');
-const assert = require3('assert');
-const pMap = require3('p-map');
+const assert = require('assert');
+const pMap = require('p-map');
 
 module.exports = app => {
   class SequenceController extends app.Controller {

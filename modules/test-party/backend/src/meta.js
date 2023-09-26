@@ -1,5 +1,4 @@
-const require3 = require('require3');
-const extend = require3('@zhennann/extend');
+const extend = require('@zhennann/extend');
 
 module.exports = app => {
   const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);

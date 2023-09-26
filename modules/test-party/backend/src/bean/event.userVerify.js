@@ -1,5 +1,4 @@
-const require3 = require('require3');
-const assert = require3('assert');
+const assert = require('assert');
 
 module.exports = ctx => {
   // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
