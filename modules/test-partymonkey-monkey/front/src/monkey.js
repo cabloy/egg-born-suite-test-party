@@ -39,9 +39,8 @@ export default function (Vue) {
   }
 
   return {
-    moduleLoaded({ module }) {
+    moduleLoaded({ moduleSelf, module }) {
       if (module.name !== 'test-party') return;
-      const moduleSelf = Vue.prototype.$meta.module.get('test-partymonkey');
       // route
       monkeyRoute(moduleSelf, module, 'kitchen-sink/monkey/monkeyee', monkeyerPage);
       // store
