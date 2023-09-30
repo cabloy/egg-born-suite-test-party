@@ -107,7 +107,7 @@ module.exports = app => {
     },
     // atom
     'atom.party': {
-      mode: 'app',
+      mode: 'ctx',
       bean: atomParty,
     },
     // io

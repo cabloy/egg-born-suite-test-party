@@ -1,10 +1,19 @@
-module.exports = app => {
-  class Atom extends app.meta.AtomCmsBase {
+module.exports = ctx => {
+  const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  class Atom extends ctx.app.meta.AtomCmsBase {
+    constructor() {
+      super(ctx);
+    }
+
+    get model() {
+      return ctx.model.module(moduleInfo.relativeName).party;
+    }
+
     async create({ atomClass, item, options, user }) {
       // super
       const key = await super.create({ atomClass, item, options, user });
       // add party
-      const res = await this.ctx.model.party.insert({
+      const res = await this.model.insert({
         atomId: key.atomId,
       });
       return { atomId: key.atomId, itemId: res.insertId };
@@ -35,15 +44,15 @@ module.exports = app => {
       // super
       await super.write({ atomClass, target, key, item, options, user });
       // update party
-      const data = await this.ctx.model.party.prepareData(item);
-      await this.ctx.model.party.update(data);
+      const data = await this.model.prepareData(item);
+      await this.model.update(data);
     }
 
     async delete({ atomClass, key, options, user }) {
       // super
       await super.delete({ atomClass, key, options, user });
       // delete party
-      await this.ctx.model.party.delete({
+      await this.model.delete({
         id: key.itemId,
       });
     }
@@ -55,7 +64,7 @@ module.exports = app => {
       if (atom.atomStage !== 1) return res;
       if (action !== 101) return res;
       // partyOver
-      const item = await this.ctx.model.party.get({ id: atom.itemId });
+      const item = await this.model.get({ id: atom.itemId });
       if (action === 101 && item.partyOver === 0) return res;
       return null;
     }
@@ -64,7 +73,7 @@ module.exports = app => {
       // dictKey
       if (partyCountry !== '1' && partyCountry !== '86') return null;
       // findItem
-      return await this.ctx.bean.dict.findItem({
+      return await ctx.bean.dict.findItem({
         dictKey: 'a-dictbooster:countries',
         code: partyCountry,
       });
@@ -75,7 +84,7 @@ module.exports = app => {
       if (!partyCity) return null;
       // findItem
       const dictKey = partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina';
-      return await this.ctx.bean.dict.findItem({
+      return await ctx.bean.dict.findItem({
         dictKey,
         code: partyCity,
         options: { separator: '/' },
@@ -100,14 +109,14 @@ module.exports = app => {
       const meta = this._ensureItemMeta(item);
       // meta.flags
       if (item.partyOver) {
-        meta.flags.push(this.ctx.text('PartyOverFlag'));
+        meta.flags.push(ctx.text('PartyOverFlag'));
       }
       if (layout !== 'table' && item.personCount) {
         meta.flags.push(item.personCount + 'P');
       }
       // meta.summary
       if (item.partyTypeCode) {
-        const dictItem = await this.ctx.bean.dict.findItem({
+        const dictItem = await ctx.bean.dict.findItem({
           dictKey: 'test-party:dictPartyType',
           code: item.partyTypeCode,
         });
