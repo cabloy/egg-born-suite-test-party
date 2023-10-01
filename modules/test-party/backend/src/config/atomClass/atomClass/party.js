@@ -43,6 +43,10 @@ module.exports = app => {
         directShowOnList: true,
         directShowOnItem: true,
         stage: 'formal',
+        params: {
+          confirm: true,
+          transaction: true,
+        },
       },
       partyOverBulk: {
         code: 201,
