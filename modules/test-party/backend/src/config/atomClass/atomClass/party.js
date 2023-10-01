@@ -35,7 +35,8 @@ module.exports = app => {
       partyOver: {
         code: 101,
         title: 'PartyOver',
-        actionModule: moduleInfo.relativeName,
+        // actionModule: moduleInfo.relativeName,
+        actionModule: 'a-base',
         actionComponent: 'action',
         icon: { f7: ':outline:check-circle-outline' },
         enableOnOpened: true,
