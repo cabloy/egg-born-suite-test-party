@@ -69,6 +69,19 @@ module.exports = ctx => {
       return null;
     }
 
+    async performAction({ key, atomClass, action, item, options, user }) {
+      // super
+      await super.performAction({ key, atomClass, action, item, options, user });
+      // partyOver
+      if (action === 'partyOver') {
+        await this.model.update({
+          id: key.itemId,
+          partyOver: 1,
+        });
+        await ctx.bean.cms.render._renderArticlePush({ key, inner: false });
+      }
+    }
+
     async _translateDictPartyCountry({ partyCountry }) {
       // dictKey
       if (partyCountry !== '1' && partyCountry !== '86') return null;
