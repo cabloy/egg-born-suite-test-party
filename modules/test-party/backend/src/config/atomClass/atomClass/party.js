@@ -44,8 +44,13 @@ module.exports = app => {
         directShowOnItem: true,
         stage: 'formal',
         params: {
-          confirm: true,
-          transaction: true,
+          transaction: true, // default
+          dialog: {
+            confirm: true,
+            confirmText: null,
+            toast: true,
+            toastText: null,
+          },
         },
       },
       partyOverBulk: {
