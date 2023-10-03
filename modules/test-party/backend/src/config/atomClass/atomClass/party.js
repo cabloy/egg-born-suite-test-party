@@ -51,6 +51,9 @@ module.exports = app => {
             toast: true, // default is true
             toastText: null,
           },
+          actionAfter: {
+            sameAs: 'write',
+          },
         },
       },
       partyOverBulk: {
@@ -71,6 +74,9 @@ module.exports = app => {
             toast: true, // default is true
             toastTextDoneAll: null,
             toastTextDoneSome: null,
+          },
+          actionAfter: {
+            sameAs: 'create',
           },
         },
       },

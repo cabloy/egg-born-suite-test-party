@@ -82,6 +82,30 @@ module.exports = ctx => {
       }
     }
 
+    async performActionBulk({ keys, atomClass, action, item, options, user }) {
+      // super
+      await super.performActionBulk({ keys, atomClass, action, item, options, user });
+      // partyOverBulk
+      if (action === 'partyOverBulk') {
+        const resKeys = [];
+        for (const key of keys) {
+          // check right action
+          const right = await ctx.bean.atom.checkRightAction({
+            atom: { id: key.atomId },
+            atomClass,
+            action: 'partyOver',
+            user,
+          });
+          if (!right) continue;
+          // over
+          await this.performAction({ key, atomClass, action, item, options, user });
+          // ok
+          resKeys.push(key);
+        }
+        return { keys: resKeys };
+      }
+    }
+
     async _translateDictPartyCountry({ partyCountry }) {
       // dictKey
       if (partyCountry !== '1' && partyCountry !== '86') return null;
