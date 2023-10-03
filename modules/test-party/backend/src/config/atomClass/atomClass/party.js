@@ -44,11 +44,11 @@ module.exports = app => {
         directShowOnItem: true,
         stage: 'formal',
         params: {
-          transaction: true, // default
+          transaction: true, // default is true
           dialog: {
-            confirm: true,
+            confirm: true, // default is true
             confirmText: null,
-            toast: true,
+            toast: true, // default is true
             toastText: null,
           },
         },
@@ -56,12 +56,23 @@ module.exports = app => {
       partyOverBulk: {
         code: 201,
         title: 'PartyOver',
-        actionModule: moduleInfo.relativeName,
-        actionComponent: 'action',
+        // actionModule: moduleInfo.relativeName,
+        actionModule: 'a-base',
+        actionComponent: 'actionBulk',
         icon: { f7: ':outline:check-circle-outline' },
         bulk: true,
         select: true,
         stage: 'formal',
+        params: {
+          transaction: true, // default is true
+          dialog: {
+            confirm: true, // default is true
+            confirmText: null,
+            toast: true, // default is true
+            toastTextDoneAll: null,
+            toastTextDoneSome: null,
+          },
+        },
       },
     },
     validator: 'party',

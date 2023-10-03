@@ -21,7 +21,7 @@ export default {
         // action
         ctx.$meta.eventHub.$emit('atom:action', { key, atomClass, action: { name: 'save' } });
       }
-      // clear selection
+      // clear selection, 清除已经完成的部分
       ctx.bulk_clearSelectedAtoms();
       // check result
       if (res.keys.length === keys.length) return true;
