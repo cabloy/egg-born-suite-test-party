@@ -21,8 +21,8 @@ export default {
         // action
         ctx.$meta.eventHub.$emit('atom:action', { key, atomClass, action: { name: 'save' } });
       }
-      // clear selection, 清除已经完成的部分
-      ctx.bulk_clearSelectedAtoms();
+      // clear selection
+      ctx.bulk_clearSelectedAtoms({ keysClear: res.keys });
       // check result
       if (res.keys.length === keys.length) return true;
       return this.$text('PartyOverBulkNotAllDone');
