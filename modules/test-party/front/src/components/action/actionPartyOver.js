@@ -7,7 +7,8 @@ export default {
         module: item.module,
         atomClassName: item.atomClassName,
       };
-      await ctx.$view.dialog.confirm();
+      // confirm
+      await this.base_handleConfirm();
       await ctx.$api.post('/test/party/party/over', { key });
       ctx.$meta.eventHub.$emit('atom:action', { key, atomClass, action: { name: 'save' } });
       return true;
