@@ -45,6 +45,7 @@ module.exports = app => {
         stage: 'formal',
         params: {
           transaction: true, // default is true
+          // atomState: 1, // over
           dialog: {
             confirm: true, // default is true
             confirmText: null,

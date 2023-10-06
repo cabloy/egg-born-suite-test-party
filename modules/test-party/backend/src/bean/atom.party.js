@@ -89,16 +89,17 @@ module.exports = ctx => {
       if (action === 'partyOverBulk') {
         const resKeys = [];
         for (const key of keys) {
+          const actionItem = 'partyOver';
           // check right action
           const right = await ctx.bean.atom.checkRightAction({
             atom: { id: key.atomId },
             atomClass,
-            action: 'partyOver',
+            action: actionItem,
             user,
           });
           if (!right) continue;
           // over
-          await this.performAction({ key, atomClass, action, item, options, user });
+          await this.performAction({ key, atomClass, action: actionItem, item, options, user });
           // ok
           resKeys.push(key);
         }
