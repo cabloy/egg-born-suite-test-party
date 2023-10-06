@@ -8,6 +8,8 @@ export default {
   SMSVerificationCode: 'Code',
   IntervalMS: 'Interval(ms)',
   PartyOver: 'Party Over',
+  PartyExpense: 'Party Expense',
+  PartySummary: 'Party Summary',
   PartyOverBulkNotAllDone: 'Some Items Cannot be Overed',
   SelfIntroduction: 'Self-Introduction',
   MonkeyeeTestTip1: 'The page will be monkeyed',

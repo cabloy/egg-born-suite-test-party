@@ -84,16 +84,53 @@ module.exports = app => {
         ebType: 'tags',
         ebTitle: 'Tags',
       },
-      partyOver: {
-        ebType: 'toggle',
-        ebTitle: 'PartyOver',
+      // Extra
+      __groupStatus: {
+        ebType: 'group-flatten',
+        ebTitle: 'Status',
+        ebGroupWhole: true,
         ebDisplay: {
-          // expression: 'status===0',
-          // dependencies: ['status'],
+          // expression: 'partyOver===1',
+          // dependencies: ['partyOver'],
           host: {
             stage: 'formal',
             // mode: 'view',
           },
+        },
+      },
+      partyOver: {
+        ebType: 'toggle',
+        ebTitle: 'PartyOver',
+        ebDisplay: {
+          host: {
+            stage: 'formal',
+          },
+        },
+        ebReadOnly: true,
+      },
+      partyExpense: {
+        ebType: 'text',
+        ebTitle: 'PartyExpense',
+        ebDisplay: {
+          host: {
+            stage: 'formal',
+          },
+        },
+        ebParams: {
+          currency: true,
+        },
+        ebReadOnly: true,
+      },
+      partySummary: {
+        ebType: 'text',
+        ebTitle: 'PartySummary',
+        ebDisplay: {
+          host: {
+            stage: 'formal',
+          },
+        },
+        ebParams: {
+          textarea: true,
         },
         ebReadOnly: true,
       },

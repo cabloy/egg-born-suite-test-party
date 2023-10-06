@@ -69,6 +69,8 @@ export default {
   Saved: '已保存',
   IntervalMS: '间隔(ms)',
   PartyOver: '宴会结束',
+  PartyExpense: '宴会花费',
+  PartySummary: '宴会总结',
   PartyOverBulkNotAllDone: '某些条目无法执行结束操作',
   SelfIntroduction: '自我介绍',
   MonkeyeeTestTip1: '本页面将被Monkey',
