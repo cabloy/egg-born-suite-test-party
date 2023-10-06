@@ -1,4 +1,4 @@
-const fileVersionUpdates = [1, 2];
+const fileVersionUpdates = [1, 2, 3];
 const fileVersionInits = [1];
 
 module.exports = app => {
