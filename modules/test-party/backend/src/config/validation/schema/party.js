@@ -109,6 +109,8 @@ module.exports = app => {
         ebReadOnly: true,
       },
       partyExpense: {
+        type: 'number',
+        ebCopy: false,
         ebType: 'text',
         ebTitle: 'PartyExpense',
         ebDisplay: {
@@ -122,6 +124,8 @@ module.exports = app => {
         ebReadOnly: true,
       },
       partySummary: {
+        type: 'string',
+        ebCopy: false,
         ebType: 'text',
         ebTitle: 'PartySummary',
         ebDisplay: {
