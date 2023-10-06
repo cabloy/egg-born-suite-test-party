@@ -47,6 +47,7 @@ module.exports = app => {
           transaction: true, // default is true
           // atomState: 1, // over
           dialog: {
+            title: null,
             confirm: true, // default is true
             confirmText: null,
             toast: true, // default is true
