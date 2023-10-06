@@ -53,6 +53,16 @@ module.exports = app => {
             toast: true, // default is true
             toastText: null,
           },
+          form: {
+            fieldsRight: {
+              mode: 'allowSpecificFields',
+              basic: { read: false, write: false },
+              fields: [
+                { name: 'partyExpense', read: true, write: true },
+                { name: 'partySummary', read: true, write: true },
+              ],
+            },
+          },
           actionAfter: {
             sameAs: 'write',
           },
