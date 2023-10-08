@@ -10,6 +10,7 @@ module.exports = app => {
       category: true,
       tag: true,
       cms: true,
+      history: true,
       fields: {
         dicts: {
           partyTypeCode: {
