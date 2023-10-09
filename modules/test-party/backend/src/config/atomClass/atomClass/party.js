@@ -55,6 +55,7 @@ module.exports = app => {
             toastText: null,
           },
           form: {
+            mode: 'view', // edit/view
             fieldsRight: {
               mode: 'allowSpecificFields',
               basic: { read: false, write: false },
