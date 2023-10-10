@@ -56,9 +56,7 @@ module.exports = app => {
           schemas: 'settingsInstance',
         },
       },
-      keywords: {
-        'x-languages': keywords.languages,
-      },
+      keywords,
       schemas,
     },
     cli: {

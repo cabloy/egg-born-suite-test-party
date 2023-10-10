@@ -1,19 +1,21 @@
+const languages = require('./keyword/languages.js');
+
+function appendPrefix(keywords) {
+  const result = {};
+  for (const key in keywords) {
+    if (key.indexOf('x-') === 0) {
+      result[key] = keywords[key];
+    } else {
+      result[`x-${key}`] = keywords[key];
+    }
+  }
+  return result;
+}
+
 module.exports = app => {
   const keywords = {};
-  keywords.languages = {
-    async: true,
-    type: 'string',
-    errors: true,
-    compile(/* sch, parentSchema*/) {
-      return async function (data) {
-        const ctx = this;
-        const locales = ctx.bean.base.locales();
-        const index = locales.findIndex(item => item.value === data);
-        if (index > -1) return true;
-        const errors = [{ keyword: 'x-languages', params: [], message: ctx.text('Not Expected Value') }];
-        throw new app.meta.ajv.ValidationError(errors);
-      };
-    },
-  };
+  // product
+  Object.assign(keywords, appendPrefix(languages(app)));
+  // ok
   return keywords;
 };
