@@ -70,21 +70,6 @@ module.exports = app => {
         },
       },
       // Extra
-      __groupExtra: {
-        ebType: 'group-flatten',
-        ebTitle: 'Extra',
-      },
-      atomCategoryId: {
-        type: 'number',
-        ebType: 'category',
-        ebTitle: 'Category',
-      },
-      atomTags: {
-        type: ['string', 'null'],
-        ebType: 'tags',
-        ebTitle: 'Tags',
-      },
-      // Extra
       __groupStatus: {
         ebType: 'group-flatten',
         ebTitle: 'Status',
@@ -139,17 +124,17 @@ module.exports = app => {
         ebReadOnly: true,
       },
       // Details
-      __groupDetails: {
+      __groupPartyExpenseDetails: {
         ebType: 'group-flatten',
-        ebTitle: 'Details',
+        ebTitle: 'PartyExpenseDetails',
         ebGroupWhole: true,
         ebParams: {
           titleHidden: true,
         },
       },
-      details: {
+      partyExpenseDetails: {
         ebType: 'details',
-        ebTitle: 'Details',
+        ebTitle: 'PartyExpenseDetails',
         ebParams: {
           atomClass: {
             module: 'test-party',

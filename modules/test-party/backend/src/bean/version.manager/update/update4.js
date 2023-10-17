@@ -13,7 +13,10 @@ module.exports = function SelfFactory(ctx) {
           atomIdMain int(11) DEFAULT '0',
           detailLineNo int(11) DEFAULT '0',
           name varchar(50) DEFAULT NULL,
-          description varchar(255) DEFAULT NULL,
+          price int(11) DEFAULT '0',
+          quantity int(11) DEFAULT '0',
+          amount int(11) DEFAULT '0',
+          remark varchar(255) DEFAULT NULL,
           PRIMARY KEY (id)
         )
       `;

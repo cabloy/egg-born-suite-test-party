@@ -7,8 +7,8 @@ module.exports = app => {
       tableName: 'testParty',
       tableNameModes: {},
       language: false,
-      category: true,
-      tag: true,
+      category: false,
+      tag: false,
       cms: true,
       history: true,
       fields: {
