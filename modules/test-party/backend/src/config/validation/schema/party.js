@@ -138,6 +138,25 @@ module.exports = app => {
         },
         ebReadOnly: true,
       },
+      // Details
+      __groupDetails: {
+        ebType: 'group-flatten',
+        ebTitle: 'Details',
+        ebGroupWhole: true,
+        ebParams: {
+          titleHidden: true,
+        },
+      },
+      details: {
+        ebType: 'details',
+        ebTitle: 'Details',
+        ebParams: {
+          atomClass: {
+            module: 'test-party',
+            atomClassName: 'partyExpense',
+          },
+        },
+      },
     },
   };
   // party search

@@ -77,6 +77,7 @@ module.exports = app => {
     },
     index: {
       indexes: {
+        testPartyExpense: 'createdAt,updatedAt,atomIdMain',
         testParty: 'createdAt,updatedAt,atomId,partyTypeCode',
       },
     },

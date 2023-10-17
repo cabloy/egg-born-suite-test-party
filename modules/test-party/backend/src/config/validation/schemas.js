@@ -1,3 +1,4 @@
+const partyExpense = require('./schema/partyExpense.js');
 const blocks = require('./schema/blocks.js');
 const formTest = require('./schema/formTest.js');
 const party = require('./schema/party.js');
@@ -6,6 +7,8 @@ const settings = require('./schema/settings.js');
 
 module.exports = app => {
   const schemas = {};
+  // partyExpense
+  Object.assign(schemas, partyExpense(app));
   // blocks
   Object.assign(schemas, blocks(app));
   // formTest

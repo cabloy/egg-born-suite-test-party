@@ -1,3 +1,4 @@
+const atomPartyExpense = require('./bean/atom.partyExpense.js');
 const versionManager = require('./bean/version.manager.js');
 const cliDefaultDemo = require('./bean/cli.default.demo.js');
 const testApp = require('./bean/test.app.js');
@@ -25,6 +26,11 @@ const summerCacheTest = require('./bean/summer.cache.test.js');
 
 module.exports = app => {
   const beans = {
+    // atom
+    'atom.partyExpense': {
+      mode: 'ctx',
+      bean: atomPartyExpense,
+    },
     // version
     'version.manager': {
       mode: 'app',

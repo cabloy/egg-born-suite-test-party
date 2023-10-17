@@ -55,4 +55,6 @@ module.exports = {
   mother: '母亲',
   son: '儿子',
   daughter: '女儿',
+  'Create PartyExpense': '新建PartyExpense',
+  'PartyExpense List': 'PartyExpense列表',
 };
