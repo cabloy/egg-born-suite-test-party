@@ -153,6 +153,7 @@ module.exports = app => {
         ebType: 'dict',
         ebTitle: 'Party Type',
         ebParams: {
+          className: 'col-100 medium-100 large-100',
           dictKey: 'test-party:dictPartyType',
           mode: 'tree',
         },
