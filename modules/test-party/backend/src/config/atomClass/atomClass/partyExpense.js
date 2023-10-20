@@ -17,7 +17,7 @@ module.exports = app => {
       enableRight: false,
       layout: {
         config: {
-          // atomList: 'layoutAtomListPartyExpense',
+          atomList: 'layoutAtomListPartyExpense',
         },
       },
     },

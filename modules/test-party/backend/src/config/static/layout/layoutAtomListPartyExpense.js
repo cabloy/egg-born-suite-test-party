@@ -21,9 +21,12 @@ module.exports = app => {
                 renderType: 'atomName',
               },
               {
-                dataIndex: 'description',
-                title: 'Description',
+                dataIndex: 'price',
+                title: 'Price',
                 align: 'left',
+                params: {
+                  currency: true,
+                },
               },
             ],
           },
