@@ -61,7 +61,7 @@ module.exports = app => {
               basic: { read: false, write: false },
               fields: [
                 { name: '__groupPartyOverInfo', read: true, write: false },
-                { name: 'partyOver', read: true, write: true },
+                // { name: 'partyOver', read: true, write: true },
                 { name: 'partySummary', read: true, write: true },
                 { name: '__groupPartyExpenseInfo', read: true, write: false },
                 { name: 'partyExpenseCount', read: true, write: true },
