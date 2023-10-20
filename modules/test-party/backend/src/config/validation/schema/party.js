@@ -9,6 +9,7 @@ module.exports = app => {
       __groupBasicInfo: {
         ebType: 'group-flatten',
         ebTitle: 'Basic Info',
+        ebGroupWhole: true,
       },
       atomName: {
         type: 'string',
@@ -69,11 +70,10 @@ module.exports = app => {
           leafOnly: true,
         },
       },
-      // Extra
-      __groupStatus: {
+      // Over Info
+      __groupPartyOverInfo: {
         ebType: 'group-flatten',
-        ebTitle: 'Status',
-        ebGroupWhole: true,
+        ebTitle: 'PartyOverInfo',
         ebDisplay: {
           // expression: 'partyOver===1',
           // dependencies: ['partyOver'],
@@ -93,21 +93,6 @@ module.exports = app => {
         },
         ebReadOnly: true,
       },
-      partyExpense: {
-        type: 'number',
-        ebCopy: false,
-        ebType: 'text',
-        ebTitle: 'PartyExpense',
-        ebDisplay: {
-          host: {
-            stage: 'formal',
-          },
-        },
-        ebParams: {
-          currency: true,
-        },
-        ebReadOnly: true,
-      },
       partySummary: {
         type: 'string',
         ebCopy: false,
@@ -123,8 +108,22 @@ module.exports = app => {
         },
         ebReadOnly: true,
       },
+      // Expense Info
+      __groupPartyExpenseInfo: {
+        ebType: 'group-flatten',
+        ebTitle: 'PartyExpenseInfo',
+      },
+      partyExpense: {
+        type: 'number',
+        ebCopy: false,
+        ebType: 'text',
+        ebTitle: 'PartyExpense',
+        ebParams: {
+          currency: true,
+        },
+      },
       // Details
-      __groupPartyExpenseDetails: {
+      __groupPartyExpenseDetailsInfo: {
         ebType: 'group-flatten',
         ebTitle: 'PartyExpenseDetails',
         ebGroupWhole: true,

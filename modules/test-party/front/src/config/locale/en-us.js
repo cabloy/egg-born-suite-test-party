@@ -8,6 +8,7 @@ export default {
   SMSVerificationCode: 'Code',
   IntervalMS: 'Interval(ms)',
   PartyOver: 'Party Over',
+  PartyOverInfo: 'Party Over Info',
   PartyExpense: 'Party Expense',
   PartySummary: 'Party Summary',
   PartyExpenseDetails: 'Party Expense Details',
