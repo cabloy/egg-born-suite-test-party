@@ -5,7 +5,8 @@ module.exports = function SelfFactory(ctx) {
       // alter table: testParty
       const sql = `
         ALTER TABLE testParty
-          ADD COLUMN partyExpense int(11) DEFAULT '0',
+          ADD COLUMN partyExpenseCount int(11) DEFAULT '0',
+          ADD COLUMN partyExpenseAmount int(11) DEFAULT '0',
           ADD COLUMN partySummary text DEFAULT NULL
       `;
       await ctx.model.query(sql);

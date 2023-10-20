@@ -113,14 +113,36 @@ module.exports = app => {
         ebType: 'group-flatten',
         ebTitle: 'PartyExpenseInfo',
       },
-      partyExpense: {
+      partyExpenseCount: {
         type: 'number',
-        ebCopy: false,
-        ebType: 'text',
-        ebTitle: 'PartyExpense',
+        ebType: 'detailsStat',
+        ebTitle: 'PartyExpenseQuantity',
         ebParams: {
+          detailClass: {
+            module: moduleInfo.relativeName,
+            atomClassName: 'partyExpense',
+          },
+          summary: {
+            type: 'count',
+          },
+        },
+      },
+      partyExpenseAmount: {
+        type: 'number',
+        ebType: 'detailsStat',
+        ebTitle: 'PartyExpenseAmount',
+        ebParams: {
+          detailClass: {
+            module: moduleInfo.relativeName,
+            atomClassName: 'partyExpense',
+          },
+          summary: {
+            type: 'sum',
+            field: 'amount',
+          },
           currency: true,
         },
+        ebAutoSubmit: true,
       },
       // Details
       __groupPartyExpenseDetailsInfo: {
