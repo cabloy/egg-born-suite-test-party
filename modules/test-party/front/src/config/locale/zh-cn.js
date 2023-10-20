@@ -74,6 +74,7 @@ export default {
   PartyExpenseInfo: '宴会花费信息',
   PartyExpenseQuantity: '花费数量',
   PartyExpenseAmount: '花费金额',
+  PartyExpenseRemark: '说明',
   PartySummary: '宴会总结',
   PartyExpenseDetails: '宴会花费明细',
   PartyOverBulkNotAllDone: '某些条目无法执行结束操作',

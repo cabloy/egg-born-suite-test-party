@@ -10,10 +10,37 @@ module.exports = app => {
         ebTitle: 'Name',
         notEmpty: true,
       },
-      description: {
+      remark: {
         type: 'string',
         ebType: 'text',
-        ebTitle: 'Description',
+        ebTitle: 'PartyExpenseRemark',
+      },
+      price: {
+        type: 'number',
+        ebType: 'text',
+        ebTitle: 'Price',
+        ebParams: {
+          currency: true,
+        },
+      },
+      quantity: {
+        type: 'number',
+        ebType: 'text',
+        ebTitle: 'Quantity',
+        notEmpty: true,
+      },
+      amount: {
+        type: 'number',
+        ebType: 'text',
+        ebTitle: 'Amount',
+        ebComputed: {
+          expression: 'price * quantity',
+          dependencies: 'price,quantity',
+        },
+        ebParams: {
+          currency: true,
+        },
+        ebReadOnly: false,
       },
     },
   };

@@ -59,8 +59,13 @@ module.exports = ctx => {
     _getMeta(item) {
       const meta = this._ensureItemMeta(item);
       // meta.flags
+      if (item.quantity > 1) {
+        meta.flags.push(item.quantity);
+      }
+      const amount = (item.amount / 100).toFixed(2);
+      meta.flags.push(amount);
       // meta.summary
-      meta.summary = item.description;
+      meta.summary = item.remark;
     }
   }
 

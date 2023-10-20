@@ -14,6 +14,7 @@ export default {
   PartySummary: 'Party Summary',
   PartyExpenseQuantity: 'Expense Quantity',
   PartyExpenseAmount: 'Expense Amount',
+  PartyExpenseRemark: 'Remark',
   PartyExpenseDetails: 'Party Expense Details',
   PartyOverBulkNotAllDone: 'Some Items Cannot be Overed',
   SelfIntroduction: 'Self-Introduction',
