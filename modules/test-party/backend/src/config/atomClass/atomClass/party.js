@@ -69,6 +69,11 @@ module.exports = app => {
                 { name: '__groupPartyExpenseDetailsInfo', read: true, write: false },
                 { name: 'partyExpenseDetails', read: true, write: true },
               ],
+              details: {
+                'test-party:partyExpense': {
+                  mode: 'allowAllFieldsReadWrite',
+                },
+              },
             },
           },
           actionAfter: {
