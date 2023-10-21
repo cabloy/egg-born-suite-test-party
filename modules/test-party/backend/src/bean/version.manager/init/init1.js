@@ -27,6 +27,7 @@ module.exports = function (ctx) {
         { roleName: 'anonymous', action: 'read', scopeNames: 'authenticated' },
         // custom
         { roleName: 'system', action: 'partyOver', scopeNames: 0 },
+        { roleName: 'system', action: 'partyOverOtherTest1', scopeNames: 0 },
         { roleName: 'system', action: 'partyOverBulk' },
       ];
       await ctx.bean.role.addRoleRightBatch({ atomClassName: 'party', roleRights });

@@ -73,8 +73,21 @@ module.exports = app => {
           },
           actionAfter: {
             sameAs: 'write',
+            commands: null, //
           },
         },
+      },
+      partyOverOtherTest1: {
+        code: 102,
+        title: 'OtherTest1',
+        actionModule: 'a-base',
+        actionComponent: 'action',
+        icon: { f7: '::dot' },
+        enableOnOpened: true,
+        directShowOnList: false,
+        directShowOnItem: false,
+        stage: 'formal',
+        enableOnFormAction: 'partyOver',
       },
       partyOverBulk: {
         code: 201,
