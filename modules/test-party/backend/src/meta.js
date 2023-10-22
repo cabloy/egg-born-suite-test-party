@@ -3,25 +3,25 @@ const extend = require('@zhennann/extend');
 module.exports = app => {
   const meta = {};
   // atomClasses
-  const atomClasses = require('./config/atomClass/atomClasses.js')(app);
+  const atomClasses = require('./meta/atomClass/atomClasses.js')(app);
   // schemas
-  const schemas = require('./config/validation/schemas.js')(app);
+  const schemas = require('./meta/validation/schemas.js')(app);
   // keywords
-  const keywords = require('./config/validation/keywords.js')(app);
+  const keywords = require('./meta/validation/keywords.js')(app);
   // socketio
-  const socketioTest = require('./config/socketio/test.js')(app);
-  const socketioSimpleChat = require('./config/socketio/simpleChat.js')(app);
+  const socketioTest = require('./meta/socketio/test.js')(app);
+  const socketioSimpleChat = require('./meta/socketio/simpleChat.js')(app);
   // static
-  const staticApps = require('./config/static/apps.js')(app);
-  const staticDashboards = require('./config/static/dashboards.js')(app);
-  const staticLayouts = require('./config/static/layouts.js')(app);
-  const staticResources = require('./config/static/resources.js')(app);
-  const staticDicts = require('./config/static/dicts.js')(app);
-  const staticRoles = require('./config/static/roles.js')(app);
+  const staticApps = require('./meta/static/apps.js')(app);
+  const staticDashboards = require('./meta/static/dashboards.js')(app);
+  const staticLayouts = require('./meta/static/layouts.js')(app);
+  const staticResources = require('./meta/static/resources.js')(app);
+  const staticDicts = require('./meta/static/dicts.js')(app);
+  const staticRoles = require('./meta/static/roles.js')(app);
   // cli commands
-  const cliCommands = require('./config/cli/commands.js')(app);
+  const cliCommands = require('./meta/cli/commands.js')(app);
   // icons
-  const iconGroups = require('./config/icons/groups.js');
+  const iconGroups = require('./meta/icons/groups.js');
   // meta
   extend(true, meta, {
     base: {
