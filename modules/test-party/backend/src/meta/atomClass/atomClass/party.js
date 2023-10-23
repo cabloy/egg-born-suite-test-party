@@ -25,6 +25,13 @@ module.exports = app => {
           },
         },
       },
+      dict: {
+        states: {
+          formal: {
+            dictKey: 'test-party:dictPartyStatus',
+          },
+        },
+      },
       layout: {
         config: {
           atomList: 'layoutAtomListParty',
