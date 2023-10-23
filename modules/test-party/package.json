@@ -1,6 +1,6 @@
 {
   "name": "egg-born-module-test-party",
-  "version": "4.8.36",
+  "version": "5.0.0",
   "title": "Party Test",
   "eggBornModule": {
     "fileVersion": 4,
@@ -10,9 +10,9 @@
       "theme": true
     },
     "dependencies": {
-      "a-instance": "4.0.0",
-      "a-base": "4.0.0",
-      "a-authopen": "4.0.0"
+      "a-instance": "5.0.0",
+      "a-base": "5.0.0",
+      "a-authopen": "5.0.0"
     }
   },
   "description": "",
