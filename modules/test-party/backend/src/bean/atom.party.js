@@ -12,13 +12,17 @@ module.exports = ctx => {
     async create({ atomClass, item, options, user }) {
       // super
       const key = await super.create({ atomClass, item, options, user });
+      // atomState
+      if (item.atomStage === 1) {
+        await ctx.bean.atom.atomState({
+          key: { atomId: key.atomId },
+          atom: { atomState: 0 }, // ongoing
+        });
+      }
       // add party
       const data = {
         atomId: key.atomId,
       };
-      if (item.atomStage === 1) {
-        data.atomState = 0; // ongoing
-      }
       const res = await this.model.insert(data);
       return { atomId: key.atomId, itemId: res.insertId };
     }
