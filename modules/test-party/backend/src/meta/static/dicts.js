@@ -1,8 +1,10 @@
+const partyStatus = require('./dict/partyStatus.js');
 const partyType = require('./dict/partyType.js');
 
 module.exports = app => {
   const dicts = [
-    partyType(app), //
+    partyStatus(app), //
+    partyType(app),
   ];
   return dicts;
 };

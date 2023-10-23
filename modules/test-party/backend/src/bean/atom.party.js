@@ -13,9 +13,13 @@ module.exports = ctx => {
       // super
       const key = await super.create({ atomClass, item, options, user });
       // add party
-      const res = await this.model.insert({
+      const data = {
         atomId: key.atomId,
-      });
+      };
+      if (item.atomStage === 1) {
+        data.atomState = 0; // ongoing
+      }
+      const res = await this.model.insert(data);
       return { atomId: key.atomId, itemId: res.insertId };
     }
 
