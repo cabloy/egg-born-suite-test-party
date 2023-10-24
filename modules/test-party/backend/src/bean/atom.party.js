@@ -74,10 +74,8 @@ module.exports = ctx => {
       // super
       await super.performAction({ key, atomClass, action, item, options, user });
       // partyOver
-      if (action === 'partyOver') {
-        // render article
-        await ctx.bean.cms.render._renderArticlePush({ key, inner: false });
-      }
+      // if (action === 'partyOver') {
+      // }
     }
 
     async performActionBulk({ keys, atomClass, action, item, options, user }) {

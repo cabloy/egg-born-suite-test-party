@@ -63,6 +63,9 @@ module.exports = app => {
             partyOverPerson: 'user.id',
             partyOverTime: 'new Date()',
           },
+          cms: {
+            render: true,
+          },
           dialog: {
             title: null,
             confirm: true, // default is true

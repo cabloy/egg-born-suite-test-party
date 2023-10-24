@@ -15,8 +15,9 @@ module.exports = app => {
         ebType: 'text',
         ebTitle: 'PartySummary',
         ebParams: {
-          textarea: true,
+          // textarea: true,
         },
+        notEmpty: true,
       },
     },
   };
