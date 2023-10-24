@@ -154,9 +154,6 @@ module.exports = ctx => {
       // meta
       const meta = this._ensureItemMeta(item);
       // meta.flags
-      if (item.partyOver) {
-        meta.flags.push(ctx.text('PartyOverFlag'));
-      }
       if (layout !== 'table' && item.personCount) {
         meta.flags.push(item.personCount + 'P');
       }

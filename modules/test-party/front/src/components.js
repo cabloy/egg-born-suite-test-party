@@ -1,4 +1,3 @@
-import action from './components/action.js';
 import renderPartyCity from './components/renderPartyCity.jsx';
 import createModal from './components/createModal.jsx';
 import helloGlobal from './kitchen-sink/components/helloGlobal.vue';
@@ -15,7 +14,6 @@ import loadComponentAsync from './kitchen-sink/components/loadComponentAsync.vue
 import appMineLayoutBlockListMineBody from './components/appMineLayoutList/appMineLayoutBlockListMineBody.jsx';
 
 export default {
-  action,
   renderPartyCity,
   createModal,
   helloGlobal,

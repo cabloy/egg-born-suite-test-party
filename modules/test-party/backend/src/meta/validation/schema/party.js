@@ -75,8 +75,6 @@ module.exports = app => {
         ebType: 'group-flatten',
         ebTitle: 'PartyOverInfo',
         ebDisplay: {
-          // expression: 'partyOver===1',
-          // dependencies: ['partyOver'],
           host: {
             stage: 'formal',
             // mode: 'view',
@@ -86,6 +84,11 @@ module.exports = app => {
       partyOver: {
         ebType: 'toggle',
         ebTitle: 'PartyOver',
+        ebComputed: {
+          expression: 'atomState==="1"',
+          dependencies: ['atomState'],
+          immediate: true,
+        },
         ebDisplay: {
           host: {
             stage: 'formal',
