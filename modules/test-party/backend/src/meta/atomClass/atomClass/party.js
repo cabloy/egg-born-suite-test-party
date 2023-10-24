@@ -142,7 +142,7 @@ module.exports = app => {
             },
           },
           actionAfter: {
-            sameAs: 'create',
+            sameAs: 'refresh',
           },
         },
       },
