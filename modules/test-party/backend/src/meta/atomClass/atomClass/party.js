@@ -58,6 +58,10 @@ module.exports = app => {
         params: {
           transaction: true, // default is true
           // atomState: 1, // over
+          fieldsMapping: {
+            partyOverPerson: 'user.id',
+            partyOverTime: 'new Date()',
+          },
           dialog: {
             title: null,
             confirm: true, // default is true

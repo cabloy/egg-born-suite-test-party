@@ -110,9 +110,11 @@ describe('test/controller/test/feat/openAuth.test.js', () => {
     // party/overBulk
     result = await app
       .httpRequest()
-      .post(mockUrl('/test/party/party/overBulk'))
+      .post(mockUrl('/a/base/atom/performActionBulk'))
       .set('Authorization', `Bearer ${accessToken}`)
       .send({
+        atomClass: __atomClassParty,
+        action: 'partyOverBulk',
         keys: [],
       });
     assert.equal(result.body.code, 0);

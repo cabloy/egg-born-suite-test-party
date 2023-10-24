@@ -7,7 +7,9 @@ module.exports = function SelfFactory(ctx) {
         ALTER TABLE testParty
           ADD COLUMN partyExpenseCount int(11) DEFAULT '0',
           ADD COLUMN partyExpenseAmount int(11) DEFAULT '0',
-          ADD COLUMN partySummary text DEFAULT NULL
+          ADD COLUMN partySummary text DEFAULT NULL,
+          ADD COLUMN partyOverPerson int(11) DEFAULT '0',
+          ADD COLUMN partyOverTime timestamp DEFAULT NULL
       `;
       await ctx.model.query(sql);
     }
