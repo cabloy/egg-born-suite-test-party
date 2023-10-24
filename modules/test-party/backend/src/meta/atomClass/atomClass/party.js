@@ -57,7 +57,7 @@ module.exports = app => {
         stage: 'formal',
         params: {
           transaction: true, // default is true
-          // atomState: 1, // over
+          atomState: 1, // over
           fieldsMapping: {
             partyOverPerson: 'user.id',
             partyOverTime: 'new Date()',

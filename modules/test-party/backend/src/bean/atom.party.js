@@ -75,10 +75,7 @@ module.exports = ctx => {
       await super.performAction({ key, atomClass, action, item, options, user });
       // partyOver
       if (action === 'partyOver') {
-        await this.model.update({
-          id: key.itemId,
-          partyOver: 1,
-        });
+        // render article
         await ctx.bean.cms.render._renderArticlePush({ key, inner: false });
       }
     }
