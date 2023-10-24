@@ -17,6 +17,7 @@ module.exports = app => {
         ebParams: {
           // textarea: true,
         },
+        default: '',
         notEmpty: true,
       },
     },
