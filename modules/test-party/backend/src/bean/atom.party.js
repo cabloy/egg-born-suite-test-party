@@ -67,14 +67,7 @@ module.exports = ctx => {
 
     async checkRightAction({ atom, atomClass, action, options, user }) {
       // super
-      const res = await super.checkRightAction({ atom, atomClass, action, options, user });
-      if (!res) return res;
-      if (atom.atomStage !== 1) return res;
-      if (action !== 101) return res;
-      // partyOver
-      const item = await this.model.get({ id: atom.itemId });
-      if (action === 101 && item.partyOver === 0) return res;
-      return null;
+      return await super.checkRightAction({ atom, atomClass, action, options, user });
     }
 
     async performAction({ key, atomClass, action, item, options, user }) {
