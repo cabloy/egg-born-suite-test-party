@@ -130,7 +130,6 @@ module.exports = app => {
             toastTextDoneSome: null,
           },
           form: {
-            mode: 'edit', // edit/view
             fieldsRight: {
               mode: 'custom',
               custom: {
