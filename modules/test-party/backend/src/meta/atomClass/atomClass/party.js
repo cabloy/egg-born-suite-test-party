@@ -92,7 +92,7 @@ module.exports = app => {
             },
           },
           actionAfter: {
-            sameAs: 'write',
+            sameAs: 'save',
             commands: null, //
           },
         },
