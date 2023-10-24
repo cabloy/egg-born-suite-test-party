@@ -144,6 +144,9 @@ module.exports = app => {
           actionAfter: {
             sameAs: 'refresh',
           },
+          actionAfterItem: {
+            // sameAs: '',
+          },
         },
       },
     },
