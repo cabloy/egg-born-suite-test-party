@@ -47,6 +47,7 @@ module.exports = app => {
         actionModule: 'a-base',
         actionComponent: 'action',
         icon: { f7: ':outline:check-circle-outline' },
+        enableOnAtomState: '0',
         enableOnOpened: true,
         directShowOnList: true,
         directShowOnItem: true,
