@@ -137,7 +137,7 @@ module.exports = app => {
               mode: 'custom',
               custom: {
                 module: 'test-party',
-                schema: 'partyOverBulk',
+                validator: 'partyOverBulk',
               },
             },
           },
