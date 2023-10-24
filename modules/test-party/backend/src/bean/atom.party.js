@@ -94,8 +94,10 @@ module.exports = ctx => {
             user,
           });
           if (!right) continue;
+          // write
+          await ctx.bean.atom.write({ key, atomClass, item, options: { formAction: actionItem }, user });
           // over
-          await this.performAction({ key, atomClass, action: actionItem, item, options, user });
+          await this.performAction({ key, atomClass, action: actionItem, item: null, options, user });
           // ok
           resKeys.push(key);
         }
