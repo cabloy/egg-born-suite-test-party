@@ -40,6 +40,9 @@ module.exports = app => {
       },
     },
     actions: {
+      write: {
+        enableOnAtomState: [null, 0],
+      },
       partyOver: {
         code: 101,
         title: 'PartyOver',
