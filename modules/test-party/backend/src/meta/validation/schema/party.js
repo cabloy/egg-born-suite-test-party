@@ -82,17 +82,13 @@ module.exports = app => {
         },
       },
       partyOver: {
+        ebCopy: false,
         ebType: 'toggle',
         ebTitle: 'PartyOver',
         ebComputed: {
           expression: 'atomState==="1"',
           dependencies: ['atomState'],
           immediate: true,
-        },
-        ebDisplay: {
-          host: {
-            stage: 'formal',
-          },
         },
         ebReadOnly: true,
       },
@@ -101,13 +97,23 @@ module.exports = app => {
         ebCopy: false,
         ebType: 'text',
         ebTitle: 'PartySummary',
-        ebDisplay: {
-          host: {
-            stage: 'formal',
-          },
-        },
         ebParams: {
           textarea: true,
+        },
+        ebReadOnly: true,
+      },
+      partyOverPerson: {
+        ebCopy: false,
+        ebType: 'userName',
+        ebTitle: 'Operator',
+        ebReadOnly: true,
+      },
+      partyOverTime: {
+        ebCopy: false,
+        ebType: 'text',
+        ebTitle: 'OperationTime',
+        ebParams: {
+          dateFormat: true,
         },
         ebReadOnly: true,
       },

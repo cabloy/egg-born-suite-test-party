@@ -12,6 +12,7 @@ module.exports = app => {
       cms: true,
       history: true,
       fields: {
+        userIds: 'partyOverPerson',
         dicts: {
           partyTypeCode: {
             dictKey: 'test-party:dictPartyType',
