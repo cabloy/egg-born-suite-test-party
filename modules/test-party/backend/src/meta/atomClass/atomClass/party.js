@@ -129,6 +129,16 @@ module.exports = app => {
             toastTextDoneAll: null,
             toastTextDoneSome: null,
           },
+          form: {
+            mode: 'edit', // edit/view
+            fieldsRight: {
+              mode: 'custom',
+              custom: {
+                module: 'test-party',
+                schema: 'partyOverBulk',
+              },
+            },
+          },
           actionAfter: {
             sameAs: 'create',
           },
