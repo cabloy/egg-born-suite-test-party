@@ -45,6 +45,37 @@ module.exports = app => {
         // enableOnAtomState: [null, 0],
         enableOnAtomStateReverse: '1',
       },
+      viewHistory: {
+        params: {
+          form: {
+            mode: 'view',
+            fieldsRight: {
+              mode: 'allowSpecificFields',
+              basic: { read: false, write: false },
+              fields: [
+                { name: '__groupPartyOverInfo', read: true, write: false },
+                // { name: 'partyOver', read: true, write: false },
+                { name: 'partySummary', read: true, write: false },
+                { name: '__groupPartyExpenseInfo', read: true, write: false },
+                { name: 'partyExpenseCount', read: true, write: false },
+                { name: 'partyExpenseAmount', read: true, write: false },
+                { name: '__groupPartyExpenseDetailsInfo', read: true, write: false },
+                { name: 'partyExpenseDetails', read: true, write: false },
+              ],
+              details: {
+                'test-party:partyExpense': {
+                  mode: 'allowSpecificFields',
+                  basic: { read: false, write: false },
+                  fields: [
+                    { name: 'name', read: true, write: false },
+                    { name: 'amount', read: true, write: false },
+                  ],
+                },
+              },
+            },
+          },
+        },
+      },
       partyOver: {
         code: 101,
         title: 'PartyOver',
