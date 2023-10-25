@@ -42,7 +42,8 @@ module.exports = app => {
     },
     actions: {
       write: {
-        enableOnAtomState: [null, 0],
+        // enableOnAtomState: [null, 0],
+        enableOnAtomStateReverse: '1',
       },
       partyOver: {
         code: 101,
