@@ -16,7 +16,6 @@ module.exports = app => {
         dicts: {
           partyTypeCode: {
             dictKey: 'test-party:dictPartyType',
-            // separator: '/',
           },
           partyCountry: {
             dictKey: 'a-dictarea:countries',
