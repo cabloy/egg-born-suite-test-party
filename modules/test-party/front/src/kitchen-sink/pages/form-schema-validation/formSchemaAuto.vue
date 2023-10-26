@@ -14,6 +14,8 @@
       :data="item"
       :params="validateParams"
       :onPerform="onPerformValidate"
+      :onFlush="onFlushValidate"
+      :onReset="onResetValidate"
       @submit="onFormSubmit"
       @validateItem:change="onValidateItemChange"
     ></eb-validate>
@@ -59,6 +61,12 @@ export default {
     onPerformReset() {
       return this.$refs.validate.reset();
     },
+    onFlushValidate(){
+      this.page_setDirty(false);
+    },
+    onResetValidate(){
+      this.page_setDirty(false);
+    },
     onValidateItemChange() {
       this.page_setDirty(true);
     },
@@ -66,7 +74,6 @@ export default {
       await this.$api.post('kitchen-sink/form-schema-validation/saveValidation', {
         data: this.item,
       });
-      this.page_setDirty(false);
       return true; // toast on success
     },
     onPerformUpload() {
