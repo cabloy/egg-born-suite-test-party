@@ -81,25 +81,21 @@ module.exports = ctx => {
       await super.performActionBulk({ keys, atomClass, action, item, options, user });
       // partyOverBulk
       if (action === 'partyOverBulk') {
-        const resKeys = [];
-        for (const key of keys) {
-          const actionItem = 'partyOver';
-          // check right action
-          const right = await ctx.bean.atom.checkRightAction({
-            atom: { id: key.atomId },
-            atomClass,
-            action: actionItem,
-            user,
-          });
-          if (!right) continue;
-          // write
-          await ctx.bean.atom.write({ key, atomClass, item, options: { formAction: actionItem }, user });
-          // over
-          await this.performAction({ key, atomClass, action: actionItem, item: null, options, user });
-          // ok
-          resKeys.push(key);
-        }
-        return { keys: resKeys };
+        const actionItem = 'partyOver';
+        return await super.performActionBulk_policyLoop({
+          keys,
+          atomClass,
+          action,
+          item,
+          options,
+          user,
+          actionItem,
+          fnBefore: async ({ key }) => {
+            // write
+            await ctx.bean.atom.write({ key, atomClass, item, options: { formAction: actionItem }, user });
+          },
+          fnAfter: null,
+        });
       }
     }
 
