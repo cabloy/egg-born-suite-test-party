@@ -22,7 +22,8 @@ module.exports = app => {
             dictKey: 'a-dictarea:countries',
           },
           partyCity: {
-            translate: false,
+            dictKeyFrom: 'partyCountry',
+            separator: '/',
           },
         },
       },

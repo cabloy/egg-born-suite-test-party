@@ -43,7 +43,7 @@ module.exports = ctx => {
       await super.select({ atomClass, options, items, user });
       // select
       for (const item of items) {
-        await this._translate(item);
+        // await this._translate(item);
         await this._getMeta(item, options);
       }
     }
