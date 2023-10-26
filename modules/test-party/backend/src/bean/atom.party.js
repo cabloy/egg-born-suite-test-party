@@ -110,7 +110,7 @@ module.exports = ctx => {
       if (partyCountry !== '1' && partyCountry !== '86') return null;
       // findItem
       return await ctx.bean.dict.findItem({
-        dictKey: 'a-dictbooster:countries',
+        dictKey: 'a-dictarea:countries',
         code: partyCountry,
       });
     }
@@ -119,7 +119,7 @@ module.exports = ctx => {
       if (partyCountry !== '1' && partyCountry !== '86') return null;
       if (!partyCity) return null;
       // findItem
-      const dictKey = partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina';
+      const dictKey = partyCountry === '1' ? 'a-dictarea:citiesUSA' : 'a-dictarea:citiesChina';
       return await ctx.bean.dict.findItem({
         dictKey,
         code: partyCity,

@@ -28,7 +28,7 @@ export default {
     const propertyNew = this.$meta.util.extend({}, property, {
       ebType: 'dict',
       ebParams: {
-        dictKey: partyCountry === '1' ? 'a-dictbooster:citiesUSA' : 'a-dictbooster:citiesChina',
+        dictKey: partyCountry === '1' ? 'a-dictarea:citiesUSA' : 'a-dictarea:citiesChina',
         mode: 'tree',
       },
       ebRender: null,

@@ -52,7 +52,7 @@ module.exports = app => {
         ebType: 'dict',
         ebTitle: 'Party Country',
         ebParams: {
-          dictKey: 'a-dictbooster:countries',
+          dictKey: 'a-dictarea:countries',
           mode: 'select',
         },
         ebOptionsBlankAuto: true,
@@ -211,7 +211,7 @@ module.exports = app => {
         ebType: 'dict',
         ebTitle: 'Party Country',
         ebParams: {
-          dictKey: 'a-dictbooster:countries',
+          dictKey: 'a-dictarea:countries',
           mode: 'select',
         },
         ebOptionsBlankAuto: true,

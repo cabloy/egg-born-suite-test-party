@@ -19,7 +19,7 @@ module.exports = app => {
             // separator: '/',
           },
           partyCountry: {
-            dictKey: 'a-dictbooster:countries',
+            dictKey: 'a-dictarea:countries',
           },
           partyCity: {
             translate: false,
