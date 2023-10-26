@@ -59,13 +59,11 @@ module.exports = app => {
       },
       partyCity: {
         type: 'string',
-        ebType: 'component',
+        ebType: 'dict',
         ebTitle: 'Party City',
-        ebRender: {
-          module: moduleInfo.relativeName,
-          name: 'renderPartyCity',
-        },
         ebParams: {
+          dictKeyFrom: 'partyCountry',
+          mode: 'tree',
           separator: '/',
           leafOnly: true,
         },
@@ -218,13 +216,11 @@ module.exports = app => {
       },
       partyCity: {
         type: 'string',
-        ebType: 'component',
+        ebType: 'dict',
         ebTitle: 'Party City',
-        ebRender: {
-          module: moduleInfo.relativeName,
-          name: 'renderPartyCity',
-        },
         ebParams: {
+          dictKeyFrom: 'partyCountry',
+          mode: 'tree',
           separator: '/',
           leafOnly: false,
         },
