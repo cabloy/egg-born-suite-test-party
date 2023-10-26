@@ -2,7 +2,8 @@
   <eb-page>
     <eb-navbar large largeTransparent :title="page_title" eb-back-link="Back">
       <f7-nav-right>
-        <eb-link ref="buttonSubmit" iconF7="::save" :onPerform="onPerformSave"></eb-link>
+        <eb-link ref="buttonReset" iconF7="::reset" :tooltip="$text('Reset')" :onPerform="onPerformReset"></eb-link>
+        <eb-link ref="buttonSubmit" iconF7="::save" :tooltip="$text('Save')" :onPerform="onPerformSave"></eb-link>
       </f7-nav-right>
     </eb-navbar>
     <f7-block-title>Form</f7-block-title>
@@ -54,6 +55,9 @@ export default {
     },
     onPerformSave() {
       return this.$refs.validate.perform();
+    },
+    onPerformReset() {
+      return this.$refs.validate.reset();
     },
     onValidateItemChange() {
       this.page_setDirty(true);
