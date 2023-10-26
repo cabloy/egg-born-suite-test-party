@@ -32,7 +32,6 @@ module.exports = ctx => {
       const item = await super.read({ atomClass, options, key, user });
       if (!item) return null;
       // read
-      await this._translate(item);
       await this._getMeta(item, options);
       // ok
       return item;
@@ -43,7 +42,6 @@ module.exports = ctx => {
       await super.select({ atomClass, options, items, user });
       // select
       for (const item of items) {
-        // await this._translate(item);
         await this._getMeta(item, options);
       }
     }
@@ -105,39 +103,6 @@ module.exports = ctx => {
       }
     }
 
-    async _translateDictPartyCountry({ partyCountry }) {
-      // dictKey
-      if (partyCountry !== '1' && partyCountry !== '86') return null;
-      // findItem
-      return await ctx.bean.dict.findItem({
-        dictKey: 'a-dictarea:countries',
-        code: partyCountry,
-      });
-    }
-
-    async _translateDictPartyCity({ partyCountry, partyCity }) {
-      if (partyCountry !== '1' && partyCountry !== '86') return null;
-      if (!partyCity) return null;
-      // findItem
-      const dictKey = partyCountry === '1' ? 'a-dictarea:citiesUSA' : 'a-dictarea:citiesChina';
-      return await ctx.bean.dict.findItem({
-        dictKey,
-        code: partyCity,
-        options: { separator: '/' },
-      });
-    }
-
-    async _translate(item) {
-      const dictItem = await this._translateDictPartyCity({
-        partyCountry: item.partyCountry,
-        partyCity: item.partyCity,
-      });
-      if (dictItem) {
-        item._partyCityTitle = dictItem.titleFull;
-        item._partyCityTitleLocale = dictItem.titleLocaleFull;
-      }
-    }
-
     async _getMeta(item, options) {
       // layout: list/table/mobile/pc
       const layout = options && options.layout;
@@ -149,12 +114,8 @@ module.exports = ctx => {
       }
       // meta.summary
       if (item.partyTypeCode) {
-        const dictItem = await ctx.bean.dict.findItem({
-          dictKey: 'test-party:dictPartyType',
-          code: item.partyTypeCode,
-        });
         if (layout !== 'table') {
-          meta.summary = `${dictItem.options.emoji}${dictItem.titleLocaleFull}`;
+          meta.summary = `${item._partyTypeCodeOptions.emoji}${item._partyTypeCodeTitleLocale}`;
         }
       }
     }
