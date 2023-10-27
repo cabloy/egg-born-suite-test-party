@@ -14,6 +14,11 @@ module.exports = app => {
       fields: {
         userIds: 'partyOverPerson',
         dicts: {
+          atomState: {
+            formal: {
+              dictKey: 'test-party:dictPartyStatus',
+            },
+          },
           partyTypeCode: {
             dictKey: 'test-party:dictPartyType',
           },
@@ -23,13 +28,6 @@ module.exports = app => {
           partyCity: {
             dictKeyFrom: 'partyCountry',
             separator: '/',
-          },
-        },
-      },
-      dict: {
-        states: {
-          formal: {
-            dictKey: 'test-party:dictPartyStatus',
           },
         },
       },
