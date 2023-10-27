@@ -126,6 +126,10 @@ module.exports = app => {
         stage: 'formal',
         params: {
           transaction: true, // default is true
+          performAction: {
+            policy: 'loop',
+            actionItem: 'partyOver',
+          },
           dialog: {
             confirm: true, // default is true
             confirmText: null,

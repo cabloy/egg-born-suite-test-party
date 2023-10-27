@@ -78,25 +78,20 @@ module.exports = ctx => {
 
     async performActionBulk({ keys, atomClass, action, item, options, user }) {
       // super
-      await super.performActionBulk({ keys, atomClass, action, item, options, user });
-      // partyOverBulk
-      if (action === 'partyOverBulk') {
-        const actionItem = 'partyOver';
-        return await super.performActionBulk_policyLoop({
-          keys,
-          atomClass,
-          action,
-          item,
-          options,
-          user,
-          actionItem,
-          fnBefore: async ({ key }) => {
+      return await super.performActionBulk({
+        keys,
+        atomClass,
+        action,
+        item,
+        options,
+        user,
+        fnBefore: async ({ key, actionItem }) => {
+          if (actionItem === 'partyOver') {
             // write
             await ctx.bean.atom.write({ key, atomClass, item, options: { formAction: actionItem }, user });
-          },
-          fnAfter: null,
-        });
-      }
+          }
+        },
+      });
     }
 
     async _getMeta(item, options) {
