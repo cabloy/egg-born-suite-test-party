@@ -12,7 +12,9 @@ module.exports = app => {
       cms: true,
       history: true,
       fields: {
-        userIds: 'partyOverPerson',
+        mappings: {
+          userIds: 'partyOverPerson',
+        },
         dicts: {
           atomState: {
             formal: {
