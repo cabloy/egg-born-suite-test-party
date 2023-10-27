@@ -2,7 +2,13 @@
   <eb-page>
     <eb-navbar large largeTransparent :title="page_title" eb-back-link="Back">
       <f7-nav-right>
-        <eb-link ref="buttonReset" iconF7="::reset" :tooltip="$text('Reset')" :onPerform="onPerformReset"></eb-link>
+        <eb-link
+          v-if="page_getDirty()"
+          ref="buttonReset"
+          iconF7="::reset"
+          :tooltip="$text('Reset')"
+          :onPerform="onPerformReset"
+        ></eb-link>
         <eb-link ref="buttonSubmit" iconF7="::save" :tooltip="$text('Save')" :onPerform="onPerformSave"></eb-link>
       </f7-nav-right>
     </eb-navbar>
@@ -18,6 +24,7 @@
       :onReset="onResetValidate"
       @submit="onFormSubmit"
       @validateItem:change="onValidateItemChange"
+      @dirty:change="onDirtyChangeValidate"
     ></eb-validate>
     <f7-block-title>Form Value</f7-block-title>
     <pre class="form-data">{{ form2 }}</pre>
@@ -61,14 +68,17 @@ export default {
     onPerformReset() {
       return this.$refs.validate.reset();
     },
-    onFlushValidate(){
-      this.page_setDirty(false);
+    onFlushValidate() {
+      // this.page_setDirty(false);
     },
-    onResetValidate(){
-      this.page_setDirty(false);
+    onResetValidate() {
+      // this.page_setDirty(false);
     },
     onValidateItemChange() {
-      this.page_setDirty(true);
+      // this.page_setDirty(true);
+    },
+    onDirtyChangeValidate(isDirty) {
+      this.page_setDirty(isDirty);
     },
     async onPerformValidate() {
       await this.$api.post('kitchen-sink/form-schema-validation/saveValidation', {
