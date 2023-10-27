@@ -8,13 +8,17 @@ module.exports = app => {
       itemOnly: true,
       detail: {
         inline: true,
-        atomIdMain: 'atomIdMain',
         atomClassMain: {
           module: 'test-party',
           atomClassName: 'party',
         },
       },
       enableRight: false,
+      fields: {
+        mappings: {
+          atomIdMain: 'atomIdMain',
+        },
+      },
       layout: {
         config: {
           atomList: 'layoutAtomListPartyExpense',
