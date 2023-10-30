@@ -9,17 +9,6 @@ module.exports = ctx => {
       return ctx.model.module(moduleInfo.relativeName).partyExpense;
     }
 
-    async create({ atomClass, item, options, user }) {
-      // super
-      let data = await super.create({ atomClass, item, options, user });
-      // add partyExpense
-      data = await this.model.prepareData(data);
-      const res = await this.model.insert(data);
-      // return key
-      const itemId = res.insertId;
-      return { atomId: itemId, itemId };
-    }
-
     async read({ atomClass, options, key, user }) {
       // super
       const item = await super.read({ atomClass, options, key, user });
@@ -39,12 +28,24 @@ module.exports = ctx => {
       }
     }
 
+    async create({ atomClass, item, options, user }) {
+      // super
+      const data = await super.create({ atomClass, item, options, user });
+      // add partyExpense
+      data.itemId = await this.model.create(data);
+      // data
+      return data;
+    }
+
     async write({ atomClass, target, key, item, options, user }) {
       // super
-      await super.write({ atomClass, target, key, item, options, user });
+      const data = await super.write({ atomClass, target, key, item, options, user });
       // update partyExpense
-      const data = await this.model.prepareData(item);
-      await this.model.update(data);
+      if (key.atomId !== 0) {
+        await this.model.write(data);
+      }
+      // data
+      return data;
     }
 
     async delete({ atomClass, key, options, user }) {
