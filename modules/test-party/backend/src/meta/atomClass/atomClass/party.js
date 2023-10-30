@@ -41,6 +41,9 @@ module.exports = app => {
       },
     },
     actions: {
+      create: {
+        createDelay: true,
+      },
       write: {
         // enableOnAtomState: [null, 0],
         enableOnAtomStateReverse: '1',

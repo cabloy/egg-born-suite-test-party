@@ -9,24 +9,6 @@ module.exports = ctx => {
       return ctx.model.module(moduleInfo.relativeName).party;
     }
 
-    async create({ atomClass, item, options, user }) {
-      // super
-      const key = await super.create({ atomClass, item, options, user });
-      // atomState
-      if (item.atomStage === 1) {
-        await ctx.bean.atom.atomState({
-          key: { atomId: key.atomId },
-          atom: { atomState: 0 }, // ongoing
-        });
-      }
-      // add party
-      const data = {
-        atomId: key.atomId,
-      };
-      const res = await this.model.insert(data);
-      return { atomId: key.atomId, itemId: res.insertId };
-    }
-
     async read({ atomClass, options, key, user }) {
       // super
       const item = await super.read({ atomClass, options, key, user });
@@ -46,12 +28,31 @@ module.exports = ctx => {
       }
     }
 
+    async create({ atomClass, item, options, user }) {
+      // super
+      const data = await super.create({ atomClass, item, options, user });
+      // atomState
+      if (item.atomStage === 1) {
+        await ctx.bean.atom.atomState({
+          key: { atomId: data.atomId },
+          atom: { atomState: 0 }, // ongoing
+        });
+      }
+      // add party
+      data.itemId = await this.model.create(data);
+      // data
+      return data;
+    }
+
     async write({ atomClass, target, key, item, options, user }) {
       // super
-      await super.write({ atomClass, target, key, item, options, user });
+      const data = await super.write({ atomClass, target, key, item, options, user });
       // update party
-      const data = await this.model.prepareData(item);
-      await this.model.update(data);
+      if (key.atomId !== 0) {
+        await this.model.write(data);
+      }
+      // data
+      return data;
     }
 
     async delete({ atomClass, key, options, user }) {
