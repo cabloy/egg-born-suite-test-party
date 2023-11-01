@@ -9,6 +9,13 @@ module.exports = ctx => {
       return ctx.model.module(moduleInfo.relativeName).party;
     }
 
+    async default({ atomClass, item, options, user }) {
+      // party default
+      const data = await this.model.default();
+      // super
+      return await super.default({ atomClass, data, item, options, user });
+    }
+
     async read({ atomClass, options, key, user }) {
       // super
       const item = await super.read({ atomClass, options, key, user });
