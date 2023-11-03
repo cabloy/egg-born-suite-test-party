@@ -1,4 +1,3 @@
-const atomPartyExpense = require('./bean/atom.partyExpense.js');
 const versionManager = require('./bean/version.manager.js');
 const cliDefaultDemo = require('./bean/cli.default.demo.js');
 const testApp = require('./bean/test.app.js');
@@ -17,6 +16,7 @@ const startupStartupInstance = require('./bean/startup.startupInstance.js');
 const middlewareTestInterception = require('./bean/middleware.interception.js');
 const middlewareTestRestructuring = require('./bean/middleware.restructuring.js');
 const atomParty = require('./bean/atom.party.js');
+const atomPartyExpense = require('./bean/atom.partyExpense.js');
 const ioMessageTest = require('./bean/io.message.test.js');
 const ioMessageSimpleChat = require('./bean/io.message.simpleChat.js');
 const sequenceTest = require('./bean/sequence.test.js');
@@ -26,11 +26,6 @@ const summerCacheTest = require('./bean/summer.cache.test.js');
 
 module.exports = app => {
   const beans = {
-    // atom
-    'atom.partyExpense': {
-      mode: 'ctx',
-      bean: atomPartyExpense,
-    },
     // version
     'version.manager': {
       mode: 'app',
@@ -115,6 +110,10 @@ module.exports = app => {
     'atom.party': {
       mode: 'ctx',
       bean: atomParty,
+    },
+    'atom.partyExpense': {
+      mode: 'ctx',
+      bean: atomPartyExpense,
     },
     // io
     'io.message.test': {
