@@ -1,6 +1,6 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
-describe('test/controller/test/ctx/transaction.test.js', () => {
+describe.only('test/controller/test/ctx/transaction.test.js', () => {
   it('action:transaction:fail', async () => {
     app.mockSession({});
 
