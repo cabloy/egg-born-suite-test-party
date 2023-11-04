@@ -9,15 +9,9 @@ module.exports = app => {
       const user = this.ctx.state.user.op;
 
       // add party:star
-      const partyKeyDraft = await this.ctx.bean.atom.create({
+      const partyKeyDraft = await this.ctx.bean.atom.write({
         atomClass,
         options: { preferredRole: true },
-        user,
-      });
-
-      // write party
-      await this.ctx.bean.atom.write({
-        key: partyKeyDraft,
         item: { atomName: 'test:starLabel' },
         user,
       });

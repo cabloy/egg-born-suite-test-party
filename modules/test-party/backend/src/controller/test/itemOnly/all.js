@@ -44,11 +44,7 @@ module.exports = app => {
       );
 
       // add useronline
-      const itemKey = await this.ctx.bean.atom.create({
-        atomClass,
-      });
-      await this.ctx.bean.atom.write({
-        key: itemKey,
+      const itemKey = await this.ctx.bean.atom.write({
         atomClass,
         item: {
           userId: userTom.id,

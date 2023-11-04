@@ -38,13 +38,9 @@ module.exports = app => {
       );
 
       // Tom add party
-      const partyKeyDraft = await this.ctx.bean.atom.create({
+      const partyKeyDraft = await this.ctx.bean.atom.write({
         atomClass,
         options: { preferredRole: true },
-        user: userTom,
-      });
-      await this.ctx.bean.atom.write({
-        key: partyKeyDraft,
         item: { atomName: 'test:all', personCount: 3 },
         user: userTom,
       });
