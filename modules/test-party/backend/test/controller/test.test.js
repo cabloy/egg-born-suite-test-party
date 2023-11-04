@@ -22,9 +22,13 @@ describe('action: atom: party', () => {
     // create
     let result = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .send({
         atomClass: { module: atomClassModule, atomClassName },
+        item: {
+          atomName: 'party demo',
+          personCount: 3,
+        },
       });
     assert(result.body.code === 0);
     const keyDraft = result.body.data;
@@ -32,13 +36,10 @@ describe('action: atom: party', () => {
     // submit
     result = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/writeSubmit'))
+      .post(mockUrl('/a/base/atom/submit'))
       .send({
         key: keyDraft,
-        item: {
-          atomName: 'party demo',
-          personCount: 3,
-        },
+        atomClass: { module: atomClassModule, atomClassName },
       });
     assert(result.body.code === 0);
     const keyFormal = result.body.data.formal.key;

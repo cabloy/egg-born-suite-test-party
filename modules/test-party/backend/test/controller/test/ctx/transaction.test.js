@@ -18,7 +18,7 @@ describe('test/controller/test/ctx/transaction.test.js', () => {
     // create
     let res = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .send({
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
@@ -67,7 +67,7 @@ describe('test/controller/test/ctx/transaction.test.js', () => {
     // create
     let res = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .send({
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });

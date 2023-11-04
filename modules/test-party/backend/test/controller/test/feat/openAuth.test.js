@@ -92,7 +92,7 @@ describe('test/controller/test/feat/openAuth.test.js', () => {
     // create
     result = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .set('Authorization', `Bearer ${accessToken}`)
       .send({
         atomClass: __atomClassParty,

@@ -52,7 +52,7 @@ describe('test/controller/test/atom/right.test.js', () => {
     // create
     let res = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .send({
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
       });
@@ -122,7 +122,7 @@ describe('test/controller/test/atom/right.test.js', () => {
           password: '123456',
         },
       });
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/writeSubmit')).send({
+    res = await app.httpRequest().post(mockUrl('/a/base/atom/submit')).send({
       key: partyKeyDraft,
     });
     assert.equal(res.body.code, 0);

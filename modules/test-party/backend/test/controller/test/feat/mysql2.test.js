@@ -22,7 +22,7 @@ describe('test/controller/test/feat/mysql2.test.js', () => {
     // create
     let result = await app
       .httpRequest()
-      .post(mockUrl('/a/base/atom/create'))
+      .post(mockUrl('/a/base/atom/write'))
       .send({
         atomClass: { module: atomClassModule, atomClassName },
       });
