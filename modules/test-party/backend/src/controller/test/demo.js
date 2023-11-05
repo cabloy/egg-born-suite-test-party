@@ -1,3 +1,16 @@
+const path = require('path');
+const fse = require('fs-extra');
+
+const __JSContent = `module.exports = ctx => {
+  class Demo {
+    async execute() {
+      return 'hello world';
+    }
+  }
+  return Demo;
+};
+`;
+
 module.exports = app => {
   class DemoController extends app.Controller {
     async demo() {
@@ -8,7 +21,14 @@ module.exports = app => {
       this.ctx.success(result);
     }
 
-    async _prepareJSFile() {}
+    async _prepareJSFile() {
+      const jsFile = path.join(app.baseDir, 'demo.js');
+      const exists = await fse.exists(jsFile);
+      if (!exists) {
+        await fse.outputFile(jsFile, __JSContent);
+      }
+      return jsFile;
+    }
   }
 
   return DemoController;
