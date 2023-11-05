@@ -2,15 +2,6 @@ module.exports = (/* app */) => {
   let routes = [];
   routes = routes.concat([
     // test/atom/starLabel
-    {
-      method: 'get',
-      path: 'demo',
-      controller: 'testDemo',
-      meta: {
-        gate: { env: 'local' },
-      },
-    },
-    // test/atom/starLabel
     { method: 'post', path: 'test/atom/starLabel', controller: 'testAtomStarLabel', middlewares: 'test' },
     // test/atom/all
     {
