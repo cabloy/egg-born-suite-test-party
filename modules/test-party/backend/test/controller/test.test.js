@@ -34,6 +34,7 @@ describe('action: atom: party', () => {
         },
       },
     });
+    assert(!!keyDraft);
 
     // submit
     let result = await ctx.meta.util.performAction({
