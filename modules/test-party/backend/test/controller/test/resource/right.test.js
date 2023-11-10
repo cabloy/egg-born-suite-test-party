@@ -11,17 +11,7 @@ describe('test/controller/test/function/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightResources) {
       // login
-      await ctx.meta.util.performAction({
-        innerAccess: false,
-        method: 'post',
-        url: '/a/auth/passport/a-authsimple/authsimple',
-        body: {
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        },
-      });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightResourceUser
       let data;
       try {

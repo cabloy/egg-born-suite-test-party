@@ -17,17 +17,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightCreates) {
       // login
-      await ctx.meta.util.performAction({
-        innerAccess: false,
-        method: 'post',
-        url: '/a/auth/passport/a-authsimple/authsimple',
-        body: {
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        },
-      });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightCreate
       let data;
       try {
@@ -55,17 +45,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
     const ctx = await app.mockCtx();
 
     // login
-    await ctx.meta.util.performAction({
-      innerAccess: false,
-      method: 'post',
-      url: '/a/auth/passport/a-authsimple/authsimple',
-      body: {
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      },
-    });
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
 
     // create
     const itemKey = await ctx.meta.util.performAction({
@@ -84,17 +64,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightReads) {
       // login
-      await ctx.meta.util.performAction({
-        innerAccess: false,
-        method: 'post',
-        url: '/a/auth/passport/a-authsimple/authsimple',
-        body: {
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        },
-      });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightRead
       let data;
       try {
@@ -124,17 +94,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightWrites) {
       // login
-      await ctx.meta.util.performAction({
-        innerAccess: false,
-        method: 'post',
-        url: '/a/auth/passport/a-authsimple/authsimple',
-        body: {
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        },
-      });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightWrite
       let data;
       try {
@@ -158,17 +118,7 @@ describe.only('test/controller/test/itemOnly/right.test.js', () => {
     }
 
     // delete
-    await ctx.meta.util.performAction({
-      innerAccess: false,
-      method: 'post',
-      url: '/a/auth/passport/a-authsimple/authsimple',
-      body: {
-        data: {
-          auth: 'root',
-          password: '123456',
-        },
-      },
-    });
+    await ctx.meta.mockUtil.login({ auth: 'root' });
     await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'post',
