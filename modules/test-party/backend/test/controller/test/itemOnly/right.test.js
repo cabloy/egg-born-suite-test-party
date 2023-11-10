@@ -6,9 +6,10 @@ const atomClass = {
   atomClassName: 'userOnlineHistory',
 };
 
-describe('test/controller/test/itemOnly/right.test.js', () => {
+describe.only('test/controller/test/itemOnly/right.test.js', () => {
   it('action:checkRightCreate', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     const checkRightCreates = [
       ['Tom', false],
@@ -16,46 +17,65 @@ describe('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightCreates) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: '/a/auth/passport/a-authsimple/authsimple',
+        body: {
           data: {
             auth: userName,
             password: '123456',
           },
-        });
-      // checkRightCreate
-      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightCreate')).send({
-        atomClass,
+        },
       });
-      if (right) {
-        assert.equal(result.body.data.id > 0, true);
-      } else {
-        assert.equal(result.status, 403);
+      // checkRightCreate
+      let data;
+      try {
+        data = await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/itemOnly/checkRightCreate', false),
+          body: {
+            atomClass,
+          },
+        });
+      } catch (err) {
+        assert.equal(right, false);
+        assert.equal(err.code, 403);
+      }
+      if (data) {
+        assert.equal(right, true);
+        assert.equal(data.id > 0, true);
       }
     }
   });
 
   it('action:checkRight', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // login
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/auth/passport/a-authsimple/authsimple',
+      body: {
         data: {
           auth: 'Tom',
           password: '123456',
         },
-      });
+      },
+    });
 
     // create
-    let res = await app.httpRequest().post(mockUrl('test/itemOnly/createRaw')).send({
-      atomClass,
+    const itemKey = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/itemOnly/createRaw', false),
+      body: {
+        atomClass,
+      },
     });
-    const itemKey = res.body.data;
 
     // check right read
     const checkRightReads = [
@@ -64,24 +84,36 @@ describe('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightReads) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: '/a/auth/passport/a-authsimple/authsimple',
+        body: {
           data: {
             auth: userName,
             password: '123456',
           },
-        });
-      // checkRightRead
-      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightRead')).send({
-        key: itemKey,
-        atomClass,
+        },
       });
-      if (right) {
-        assert.equal(result.body.data.atomId, itemKey.atomId);
-      } else {
-        assert.equal(result.status, 403);
+      // checkRightRead
+      let data;
+      try {
+        data = await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/itemOnly/checkRightRead', false),
+          body: {
+            key: itemKey,
+            atomClass,
+          },
+        });
+      } catch (err) {
+        assert.equal(right, false);
+        assert.equal(err.code, 403);
+      }
+      if (data) {
+        assert.equal(right, true);
+        assert.equal(data.atomId, itemKey.atomId);
       }
     }
 
@@ -92,41 +124,59 @@ describe('test/controller/test/itemOnly/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightWrites) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: '/a/auth/passport/a-authsimple/authsimple',
+        body: {
           data: {
             auth: userName,
             password: '123456',
           },
-        });
-      // checkRightWrite
-      const result = await app.httpRequest().post(mockUrl('test/itemOnly/checkRightWrite')).send({
-        key: itemKey,
-        atomClass,
+        },
       });
-      if (right) {
-        assert.equal(result.body.data.atomId, itemKey.atomId);
-      } else {
-        assert.equal(result.status, 403);
+      // checkRightWrite
+      let data;
+      try {
+        data = await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/itemOnly/checkRightWrite', false),
+          body: {
+            key: itemKey,
+            atomClass,
+          },
+        });
+      } catch (err) {
+        assert.equal(right, false);
+        assert.equal(err.code, 403);
+      }
+      if (data) {
+        assert.equal(right, true);
+        assert.equal(data.atomId, itemKey.atomId);
       }
     }
 
     // delete
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/auth/passport/a-authsimple/authsimple',
+      body: {
         data: {
           auth: 'root',
           password: '123456',
         },
-      });
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: itemKey,
-      atomClass,
+      },
     });
-    assert.equal(res.body.code, 0);
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/atom/delete', false),
+      body: {
+        key: itemKey,
+        atomClass,
+      },
+    });
   });
 });
