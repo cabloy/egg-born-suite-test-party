@@ -2,8 +2,12 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/event/hello.test.js', () => {
   it('action:event:hello', async () => {
-    app.mockSession({});
-    const result = await app.httpRequest().post(mockUrl('test/event/hello'));
-    assert.equal(result.body.code, 0);
+    // ctx
+    const ctx = await app.mockCtx();
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/event/hello', false),
+    });
   });
 });

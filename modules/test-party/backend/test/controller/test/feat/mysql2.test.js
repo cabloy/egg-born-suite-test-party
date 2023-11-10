@@ -2,59 +2,58 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/feat/mysql2.test.js', () => {
   it('action:mysql2', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // atomClass info
     const atomClassModule = mockInfo().relativeName;
     const atomClassName = 'party';
 
     // login as root
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'root',
-          password: '123456',
-        },
-      });
+    await ctx.meta.mockUtil.login({ auth: 'root' });
 
     // create
-    let result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/atom/write'))
-      .send({
+    const keyDraft = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/write',
+      body: {
         atomClass: { module: atomClassModule, atomClassName },
-      });
-    assert(result.body.code === 0);
-    const keyDraft = result.body.data;
+      },
+    });
 
     // query
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/queryOne'))
-      .send({
+    let data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/db/queryOne',
+      body: {
         sql: 'select a.*,b.* from aAtom a, testParty b where a.id=b.atomId and a.id=?',
         params: [keyDraft.atomId],
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.id, keyDraft.itemId);
+      },
+    });
+    assert.equal(data.id, keyDraft.itemId);
 
     // query
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/queryOne'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/db/queryOne',
+      body: {
         sql: 'select b.*,a.* from aAtom a, testParty b where a.id=b.atomId and a.id=?',
         params: [keyDraft.atomId],
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.id, keyDraft.atomId);
+      },
+    });
+    assert.equal(data.id, keyDraft.atomId);
 
     // delete
-    result = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: keyDraft,
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/delete',
+      body: {
+        key: keyDraft,
+      },
     });
-    assert(result.body.code === 0);
   });
 });
