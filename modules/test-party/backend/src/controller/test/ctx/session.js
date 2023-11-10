@@ -4,7 +4,7 @@ module.exports = app => {
   class SessionController extends app.Controller {
     async session() {
       // key1
-      this.ctx.session._key1 = 1;
+      this.ctx.session.test_key1 = 1;
       // echo1
       const res = await this.ctx.meta.util.performAction({
         method: 'post',
@@ -12,7 +12,7 @@ module.exports = app => {
       });
       assert.equal(res.user.op.id, this.ctx.state.user.op.id);
       assert.equal(res.instance.id, this.ctx.instance.id);
-      assert.equal(this.ctx.session._key2, 2);
+      assert.equal(this.ctx.session.test_key2, 2);
       // done
       this.ctx.success();
     }
@@ -29,9 +29,9 @@ module.exports = app => {
 
     async echo2() {
       // check
-      assert.equal(this.ctx.session._key1, 1);
+      assert.equal(this.ctx.session.test_key1, 1);
       // key2
-      this.ctx.session._key2 = 2;
+      this.ctx.session.test_key2 = 2;
       // echo back
       this.ctx.success({
         user: this.ctx.state.user,

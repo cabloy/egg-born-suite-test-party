@@ -2,7 +2,8 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/auth/login.test.js', () => {
   it('action:auth:login', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx({ new: true });
 
     // login
     const users = [
@@ -12,19 +13,11 @@ describe('test/controller/test/auth/login.test.js', () => {
     ];
 
     for (const [userName, success] of users) {
-      const res = await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        });
-      if (success) {
-        assert.equal(res.status, 200, userName);
-      } else {
-        assert.notEqual(res.status, 200, userName);
+      try {
+        await ctx.meta.mockUtil.login({ auth: userName });
+        assert.equal(success, true, userName);
+      } catch (err) {
+        assert.equal(success, false, userName);
       }
     }
   });

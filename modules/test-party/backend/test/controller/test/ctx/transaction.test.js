@@ -1,6 +1,6 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
-describe.only('test/controller/test/ctx/transaction.test.js', () => {
+describe('test/controller/test/ctx/transaction.test.js', () => {
   it('action:transaction:fail', async () => {
     // ctx
     const ctx = await app.mockCtx();
