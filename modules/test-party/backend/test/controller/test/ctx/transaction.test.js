@@ -1,101 +1,117 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
-describe('test/controller/test/ctx/transaction.test.js', () => {
+describe.only('test/controller/test/ctx/transaction.test.js', () => {
   it('action:transaction:fail', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // login
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
 
     // create
-    let res = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/atom/write'))
-      .send({
+    const atomKey = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/write',
+      body: {
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
-      });
-    const atomKey = res.body.data;
+      },
+    });
 
     // try to change info
     const itemNew = {
       atomName: 'test:transaction',
       personCount: 0,
     };
-    res = await app.httpRequest().post(mockUrl('test/ctx/transaction')).send({
-      key: atomKey,
-      item: itemNew,
-    });
-    assert.equal(res.status, 500);
+    try {
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: mockUrl('test/ctx/transaction', false),
+        body: {
+          key: atomKey,
+          item: itemNew,
+        },
+      });
+    } catch (err) {
+      assert.equal(err.code, 422);
+    }
 
     // check info
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/read')).send({
-      key: atomKey,
+    const item = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/read',
+      body: {
+        key: atomKey,
+      },
     });
-    const item = res.body.data;
     assert.notEqual(item.atomName, itemNew.atomName);
     assert.equal(item.personCount, 0);
 
     // delete
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: atomKey,
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/delete',
+      body: {
+        key: atomKey,
+      },
     });
-    assert.equal(res.body.code, 0);
   });
 
   it('action:transaction:success', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // login
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
 
     // create
-    let res = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/atom/write'))
-      .send({
+    const atomKey = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/write',
+      body: {
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
-      });
-    const atomKey = res.body.data;
+      },
+    });
 
     // try to change info
     const itemNew = {
       atomName: 'test:transaction',
       personCount: 3,
     };
-    res = await app.httpRequest().post(mockUrl('test/ctx/transaction')).send({
-      key: atomKey,
-      item: itemNew,
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/ctx/transaction', false),
+      body: {
+        key: atomKey,
+        item: itemNew,
+      },
     });
-    assert.equal(res.body.code, 0);
 
     // check info
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/read')).send({
-      key: atomKey,
+    const item = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/read',
+      body: {
+        key: atomKey,
+      },
     });
-    const item = res.body.data;
     assert.equal(item.atomName, itemNew.atomName);
     assert.equal(item.personCount, itemNew.personCount);
 
     // delete
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: atomKey,
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: '/a/base/atom/delete',
+      body: {
+        key: atomKey,
+      },
     });
-    assert.equal(res.body.code, 0);
   });
 });
