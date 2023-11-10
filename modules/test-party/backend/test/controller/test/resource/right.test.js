@@ -2,7 +2,8 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/function/right.test.js', () => {
   it('action:checkRightResourceUser', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     const checkRightResources = [
       ['Root', true],
@@ -10,22 +11,32 @@ describe('test/controller/test/function/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightResources) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: '/a/auth/passport/a-authsimple/authsimple',
+        body: {
           data: {
             auth: userName,
             password: '123456',
           },
-        });
+        },
+      });
       // checkRightResourceUser
-      const result = await app.httpRequest().post(mockUrl('test/resource/checkRightResourceUser'));
-      if (right) {
-        console.log(result.body.data);
-        assert.equal(result.body.data.atomId > 0, true);
-      } else {
-        assert.equal(result.status, 403);
+      let data;
+      try {
+        data = await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/resource/checkRightResourceUser', false),
+        });
+      } catch (err) {
+        assert.equal(right, false);
+        assert.equal(err.code, 403);
+      }
+      if (data) {
+        assert.equal(right, true);
+        assert.equal(data.atomId > 0, true);
       }
     }
   });

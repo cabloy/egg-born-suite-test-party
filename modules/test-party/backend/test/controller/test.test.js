@@ -12,6 +12,7 @@ describe('action: atom: party', () => {
 
     // login as root
     await ctx.meta.util.performAction({
+      innerAccess: false,
       method: 'post',
       url: '/a/auth/passport/a-authsimple/authsimple',
       body: {
@@ -24,6 +25,7 @@ describe('action: atom: party', () => {
 
     // create
     const keyDraft = await ctx.meta.util.performAction({
+      innerAccess: false,
       method: 'post',
       url: '/a/base/atom/write',
       body: {
@@ -38,6 +40,7 @@ describe('action: atom: party', () => {
 
     // submit
     let result = await ctx.meta.util.performAction({
+      innerAccess: false,
       method: 'post',
       url: '/a/base/atom/submit',
       body: {
@@ -50,6 +53,7 @@ describe('action: atom: party', () => {
 
     // read
     result = await ctx.meta.util.performAction({
+      innerAccess: false,
       method: 'post',
       url: '/a/base/atom/read',
       body: {
@@ -61,6 +65,7 @@ describe('action: atom: party', () => {
 
     // delete
     await ctx.meta.util.performAction({
+      innerAccess: false,
       method: 'post',
       url: '/a/base/atom/delete',
       body: {
