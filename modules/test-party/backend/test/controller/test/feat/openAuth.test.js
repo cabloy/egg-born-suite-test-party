@@ -97,6 +97,7 @@ describe('test/controller/test/feat/openAuth.test.js', () => {
       .send({
         atomClass: __atomClassParty,
       });
+    assert.equal(result.body.code, 0);
     const partyKeyDraft = result.body.data;
     // read
     result = await app

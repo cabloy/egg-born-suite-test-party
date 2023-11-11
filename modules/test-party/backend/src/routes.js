@@ -17,14 +17,18 @@ module.exports = (/* app */) => {
       path: 'test/atom/checkRightCreate',
       controller: 'testAtomRight',
       middlewares: 'test',
-      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'create' } },
+      meta: {
+        right: { type: 'atom', atomClass: 'test-party:party', action: 'create' },
+      },
     },
     {
       method: 'post',
       path: 'test/atom/checkRightRead',
       controller: 'testAtomRight',
       middlewares: 'test',
-      meta: { right: { type: 'atom', atomClass: 'test-party:party', action: 'read' } },
+      meta: {
+        right: { type: 'atom', atomClass: 'test-party:party', action: 'read' },
+      },
     },
     {
       method: 'post',
