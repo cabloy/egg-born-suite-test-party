@@ -14,6 +14,7 @@ describe('test/controller/test/ctx/session.test.js', () => {
 
     // login
     await ctx.meta.mockUtil.login({ auth: 'root' });
+    await ctx.meta.mockUtil.logout();
 
     // test again
     await ctx.meta.util.performAction({
