@@ -2,10 +2,19 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/feat/queue.test.js', () => {
   it('action:queue', async () => {
-    let result = await app.httpRequest().post(mockUrl('test/feat/pushAsync'));
-    assert(result.body.code === 0);
+    // ctx
+    const ctx = await app.mockCtx();
 
-    result = await app.httpRequest().post(mockUrl('test/feat/push'));
-    assert(result.body.code === 0);
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/feat/pushAsync', false),
+    });
+
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/feat/push', false),
+    });
   });
 });
