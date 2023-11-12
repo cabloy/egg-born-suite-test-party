@@ -6,7 +6,7 @@ describe('test/controller/test/feat/modelWhere.test.js', () => {
     const ctx = await app.mockCtx();
     await ctx.meta.util.performAction({
       innerAccess: false,
-      method: 'post',
+      method: 'get',
       url: mockUrl('test/feat/modelWhere', false),
     });
   });
