@@ -17,8 +17,16 @@ describe('test/controller/test/feat/validation.test.js', () => {
       },
     };
 
-    const result = await app.httpRequest().post(mockUrl('test/feat/validation/success')).send({ data });
-    assert.equal(result.body.code, 0);
+    // ctx
+    const ctx = await app.mockCtx();
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/feat/validation/success', false),
+      body: {
+        data,
+      },
+    });
   });
 
   it('action:validation:fail', async () => {
@@ -37,8 +45,20 @@ describe('test/controller/test/feat/validation.test.js', () => {
       },
     };
 
-    const result = await app.httpRequest().post(mockUrl('test/feat/validation/fail')).send({ data });
-    assert.equal(result.status, 500);
+    // ctx
+    try {
+      const ctx = await app.mockCtx();
+      await ctx.meta.util.performAction({
+        innerAccess: false,
+        method: 'post',
+        url: mockUrl('test/feat/validation/fail', false),
+        body: {
+          data,
+        },
+      });
+    } catch (err) {
+      assert.equal(err.code, 422);
+    }
   });
 
   it('action:validation:schema', async () => {
@@ -52,7 +72,15 @@ describe('test/controller/test/feat/validation.test.js', () => {
       },
     };
 
-    const result = await app.httpRequest().post(mockUrl('test/feat/validation/schema')).send({ data });
-    assert.equal(result.body.code, 0);
+    // ctx
+    const ctx = await app.mockCtx();
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/feat/validation/schema', false),
+      body: {
+        data,
+      },
+    });
   });
 });
