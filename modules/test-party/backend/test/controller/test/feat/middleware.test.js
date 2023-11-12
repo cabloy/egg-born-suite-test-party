@@ -1,6 +1,6 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
-describe.only('test/controller/test/feat/middleware.test.js', () => {
+describe('test/controller/test/feat/middleware.test.js', () => {
   it('action:interception', async () => {
     // ctx
     const ctx = await app.mockCtx();
@@ -31,7 +31,7 @@ describe.only('test/controller/test/feat/middleware.test.js', () => {
         });
       },
       async function (err) {
-        assert.equal(err.code, 1002);
+        assert.equal(err.code, 'test-party:1002');
       }
     );
   });
