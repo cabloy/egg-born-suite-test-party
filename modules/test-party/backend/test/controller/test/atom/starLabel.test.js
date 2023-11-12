@@ -2,21 +2,17 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/atom/starLabel.test.js', () => {
   it('action:starLabel', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // login
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
 
     // do
-    const result = await app.httpRequest().post(mockUrl('test/atom/starLabel'));
-    assert.equal(result.body.code, 0);
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('test/atom/starLabel', false),
+    });
   });
 });

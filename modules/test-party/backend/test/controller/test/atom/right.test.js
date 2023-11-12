@@ -2,7 +2,8 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/atom/right.test.js', () => {
   it('action:checkRightCreate', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     const checkRightCreates = [
       ['Tom', true],
@@ -11,52 +12,46 @@ describe('test/controller/test/atom/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightCreates) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightCreate
-      const result = await app
-        .httpRequest()
-        .post(mockUrl('test/atom/checkRightCreate'))
-        .send({
-          atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
-        });
-      if (right) {
-        assert.equal(result.body.data.id > 0, true);
-      } else {
-        assert.equal(result.status, 403);
-      }
+      await ctx.meta.mockUtil.catchError(
+        async function () {
+          return await ctx.meta.util.performAction({
+            innerAccess: false,
+            method: 'post',
+            url: mockUrl('test/atom/checkRightCreate', false),
+            body: {
+              atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
+            },
+          });
+        },
+        async function (err, data) {
+          if (right) {
+            assert.equal(data.id > 0, true);
+          } else {
+            assert.equal(err.code, 403);
+          }
+        }
+      );
     }
   });
 
   it('action:checkRight', async () => {
-    app.mockSession({});
+    // ctx
+    const ctx = await app.mockCtx();
 
     // login
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
 
     // create
-    let res = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/atom/write'))
-      .send({
+    const partyKeyDraft = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/atom/write', false),
+      body: {
         atomClass: { module: mockInfo().relativeName, atomClassName: 'party' },
-      });
-    const partyKeyDraft = res.body.data;
+      },
+    });
 
     // check right read
     const checkRightReads = [
@@ -65,24 +60,27 @@ describe('test/controller/test/atom/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightReads) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightRead
-      const result = await app.httpRequest().post(mockUrl('test/atom/checkRightRead')).send({
-        key: partyKeyDraft,
-      });
-      if (right) {
-        assert.equal(result.body.data.atomId, partyKeyDraft.atomId);
-      } else {
-        assert.equal(result.status, 403);
-      }
+      await ctx.meta.mockUtil.catchError(
+        async function () {
+          return await ctx.meta.util.performAction({
+            innerAccess: false,
+            method: 'post',
+            url: mockUrl('test/atom/checkRightRead', false),
+            body: {
+              key: partyKeyDraft,
+            },
+          });
+        },
+        async function (err, data) {
+          if (right) {
+            assert.equal(data.atomId, partyKeyDraft.atomId);
+          } else {
+            assert.equal(err.code, 403);
+          }
+        }
+      );
     }
 
     // check right write
@@ -92,41 +90,40 @@ describe('test/controller/test/atom/right.test.js', () => {
     ];
     for (const [userName, right] of checkRightWrites) {
       // login
-      await app
-        .httpRequest()
-        .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-        .send({
-          data: {
-            auth: userName,
-            password: '123456',
-          },
-        });
+      await ctx.meta.mockUtil.login({ auth: userName });
       // checkRightWrite
-      const result = await app.httpRequest().post(mockUrl('test/atom/checkRightWrite')).send({
-        key: partyKeyDraft,
-      });
-      if (right) {
-        assert.equal(result.body.data.atomId, partyKeyDraft.atomId);
-      } else {
-        assert.equal(result.status, 403);
-      }
+      await ctx.meta.mockUtil.catchError(
+        async function () {
+          return await ctx.meta.util.performAction({
+            innerAccess: false,
+            method: 'post',
+            url: mockUrl('test/atom/checkRightWrite', false),
+            body: {
+              key: partyKeyDraft,
+            },
+          });
+        },
+        async function (err, data) {
+          if (right) {
+            assert.equal(data.atomId, partyKeyDraft.atomId);
+          } else {
+            assert.equal(err.code, 403);
+          }
+        }
+      );
     }
 
     // submit
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/submit')).send({
-      key: partyKeyDraft,
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
+    const data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/atom/submit', false),
+      body: {
+        key: partyKeyDraft,
+      },
     });
-    assert.equal(res.body.code, 0);
-    const partyKeyFormal = res.body.data.formal.key;
+    const partyKeyFormal = data.formal.key;
 
     // // check right actions
     // const checkRightActions = [
@@ -178,18 +175,14 @@ describe('test/controller/test/atom/right.test.js', () => {
     // }
 
     // delete
-    await app
-      .httpRequest()
-      .post(mockUrl('/a/auth/passport/a-authsimple/authsimple'))
-      .send({
-        data: {
-          auth: 'Tom',
-          password: '123456',
-        },
-      });
-    res = await app.httpRequest().post(mockUrl('/a/base/atom/delete')).send({
-      key: partyKeyFormal,
+    await ctx.meta.mockUtil.login({ auth: 'Tom' });
+    await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/atom/delete', false),
+      body: {
+        key: partyKeyFormal,
+      },
     });
-    assert.equal(res.body.code, 0);
   });
 });

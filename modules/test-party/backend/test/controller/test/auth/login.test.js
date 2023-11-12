@@ -3,7 +3,7 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 describe('test/controller/test/auth/login.test.js', () => {
   it('action:auth:login', async () => {
     // ctx
-    const ctx = await app.mockCtx({ new: true });
+    const ctx = await app.mockCtx();
 
     // login
     const users = [

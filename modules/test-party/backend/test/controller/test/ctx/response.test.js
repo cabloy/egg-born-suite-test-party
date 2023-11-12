@@ -24,7 +24,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
     const result = await app.httpRequest().post(mockUrl('test/ctx/response/fail?locale=zh-cn')).send();
     const body = result.body;
     assert.equal(result.status, 200);
-    assert.equal(body.code, 1001);
+    assert.equal(body.code, 'test-party:1001');
     assert.equal(body.message, '错误测试');
   });
 
