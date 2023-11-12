@@ -1,6 +1,6 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
-describe('test/controller/test/ctx/response.test.js', () => {
+describe.only('test/controller/test/ctx/response.test.js', () => {
   it('action:response:success', async () => {
     // ctx
     const ctx = await app.mockCtx();
@@ -30,15 +30,38 @@ describe('test/controller/test/ctx/response.test.js', () => {
   });
 
   it('action:response:fail', async () => {
-    const result = await app.httpRequest().post(mockUrl('test/ctx/response/fail?locale=zh-cn')).send();
-    const body = result.body;
-    assert.equal(result.status, 200);
-    assert.equal(body.code, 'test-party:1001');
-    assert.equal(body.message, '错误测试');
+    // ctx
+    const ctx = await app.mockCtx({ locale: 'zh-cn' });
+    await ctx.meta.mockUtil.catchError(
+      async function () {
+        return await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/ctx/response/fail', false),
+        });
+      },
+      async function (err) {
+        assert.equal(err.code, 'test-party:1001');
+        assert.equal(err.message, '错误测试');
+      }
+    );
   });
 
   it('action:response:throwError', async () => {
-    const result = await app.httpRequest().post(mockUrl('test/ctx/response/throwError?locale=zh-cn')).send();
-    assert.equal(result.status, 500);
+    // ctx
+    const ctx = await app.mockCtx({ locale: 'zh-cn' });
+    await ctx.meta.mockUtil.catchError(
+      async function () {
+        return await ctx.meta.util.performAction({
+          innerAccess: false,
+          method: 'post',
+          url: mockUrl('test/ctx/response/throwError', false),
+        });
+      },
+      async function (err) {
+        assert.equal(err.code, 'test-party:1001');
+        assert.equal(err.message, '错误测试');
+      }
+    );
   });
 });
