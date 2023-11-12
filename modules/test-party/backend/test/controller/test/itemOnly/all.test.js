@@ -6,7 +6,7 @@ describe('test/controller/test/itemOnly/all.test.js', () => {
     const ctx = await app.mockCtx();
     await ctx.meta.util.performAction({
       innerAccess: false,
-      method: 'post',
+      method: 'get',
       url: mockUrl('test/itemOnly/all', false),
     });
   });
