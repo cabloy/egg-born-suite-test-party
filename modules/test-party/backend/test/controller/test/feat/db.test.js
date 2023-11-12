@@ -2,99 +2,111 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
 describe('test/controller/test/feat/db.test.js', () => {
   it('action:db', async () => {
-    let result;
+    // ctx
+    const ctx = await app.mockCtx();
+
     // iid
-    result = await app.httpRequest().post(mockUrl('/a/base/db/iid'));
-    const iid = result.body.data;
+    const iid = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/iid', false),
+    });
     assert(iid > 0);
     // insert
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/insert'))
-      .send({
+    let data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/insert', false),
+      body: {
         tableName: 'testParty',
         data: {
           iid,
           deleted: 0,
           personCount: 8,
         },
-      });
-    assert.equal(result.body.code, 0);
-    const partyId = result.body.data.insertId;
+      },
+    });
+    const partyId = data.insertId;
     // select
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/select'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/select', false),
+      body: {
         tableName: 'testParty',
         options: {
           where: {
             id: partyId,
           },
         },
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data[0].id, partyId);
-    assert.equal(result.body.data[0].personCount, 8);
+      },
+    });
+    assert.equal(data[0].id, partyId);
+    assert.equal(data[0].personCount, 8);
     // update
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/update'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/update', false),
+      body: {
         tableName: 'testParty',
         data: {
           id: partyId,
           personCount: 9,
         },
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.affectedRows, 1);
+      },
+    });
+    assert.equal(data.affectedRows, 1);
     // get
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/get'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/get', false),
+      body: {
         tableName: 'testParty',
         where: {
           id: partyId,
         },
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.id, partyId);
-    assert.equal(result.body.data.personCount, 9);
+      },
+    });
+    assert.equal(data.id, partyId);
+    assert.equal(data.personCount, 9);
     // count
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/count'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/count', false),
+      body: {
         tableName: 'testParty',
         where: {
           id: partyId,
         },
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data, 1);
+      },
+    });
+    assert.equal(data, 1);
     // delete
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/delete'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/delete', false),
+      body: {
         tableName: 'testParty',
         where: {
           id: partyId,
         },
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.affectedRows, 1);
+      },
+    });
+    assert.equal(data.affectedRows, 1);
     // query
-    result = await app
-      .httpRequest()
-      .post(mockUrl('/a/base/db/query'))
-      .send({
+    data = await ctx.meta.util.performAction({
+      innerAccess: false,
+      method: 'post',
+      url: mockUrl('/a/base/db/query', false),
+      body: {
         sql: 'select * from testParty where iid=? and id=?',
         params: [iid, partyId],
-      });
-    assert.equal(result.body.code, 0);
-    assert.equal(result.body.data.length, 0);
+      },
+    });
+    assert.equal(data.length, 0);
   });
 });
