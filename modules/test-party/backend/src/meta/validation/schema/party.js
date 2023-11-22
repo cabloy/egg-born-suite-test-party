@@ -30,7 +30,6 @@ module.exports = app => {
         ebTitle: 'Party Type',
         ebParams: {
           dictKey: 'test-party:dictPartyType',
-          mode: 'tree',
         },
         notEmpty: true,
       },
@@ -63,7 +62,6 @@ module.exports = app => {
         ebTitle: 'Party City',
         ebParams: {
           dictKeyFrom: 'partyCountry',
-          mode: 'tree',
           separator: '/',
           leafOnly: true,
         },
@@ -183,7 +181,6 @@ module.exports = app => {
         ebParams: {
           className: 'col-100 medium-100 large-100',
           dictKey: 'test-party:dictPartyType',
-          mode: 'tree',
         },
         ebOptionsBlankAuto: true,
       },
@@ -220,7 +217,6 @@ module.exports = app => {
         ebTitle: 'Party City',
         ebParams: {
           dictKeyFrom: 'partyCountry',
-          mode: 'tree',
           separator: '/',
           leafOnly: false,
         },

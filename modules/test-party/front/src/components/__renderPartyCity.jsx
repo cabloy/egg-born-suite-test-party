@@ -29,7 +29,6 @@ export default {
       ebType: 'dict',
       ebParams: {
         dictKey: partyCountry === '1' ? 'a-dictarea:citiesUSA' : 'a-dictarea:citiesChina',
-        mode: 'tree',
       },
       ebRender: null,
     });
