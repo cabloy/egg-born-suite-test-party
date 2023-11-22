@@ -1,11 +1,12 @@
-module.exports = app => {
+module.exports = function SelfFactory(app) {
   class ProgressController extends app.Controller {
     async progress() {
       // create progress
       const progressId = await this.ctx.bean.progress.create();
       // background
-      this.ctx.runInBackground(async () => {
-        await this._progressInBackground({ progressId });
+      this.ctx.meta.util.runInBackground(async ({ ctx }) => {
+        const selfInstance = new (SelfFactory(app))(ctx);
+        await selfInstance._progressInBackground({ progressId });
       });
       // return progressId
       this.ctx.success({ progressId });
