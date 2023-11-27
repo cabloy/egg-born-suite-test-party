@@ -218,9 +218,6 @@ module.exports = app => {
           separator: '/',
           leafOnly: false,
         },
-        ebSearch: {
-          operators: 'likeRight',
-        },
       },
     },
   };
