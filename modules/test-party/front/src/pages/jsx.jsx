@@ -4,6 +4,8 @@ export default {
     return {
       counter: 1,
       counterComponent: null,
+      // _aaa: 1,
+      // __bbbbb: 2,
     };
   },
   computed: {
