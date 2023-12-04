@@ -109,7 +109,7 @@ module.exports = ctx => {
       const meta = this._ensureItemMeta(item);
       // meta.flags
       if (layout !== 'table' && item.personCount) {
-        meta.flags.push(item.personCount + 'P');
+        meta.flags.push(item.personCount + ctx.text('PartyPersonCountFlag'));
       }
       // meta.summary
       if (item.partyTypeCode) {

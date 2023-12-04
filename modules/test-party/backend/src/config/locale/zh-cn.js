@@ -15,6 +15,7 @@ module.exports = {
   UIComponents: 'UI组件',
   Guide: '指南',
   Components: '组件',
+  PartyPersonCountFlag: '人',
   'Home(Test)': '首页（测试）',
   'Dashboard(Test)': '仪表板（测试）',
   'Party Test': '宴会测试',

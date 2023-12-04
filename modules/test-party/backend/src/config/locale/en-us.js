@@ -4,4 +4,5 @@ module.exports = {
   OpenIsolateAppParty: 'Open Isolate App (Party)',
   DianCaiWechat: 'Wechat Ordering',
   UIComponents: 'UI Components',
+  PartyPersonCountFlag: 'P',
 };
