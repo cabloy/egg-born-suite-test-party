@@ -45,14 +45,11 @@ export default {
     onFormSubmit() {
       this.$refs.buttonSubmit.onClick();
     },
-    onPerformSend() {
-      return this.$api
-        .post('test/feat/sendMail', {
-          data: this.item,
-        })
-        .then(() => {
-          return true;
-        });
+    async onPerformSend() {
+      await this.$api.post('test/feat/sendMail', {
+        data: this.item,
+      });
+      return true;
     },
   },
 };
