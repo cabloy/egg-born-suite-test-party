@@ -61,7 +61,7 @@ const __testData_custom_object = {
 };
 
 module.exports = app => {
-  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  // const moduleInfo = module.info;
   class FieldsController extends app.Controller {
     async parseSchema() {
       const moduleTestFlow = app.meta.modules['test-flow'];

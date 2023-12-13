@@ -2,7 +2,7 @@ const _subscribePathTest = '/test/party/test';
 const _subscribePathSimpleChat = '/test/party/simpleChat';
 
 module.exports = app => {
-  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const moduleInfo = module.info;
   class SocketIOController extends app.Controller {
     async publish() {
       const options = this.ctx.request.body.options;

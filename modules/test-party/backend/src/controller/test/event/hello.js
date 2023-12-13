@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 module.exports = app => {
-  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const moduleInfo = module.info;
 
   class HelloController extends app.Controller {
     async hello() {

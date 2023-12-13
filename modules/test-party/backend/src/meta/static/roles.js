@@ -1,5 +1,5 @@
 module.exports = app => {
-  // const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  // const moduleInfo = module.info;
   const __rolesAll = [
     { atomName: 'friend', roleTypeCode: 1 },
     { atomName: 'consultant', roleTypeCode: 1 },

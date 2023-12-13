@@ -1,5 +1,5 @@
 module.exports = app => {
-  const moduleInfo = app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const moduleInfo = module.info;
   class MonkeyeeController extends app.Controller {
     async test() {
       this.ctx.success(moduleInfo.relativeName);
