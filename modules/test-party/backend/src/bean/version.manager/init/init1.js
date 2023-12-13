@@ -1,7 +1,7 @@
 const testData = require('../test/testData.js');
 
 module.exports = function (ctx) {
-  const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  const moduleInfo = module.info;
   class VersionInit {
     async run(options) {
       await this._init_rights();

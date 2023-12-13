@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 module.exports = ctx => {
-  // const moduleInfo = ctx.app.meta.mockUtil.parseInfoFromPackage(__dirname);
+  // const moduleInfo = module.info;
   class EventBean {
     async execute(context, next) {
       const data = context.data;
