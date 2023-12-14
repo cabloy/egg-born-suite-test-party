@@ -108,11 +108,9 @@ module.exports = app => {
     },
     // atom
     'atom.party': {
-      mode: 'ctx',
       bean: atomParty,
     },
     'atom.partyExpense': {
-      mode: 'ctx',
       bean: atomPartyExpense,
     },
     // io
