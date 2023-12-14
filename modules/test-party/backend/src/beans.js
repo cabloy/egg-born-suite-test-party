@@ -117,11 +117,9 @@ module.exports = app => {
     },
     // io
     'io.message.test': {
-      mode: 'ctx',
       bean: ioMessageTest,
     },
     'io.message.simpleChat': {
-      mode: 'ctx',
       bean: ioMessageSimpleChat,
     },
     // sequence
