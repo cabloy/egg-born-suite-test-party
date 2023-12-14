@@ -35,7 +35,6 @@ module.exports = app => {
   Object.assign(beans, {
     // cli
     'cli.default.demo': {
-      mode: 'ctx',
       bean: cliDefaultDemo,
     },
     // test
