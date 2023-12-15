@@ -60,109 +60,107 @@ const __testData_custom_object = {
   },
 };
 
-module.exports =
-  // const moduleInfo = module.info;
-  class FieldsController {
-    async parseSchema() {
-      const moduleTestFlow = app.meta.modules['test-flow'];
-      if (!moduleTestFlow) {
-        // do nothing
-        this.ctx.success();
-        return;
-      }
-      // atomClass
-      const atomClass = { module: 'test-flow', atomClassName: 'purchaseOrder' };
-      // mode: allowAllFieldsRead
-      await this._parseSchema_mode_allowAllFieldsRead({ atomClass });
-      // mode: allowAllFieldsReadWrite
-      await this._parseSchema_mode_allowAllFieldsReadWrite({ atomClass });
-      // mode: allowSpecificFields_1
-      await this._parseSchema_mode_allowSpecificFields_1({ atomClass });
-      // mode: allowSpecificFields_2
-      await this._parseSchema_mode_allowSpecificFields_2({ atomClass });
-      // mode: allowSpecificFields_3
-      await this._parseSchema_mode_allowSpecificFields_3({ atomClass });
-      // mode: custom_array
-      await this._parseSchema_mode_custom_array({ atomClass });
-      // mode: custom_object
-      await this._parseSchema_mode_custom_object({ atomClass });
-      // ok
+module.exports = class FieldsController {
+  async parseSchema() {
+    const moduleTestFlow = this.app.meta.modules['test-flow'];
+    if (!moduleTestFlow) {
+      // do nothing
       this.ctx.success();
+      return;
     }
-
+    // atomClass
+    const atomClass = { module: 'test-flow', atomClassName: 'purchaseOrder' };
     // mode: allowAllFieldsRead
-    async _parseSchema_mode_allowAllFieldsRead({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_allowAllFieldsRead,
-      });
-      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, true);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
-    }
-
+    await this._parseSchema_mode_allowAllFieldsRead({ atomClass });
     // mode: allowAllFieldsReadWrite
-    async _parseSchema_mode_allowAllFieldsReadWrite({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_allowAllFieldsReadWrite,
-      });
-      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
-      assert.equal(schemaBase.isSchemaBase, true);
-    }
-
+    await this._parseSchema_mode_allowAllFieldsReadWrite({ atomClass });
     // mode: allowSpecificFields_1
-    async _parseSchema_mode_allowSpecificFields_1({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_allowSpecificFields_1,
-      });
-      assert.equal(schemaBase.schema.properties.atomName, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
-    }
-
+    await this._parseSchema_mode_allowSpecificFields_1({ atomClass });
     // mode: allowSpecificFields_2
-    async _parseSchema_mode_allowSpecificFields_2({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_allowSpecificFields_2,
-      });
-      assert.equal(schemaBase.schema.properties.atomName, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
-      assert.equal(schemaBase.schema.properties.details, undefined);
-    }
-
+    await this._parseSchema_mode_allowSpecificFields_2({ atomClass });
     // mode: allowSpecificFields_3
-    async _parseSchema_mode_allowSpecificFields_3({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_allowSpecificFields_3,
-      });
-      assert.equal(schemaBase.schema.properties.atomName, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
-    }
+    await this._parseSchema_mode_allowSpecificFields_3({ atomClass });
     // mode: custom_array
-    async _parseSchema_mode_custom_array({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_custom_array,
-      });
-      assert.equal(schemaBase.schema.properties.atomName, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
-    }
-    // mode: custom_array
-    async _parseSchema_mode_custom_object({ atomClass }) {
-      const schemaBase = await this.ctx.bean.fields.parseSchema({
-        atomClass,
-        fieldsRight: __testData_custom_object,
-      });
-      assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
-      assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-      assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
-    }
-  };
+    await this._parseSchema_mode_custom_array({ atomClass });
+    // mode: custom_object
+    await this._parseSchema_mode_custom_object({ atomClass });
+    // ok
+    this.ctx.success();
+  }
+
+  // mode: allowAllFieldsRead
+  async _parseSchema_mode_allowAllFieldsRead({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_allowAllFieldsRead,
+    });
+    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, true);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+  }
+
+  // mode: allowAllFieldsReadWrite
+  async _parseSchema_mode_allowAllFieldsReadWrite({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_allowAllFieldsReadWrite,
+    });
+    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    assert.equal(schemaBase.isSchemaBase, true);
+  }
+
+  // mode: allowSpecificFields_1
+  async _parseSchema_mode_allowSpecificFields_1({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_allowSpecificFields_1,
+    });
+    assert.equal(schemaBase.schema.properties.atomName, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+  }
+
+  // mode: allowSpecificFields_2
+  async _parseSchema_mode_allowSpecificFields_2({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_allowSpecificFields_2,
+    });
+    assert.equal(schemaBase.schema.properties.atomName, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
+    assert.equal(schemaBase.schema.properties.details, undefined);
+  }
+
+  // mode: allowSpecificFields_3
+  async _parseSchema_mode_allowSpecificFields_3({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_allowSpecificFields_3,
+    });
+    assert.equal(schemaBase.schema.properties.atomName, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+  }
+  // mode: custom_array
+  async _parseSchema_mode_custom_array({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_custom_array,
+    });
+    assert.equal(schemaBase.schema.properties.atomName, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+  }
+  // mode: custom_array
+  async _parseSchema_mode_custom_object({ atomClass }) {
+    const schemaBase = await this.ctx.bean.fields.parseSchema({
+      atomClass,
+      fieldsRight: __testData_custom_object,
+    });
+    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
+    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+  }
+};

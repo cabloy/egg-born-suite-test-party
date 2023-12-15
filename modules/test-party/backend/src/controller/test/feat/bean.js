@@ -8,12 +8,12 @@ module.exports = class BeanController {
     let res;
 
     // app.bean
-    assert.equal(app.bean['test-party.test.app'], app.bean['test-party.test.app']);
+    assert.equal(this.app.bean['test-party.test.app'], this.app.bean['test-party.test.app']);
 
-    res = app.bean['test-party.test.app'].actionSync({ a, b });
+    res = this.app.bean['test-party.test.app'].actionSync({ a, b });
     assert.equal(res, `${a + b}:regexpaop`);
 
-    res = await app.bean['test-party.test.app'].actionAsync({ a, b });
+    res = await this.app.bean['test-party.test.app'].actionAsync({ a, b });
     assert.equal(res, `${a + b}:regexpaop`);
 
     // ctx.bean: global
