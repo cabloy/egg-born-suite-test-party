@@ -1,9 +1,9 @@
 const _subscribePathTest = '/test/party/test';
 const _subscribePathSimpleChat = '/test/party/simpleChat';
 
-module.exports = app => {
+module.exports =
   const moduleInfo = module.info;
-  class SocketIOController extends app.Controller {
+  class SocketIOController {
     async publish() {
       const options = this.ctx.request.body.options;
       const message = this.ctx.request.body.message;
@@ -51,5 +51,4 @@ module.exports = app => {
     }
   }
 
-  return SocketIOController;
-};
+  ;

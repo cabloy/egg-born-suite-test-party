@@ -60,9 +60,9 @@ const __testData_custom_object = {
   },
 };
 
-module.exports = app => {
+module.exports =
   // const moduleInfo = module.info;
-  class FieldsController extends app.Controller {
+  class FieldsController {
     async parseSchema() {
       const moduleTestFlow = app.meta.modules['test-flow'];
       if (!moduleTestFlow) {
@@ -165,6 +165,4 @@ module.exports = app => {
       assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
       assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
     }
-  }
-  return FieldsController;
-};
+  };

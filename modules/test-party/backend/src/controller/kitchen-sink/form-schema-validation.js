@@ -10,47 +10,43 @@ const __ItemDefault = {
   motto: '',
 };
 
-module.exports = app => {
-  class FormSchemaValidationController extends app.Controller {
-    async load() {
-      // try load from db cache
-      const cacheName = this._getCacheName();
-      let item = await this.ctx.cache.db.get(cacheName);
-      item = this.ctx.bean.util.extend({}, __ItemDefault, item);
-      // ok
-      this.ctx.success(item);
-    }
-
-    async saveSimple() {
-      // item
-      const item = this.ctx.request.body.data;
-      // save to db cache
-      const cacheName = this._getCacheName();
-      await this.ctx.cache.db.set(cacheName, item);
-      // ok
-      this.ctx.success();
-    }
-
-    async saveValidation() {
-      await this.saveSimple();
-    }
-
-    // form-captcha signup
-    signup() {
-      this.ctx.success();
-    }
-
-    // form-mobile-verify
-    mobileVerify() {
-      this.ctx.success();
-    }
-
-    _getCacheName() {
-      // get the operation user
-      const user = this.ctx.state.user.op;
-      return `__formTest:${user.id}`;
-    }
+module.exports = class FormSchemaValidationController {
+  async load() {
+    // try load from db cache
+    const cacheName = this._getCacheName();
+    let item = await this.ctx.cache.db.get(cacheName);
+    item = this.ctx.bean.util.extend({}, __ItemDefault, item);
+    // ok
+    this.ctx.success(item);
   }
 
-  return FormSchemaValidationController;
+  async saveSimple() {
+    // item
+    const item = this.ctx.request.body.data;
+    // save to db cache
+    const cacheName = this._getCacheName();
+    await this.ctx.cache.db.set(cacheName, item);
+    // ok
+    this.ctx.success();
+  }
+
+  async saveValidation() {
+    await this.saveSimple();
+  }
+
+  // form-captcha signup
+  signup() {
+    this.ctx.success();
+  }
+
+  // form-mobile-verify
+  mobileVerify() {
+    this.ctx.success();
+  }
+
+  _getCacheName() {
+    // get the operation user
+    const user = this.ctx.state.user.op;
+    return `__formTest:${user.id}`;
+  }
 };

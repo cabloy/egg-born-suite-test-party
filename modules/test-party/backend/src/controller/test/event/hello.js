@@ -1,9 +1,9 @@
 const assert = require('assert');
 
-module.exports = app => {
+module.exports =
   const moduleInfo = module.info;
 
-  class HelloController extends app.Controller {
+  class HelloController {
     async hello() {
       const data = {
         text: 'hello',
@@ -26,5 +26,4 @@ module.exports = app => {
     }
   }
 
-  return HelloController;
-};
+  ;

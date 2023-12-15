@@ -1,27 +1,23 @@
 const assert = require('assert');
 
-module.exports = app => {
-  class TailController extends app.Controller {
-    async tail() {
-      // 1
-      this.ctx.meta._tail_test = 1;
+module.exports = class TailController {
+  async tail() {
+    // 1
+    this.ctx.meta._tail_test = 1;
 
-      // tail
+    // tail
+    this.ctx.tail(() => {
+      assert.equal(this.ctx.meta._tail_test, 2);
       this.ctx.tail(() => {
-        assert.equal(this.ctx.meta._tail_test, 2);
-        this.ctx.tail(() => {
-          assert.equal(this.ctx.meta._tail_test, 3);
-        });
-        this.ctx.meta._tail_test = 3;
+        assert.equal(this.ctx.meta._tail_test, 3);
       });
+      this.ctx.meta._tail_test = 3;
+    });
 
-      // 2
-      this.ctx.meta._tail_test = 2;
+    // 2
+    this.ctx.meta._tail_test = 2;
 
-      // done
-      this.ctx.success();
-    }
+    // done
+    this.ctx.success();
   }
-
-  return TailController;
 };

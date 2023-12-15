@@ -1,5 +1,5 @@
 module.exports = function SelfFactory(app) {
-  class ProgressController extends app.Controller {
+  class ProgressController {
     async progress() {
       // create progress
       const progressId = await this.ctx.bean.progress.create();
@@ -83,5 +83,4 @@ module.exports = function SelfFactory(app) {
       }
     }
   }
-  return ProgressController;
-};
+  ;

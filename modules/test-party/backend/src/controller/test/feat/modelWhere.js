@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-module.exports = app => {
+module.exports =
   const atomStaticKey = '--modelWhere--test--';
   const __rows = [
     { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
@@ -8,7 +8,7 @@ module.exports = app => {
     { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
   ];
 
-  class ModelController extends app.Controller {
+  class ModelController {
     async modelWhere() {
       await this._modelWhere();
       this.ctx.success();
@@ -85,5 +85,4 @@ module.exports = app => {
     }
   }
 
-  return ModelController;
-};
+  ;

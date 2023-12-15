@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-module.exports = app => {
+module.exports =
   const atomStaticKey = '--model--test--';
   const __rows = [
     { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
@@ -8,7 +8,7 @@ module.exports = app => {
     { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
   ];
 
-  class ModelController extends app.Controller {
+  class ModelController {
     async model() {
       // model
       const model = this.ctx.model.module('a-base').atom;
@@ -115,5 +115,4 @@ module.exports = app => {
     }
   }
 
-  return ModelController;
-};
+  ;

@@ -1,8 +1,8 @@
 const assert = require('assert');
 
-module.exports = app => {
+module.exports =
   const moduleInfo = module.info;
-  class BeanController extends app.Controller {
+  class BeanController {
     async bean() {
       const a = 3;
       const b = 4;
@@ -74,5 +74,4 @@ module.exports = app => {
     }
   }
 
-  return BeanController;
-};
+  ;

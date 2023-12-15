@@ -1,8 +1,8 @@
 const assert = require('assert');
 
-module.exports = app => {
+module.exports =
   const moduleInfo = module.info;
-  class SummerController extends app.Controller {
+  class SummerController {
     async summer() {
       // name
       const name = 'test';
@@ -108,5 +108,4 @@ module.exports = app => {
       this.ctx.success();
     }
   }
-  return SummerController;
-};
+  ;
