@@ -24,121 +24,115 @@ const statsTasksUser = require('./bean/stats.tasksUser.js');
 const statsTasksInstance = require('./bean/stats.tasksInstance.js');
 const summerCacheTest = require('./bean/summer.cache.test.js');
 
-module.exports = app => {
-  const beans = {
-    // version
-    'version.manager': {
-      mode: 'app',
-      bean: versionManager,
-    },
-  };
-  Object.assign(beans, {
-    // cli
-    'cli.default.demo': {
-      bean: cliDefaultDemo,
-    },
-    // test
-    'test.app': {
-      mode: 'app',
-      bean: testApp,
-    },
-    'test.class': {
-      mode: 'app',
-      bean: testClass,
-    },
-    testctx: {
-      mode: 'ctx',
-      bean: testCtx,
-      global: true,
-    },
-    'local.test': {
-      mode: 'ctx',
-      bean: localTest,
-    },
-    // event
-    'event.helloEcho': {
-      mode: 'ctx',
-      bean: eventHelloEcho,
-    },
-    'event.userVerify': {
-      mode: 'ctx',
-      bean: eventUserVerify,
-    },
-    'event.loginInfo': {
-      mode: 'ctx',
-      bean: eventLoginInfo,
-    },
-    'event.loginInfoDashboard': {
-      mode: 'ctx',
-      bean: eventLoginInfoDashboard,
-    },
-    // broadcast
-    'broadcast.test': {
-      mode: 'app',
-      bean: broadcastTest,
-    },
-    // queue
-    'queue.test': {
-      mode: 'app',
-      bean: queueTest,
-    },
-    // schedule
-    'schedule.test': {
-      mode: 'app',
-      bean: scheduleTest,
-    },
-    // startup
-    'startup.startupAll': {
-      mode: 'app',
-      bean: startupStartupAll,
-    },
-    'startup.startupInstance': {
-      mode: 'app',
-      bean: startupStartupInstance,
-    },
-    // middleware
-    'middleware.testInterception': {
-      mode: 'ctx',
-      bean: middlewareTestInterception,
-    },
-    'middleware.testRestructuring': {
-      mode: 'ctx',
-      bean: middlewareTestRestructuring,
-    },
-    // atom
-    'atom.party': {
-      bean: atomParty,
-    },
-    'atom.partyExpense': {
-      bean: atomPartyExpense,
-    },
-    // io
-    'io.message.test': {
-      bean: ioMessageTest,
-    },
-    'io.message.simpleChat': {
-      bean: ioMessageSimpleChat,
-    },
-    // sequence
-    'sequence.test': {
-      mode: 'ctx',
-      bean: sequenceTest,
-    },
-    // stats
-    'stats.tasksUser': {
-      mode: 'ctx',
-      bean: statsTasksUser,
-    },
-    'stats.tasksInstance': {
-      mode: 'ctx',
-      bean: statsTasksInstance,
-    },
-    // summer
-    'summer.cache.test': {
-      mode: 'ctx',
-      bean: summerCacheTest,
-    },
-  });
-
-  return beans;
+module.exports = {
+  // version
+  'version.manager': {
+    mode: 'app',
+    bean: versionManager,
+  },
+  // cli
+  'cli.default.demo': {
+    bean: cliDefaultDemo,
+  },
+  // test
+  'test.app': {
+    mode: 'app',
+    bean: testApp,
+  },
+  'test.class': {
+    mode: 'app',
+    bean: testClass,
+  },
+  testctx: {
+    mode: 'ctx',
+    bean: testCtx,
+    global: true,
+  },
+  'local.test': {
+    mode: 'ctx',
+    bean: localTest,
+  },
+  // event
+  'event.helloEcho': {
+    mode: 'ctx',
+    bean: eventHelloEcho,
+  },
+  'event.userVerify': {
+    mode: 'ctx',
+    bean: eventUserVerify,
+  },
+  'event.loginInfo': {
+    mode: 'ctx',
+    bean: eventLoginInfo,
+  },
+  'event.loginInfoDashboard': {
+    mode: 'ctx',
+    bean: eventLoginInfoDashboard,
+  },
+  // broadcast
+  'broadcast.test': {
+    mode: 'app',
+    bean: broadcastTest,
+  },
+  // queue
+  'queue.test': {
+    mode: 'app',
+    bean: queueTest,
+  },
+  // schedule
+  'schedule.test': {
+    mode: 'app',
+    bean: scheduleTest,
+  },
+  // startup
+  'startup.startupAll': {
+    mode: 'app',
+    bean: startupStartupAll,
+  },
+  'startup.startupInstance': {
+    mode: 'app',
+    bean: startupStartupInstance,
+  },
+  // middleware
+  'middleware.testInterception': {
+    mode: 'ctx',
+    bean: middlewareTestInterception,
+  },
+  'middleware.testRestructuring': {
+    mode: 'ctx',
+    bean: middlewareTestRestructuring,
+  },
+  // atom
+  'atom.party': {
+    bean: atomParty,
+  },
+  'atom.partyExpense': {
+    bean: atomPartyExpense,
+  },
+  // io
+  'io.message.test': {
+    bean: ioMessageTest,
+  },
+  'io.message.simpleChat': {
+    bean: ioMessageSimpleChat,
+  },
+  // sequence
+  'sequence.test': {
+    mode: 'ctx',
+    bean: sequenceTest,
+  },
+  // stats
+  'stats.tasksUser': {
+    mode: 'ctx',
+    bean: statsTasksUser,
+  },
+  'stats.tasksInstance': {
+    mode: 'ctx',
+    bean: statsTasksInstance,
+  },
+  // summer
+  'summer.cache.test': {
+    mode: 'ctx',
+    bean: summerCacheTest,
+  },
 };
