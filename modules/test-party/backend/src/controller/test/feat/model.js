@@ -1,118 +1,114 @@
 const assert = require('assert');
 
-module.exports =
-  const atomStaticKey = '--model--test--';
-  const __rows = [
-    { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
-    { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
-    { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
-  ];
+const atomStaticKey = '--model--test--';
+const __rows = [
+  { atomStaticKey, atomName: 'atom-one', atomStage: 0 },
+  { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
+  { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
+];
+module.exports = class ModelController {
+  async model() {
+    // model
+    const model = this.ctx.model.module('a-base').atom;
 
-  class ModelController {
-    async model() {
-      // model
-      const model = this.ctx.model.module('a-base').atom;
+    // insert one row
+    await model.insert(__rows[0]);
+    // insert multi rows
+    await model.insert(__rows.slice(1));
 
-      // insert one row
-      await model.insert(__rows[0]);
-      // insert multi rows
-      await model.insert(__rows.slice(1));
+    // select
+    let list = await model.select({
+      where: { atomStaticKey },
+    });
+    assert.equal(list.length, 3);
 
-      // select
-      let list = await model.select({
+    // read
+    const item = await model.get({
+      atomStaticKey,
+      atomName: 'atom-one',
+    });
+
+    // update one row
+    await model.update({
+      id: item.id,
+      readCount: item.readCount + 1,
+    });
+
+    // update with options.where and options.columns
+    await model.update(
+      {
+        readCount: 1,
+      },
+      {
         where: { atomStaticKey },
-      });
-      assert.equal(list.length, 3);
+        columns: ['readCount'],
+      }
+    );
 
-      // read
-      const item = await model.get({
-        atomStaticKey,
-        atomName: 'atom-one',
-      });
-
-      // update one row
-      await model.update({
-        id: item.id,
-        readCount: item.readCount + 1,
-      });
-
-      // update with options.where and options.columns
-      await model.update(
-        {
-          readCount: 1,
+    // select: in
+    list = await model.select({
+      where: { atomStaticKey: [atomStaticKey] },
+    });
+    assert.equal(list.length, 3);
+    list = await model.select({
+      where: {
+        atomStaticKey: {
+          op: 'in',
+          val: [atomStaticKey],
         },
-        {
-          where: { atomStaticKey },
-          columns: ['readCount'],
-        }
-      );
+      },
+    });
+    assert.equal(list.length, 3);
 
-      // select: in
-      list = await model.select({
-        where: { atomStaticKey: [atomStaticKey] },
-      });
-      assert.equal(list.length, 3);
-      list = await model.select({
-        where: {
-          atomStaticKey: {
-            op: 'in',
-            val: [atomStaticKey],
-          },
+    // select: is null
+    list = await model.select({
+      where: {
+        atomStaticKey: [atomStaticKey],
+        atomName: null,
+      },
+    });
+    assert.equal(list.length, 0);
+
+    // select: is not null
+    list = await model.select({
+      where: {
+        atomStaticKey: [atomStaticKey],
+        atomName: {
+          op: 'notNull',
         },
-      });
-      assert.equal(list.length, 3);
+      },
+    });
+    assert.equal(list.length, 3);
 
-      // select: is null
-      list = await model.select({
-        where: {
-          atomStaticKey: [atomStaticKey],
-          atomName: null,
+    // select: like
+    list = await model.select({
+      where: {
+        atomStaticKey: [atomStaticKey],
+        atomName: {
+          op: 'likeRight',
+          val: 'atom-',
         },
-      });
-      assert.equal(list.length, 0);
+      },
+    });
+    assert.equal(list.length, 3);
 
-      // select: is not null
-      list = await model.select({
-        where: {
-          atomStaticKey: [atomStaticKey],
-          atomName: {
-            op: 'notNull',
-          },
-        },
-      });
-      assert.equal(list.length, 3);
+    // select: or
+    list = await model.select({
+      where: {
+        atomStaticKey: [atomStaticKey],
+        __or__: [{ atomName: 'atom-one' }, { atomName: 'atom-two' }],
+      },
+    });
+    assert.equal(list.length, 2);
 
-      // select: like
-      list = await model.select({
-        where: {
-          atomStaticKey: [atomStaticKey],
-          atomName: {
-            op: 'likeRight',
-            val: 'atom-',
-          },
-        },
-      });
-      assert.equal(list.length, 3);
+    // delete
+    await model.delete({ atomStaticKey });
 
-      // select: or
-      list = await model.select({
-        where: {
-          atomStaticKey: [atomStaticKey],
-          __or__: [{ atomName: 'atom-one' }, { atomName: 'atom-two' }],
-        },
-      });
-      assert.equal(list.length, 2);
+    // count
+    const count = await model.count({ atomStaticKey });
+    assert.equal(count, 0);
 
-      // delete
-      await model.delete({ atomStaticKey });
-
-      // count
-      const count = await model.count({ atomStaticKey });
-      assert.equal(count, 0);
-
-      // done
-      this.ctx.success();
-    }
+    // done
+    this.ctx.success();
   }
-
-  ;
+};
