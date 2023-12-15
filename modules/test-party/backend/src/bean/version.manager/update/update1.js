@@ -1,8 +1,6 @@
-module.exports = function SelfFactory(ctx) {
-  // const moduleInfo = module.info;
-  class VersionUpdate {
-    async run(options) {
-      const sql = `
+module.exports = class VersionUpdate {
+  async run(options) {
+    const sql = `
           CREATE TABLE testParty (
             id int(11) NOT NULL AUTO_INCREMENT,
             createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -15,9 +13,6 @@ module.exports = function SelfFactory(ctx) {
             PRIMARY KEY (id)
           )
         `;
-      await ctx.model.query(sql);
-    }
+    await this.ctx.model.query(sql);
   }
-
-  return VersionUpdate;
 };

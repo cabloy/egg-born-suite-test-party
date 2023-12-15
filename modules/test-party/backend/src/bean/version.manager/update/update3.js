@@ -1,9 +1,7 @@
-module.exports = function SelfFactory(ctx) {
-  // const moduleInfo = module.info;
-  class VersionUpdate {
-    async run(options) {
-      // alter table: testParty
-      const sql = `
+module.exports = class VersionUpdate {
+  async run(options) {
+    // alter table: testParty
+    const sql = `
         ALTER TABLE testParty
           ADD COLUMN partyExpenseCount int(11) DEFAULT '0',
           ADD COLUMN partyExpenseAmount int(11) DEFAULT '0',
@@ -11,9 +9,6 @@ module.exports = function SelfFactory(ctx) {
           ADD COLUMN partyOverPerson int(11) DEFAULT '0',
           ADD COLUMN partyOverTime timestamp DEFAULT NULL
       `;
-      await ctx.model.query(sql);
-    }
+    await this.ctx.model.query(sql);
   }
-
-  return VersionUpdate;
 };

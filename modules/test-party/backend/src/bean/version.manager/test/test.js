@@ -1,32 +1,27 @@
 const testData = require('./testData.js');
 
-module.exports = function (ctx) {
-  // const moduleInfo = module.info;
-  class VersionTest {
-    async run(options) {
-      // role rights
-      await this._testRoleRights();
-      // role resource rights
-      await this._testRoleResources();
-    }
-
+module.exports = class VersionTest {
+  async run(options) {
     // role rights
-    async _testRoleRights() {
-      // // atomClass: role
-      // await ctx.bean.role.addRoleRightBatch({
-      //   module: 'a-base',
-      //   atomClassName: 'role',
-      //   roleRights: testData.roleRightsRole,
-      // });
-    }
-
+    await this._testRoleRights();
     // role resource rights
-    async _testRoleResources() {
-      await ctx.bean.resource.addRoleResourceBatch({
-        roleResources: testData.roleResources,
-      });
-    }
+    await this._testRoleResources();
   }
 
-  return VersionTest;
+  // role rights
+  async _testRoleRights() {
+    // // atomClass: role
+    // await this.ctx.bean.role.addRoleRightBatch({
+    //   module: 'a-base',
+    //   atomClassName: 'role',
+    //   roleRights: testData.roleRightsRole,
+    // });
+  }
+
+  // role resource rights
+  async _testRoleResources() {
+    await this.ctx.bean.resource.addRoleResourceBatch({
+      roleResources: testData.roleResources,
+    });
+  }
 };
