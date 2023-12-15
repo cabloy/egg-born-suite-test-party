@@ -15,7 +15,7 @@ Object.assign(aops, {
     bean: regExp,
   },
 });
-if (app.meta.isTest) {
+if (module.meta.isTest) {
   Object.assign(aops, {
     atom: {
       match: 'atom',
