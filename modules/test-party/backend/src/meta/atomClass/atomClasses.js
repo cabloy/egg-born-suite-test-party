@@ -1,11 +1,8 @@
-const partyExpense = require('./atomClass/partyExpense.js');
 const party = require('./atomClass/party.js');
+const partyExpense = require('./atomClass/partyExpense.js');
 
-module.exports = app => {
-  const atomClasses = {
-    partyExpense: partyExpense(app),
-    //
-    party: party(app),
-  };
-  return atomClasses;
+module.exports = {
+  //
+  party,
+  partyExpense,
 };

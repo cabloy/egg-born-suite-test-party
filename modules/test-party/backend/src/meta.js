@@ -2,8 +2,7 @@ const extend = require('@zhennann/extend');
 
 module.exports = app => {
   const meta = {};
-  // atomClasses
-  const atomClasses = require('./meta/atomClass/atomClasses.js')(app);
+  const atomClasses = require('./meta/atomClass/atomClasses.js');
   // schemas
   const schemas = require('./meta/validation/schemas.js')(app);
   // keywords
