@@ -1,9 +1,5 @@
-module.exports = ctx => {
-  class LocalTest {
-    get name() {
-      return 'localTest';
-    }
+module.exports = class LocalTest {
+  get name() {
+    return 'localTest';
   }
-
-  return LocalTest;
 };
