@@ -6,17 +6,17 @@ module.exports = app => {
   const schemas = require('./meta/validation/schemas.js');
   const keywords = require('./meta/validation/keywords.js');
   // socketio
-  const socketioTest = require('./meta/socketio/test.js')(app);
-  const socketioSimpleChat = require('./meta/socketio/simpleChat.js')(app);
+  const socketioTest = require('./meta/socketio/test.js');
+  const socketioSimpleChat = require('./meta/socketio/simpleChat.js');
   // static
-  const staticApps = require('./meta/static/apps.js')(app);
-  const staticDashboards = require('./meta/static/dashboards.js')(app);
-  const staticLayouts = require('./meta/static/layouts.js')(app);
-  const staticResources = require('./meta/static/resources.js')(app);
-  const staticDicts = require('./meta/static/dicts.js')(app);
-  const staticRoles = require('./meta/static/roles.js')(app);
+  const staticApps = require('./meta/static/apps.js');
+  const staticDashboards = require('./meta/static/dashboards.js');
+  const staticLayouts = require('./meta/static/layouts.js');
+  const staticResources = require('./meta/static/resources.js');
+  const staticDicts = require('./meta/static/dicts.js');
+  const staticRoles = require('./meta/static/roles.js');
   // cli commands
-  const cliCommands = require('./meta/cli/commands.js')(app);
+  const cliCommands = require('./meta/cli/commands.js');
   // icons
   const iconGroups = require('./meta/icons/groups.js');
   // meta

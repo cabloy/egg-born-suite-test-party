@@ -120,14 +120,13 @@ const content = {
 };
 
 // const moduleInfo = module.info;
-module.exports = app => {
-  const dashboard = {
-    atomName: 'Home(Test)',
-    atomStaticKey: 'homeTest',
-    atomRevision: 11,
-    description: '',
-    content: JSON.stringify(content),
-    resourceRoles: 'root',
-  };
-  return dashboard;
+
+const dashboard = {
+  atomName: 'Home(Test)',
+  atomStaticKey: 'homeTest',
+  atomRevision: 11,
+  description: '',
+  content: JSON.stringify(content),
+  resourceRoles: 'root',
 };
+module.exports = dashboard;

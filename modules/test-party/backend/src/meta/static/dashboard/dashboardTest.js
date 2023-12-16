@@ -213,14 +213,13 @@ const content = {
 };
 
 // const moduleInfo = module.info;
-module.exports = app => {
-  const dashboard = {
-    atomName: 'Dashboard(Test)',
-    atomStaticKey: 'dashboardTest',
-    atomRevision: 1,
-    description: '',
-    content: JSON.stringify(content),
-    resourceRoles: 'root',
-  };
-  return dashboard;
+
+const dashboard = {
+  atomName: 'Dashboard(Test)',
+  atomStaticKey: 'dashboardTest',
+  atomRevision: 1,
+  description: '',
+  content: JSON.stringify(content),
+  resourceRoles: 'root',
 };
+module.exports = dashboard;
