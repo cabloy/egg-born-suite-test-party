@@ -5,8 +5,7 @@ module.exports = app => {
   const atomClasses = require('./meta/atomClass/atomClasses.js');
   // schemas
   const schemas = require('./meta/validation/schemas.js')(app);
-  // keywords
-  const keywords = require('./meta/validation/keywords.js')(app);
+  const keywords = require('./meta/validation/keywords.js');
   // socketio
   const socketioTest = require('./meta/socketio/test.js')(app);
   const socketioSimpleChat = require('./meta/socketio/simpleChat.js')(app);
