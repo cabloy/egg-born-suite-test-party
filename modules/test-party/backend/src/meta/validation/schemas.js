@@ -5,20 +5,18 @@ const party = require('./schema/party.js');
 const partyOverBulk = require('./schema/partyOverBulk.js');
 const settings = require('./schema/settings.js');
 
-module.exports = app => {
-  const schemas = {};
-  // partyExpense
-  Object.assign(schemas, partyExpense(app));
-  // blocks
-  Object.assign(schemas, blocks(app));
-  // formTest
-  Object.assign(schemas, formTest(app));
-  // party
-  Object.assign(schemas, party(app));
-  // partyOver
-  Object.assign(schemas, partyOverBulk(app));
-  // settings
-  Object.assign(schemas, settings(app));
-  // ok
-  return schemas;
-};
+const schemas = {};
+// partyExpense
+Object.assign(schemas, partyExpense);
+// blocks
+Object.assign(schemas, blocks);
+// formTest
+Object.assign(schemas, formTest);
+// party
+Object.assign(schemas, party);
+// partyOver
+Object.assign(schemas, partyOverBulk);
+// settings
+Object.assign(schemas, settings);
+// ok
+module.exports = schemas;

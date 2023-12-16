@@ -3,8 +3,7 @@ const extend = require('@zhennann/extend');
 module.exports = app => {
   const meta = {};
   const atomClasses = require('./meta/atomClass/atomClasses.js');
-  // schemas
-  const schemas = require('./meta/validation/schemas.js')(app);
+  const schemas = require('./meta/validation/schemas.js');
   const keywords = require('./meta/validation/keywords.js');
   // socketio
   const socketioTest = require('./meta/socketio/test.js')(app);
