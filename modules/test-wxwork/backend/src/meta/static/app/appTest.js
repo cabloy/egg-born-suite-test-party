@@ -1,6 +1,6 @@
 // http://localhost:9192/?appKey=test-wxwork:appTest
+// const moduleInfo = module.info;
 module.exports = app => {
-  // const moduleInfo = module.info;
   const content = {
     presets: {
       authenticated: {

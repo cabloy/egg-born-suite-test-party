@@ -119,8 +119,8 @@ const content = {
   },
 };
 
+// const moduleInfo = module.info;
 module.exports = app => {
-  // const moduleInfo = module.info;
   const dashboard = {
     atomName: 'Home(Test)',
     atomStaticKey: 'homeTest',
