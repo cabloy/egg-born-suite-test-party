@@ -12,7 +12,10 @@
     "dependencies": {
       "a-instance": "5.0.0",
       "a-base": "5.0.0",
-      "a-authopen": "5.0.0"
+      "a-authopen": "5.0.0",
+      "a-cli": "5.0.0",
+      "a-cms": "5.0.0",
+      "a-flownode": "5.0.0"
     }
   },
   "description": "",
