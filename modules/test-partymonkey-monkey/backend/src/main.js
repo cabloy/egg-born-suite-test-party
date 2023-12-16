@@ -8,9 +8,9 @@ module.exports = app => {
   const services = require('./services.js');
   const models = require('./models.js');
   // meta
-  const meta = require('./meta.js')(app);
+  const meta = require('./meta.js');
   // monkey
-  const monkey = require('./monkey.js')(app);
+  const monkey = require('./monkey.js');
 
   return {
     routes,
