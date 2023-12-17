@@ -7,7 +7,7 @@ class simpleAopBase {
 
 module.exports = class simpleAop extends simpleAopBase {
   // magic
-  get__magic__(context, next) {
+  __get__(context, next) {
     next();
     const prop = context.prop;
     if (prop === 'magic') {
@@ -15,12 +15,12 @@ module.exports = class simpleAop extends simpleAopBase {
     }
   }
 
-  get__name(context, next) {
+  __get_name__(context, next) {
     next();
     context.value = `${context.value}:simpleaop`;
   }
 
-  set__name(context, next) {
+  __set_name__(context, next) {
     const parts = context.value.split(':');
     const index = parts.indexOf('simpleaop');
     if (index > -1) {

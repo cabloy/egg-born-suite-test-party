@@ -1,10 +1,10 @@
 module.exports = class regExpAop {
-  get__name(context, next) {
+  __get_name__(context, next) {
     next();
     context.value = `${context.value}:regexpaop`;
   }
 
-  set__name(context, next) {
+  __set_name__(context, next) {
     const parts = context.value.split(':');
     const index = parts.indexOf('regexpaop');
     if (index > -1) {

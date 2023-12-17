@@ -232,12 +232,12 @@ module.exports = [
     meta: { auth: { enable: false } },
   },
 
-  // test/feat/bean
+  // test/feat/bean: http://localhost:9192/api/test/party/test/feat/bean
   {
     method: 'get',
     path: 'test/feat/bean',
     controller: 'testFeatBean',
-    middlewares: 'test',
+    // middlewares: 'test',
     meta: { auth: { enable: false } },
   },
   {
