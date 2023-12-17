@@ -13,6 +13,9 @@ module.exports = class simpleAop extends simpleAopBase {
     if (prop === 'magic') {
       context.value = 'magic:simpleaop';
     }
+    // if (prop === 'name') {
+    //   context.value = `${context.value}:simpleaop`;
+    // }
   }
 
   __get_name__(context, next) {
