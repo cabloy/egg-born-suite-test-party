@@ -18,6 +18,19 @@ module.exports = class simpleAop extends simpleAopBase {
     // }
   }
 
+  __set__(context, next) {
+    // const prop = context.prop;
+    // if (prop === 'name') {
+    //   const parts = context.value.split(':');
+    //   const index = parts.indexOf('simpleaop');
+    //   if (index > -1) {
+    //     parts.splice(index, 1);
+    //   }
+    //   context.value = parts.join(':');
+    // }
+    next();
+  }
+
   __get_name__(context, next) {
     next();
     context.value = `${context.value}:simpleaop`;
