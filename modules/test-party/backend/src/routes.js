@@ -237,7 +237,7 @@ module.exports = [
     method: 'get',
     path: 'test/feat/bean',
     controller: 'testFeatBean',
-    // middlewares: 'test',
+    middlewares: 'test',
     meta: { auth: { enable: false } },
   },
   {
