@@ -3,6 +3,18 @@ module.exports = class ctxBean {
     this._name = moduleName || this.ctx.module.info.relativeName;
   }
 
+  __get__(prop) {
+    if (prop === 'magicSelf') {
+      return this['magic:self'];
+    }
+  }
+
+  __set__(prop, value) {
+    if (prop === 'magicSelf') {
+      this['magic:self'] = value;
+    }
+  }
+
   get name() {
     return this._name;
   }

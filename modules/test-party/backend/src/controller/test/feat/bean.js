@@ -49,6 +49,13 @@ module.exports = class BeanController {
     res = await this.ctx.bean['test-party.test.class'].actionAsync({ a, b });
     assert.equal(res, `${a + b}:regexpaop`);
 
+    // magic of self
+    this.ctx.bean.testctx.magicSelf = '__magicSelf__';
+    res = this.ctx.bean.testctx.magicSelf;
+    assert.equal(res, '__magicSelf__');
+    res = this.ctx.bean.testctx['magic:self'];
+    assert.equal(res, '__magicSelf__');
+
     // ok
     this.ctx.success();
   }
