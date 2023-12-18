@@ -6,12 +6,10 @@ const aops = {};
 Object.assign(aops, {
   simple: {
     match: 'testctx',
-    mode: 'ctx',
     bean: simple,
   },
   regExp: {
     match: [/^test-party.test\.\w+$/, 'testctx'],
-    mode: 'ctx',
     bean: regExp,
   },
 });
@@ -19,7 +17,6 @@ if (module.meta.isTest) {
   Object.assign(aops, {
     atom: {
       match: 'atom',
-      mode: 'ctx',
       bean: atom,
     },
   });

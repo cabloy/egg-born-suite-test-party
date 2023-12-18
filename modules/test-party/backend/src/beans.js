@@ -27,7 +27,6 @@ const summerCacheTest = require('./bean/summer.cache.test.js');
 module.exports = {
   // version
   'version.manager': {
-    mode: 'app',
     bean: versionManager,
   },
   // cli
@@ -36,70 +35,55 @@ module.exports = {
   },
   // test
   'test.app': {
-    mode: 'app',
     bean: testApp,
   },
   'test.class': {
-    mode: 'app',
     bean: testClass,
   },
   testctx: {
-    mode: 'ctx',
     bean: testCtx,
     global: true,
   },
   'local.test': {
-    mode: 'ctx',
     bean: localTest,
   },
   // event
   'event.helloEcho': {
-    mode: 'ctx',
     bean: eventHelloEcho,
   },
   'event.userVerify': {
-    mode: 'ctx',
     bean: eventUserVerify,
   },
   'event.loginInfo': {
-    mode: 'ctx',
     bean: eventLoginInfo,
   },
   'event.loginInfoDashboard': {
-    mode: 'ctx',
     bean: eventLoginInfoDashboard,
   },
   // broadcast
   'broadcast.test': {
-    mode: 'app',
     bean: broadcastTest,
   },
   // queue
   'queue.test': {
-    mode: 'app',
     bean: queueTest,
   },
   // schedule
   'schedule.test': {
-    mode: 'app',
     bean: scheduleTest,
   },
   // startup
   'startup.startupAll': {
-    mode: 'app',
     bean: startupStartupAll,
   },
   'startup.startupInstance': {
-    mode: 'app',
     bean: startupStartupInstance,
   },
   // middleware
   'middleware.testInterception': {
-    mode: 'ctx',
     bean: middlewareTestInterception,
   },
   'middleware.testRestructuring': {
-    mode: 'ctx',
     bean: middlewareTestRestructuring,
   },
   // atom
@@ -118,21 +102,17 @@ module.exports = {
   },
   // sequence
   'sequence.test': {
-    mode: 'ctx',
     bean: sequenceTest,
   },
   // stats
   'stats.tasksUser': {
-    mode: 'ctx',
     bean: statsTasksUser,
   },
   'stats.tasksInstance': {
-    mode: 'ctx',
     bean: statsTasksInstance,
   },
   // summer
   'summer.cache.test': {
-    mode: 'ctx',
     bean: summerCacheTest,
   },
 };

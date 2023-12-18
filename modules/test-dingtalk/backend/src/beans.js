@@ -3,11 +3,9 @@ const eventDingtalkMessageGeneral = require('./bean/event.dingtalkMessageGeneral
 
 module.exports = {
   'event.loginInfo': {
-    mode: 'ctx',
     bean: eventLoginInfo,
   },
   'event.dingtalkMessageGeneral': {
-    mode: 'ctx',
     bean: eventDingtalkMessageGeneral,
   },
 };
