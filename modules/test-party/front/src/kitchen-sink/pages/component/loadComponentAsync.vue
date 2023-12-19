@@ -33,13 +33,10 @@ export default {
   },
   methods: {
     async init() {
-      // load module
-      const moduleTestParty = await this.$meta.module.use('test-party');
-      // create component
-      let component = moduleTestParty.options.components['loadComponentAsync'];
-      component = this.$meta.util.createComponentOptions(component);
+      // use component
+      const component = await this.$meta.module.useComponent('test-party', 'loadComponentAsync');
       // register component
-      this.$options.components['loadComponentAsync'] = component;
+      this.$options.components.loadComponentAsync = component;
       // ready
       this.componentReady = true;
     },

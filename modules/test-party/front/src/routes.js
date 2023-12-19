@@ -16,6 +16,7 @@ function loadKitchenSinkFramework7(name) {
 }
 
 export default [
+  { path: 'installFactory', component: loadjsx('installFactory') },
   { path: 'component', component: loadjsx('component') },
   { path: 'jsx', component: loadjsx('jsx') },
   { path: 'wasm_go', component: loadjsx('wasm_go') },
