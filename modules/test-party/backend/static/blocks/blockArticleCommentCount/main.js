@@ -85,7 +85,7 @@
       if ($host.mode === 'view-cms') {
         return window.util.time.formatDateTime();
       }
-      return window.Vue.prototype.$meta.util.formatDateTime();
+      return window.Vue.default.prototype.$meta.util.formatDateTime();
     }
   }
   return Block;
