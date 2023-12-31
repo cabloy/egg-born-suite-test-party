@@ -5,6 +5,6 @@ module.exports = {
   },
   backend: {
     productionSourceMap: false,
-    uglify: true,
+    uglify: false, // true,
   },
 };
