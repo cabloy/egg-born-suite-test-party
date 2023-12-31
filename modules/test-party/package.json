@@ -18,6 +18,15 @@
       "a-flownode": "5.0.0"
     }
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "description": "",
   "files": [
     "dist",
