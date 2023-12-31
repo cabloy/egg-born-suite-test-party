@@ -10,6 +10,15 @@
       "test-party": "5.0.0"
     }
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "description": "test for monkey modules",
   "keywords": [
     "Cabloy Module"
@@ -21,5 +30,7 @@
     "preversion": "npm run build:all && git add ."
   },
   "author": "zhennann",
-  "dependencies": {}
+  "dependencies": {
+    "egg-born-module-test-party": "^5.0.0"
+  }
 }
