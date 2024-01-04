@@ -18,7 +18,7 @@
       "a-flownode": "5.0.0"
     }
   },
-  "type": "module",
+  "type_": "module",
   "exports": {
     ".": {
       "types": [

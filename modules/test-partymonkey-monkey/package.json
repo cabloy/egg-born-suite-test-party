@@ -10,7 +10,7 @@
       "test-party": "5.0.0"
     }
   },
-  "type": "module",
+  "type_": "module",
   "exports": {
     ".": {
       "types": [
