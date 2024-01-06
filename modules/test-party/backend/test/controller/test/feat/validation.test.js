@@ -18,7 +18,7 @@ describe('test/controller/test/feat/validation.test.js', () => {
     };
 
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
     await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'post',
@@ -47,7 +47,7 @@ describe('test/controller/test/feat/validation.test.js', () => {
 
     // ctx
     try {
-      const ctx = await app.mockCtx();
+      const ctx = await app.meta.mockUtil.mockCtx();
       await ctx.meta.util.performAction({
         innerAccess: false,
         method: 'post',
@@ -73,7 +73,7 @@ describe('test/controller/test/feat/validation.test.js', () => {
     };
 
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
     await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'post',

@@ -9,7 +9,7 @@ const atomClass = {
 describe('test/controller/test/itemOnly/right.test.js', () => {
   it('action:checkRightCreate', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
 
     const checkRightCreates = [
       ['Tom', false],
@@ -42,7 +42,7 @@ describe('test/controller/test/itemOnly/right.test.js', () => {
 
   it('action:checkRight', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
 
     // login
     await ctx.meta.mockUtil.login({ auth: 'Tom' });

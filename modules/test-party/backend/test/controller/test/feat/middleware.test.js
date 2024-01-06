@@ -3,7 +3,7 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 describe('test/controller/test/feat/middleware.test.js', () => {
   it('action:interception', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
 
     // success
     const data = await ctx.meta.util.performAction({
@@ -38,7 +38,7 @@ describe('test/controller/test/feat/middleware.test.js', () => {
 
   it('action:restructuring', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
     // success
     const data = await ctx.meta.util.performAction({
       innerAccess: false,

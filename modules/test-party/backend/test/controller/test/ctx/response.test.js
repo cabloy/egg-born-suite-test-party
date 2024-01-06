@@ -3,7 +3,7 @@ const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 describe('test/controller/test/ctx/response.test.js', () => {
   it('action:response:success', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
     const data = await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'post',
@@ -14,7 +14,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
 
   it('action:response:successMore', async () => {
     // ctx
-    const ctx = await app.mockCtx();
+    const ctx = await app.meta.mockUtil.mockCtx();
     const page = { index: 0, size: 10 };
     const data = await ctx.meta.util.performAction({
       innerAccess: false,
@@ -31,7 +31,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
 
   it('action:response:fail', async () => {
     // ctx
-    const ctx = await app.mockCtx({ locale: 'zh-cn' });
+    const ctx = await app.meta.mockUtil.mockCtx({ locale: 'zh-cn' });
     await ctx.meta.mockUtil.catchError(
       async function () {
         return await ctx.meta.util.performAction({
@@ -49,7 +49,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
 
   it('action:response:throwError', async () => {
     // ctx
-    const ctx = await app.mockCtx({ locale: 'zh-cn' });
+    const ctx = await app.meta.mockUtil.mockCtx({ locale: 'zh-cn' });
     await ctx.meta.mockUtil.catchError(
       async function () {
         return await ctx.meta.util.performAction({
