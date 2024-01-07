@@ -25,7 +25,7 @@ const a = 1;
 const b = MyTest;
 // PartyTest2;
 PartyTest;
-
+MyTest30;
 // basename;
 export class Test {
   // getTest():
