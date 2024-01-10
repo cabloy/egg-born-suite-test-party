@@ -1,8 +1,8 @@
 // eslint-disable-next-line
-module.exports = appInfo => {
+module.exports = app => {
   const config = {};
 
-  if (appInfo.env === 'unittest') {
+  if (app.meta.isTest) {
     // startups
     config.startups = {
       startupAll: {
