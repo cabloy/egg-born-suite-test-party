@@ -64,7 +64,7 @@ module.exports = class BeanController {
     let res;
 
     // general way
-    res = this.ctx.bean._getBean(moduleInfo.relativeName, 'local.test').name;
+    res = this.ctx.bean._getBean('test-party.local.test').name;
     assert.equal(res, 'localTest');
 
     // this module
