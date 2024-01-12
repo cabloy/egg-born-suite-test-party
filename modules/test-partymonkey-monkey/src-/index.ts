@@ -1,19 +1,19 @@
-// import PartyTest2, { PartyTest } from 'egg-born-module-test-party';
+// import PartyTest2, { PartyTest } from 'cabloy-module-api-test-party';
 // import '@cabloy/common';
 
-// import { PartyTest, PartyTest2 } from 'egg-born-module-test-party';
+// import { PartyTest, PartyTest2 } from 'cabloy-module-api-test-party';
 
-// import   PartyTest2, { PartyTest } from 'egg-born-module-test-party';
-// import { Classes, PartyTest } from 'egg-born-module-test-party';
-// import { PartyTest } from 'egg-born-module-test-party';
-// import { PartyTest } from 'egg-born-module-test-party';
-// import { PartyTest } from 'egg-born-module-test-party';
-// import { PartyTest, PartyTest2, PartyTest3 } from 'egg-born-module-test-party';
-// import { PartyTest2 } from 'egg-born-module-test-party';
-// import { PartyTest2 } from 'egg-born-module-test-party';
-// import { PartyTest } from 'egg-born-module-test-party';
-// import { classes } from 'egg-born-module-test-party';
-// import { PartyTest2 } from 'egg-born-module-test-party';
+// import   PartyTest2, { PartyTest } from 'cabloy-module-api-test-party';
+// import { Classes, PartyTest } from 'cabloy-module-api-test-party';
+// import { PartyTest } from 'cabloy-module-api-test-party';
+// import { PartyTest } from 'cabloy-module-api-test-party';
+// import { PartyTest } from 'cabloy-module-api-test-party';
+// import { PartyTest, PartyTest2, PartyTest3 } from 'cabloy-module-api-test-party';
+// import { PartyTest2 } from 'cabloy-module-api-test-party';
+// import { PartyTest2 } from 'cabloy-module-api-test-party';
+// import { PartyTest } from 'cabloy-module-api-test-party';
+// import { classes } from 'cabloy-module-api-test-party';
+// import { PartyTest2 } from 'cabloy-module-api-test-party';
 // import { urlencoded } from 'express';
 // import { basename } from 'path';
 // import { PartyTest2 } from '../../test-party/src/index2.js';

@@ -1,5 +1,5 @@
 {
-  "name": "egg-born-module-test-wechat",
+  "name": "cabloy-module-api-test-wechat",
   "version": "5.4.0",
   "title": "test-wechat",
   "eggBornModule": {
@@ -10,7 +10,7 @@
       "a-wechat": "5.0.0"
     }
   },
-  "description": "test module for egg-born-module-a-wechat",
+  "description": "test module for cabloy-module-api-a-wechat",
   "keywords": [
     "Cabloy Module",
     "Wechat Test"

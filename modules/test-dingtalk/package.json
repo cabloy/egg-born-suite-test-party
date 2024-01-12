@@ -1,5 +1,5 @@
 {
-  "name": "egg-born-module-test-dingtalk",
+  "name": "cabloy-module-api-test-dingtalk",
   "version": "5.0.0",
   "title": "test-dingtalk",
   "eggBornModule": {
@@ -10,7 +10,7 @@
       "a-dingtalk": "5.0.0"
     }
   },
-  "description": "test module for egg-born-module-a-wxwork",
+  "description": "test module for cabloy-module-api-a-wxwork",
   "keywords": [
     "Cabloy Module",
     "Wxwork Test"

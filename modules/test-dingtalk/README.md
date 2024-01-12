@@ -1,3 +1,3 @@
-# egg-born-module-test-dingtalk
+# cabloy-module-api-test-dingtalk
 
-CabloyJS的钉钉测试模块
+CabloyJS 的钉钉测试模块

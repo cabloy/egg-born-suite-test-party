@@ -1,5 +1,5 @@
 {
-  "name": "egg-born-module-test-partymonkey-monkey",
+  "name": "cabloy-module-api-test-partymonkey-monkey",
   "version": "5.0.0",
   "title": "test-partymonkey-monkey",
   "eggBornModule": {
@@ -34,6 +34,6 @@
   },
   "author": "zhennann",
   "dependencies": {
-    "egg-born-module-test-party": "^5.0.0"
+    "cabloy-module-api-test-party": "^5.0.0"
   }
 }

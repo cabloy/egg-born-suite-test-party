@@ -1,1 +1,1 @@
-import 'egg-born-module-test-party';
+import 'cabloy-module-api-test-party';

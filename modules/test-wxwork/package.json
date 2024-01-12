@@ -1,5 +1,5 @@
 {
-  "name": "egg-born-module-test-wxwork",
+  "name": "cabloy-module-api-test-wxwork",
   "version": "5.0.0",
   "title": "test-wxwork",
   "eggBornModule": {
@@ -10,7 +10,7 @@
       "a-wxwork": "5.0.0"
     }
   },
-  "description": "test module for egg-born-module-a-wxwork",
+  "description": "test module for cabloy-module-api-a-wxwork",
   "keywords": [
     "Cabloy Module",
     "Wxwork Test"
