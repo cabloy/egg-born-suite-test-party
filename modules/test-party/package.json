@@ -18,7 +18,7 @@
       "a-flownode": "5.0.0"
     }
   },
-  "type_": "module",
+  "type": "module",
   "exports": {
     ".": {
       "types": [
@@ -45,5 +45,7 @@
     "preversion": "npm run build:all && git add ."
   },
   "author": "zhennann",
-  "dependencies": {}
+  "dependencies": {
+    "@cabloy/core": "5.0.0"
+  }
 }
