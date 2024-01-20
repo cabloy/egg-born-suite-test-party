@@ -1,4 +1,4 @@
-const extend = require('@zhennann/extend');
+const extend = require('@cabloy/extend');
 
 const atomClasses = require('./meta/atomClass/atomClasses.js');
 const schemas = require('./meta/validation/schemas.js');
