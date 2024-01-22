@@ -1,0 +1,34 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "modules/test-dingtalk"
+    },
+    {
+      "path": "modules/test-hostsimple-sync"
+    },
+    {
+      "path": "modules/test-localeone"
+    },
+    {
+      "path": "modules/test-localetwo"
+    },
+    {
+      "path": "modules/test-party"
+    },
+    {
+      "path": "modules/test-partymonkey-monkey"
+    },
+    {
+      "path": "modules/test-wechat"
+    },
+    {
+      "path": "modules/test-wxwork"
+    }
+  ]
+}
