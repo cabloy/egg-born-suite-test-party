@@ -3,5 +3,15 @@
   "version": "5.0.0",
   "title": "Party Test",
   "description": "",
-  "author": "zhennann"
+  "author": "zhennann",
+  "dependencies": {
+    "cabloy-module-api-test-dingtalk": "workspace:^",
+    "cabloy-module-api-test-hostsimple-sync": "workspace:^",
+    "cabloy-module-api-test-localeone": "workspace:^",
+    "cabloy-module-api-test-localetwo": "workspace:^",
+    "cabloy-module-api-test-party": "workspace:^",
+    "cabloy-module-api-test-partymonkey-monkey": "workspace:^",
+    "cabloy-module-api-test-wechat": "workspace:^",
+    "cabloy-module-api-test-wxwork": "workspace:^"
+  }
 }
