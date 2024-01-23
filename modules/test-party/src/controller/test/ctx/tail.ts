@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class TailController {
+@Controller()
+export class ControllerTestCtxTail extends BeanBase {
   async tail() {
     // 1
     this.ctx.meta._tail_test = 1;
@@ -20,4 +23,4 @@ module.exports = class TailController {
     // done
     this.ctx.success();
   }
-};
+}

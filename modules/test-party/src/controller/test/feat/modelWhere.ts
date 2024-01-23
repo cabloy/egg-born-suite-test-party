@@ -1,3 +1,5 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
 const atomStaticKey = '--modelWhere--test--';
@@ -6,7 +8,9 @@ const __rows = [
   { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
   { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
 ];
-module.exports = class ModelController {
+
+@Controller()
+export class ControllerTestFeatModelWhere extends BeanBase {
   async modelWhere() {
     await this._modelWhere();
     this.ctx.success();
@@ -81,4 +85,4 @@ module.exports = class ModelController {
     const count = await model.count({ atomStaticKey });
     assert.equal(count, 0);
   }
-};
+}

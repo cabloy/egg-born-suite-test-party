@@ -1,7 +1,11 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
 const moduleInfo = module.info;
-module.exports = class HelloController {
+
+@Controller()
+export class ControllerTestEventHello extends BeanBase {
   async hello() {
     const data = {
       text: 'hello',
@@ -22,4 +26,4 @@ module.exports = class HelloController {
     assert.equal(result, 'echo.hello.world.echo.hello');
     this.ctx.success();
   }
-};
+}

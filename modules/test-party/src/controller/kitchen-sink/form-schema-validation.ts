@@ -1,3 +1,5 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const __ItemDefault = {
   userName: '',
   password: '',
@@ -10,7 +12,8 @@ const __ItemDefault = {
   motto: '',
 };
 
-module.exports = class FormSchemaValidationController {
+@Controller()
+export class ControllerKitchenSinkFormSchemaValidation extends BeanBase {
   async load() {
     // try load from db cache
     const cacheName = this._getCacheName();
@@ -49,4 +52,4 @@ module.exports = class FormSchemaValidationController {
     const user = this.ctx.state.user.op;
     return `__formTest:${user.id}`;
   }
-};
+}

@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class SessionController {
+@Controller()
+export class ControllerTestCtxSession extends BeanBase {
   async session() {
     // key1
     this.ctx.session.test_key1 = 1;
@@ -37,4 +40,4 @@ module.exports = class SessionController {
       instance: this.ctx.instance,
     });
   }
-};
+}

@@ -1,3 +1,5 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
 const atomStaticKey = '--model--test--';
@@ -6,7 +8,9 @@ const __rows = [
   { atomStaticKey, atomName: 'atom-two', atomStage: 1 },
   { atomStaticKey, atomName: 'atom-three', atomStage: 2 },
 ];
-module.exports = class ModelController {
+
+@Controller()
+export class ControllerTestFeatModel extends BeanBase {
   async model() {
     // model
     const model = this.ctx.model.module('a-base').atom;
@@ -42,7 +46,7 @@ module.exports = class ModelController {
       {
         where: { atomStaticKey },
         columns: ['readCount'],
-      }
+      },
     );
 
     // select: in
@@ -111,4 +115,4 @@ module.exports = class ModelController {
     // done
     this.ctx.success();
   }
-};
+}

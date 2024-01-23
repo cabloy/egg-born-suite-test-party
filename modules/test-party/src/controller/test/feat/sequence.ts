@@ -1,7 +1,10 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 const pMap = require('p-map');
 
-module.exports = class SequenceController {
+@Controller()
+export class ControllerTestFeatSequence extends BeanBase {
   async sequence() {
     const arr = [1, 2, 3, 4, 5];
     let results;
@@ -64,4 +67,4 @@ module.exports = class SequenceController {
     // done
     this.ctx.success();
   }
-};
+}

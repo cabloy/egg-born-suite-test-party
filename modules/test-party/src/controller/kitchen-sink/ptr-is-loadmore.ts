@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const gTestListMax = 89;
 
-module.exports = class PtrIsLoadMoreController {
+@Controller()
+export class ControllerKitchenSinkPtrIsLoadmore extends BeanBase {
   async list() {
     // page
     let page = this.ctx.request.body.page;
@@ -19,4 +22,4 @@ module.exports = class PtrIsLoadMoreController {
     // ok
     this.ctx.successMore(items, page.index, page.size);
   }
-};
+}

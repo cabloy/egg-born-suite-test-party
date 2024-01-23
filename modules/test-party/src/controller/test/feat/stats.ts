@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class StatsController {
+@Controller()
+export class ControllerTestFeatStats extends BeanBase {
   async stats() {
     // userIds
     const userIds = this.ctx.cache.mem.get('userIds');
@@ -47,4 +50,4 @@ module.exports = class StatsController {
     });
     this.ctx.success();
   }
-};
+}

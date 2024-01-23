@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class StarLabelController {
+@Controller()
+export class ControllerTestAtomStarLabel extends BeanBase {
   async starLabel() {
     // atomClass
     const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });
@@ -83,4 +86,4 @@ module.exports = class StarLabelController {
     // done
     this.ctx.success();
   }
-};
+}

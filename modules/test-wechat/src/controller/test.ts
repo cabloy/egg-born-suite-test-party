@@ -1,4 +1,8 @@
-module.exports = class TestController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestWechat } from '../index.js';
+
+@Controller()
+export class ControllerTest extends BeanBase {
   async getOpenid() {
     const res = await this.ctx.service.test.getOpenid({
       user: this.ctx.state.user.op,
@@ -13,4 +17,4 @@ module.exports = class TestController {
     });
     this.ctx.success(res);
   }
-};
+}

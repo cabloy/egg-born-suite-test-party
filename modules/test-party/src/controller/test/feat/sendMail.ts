@@ -1,4 +1,8 @@
-module.exports = class SendMailController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestFeatSendMail extends BeanBase {
   async sendMail() {
     // send
     const message = this.ctx.request.body.data;
@@ -9,4 +13,4 @@ module.exports = class SendMailController {
     // done
     this.ctx.success();
   }
-};
+}

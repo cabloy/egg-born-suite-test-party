@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class RequestController {
+@Controller()
+export class ControllerTestCtxRequest extends BeanBase {
   async request() {
     // param
     assert.equal(this.ctx.params.id, '1');
@@ -26,4 +29,4 @@ module.exports = class RequestController {
     this.ctx.type = 'text/xml';
     this.ctx.body = payload.toString();
   }
-};
+}

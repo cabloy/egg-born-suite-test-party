@@ -1,7 +1,11 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
 const moduleInfo = module.info;
-module.exports = class SummerController {
+
+@Controller()
+export class ControllerTestFeatSummer extends BeanBase {
   async summer() {
     // name
     const name = 'test';
@@ -106,4 +110,4 @@ module.exports = class SummerController {
     // done
     this.ctx.success();
   }
-};
+}

@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class CategoryController {
+@Controller()
+export class ControllerTestFeatCategory extends BeanBase {
   async category() {
     // atomClass
     const atomClass = {
@@ -31,4 +34,4 @@ module.exports = class CategoryController {
     // ok
     this.ctx.success();
   }
-};
+}

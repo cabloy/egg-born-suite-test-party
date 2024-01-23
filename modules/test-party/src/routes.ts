@@ -275,7 +275,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'post',
     path: 'test/feat/socketio/publish',
-    controller: 'testFeatSocketIO',
+    controller: 'testFeatSocketio',
     middlewares: '',
     meta: { auth: { user: true } },
   },
@@ -283,7 +283,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'post',
     path: 'test/feat/socketio/simpleChat',
-    controller: 'testFeatSocketIO',
+    controller: 'testFeatSocketio',
     middlewares: '',
     meta: { auth: { user: true } },
   },
@@ -400,7 +400,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'post',
     path: 'test/feat/openAuth/resourceCheckSuccess',
-    controller: 'testOpenAuth',
+    controller: 'testFeatOpenAuth',
     middlewares: 'test',
     meta: {
       right: { type: 'resource', name: 'mineKitchenSink' },
@@ -409,7 +409,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'post',
     path: 'test/feat/openAuth/resourceCheckFail',
-    controller: 'testOpenAuth',
+    controller: 'testFeatOpenAuth',
     middlewares: 'test',
     meta: {
       right: { type: 'resource', module: 'test-party', name: 'createParty' },
@@ -417,24 +417,24 @@ export const routes: IModuleRoute[] = [
   },
 
   // test/monkey/monkeyee
-  { method: 'post', path: 'test/monkey/monkeyee/test', controller: 'testMonkeyee', middlewares: 'test' },
+  { method: 'post', path: 'test/monkey/monkeyee/test', controller: 'testMonkeyMonkeyee', middlewares: 'test' },
 
   // kitchen-sink/guide
-  { method: 'post', path: 'kitchen-sink/guide/echo', controller: 'testKitchensinkGuide' },
-  { method: 'post', path: 'kitchen-sink/guide/echo3', controller: 'testKitchensinkGuide' },
-  { method: 'post', path: 'kitchen-sink/guide/echo4', controller: 'testKitchensinkGuide' },
-  { method: 'post', path: 'kitchen-sink/guide/echo6', controller: 'testKitchensinkGuide' },
-  { method: 'post', path: 'kitchen-sink/guide/echo7', controller: 'testKitchensinkGuide' },
+  { method: 'post', path: 'kitchen-sink/guide/echo', controller: 'kitchenSinkGuide' },
+  { method: 'post', path: 'kitchen-sink/guide/echo3', controller: 'kitchenSinkGuide' },
+  { method: 'post', path: 'kitchen-sink/guide/echo4', controller: 'kitchenSinkGuide' },
+  { method: 'post', path: 'kitchen-sink/guide/echo6', controller: 'kitchenSinkGuide' },
+  { method: 'post', path: 'kitchen-sink/guide/echo7', controller: 'kitchenSinkGuide' },
   {
     method: 'post',
     path: 'kitchen-sink/guide/echo8',
-    controller: 'testKitchensinkGuide',
+    controller: 'kitchenSinkGuide',
     middlewares: 'transaction',
   },
   {
     method: 'post',
     path: 'kitchen-sink/guide/echo9',
-    controller: 'testKitchensinkGuide',
+    controller: 'kitchenSinkGuide',
     meta: {
       right: { type: 'resource', name: 'appComponentsGuide' },
     },
@@ -444,7 +444,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'get',
     path: 'kitchen-sink/autocomplete/languages/:query',
-    controller: 'testKitchensinkAutocomplete',
+    controller: 'kitchenSinkAutocomplete',
     action: 'languages',
     meta: { auth: { enable: false } },
   },
@@ -452,24 +452,24 @@ export const routes: IModuleRoute[] = [
   {
     method: 'get',
     path: 'kitchen-sink/form-schema-validation/load',
-    controller: 'testKitchensinkFormSchemaValidation',
+    controller: 'kitchenSinkFormSchemaValidation',
   },
   {
     method: 'post',
     path: 'kitchen-sink/form-schema-validation/saveSimple',
-    controller: 'testKitchensinkFormSchemaValidation',
+    controller: 'kitchenSinkFormSchemaValidation',
   },
   {
     method: 'post',
     path: 'kitchen-sink/form-schema-validation/saveValidation',
-    controller: 'testKitchensinkFormSchemaValidation',
+    controller: 'kitchenSinkFormSchemaValidation',
     middlewares: 'validate',
     meta: { validate: { validator: 'formTest' } },
   },
   {
     method: 'post',
     path: 'kitchen-sink/form-captcha/signup',
-    controller: 'testKitchensinkFormSchemaValidation',
+    controller: 'kitchenSinkFormSchemaValidation',
     middlewares: 'captchaVerify,validate',
     meta: {
       captchaVerify: { scene: { name: 'formCaptchaTest' } },
@@ -479,7 +479,7 @@ export const routes: IModuleRoute[] = [
   {
     method: 'post',
     path: 'kitchen-sink/form-mobile-verify/mobileVerify',
-    controller: 'testKitchensinkFormSchemaValidation',
+    controller: 'kitchenSinkFormSchemaValidation',
     middlewares: 'captchaVerify,validate',
     meta: {
       captchaVerify: { scene: { name: 'formMobileVerifyTest' } },
@@ -487,5 +487,5 @@ export const routes: IModuleRoute[] = [
     },
   },
   // kitchen-sink/ptr-is-loadmore
-  { method: 'post', path: 'kitchen-sink/ptr-is-loadmore/list', controller: 'testKitchensinkPtrIsLoadMore' },
+  { method: 'post', path: 'kitchen-sink/ptr-is-loadmore/list', controller: 'kitchenSinkPtrIsLoadmore' },
 ];

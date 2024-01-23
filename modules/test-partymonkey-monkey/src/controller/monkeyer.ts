@@ -1,5 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestPartymonkey } from '../index.js';
 const moduleInfo = module.info;
-module.exports = class MonkeyerController {
+
+@Controller()
+export class ControllerMonkeyer extends BeanBase {
   async test() {
     const config = this.ctx.config.module('test-party');
     this.ctx.success({
@@ -7,4 +11,4 @@ module.exports = class MonkeyerController {
       monkeyed: config.monkeyed,
     });
   }
-};
+}

@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class LocaleController {
+@Controller()
+export class ControllerTestCtxLocale extends BeanBase {
   async enus() {
     const message = this.ctx.config.message;
     const data = {
@@ -22,4 +25,4 @@ module.exports = class LocaleController {
     // done
     this.ctx.success(data);
   }
-};
+}

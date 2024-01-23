@@ -1,3 +1,5 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
 const __testData_allowAllFieldsRead = {
@@ -60,7 +62,8 @@ const __testData_custom_object = {
   },
 };
 
-module.exports = class FieldsController {
+@Controller()
+export class ControllerTestFeatFieldsRight extends BeanBase {
   async parseSchema() {
     const moduleTestFlow = this.app.meta.modules['test-flow'];
     if (!moduleTestFlow) {
@@ -163,4 +166,4 @@ module.exports = class FieldsController {
     assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
     assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
   }
-};
+}

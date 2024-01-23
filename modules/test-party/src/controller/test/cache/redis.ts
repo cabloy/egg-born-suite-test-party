@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class RedisController {
+@Controller()
+export class ControllerTestCacheRedis extends BeanBase {
   async redis() {
     let res;
     let value;
@@ -48,7 +51,7 @@ module.exports = class RedisController {
     // done
     this.ctx.success();
   }
-};
+}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));

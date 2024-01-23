@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class RoleController {
+@Controller()
+export class ControllerTestMultilevelAuthorizationRole extends BeanBase {
   async role() {
     // userIds
     const userIds = this.ctx.cache.mem.get('userIds');
@@ -66,4 +69,4 @@ module.exports = class RoleController {
     // done
     this.ctx.success();
   }
-};
+}

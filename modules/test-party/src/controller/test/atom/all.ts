@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class AllController {
+@Controller()
+export class ControllerTestAtomAll extends BeanBase {
   async all() {
     const totalTimes = 1;
     const timeStart = new Date().getTime() / 1000;
@@ -33,7 +36,7 @@ module.exports = class AllController {
       ],
       (actual, expected, userName) => {
         assert.equal(actual, expected, userName);
-      }
+      },
     );
 
     // Tom add party
@@ -56,7 +59,7 @@ module.exports = class AllController {
       ],
       (actual, expected, userName) => {
         assert.equal(actual, expected, userName);
-      }
+      },
     );
 
     // Tom enable(submit) party
@@ -79,7 +82,7 @@ module.exports = class AllController {
       ],
       (actual, expected, userName) => {
         assert.equal(actual, expected, userName);
-      }
+      },
     );
 
     // Tom update party
@@ -216,7 +219,7 @@ module.exports = class AllController {
       ],
       (actual, expected, userName) => {
         assert.equal(actual, expected, userName);
-      }
+      },
     );
   }
 
@@ -246,4 +249,4 @@ module.exports = class AllController {
     if (userId) return { id: userId };
     return await this.ctx.bean.user.get({ userName });
   }
-};
+}

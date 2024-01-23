@@ -1,4 +1,8 @@
-module.exports = class ResponseController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestCtxResponse extends BeanBase {
   async success() {
     const res = {
       userName: 'zhennann',
@@ -20,4 +24,4 @@ module.exports = class ResponseController {
   async throwError() {
     this.ctx.throw(1001);
   }
-};
+}

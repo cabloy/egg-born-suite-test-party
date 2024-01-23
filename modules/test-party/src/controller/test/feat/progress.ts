@@ -1,4 +1,8 @@
-module.exports = class ProgressController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestFeatProgress extends BeanBase {
   async progress() {
     // create progress
     const progressId = await this.ctx.bean.progress.create();
@@ -81,4 +85,4 @@ module.exports = class ProgressController {
       await this.ctx.bean.util.sleep(1500);
     }
   }
-};
+}

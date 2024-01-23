@@ -1,4 +1,8 @@
-module.exports = class RightController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestItemOnlyRight extends BeanBase {
   async checkRightCreate() {
     // checked by route/middleware
     this.ctx.success(this.ctx.request.body.atomClass);
@@ -25,4 +29,4 @@ module.exports = class RightController {
     // checked by route/middleware
     this.ctx.success(this.ctx.request.body.key);
   }
-};
+}

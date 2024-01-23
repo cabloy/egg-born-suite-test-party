@@ -1,4 +1,8 @@
-module.exports = class BroadcastController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestFeatBroadcast extends BeanBase {
   async emit() {
     this.ctx.meta.util.broadcastEmit({
       locale: 'zh-cn',
@@ -8,4 +12,4 @@ module.exports = class BroadcastController {
     });
     this.ctx.success();
   }
-};
+}

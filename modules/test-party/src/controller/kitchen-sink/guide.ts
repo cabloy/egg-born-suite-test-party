@@ -1,4 +1,8 @@
-module.exports = class GuideController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerKitchenSinkGuide extends BeanBase {
   async echo() {
     const message = 'Hello World';
     this.ctx.success(message);
@@ -80,4 +84,4 @@ module.exports = class GuideController {
     // ok
     this.ctx.success('ok');
   }
-};
+}

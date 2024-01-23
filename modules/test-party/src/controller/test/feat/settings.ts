@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class SettingsController {
+@Controller()
+export class ControllerTestFeatSettings extends BeanBase {
   async settings() {
     // user
 
@@ -41,4 +44,4 @@ module.exports = class SettingsController {
     // ok
     this.ctx.success();
   }
-};
+}

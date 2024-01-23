@@ -1,4 +1,8 @@
-module.exports = class ValidationController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestFeatValidation extends BeanBase {
   async success() {
     this.ctx.success();
   }
@@ -10,4 +14,4 @@ module.exports = class ValidationController {
   async schema() {
     this.ctx.success();
   }
-};
+}

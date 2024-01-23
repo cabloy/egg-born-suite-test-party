@@ -1,4 +1,8 @@
-module.exports = class TransactionController {
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
+
+@Controller()
+export class ControllerTestCtxTransaction extends BeanBase {
   async transaction() {
     // user
     const user = this.ctx.state.user.op;
@@ -22,4 +26,4 @@ module.exports = class TransactionController {
     // done
     this.ctx.success();
   }
-};
+}

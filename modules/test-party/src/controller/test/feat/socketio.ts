@@ -1,8 +1,12 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const _subscribePathTest = '/test/party/test';
 const _subscribePathSimpleChat = '/test/party/simpleChat';
 
 const moduleInfo = module.info;
-module.exports = class SocketIOController {
+
+@Controller()
+export class ControllerTestFeatSocketio extends BeanBase {
   async publish() {
     const options = this.ctx.request.body.options;
     const message = this.ctx.request.body.message;
@@ -48,4 +52,4 @@ module.exports = class SocketIOController {
     }
     return userIds;
   }
-};
+}

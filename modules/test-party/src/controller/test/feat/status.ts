@@ -1,6 +1,9 @@
+import { BeanBase, Controller, Use } from '@cabloy/core';
+import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-module.exports = class StatusController {
+@Controller()
+export class ControllerTestFeatStatus extends BeanBase {
   async status() {
     // name
     const name = '__test_enable';
@@ -31,4 +34,4 @@ module.exports = class StatusController {
     // done
     this.ctx.success();
   }
-};
+}
