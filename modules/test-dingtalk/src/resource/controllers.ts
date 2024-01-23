@@ -1,5 +1,1 @@
-const test = require('./controller/test.js');
-
-module.exports = {
-  test,
-};
+export * from '../controller/test.js';
