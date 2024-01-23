@@ -10,7 +10,7 @@
       "test-party": "5.0.0"
     }
   },
-  "type_": "module",
+  "type": "module",
   "exports": {
     ".": {
       "types": [
@@ -23,8 +23,10 @@
     "./package.json": "./package.json"
   },
   "description": "test for monkey modules",
-  "keywords": [
-    "Cabloy Module"
+  "files": [
+    "dist",
+    "static",
+    "typings"
   ],
   "scripts": {
     "build:front": "node ../../../../../scripts/egg-born-bin.js front-build-module",
@@ -32,6 +34,9 @@
     "build:all": "npm run build:front && npm run build:backend",
     "preversion": "npm run build:all && git add ."
   },
+  "keywords": [
+    "Cabloy Module"
+  ],
   "author": "zhennann",
   "dependencies": {
     "cabloy-module-api-test-party": "^5.0.0"
