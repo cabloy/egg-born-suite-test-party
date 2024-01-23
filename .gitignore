@@ -1,6 +1,5 @@
-package-lock.json
 node_modules
-**/typings/core
-.DS_Store
-dist/
+package-lock.json
+**/dist/
 *.tsbuildinfo
+.DS_Store
