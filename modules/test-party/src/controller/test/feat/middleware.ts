@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestFeatMiddleware extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async interception() {
     const { a, b } = this.ctx.request.body;
     const c = parseInt(a) + parseInt(b);

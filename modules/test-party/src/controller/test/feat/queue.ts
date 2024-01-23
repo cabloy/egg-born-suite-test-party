@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestFeatQueue extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async pushAsync() {
     const res = await this.ctx.meta.util.queuePushAsync({
       module: 'test-party',

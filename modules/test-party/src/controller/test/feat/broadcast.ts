@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestFeatBroadcast extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async emit() {
     this.ctx.meta.util.broadcastEmit({
       locale: 'zh-cn',

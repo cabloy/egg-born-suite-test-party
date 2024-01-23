@@ -4,6 +4,9 @@ const moduleInfo = module.info;
 
 @Controller()
 export class ControllerTestMonkeyMonkeyee extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async test() {
     this.ctx.success(moduleInfo.relativeName);
   }

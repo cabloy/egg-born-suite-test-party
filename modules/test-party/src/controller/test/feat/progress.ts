@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestFeatProgress extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async progress() {
     // create progress
     const progressId = await this.ctx.bean.progress.create();

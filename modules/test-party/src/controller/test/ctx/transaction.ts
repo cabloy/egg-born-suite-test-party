@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestCtxTransaction extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async transaction() {
     // user
     const user = this.ctx.state.user.op;

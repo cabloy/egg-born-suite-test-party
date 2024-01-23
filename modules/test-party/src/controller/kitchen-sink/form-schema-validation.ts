@@ -14,6 +14,9 @@ const __ItemDefault = {
 
 @Controller()
 export class ControllerKitchenSinkFormSchemaValidation extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async load() {
     // try load from db cache
     const cacheName = this._getCacheName();

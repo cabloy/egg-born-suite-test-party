@@ -11,6 +11,9 @@ const __rows = [
 
 @Controller()
 export class ControllerTestFeatModelWhere extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async modelWhere() {
     await this._modelWhere();
     this.ctx.success();

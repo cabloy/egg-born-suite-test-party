@@ -7,6 +7,9 @@ const moduleInfo = module.info;
 
 @Controller()
 export class ControllerTestFeatSocketio extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async publish() {
     const options = this.ctx.request.body.options;
     const message = this.ctx.request.body.message;

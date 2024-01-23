@@ -4,6 +4,9 @@ const languages = require('./data/autocomplete-languages.json');
 
 @Controller()
 export class ControllerKitchenSinkAutocomplete extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async languages() {
     const query = this.ctx.params.query;
     let data;

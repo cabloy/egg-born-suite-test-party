@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestFeatTag extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async tag() {
     // atomClass
     const atomClass = {

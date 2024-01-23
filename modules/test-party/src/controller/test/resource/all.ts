@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestResourceAll extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async all() {
     // userIds
     const userIds = this.ctx.cache.mem.get('userIds');

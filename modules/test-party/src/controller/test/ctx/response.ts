@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestCtxResponse extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async success() {
     const res = {
       userName: 'zhennann',

@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestAtomAll extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async all() {
     const totalTimes = 1;
     const timeStart = new Date().getTime() / 1000;

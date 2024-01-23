@@ -64,6 +64,9 @@ const __testData_custom_object = {
 
 @Controller()
 export class ControllerTestFeatFieldsRight extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async parseSchema() {
     const moduleTestFlow = this.app.meta.modules['test-flow'];
     if (!moduleTestFlow) {

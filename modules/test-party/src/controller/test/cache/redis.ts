@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCacheRedis extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async redis() {
     let res;
     let value;

@@ -6,6 +6,9 @@ const moduleInfo = module.info;
 
 @Controller()
 export class ControllerTestFeatBean extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async bean() {
     const a = 3;
     const b = 4;

@@ -6,6 +6,9 @@ const moduleInfo = module.info;
 
 @Controller()
 export class ControllerTestEventHello extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async hello() {
     const data = {
       text: 'hello',

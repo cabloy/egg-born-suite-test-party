@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestAtomStarLabel extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async starLabel() {
     // atomClass
     const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });

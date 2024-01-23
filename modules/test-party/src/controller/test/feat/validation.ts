@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestFeatValidation extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async success() {
     this.ctx.success();
   }

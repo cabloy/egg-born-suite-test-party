@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCtxTail extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async tail() {
     // 1
     this.ctx.meta._tail_test = 1;

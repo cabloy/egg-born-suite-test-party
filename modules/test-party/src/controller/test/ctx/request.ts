@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCtxRequest extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async request() {
     // param
     assert.equal(this.ctx.params.id, '1');

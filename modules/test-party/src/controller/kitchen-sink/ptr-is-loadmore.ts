@@ -4,6 +4,9 @@ const gTestListMax = 89;
 
 @Controller()
 export class ControllerKitchenSinkPtrIsLoadmore extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async list() {
     // page
     let page = this.ctx.request.body.page;

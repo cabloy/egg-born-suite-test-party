@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestFeatStatus extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async status() {
     // name
     const name = '__test_enable';

@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCtxSession extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async session() {
     // key1
     this.ctx.session.test_key1 = 1;

@@ -11,6 +11,9 @@ const __rows = [
 
 @Controller()
 export class ControllerTestFeatModel extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async model() {
     // model
     const model = this.ctx.model.module('a-base').atom;

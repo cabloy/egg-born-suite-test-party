@@ -6,6 +6,9 @@ const moduleInfo = module.info;
 
 @Controller()
 export class ControllerTestFeatSummer extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async summer() {
     // name
     const name = 'test';

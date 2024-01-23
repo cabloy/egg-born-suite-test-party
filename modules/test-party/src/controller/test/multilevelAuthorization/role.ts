@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestMultilevelAuthorizationRole extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async role() {
     // userIds
     const userIds = this.ctx.cache.mem.get('userIds');

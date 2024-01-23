@@ -5,6 +5,9 @@ const pMap = require('p-map');
 
 @Controller()
 export class ControllerTestFeatSequence extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async sequence() {
     const arr = [1, 2, 3, 4, 5];
     let results;

@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCtxConfig extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async test() {
     // current module
     let message = this.ctx.config.message;

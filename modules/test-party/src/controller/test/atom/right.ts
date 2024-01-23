@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestAtomRight extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async checkRightCreate() {
     // checked by route/middleware
     this.ctx.success(this.ctx.request.body.atomClass);

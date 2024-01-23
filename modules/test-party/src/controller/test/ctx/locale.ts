@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCtxLocale extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async enus() {
     const message = this.ctx.config.message;
     const data = {

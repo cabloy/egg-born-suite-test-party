@@ -4,6 +4,9 @@ const assert = require('assert');
 
 @Controller()
 export class ControllerTestCacheMem extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async mem() {
     let res;
     let value;

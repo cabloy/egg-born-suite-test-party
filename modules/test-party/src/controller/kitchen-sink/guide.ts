@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerKitchenSinkGuide extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async echo() {
     const message = 'Hello World';
     this.ctx.success(message);

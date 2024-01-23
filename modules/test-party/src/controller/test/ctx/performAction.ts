@@ -3,6 +3,9 @@ import { ScopeModuleTestParty } from '../index.js';
 
 @Controller()
 export class ControllerTestCtxPerformAction extends BeanBase {
+  @Use()
+  scope: ScopeModuleTestParty;
+
   async performAction() {
     // param: id
     const id = this.ctx.request.body.id;
