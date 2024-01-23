@@ -1,11 +1,15 @@
-class simpleAopBase {
+import { Aop, BeanBase, Virtual } from '@cabloy/core';
+
+@Virtual()
+class AopSimpleBase extends BeanBase {
   actionSync(context, next) {
     next();
     context.result = `${context.result}:simpleaop`;
   }
 }
 
-module.exports = class simpleAop extends simpleAopBase {
+@Aop({ match: 'testctx' })
+export class AopSimple extends AopSimpleBase {
   // magic
   __get__(context, next) {
     next();
@@ -18,7 +22,7 @@ module.exports = class simpleAop extends simpleAopBase {
     // }
   }
 
-  __set__(context, next) {
+  __set__(_context, next) {
     // const prop = context.prop;
     // if (prop === 'name') {
     //   const parts = context.value.split(':');
@@ -50,4 +54,4 @@ module.exports = class simpleAop extends simpleAopBase {
     await next();
     context.result = `${context.result}:simpleaop`;
   }
-};
+}

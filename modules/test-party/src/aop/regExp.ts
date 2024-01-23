@@ -1,4 +1,7 @@
-module.exports = class regExpAop {
+import { Aop, BeanBase } from '@cabloy/core';
+
+@Aop({ match: [/^test-party.test\.\w+$/, 'testctx'] })
+export class AopRegExp extends BeanBase {
   __get_name__(context, next) {
     next();
     context.value = `${context.value}:regexpaop`;
@@ -23,4 +26,4 @@ module.exports = class regExpAop {
     await next();
     context.result = `${context.result}:regexpaop`;
   }
-};
+}

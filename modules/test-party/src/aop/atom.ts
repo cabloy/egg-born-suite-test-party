@@ -1,6 +1,8 @@
-const assert = require('assert');
+import { Aop, BeanBase } from '@cabloy/core';
+import assert from 'assert';
 
-module.exports = class Atom {
+@Aop({ match: 'atom' })
+export class AopAtom extends BeanBase {
   async create(context, next) {
     await next();
     assert.equal(!!context.result, true);
@@ -9,4 +11,4 @@ module.exports = class Atom {
     await next();
     assert.equal(!!context.result, true);
   }
-};
+}
