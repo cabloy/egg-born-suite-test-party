@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Party: '宴会',
   Review: '审核',
   Reviewing: '审核中',

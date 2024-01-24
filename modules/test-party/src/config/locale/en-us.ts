@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   PartyOver: 'Party Over',
   OpenIsolateApp: 'Open Isolate App',
   OpenIsolateAppParty: 'Open Isolate App (Party)',

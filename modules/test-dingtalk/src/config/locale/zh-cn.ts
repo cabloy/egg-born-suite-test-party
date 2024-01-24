@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Reply: '回复',
   'Test(Dingtalk)': '测试（钉钉）',
   'Test Layout(Dingtalk)': '测试布局（钉钉）',

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Reply: '回复',
   'Test(Wechat Work)': '测试（企业微信）',
   'Test Layout(Wechat Work)': '测试布局（企业微信）',
