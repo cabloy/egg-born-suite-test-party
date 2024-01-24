@@ -23,7 +23,7 @@ export class ControllerTestFeatProgress extends BeanBase {
       // level one
       await this._levelOne({ progressId, progressNo: 0 });
       // progress done
-      await this.ctx.bean.progress.done({ progressId, message: this.ctx.text('Well Done') });
+      await this.ctx.bean.progress.done({ progressId, message: this.ctx.text('WellDone') });
       // ok
       this.ctx.success(true);
     } catch (err) {
@@ -38,7 +38,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level One')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelOne')}: ${i + 1}`;
       await this.ctx.bean.progress.update({
         progressId,
         progressNo,
@@ -57,7 +57,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level Two')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelTwo')}: ${i + 1}`;
       await this.ctx.bean.progress.update({
         progressId,
         progressNo,
@@ -76,7 +76,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     const total = 3;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level Three')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelThree')}: ${i + 1}`;
       await this.ctx.bean.progress.update({
         progressId,
         progressNo,

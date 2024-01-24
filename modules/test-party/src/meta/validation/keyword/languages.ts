@@ -9,7 +9,7 @@ keywords.languages = {
       const locales = ctx.bean.base.locales();
       const index = locales.findIndex(item => item.value === data);
       if (index > -1) return true;
-      const errors = [{ keyword: 'x-languages', params: [], message: ctx.text('Not Expected Value') }];
+      const errors = [{ keyword: 'x-languages', params: [], message: ctx.text('NotExpectedValue') }];
       throw new module.meta.class.Ajv.ValidationError(errors);
     };
   },

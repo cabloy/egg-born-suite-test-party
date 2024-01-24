@@ -29,7 +29,7 @@ module.exports = class Cli extends module.meta.class.CliBase {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level One')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelOne')}: ${i + 1}`;
       await this.console.log({
         progressNo,
         total,
@@ -47,7 +47,7 @@ module.exports = class Cli extends module.meta.class.CliBase {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level Two')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelTwo')}: ${i + 1}`;
       await this.console.log({
         progressNo,
         total,
@@ -65,7 +65,7 @@ module.exports = class Cli extends module.meta.class.CliBase {
     const total = 3;
     let current = 0;
     for (let i = 0; i < total; i++) {
-      const text = `${this.ctx.text('Level Three')}: ${i + 1}`;
+      const text = `${this.ctx.text('LevelThree')}: ${i + 1}`;
       await this.console.log({
         progressNo,
         total,
