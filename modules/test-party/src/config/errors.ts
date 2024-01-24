@@ -1,5 +1,4 @@
-// error code should start from 1001
-module.exports = {
-  1001: 'Error Test',
-  1002: 'Incomplete Parameters',
-};
+export enum Errors {
+  'Error Test' = 1001,
+  'Incomplete Parameters' = 1002,
+}
