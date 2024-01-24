@@ -1,159 +1,172 @@
-// eslint-disable-next-line
-module.exports = app => {
-  const config = {};
+import {
+  IModuleConfigBroadcast,
+  IModuleConfigMiddleware,
+  IModuleConfigQueue,
+  IModuleConfigSchedule,
+  IModuleConfigStartup,
+  IModuleConfigSummer,
+  IModuleConfigSummerCache,
+} from '@cabloy/core';
 
-  if (app.meta.isTest) {
-    // startups
-    config.startups = {
-      startupAll: {
-        bean: 'startupAll',
-      },
-      startupInstance: {
-        bean: 'startupInstance',
-        instance: true,
-      },
-    };
-    // queues
-    config.queues = {
-      queueTest: {
-        bean: 'test',
-      },
-    };
-    // broadcasts
-    config.broadcasts = {
-      broadcastTest: {
-        bean: 'test',
-      },
-    };
-    // monkey
-    config.monkeyed = false;
-  }
+// startups
+const startups = {
+  startupAll: {
+    bean: 'startupAll',
+  } as IModuleConfigStartup,
+  startupInstance: {
+    bean: 'startupInstance',
+    instance: true,
+  } as IModuleConfigStartup,
+};
 
-  // config
-  config.message = 'Hello World';
+// queues
+const queues = {
+  queueTest: {
+    bean: 'test',
+  } as IModuleConfigQueue,
+};
 
-  // middlewares
-  config.middlewares = {
-    testInterception: {
-      bean: 'testInterception',
-      global: false,
-      dependencies: 'instance',
+// broadcasts
+const broadcasts = {
+  broadcastTest: {
+    bean: 'test',
+  } as IModuleConfigBroadcast,
+};
+
+const middlewares = {
+  testInterception: {
+    bean: 'testInterception',
+    global: false,
+    dependencies: 'instance',
+  } as IModuleConfigMiddleware,
+  testRestructuring: {
+    bean: 'testRestructuring',
+    global: false,
+    dependencies: 'instance',
+  } as IModuleConfigMiddleware,
+};
+
+// schedules
+const schedules = {
+  test: {
+    bean: 'test',
+    repeat: {
+      every: 3000,
     },
-    testRestructuring: {
-      bean: 'testRestructuring',
-      global: false,
-      dependencies: 'instance',
-    },
-  };
+    disable: true,
+  } as IModuleConfigSchedule,
+};
 
-  // schedules
-  config.schedules = {
+// summer
+const summer = {
+  caches: {
     test: {
       bean: 'test',
-      repeat: {
-        every: 3000,
+      mode: 'all', // mem/redis/all
+      mem: {
+        max: 2,
+        ttl: 1 * 1000,
       },
-      disable: true,
-    },
-  };
+      redis: {
+        ttl: 3 * 1000,
+      },
+    } as IModuleConfigSummerCache,
+  },
+} as IModuleConfigSummer;
 
-  // summer
-  config.summer = {
-    caches: {
-      test: {
-        bean: 'test',
-        mode: 'all', // mem/redis/all
-        mem: {
-          max: 2,
-          ttl: 1 * 1000,
-        },
-        redis: {
-          ttl: 3 * 1000,
-        },
-      },
+const settings = {
+  instance: {
+    groupInfo: {
+      slogan: '',
     },
-  };
-
-  // settings
-  config.settings = {
-    instance: {
-      groupInfo: {
-        slogan: '',
-      },
+  },
+  user: {
+    groupInfo: {
+      username: 'zhennann',
     },
-    user: {
-      groupInfo: {
-        username: 'zhennann',
-      },
-      groupExtra: {
-        panelExtra: {
-          groupInfo: {
-            mobile: '123',
-            sex: 1,
-            language: 'en-us',
-          },
+    groupExtra: {
+      panelExtra: {
+        groupInfo: {
+          mobile: '123',
+          sex: 1,
+          language: 'en-us',
         },
       },
     },
-  };
+  },
+};
 
-  // captcha scenes
-  const _captchaSMS = {
-    module: 'a-authsms',
-    name: 'captcha',
-  };
-  config.captcha = {
-    scenes: {
-      formMobileVerifyTest: _captchaSMS,
-      formCaptchaTest: null, // means using default
-      // formCaptchaTest: {
-      //   module: 'a-captchasimple',
-      //   name: 'captcha',
-      // },
+const cmsSitesParty = {
+  base: {
+    title: 'Party',
+    subTitle: 'Test',
+    description: '',
+    keywords: '',
+  },
+  host: {
+    url: 'http://example.com',
+    rootPath: '',
+  },
+  language: false,
+  themes: {
+    default: 'test-party',
+  },
+  edit: {
+    mode: 0, // custom
+  },
+  env: {
+    format: {
+      date: 'YYYY-MM-DD',
+      time: 'HH:mm:ss',
     },
-  };
+    article2: {
+      recentNum: 5,
+    },
+    comment: {
+      order: 'asc',
+      recentNum: 5,
+    },
+    brother: {
+      order: 'desc',
+    },
+    loadMore: {
+      loadOnScroll: false,
+    },
+  },
+};
 
-  // cms site
-  config.cms = {};
-  config.cms.sites = {};
-  config.cms.sites.party = {
-    base: {
-      title: 'Party',
-      subTitle: 'Test',
-      description: '',
-      keywords: '',
-    },
-    host: {
-      url: 'http://example.com',
-      rootPath: '',
-    },
-    language: false,
-    themes: {
-      default: 'test-party',
-    },
-    edit: {
-      mode: 0, // custom
-    },
-    env: {
-      format: {
-        date: 'YYYY-MM-DD',
-        time: 'HH:mm:ss',
+const _captchaSMS = {
+  module: 'a-authsms',
+  name: 'captcha',
+};
+
+export const config = app => {
+  return {
+    // app.meta.isTest
+    startups: app.meta.isTest ? startups : undefined,
+    queues: app.meta.isTest ? queues : undefined,
+    broadcasts: app.meta.isTest ? broadcasts : undefined,
+    monkeyed: app.meta.isTest ? false : undefined,
+    // normal
+    middlewares,
+    schedules,
+    summer,
+    message: 'Hello World',
+    captcha: {
+      scenes: {
+        formMobileVerifyTest: _captchaSMS,
+        formCaptchaTest: null, // means using default
+        // formCaptchaTest: {
+        //   module: 'a-captchasimple',
+        //   name: 'captcha',
+        // },
       },
-      article2: {
-        recentNum: 5,
-      },
-      comment: {
-        order: 'asc',
-        recentNum: 5,
-      },
-      brother: {
-        order: 'desc',
-      },
-      loadMore: {
-        loadOnScroll: false,
+    },
+    settings,
+    cms: {
+      sites: {
+        party: cmsSitesParty,
       },
     },
   };
-
-  return config;
 };
