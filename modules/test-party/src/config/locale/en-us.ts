@@ -5,4 +5,6 @@ export default {
   DianCaiWechat: 'Wechat Ordering',
   UIComponents: 'UI Components',
   PartyPersonCountFlag: 'P',
+  ErrorTest: 'Error Test',
+  IncompleteParameters: 'Incomplete Parameters',
 };

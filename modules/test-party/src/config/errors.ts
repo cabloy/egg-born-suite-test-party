@@ -1,4 +1,4 @@
 export enum Errors {
-  'Error Test' = 1001,
-  'Incomplete Parameters' = 1002,
+  'ErrorTest' = 1001,
+  'IncompleteParameters' = 1002,
 }
