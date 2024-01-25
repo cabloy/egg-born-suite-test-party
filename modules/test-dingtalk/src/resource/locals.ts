@@ -1,5 +1,7 @@
-const test = require('./service/test.js');
+export * from '../local/test.js';
 
-module.exports = {
-  test,
-};
+import { LocalTest } from '../local/test.js';
+
+export interface IModuleLocal {
+  test: LocalTest;
+}

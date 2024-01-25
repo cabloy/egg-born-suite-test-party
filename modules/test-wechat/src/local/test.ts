@@ -1,4 +1,7 @@
-module.exports = class Test {
+import { BeanBase, Local } from '@cabloy/core';
+
+@Local()
+export class LocalTest extends BeanBase {
   async getOpenid({ user }) {
     return await this.ctx.bean.wechat.util.getOpenid({
       providerName: 'wechat',
@@ -13,4 +16,4 @@ module.exports = class Test {
       user,
     });
   }
-};
+}

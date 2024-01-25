@@ -1,4 +1,7 @@
-module.exports = class Test {
+import { BeanBase, Local } from '@cabloy/core';
+
+@Local()
+export class LocalTest extends BeanBase {
   async getMemberId({ user }) {
     const modelMember = this.ctx.model.module('a-dingtalk').member;
     const member = await modelMember.get({ userId: user.id });
@@ -23,4 +26,4 @@ module.exports = class Test {
       channel: { module: 'a-dingtalk', name: 'app' },
     });
   }
-};
+}
