@@ -1,7 +1,8 @@
-const testData = require('./testData.js');
+import { BeanBase } from '@cabloy/core';
+import testData from './testData.js';
 
-module.exports = class VersionTest {
-  async run(options) {
+export class VersionTest extends BeanBase {
+  async run() {
     // role rights
     await this._testRoleRights();
     // role resource rights
@@ -24,4 +25,4 @@ module.exports = class VersionTest {
       roleResources: testData.roleResources,
     });
   }
-};
+}

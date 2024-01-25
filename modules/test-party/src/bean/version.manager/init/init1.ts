@@ -1,7 +1,8 @@
-const testData = require('../test/testData.js');
+import { BeanBase } from '@cabloy/core';
+import testData from '../test/testData.js';
 
-module.exports = class VersionInit {
-  async run(options) {
+export class VersionInit extends BeanBase {
+  async run() {
     await this._init_rights();
     await this._init_testData();
   }
@@ -149,4 +150,4 @@ module.exports = class VersionInit {
       });
     }
   }
-};
+}

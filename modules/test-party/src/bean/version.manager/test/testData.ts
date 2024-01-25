@@ -75,7 +75,7 @@ const roleRightsUser = [
   { roleName: 'father', action: 'atomAuthorizations', scopeNames: 'organization' },
 ];
 
-module.exports = {
+export default {
   roles,
   roleIncs,
   users,
