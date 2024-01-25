@@ -1,4 +1,6 @@
-module.exports = class ctxBean {
+import { BeanBase } from '@cabloy/core';
+
+export class TestCtx0 extends BeanBase {
   __init__(moduleName) {
     this._name = moduleName || this.ctx.module.info.relativeName;
   }
@@ -36,4 +38,4 @@ module.exports = class ctxBean {
     const value = await this.actionAsync({ a, b });
     return `${name}:${value}`;
   }
-};
+}
