@@ -1,7 +1,10 @@
-const party = require('./model/party.js');
-const partyExpense = require('./model/partyExpense.js');
+export * from '../model/party.js';
+export * from '../model/partyExpense.js';
 
-module.exports = {
-  party,
-  partyExpense,
-};
+import { ModelParty } from '../model/party.js';
+import { ModelPartyExpense } from '../model/partyExpense.js';
+
+export interface IModuleModel {
+  party: ModelParty;
+  partyExpense: ModelPartyExpense;
+}

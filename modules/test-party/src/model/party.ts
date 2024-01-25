@@ -1,5 +1,4 @@
-module.exports = class Party extends module.meta.class.Model {
-  constructor() {
-    super({ table: 'testParty', options: { disableDeleted: false } });
-  }
-};
+import { BeanModelBase, Model } from '@cabloy/core';
+
+@Model({ table: 'testParty', options: { disableDeleted: false } })
+export class ModelParty extends BeanModelBase {}

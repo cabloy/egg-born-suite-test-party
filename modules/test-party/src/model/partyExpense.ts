@@ -1,11 +1,10 @@
-module.exports = class PartyExpense extends module.meta.class.ModelCache {
-  constructor() {
-    super({
-      table: 'testPartyExpense',
-      options: {
-        disableDeleted: false,
-        cacheName: { module: moduleInfo.relativeName, name: 'modelPartyExpense' },
-      },
-    });
-  }
-};
+import { BeanModelBase, Model } from '@cabloy/core';
+
+@Model({
+  table: 'testPartyExpense',
+  options: {
+    disableDeleted: false,
+    cacheName: { module: moduleInfo.relativeName, name: 'modelPartyExpense' },
+  },
+})
+export class ModelPartyExpense extends BeanModelBase {}
