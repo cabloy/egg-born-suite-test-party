@@ -4,7 +4,7 @@ import { BeanModelBase, Model } from '@cabloy/core';
   table: 'testPartyExpense',
   options: {
     disableDeleted: false,
-    cacheName: { module: moduleInfo.relativeName, name: 'modelPartyExpense' },
+    cacheName: { name: 'modelPartyExpense' },
   },
 })
 export class ModelPartyExpense extends BeanModelBase {}
