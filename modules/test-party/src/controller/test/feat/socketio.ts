@@ -3,8 +3,6 @@ import { ScopeModuleTestParty } from '../index.js';
 const _subscribePathTest = '/test/party/test';
 const _subscribePathSimpleChat = '/test/party/simpleChat';
 
-const moduleInfo = module.info;
-
 @Controller()
 export class ControllerTestFeatSocketio extends BeanBase {
   @Use()

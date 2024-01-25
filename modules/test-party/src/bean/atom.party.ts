@@ -1,4 +1,3 @@
-const moduleInfo = module.info;
 module.exports = class Atom extends module.meta.class.AtomCmsBase {
   get model() {
     return this.ctx.model.module(moduleInfo.relativeName).party;

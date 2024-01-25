@@ -1,6 +1,5 @@
 const testData = require('../test/testData.js');
 
-const moduleInfo = module.info;
 module.exports = class VersionInit {
   async run(options) {
     await this._init_rights();

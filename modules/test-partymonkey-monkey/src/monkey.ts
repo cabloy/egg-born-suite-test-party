@@ -1,5 +1,3 @@
-const moduleInfo = module.info;
-
 function monkeyRoute(module, routePath, routeController) {
   const route = module.main.routes.find(item => item.path === routePath);
   if (route) {

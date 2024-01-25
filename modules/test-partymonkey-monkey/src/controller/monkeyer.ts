@@ -1,6 +1,5 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestPartymonkey } from '../index.js';
-const moduleInfo = module.info;
 
 @Controller()
 export class ControllerMonkeyer extends BeanBase {

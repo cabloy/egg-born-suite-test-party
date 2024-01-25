@@ -2,8 +2,6 @@ import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestParty } from '../index.js';
 const assert = require('assert');
 
-const moduleInfo = module.info;
-
 @Controller()
 export class ControllerTestEventHello extends BeanBase {
   @Use()
