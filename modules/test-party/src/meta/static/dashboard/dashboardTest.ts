@@ -212,8 +212,6 @@ const content = {
   },
 };
 
-// const moduleInfo = module.info;
-
 const dashboard = {
   atomName: 'Dashboard(Test)',
   atomStaticKey: 'dashboardTest',

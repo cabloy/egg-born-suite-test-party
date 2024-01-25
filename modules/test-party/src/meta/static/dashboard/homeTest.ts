@@ -119,8 +119,6 @@ const content = {
   },
 };
 
-// const moduleInfo = module.info;
-
 const dashboard = {
   atomName: 'Home(Test)',
   atomStaticKey: 'homeTest',

@@ -1,5 +1,4 @@
 // http://localhost:9192/?appKey=test-wechat:appTest
-// const moduleInfo = module.info;
 
 const content = {
   presets: {
