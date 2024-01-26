@@ -1,4 +1,4 @@
-class classBeanBase {
+class ClassBeanBase {
   constructor(ctx) {
     this.ctx = ctx;
   }
@@ -8,10 +8,8 @@ class classBeanBase {
   }
 }
 
-class classBean extends classBeanBase {
+module.exports = class classBean extends ClassBeanBase {
   async actionAsync({ a, b }) {
     return Promise.resolve(a + b);
   }
-}
-
-module.exports = classBean;
+};
