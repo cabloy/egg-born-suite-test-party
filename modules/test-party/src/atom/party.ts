@@ -2,7 +2,7 @@ import { Atom } from '@cabloy/core';
 import { BeanAtomCmsBase } from 'cabloy-module-api-a-cms';
 
 @Atom()
-export class AtomParty extends BeanAtomBase {
+export class AtomParty extends BeanAtomCmsBase {
   get model() {
     return this.ctx.model.module(moduleInfo.relativeName).party;
   }
