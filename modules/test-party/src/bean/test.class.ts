@@ -1,6 +1,8 @@
 import { Bean, BeanBase } from '@cabloy/core';
 
 class ClassBeanBase {
+  ctx: any;
+
   constructor(ctx) {
     this.ctx = ctx;
   }

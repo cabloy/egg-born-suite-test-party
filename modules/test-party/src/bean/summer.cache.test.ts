@@ -2,6 +2,8 @@ import { Bean, BeanBase } from '@cabloy/core';
 
 @Bean({ scene: 'summer.cache' })
 export class SummerCacheTest extends BeanBase {
+  _cacheBase: any;
+
   constructor({ cacheBase }) {
     this._cacheBase = cacheBase;
   }
