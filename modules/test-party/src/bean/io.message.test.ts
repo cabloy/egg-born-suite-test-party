@@ -1,7 +1,8 @@
-import { Bean, BeanBase } from '@cabloy/core';
+import { Bean } from '@cabloy/core';
+import { BeanIoMessageBase } from 'cabloy-module-api-a-socketio';
 
 @Bean({ scene: 'io.message' })
-export class IoMessageTest extends BeanBase {
+export class IoMessageTest extends BeanIoMessageBase {
   async onSaveSync({ path, options, message, messageSync, messageClass }) {
     // options
     const messageScene = (options && options.scene) || '';
