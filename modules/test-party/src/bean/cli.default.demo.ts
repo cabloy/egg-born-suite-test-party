@@ -1,7 +1,8 @@
-import { Bean, BeanBase } from '@cabloy/core';
+import { Bean } from '@cabloy/core';
+import { BeanCliBase } from 'cabloy-module-api-a-cli';
 
 @Bean({ scene: 'cli.default' })
-export class CliDefaultDemo extends BeanBase {
+export class CliDefaultDemo extends BeanCliBase {
   async meta({ user }) {
     const meta = await super.meta({ user });
     return meta;
