@@ -1,3 +1,5 @@
+import { __ThisModule__ } from '../../../resource/this.js';
+
 const schemas = {};
 // formTest
 schemas.formTest = {

@@ -1,3 +1,4 @@
+import { __ThisModule__ } from '../../../resource/this.js';
 import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestParty } from '../index.js';
 const _subscribePathTest = '/test/party/test';
