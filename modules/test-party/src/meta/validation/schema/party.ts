@@ -219,4 +219,4 @@ schemas.partySearch = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

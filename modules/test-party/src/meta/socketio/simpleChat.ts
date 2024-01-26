@@ -8,4 +8,4 @@ const simpleChat = {
     },
   },
 };
-module.exports = simpleChat;
+export default simpleChat;

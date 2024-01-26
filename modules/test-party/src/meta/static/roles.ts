@@ -22,4 +22,4 @@ for (const __role of __rolesAll) {
   });
 }
 // ok
-module.exports = roles;
+export default roles;

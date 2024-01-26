@@ -43,4 +43,4 @@ schemas.partyExpense = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

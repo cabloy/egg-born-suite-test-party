@@ -8,4 +8,4 @@ const test = {
     },
   },
 };
-module.exports = test;
+export default test;

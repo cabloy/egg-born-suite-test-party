@@ -72,4 +72,4 @@ const resources = [
     resourceRoles: 'root',
   },
 ];
-module.exports = resources;
+export default resources;

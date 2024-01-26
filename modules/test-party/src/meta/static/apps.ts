@@ -6,4 +6,4 @@ const apps = [
   appParty,
   appComponents,
 ];
-module.exports = apps;
+export default apps;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   bean: 'default.demo',
   resource: {
     atomStaticKey: 'cliDefaultDemo',

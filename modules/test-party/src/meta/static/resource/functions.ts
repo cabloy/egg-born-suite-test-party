@@ -10,4 +10,4 @@ const resources = [
     resourceRoles: 'template.system,RoleScopeCliDevelopment',
   },
 ];
-module.exports = resources;
+export default resources;

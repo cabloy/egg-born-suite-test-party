@@ -23,4 +23,4 @@ const _app = {
   resourceRoles: 'root',
   appSorting: 0,
 };
-module.exports = _app;
+export default _app;

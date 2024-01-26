@@ -1,7 +1,7 @@
 const eventLoginInfo = require('./bean/event.loginInfo.js');
 const eventWxworkMessage = require('./bean/event.wxworkMessage.js');
 
-module.exports = {
+export default {
   'event.loginInfo': {
     bean: eventLoginInfo,
   },

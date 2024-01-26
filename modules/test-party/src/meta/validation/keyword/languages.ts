@@ -14,4 +14,4 @@ keywords.languages = {
     };
   },
 };
-module.exports = keywords;
+export default keywords;

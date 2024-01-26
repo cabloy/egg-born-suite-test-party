@@ -4,4 +4,4 @@ const apps = [
   //
   appTest,
 ];
-module.exports = apps;
+export default apps;

@@ -9,4 +9,4 @@ const layouts = [
   layoutAtomListParty, // layoutAppMineParty,
   layoutAtomItemParty,
 ];
-module.exports = layouts;
+export default layouts;

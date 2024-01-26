@@ -158,4 +158,4 @@ schemas.formMobileVerifyTest = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

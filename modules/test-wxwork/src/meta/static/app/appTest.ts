@@ -31,4 +31,4 @@ const _app = {
   resourceRoles: 'authenticated',
   appSorting: 0,
 };
-module.exports = _app;
+export default _app;

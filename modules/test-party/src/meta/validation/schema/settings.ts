@@ -103,4 +103,4 @@ schemas.settingsInstance = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

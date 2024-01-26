@@ -6,4 +6,4 @@ const layouts = [
   layoutTest,
   layoutAppMenuTest,
 ];
-module.exports = layouts;
+export default layouts;

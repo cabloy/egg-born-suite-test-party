@@ -20,4 +20,4 @@ schemas.partyOverBulk = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

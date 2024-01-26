@@ -19,4 +19,4 @@ Object.assign(schemas, partyOverBulk);
 // settings
 Object.assign(schemas, settings);
 // ok
-module.exports = schemas;
+export default schemas;

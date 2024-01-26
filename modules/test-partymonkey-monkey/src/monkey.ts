@@ -9,7 +9,7 @@ function monkeyConfig(module, config) {
   config.monkeyed = true;
 }
 
-module.exports = class Monkey {
+export default class Monkey {
   moduleLoading({ /* moduleSelf,*/ module }) {
     if (module.info.relativeName !== 'test-party') return;
     // route
@@ -29,4 +29,4 @@ module.exports = class Monkey {
   metaLoaded(/* { moduleSelf, module, meta }*/) {
     // do nothing
   }
-};
+}

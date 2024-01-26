@@ -11,4 +11,4 @@ schemas.blockArticleCommentCount = {
     },
   },
 };
-module.exports = schemas;
+export default schemas;

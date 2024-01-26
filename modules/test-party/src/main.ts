@@ -12,7 +12,7 @@ const models = require('./models.js');
 // meta
 const meta = require('./meta.js');
 
-module.exports = {
+export default {
   aops,
   beans,
   routes,

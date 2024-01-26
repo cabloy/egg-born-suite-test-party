@@ -113,4 +113,4 @@ const resources = [
     resourceSorting: 2,
   },
 ];
-module.exports = resources;
+export default resources;

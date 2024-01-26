@@ -11,7 +11,7 @@ const meta = require('./meta.js');
 // monkey
 const monkey = require('./monkey.js');
 
-module.exports = {
+export default {
   routes,
   controllers,
   services,

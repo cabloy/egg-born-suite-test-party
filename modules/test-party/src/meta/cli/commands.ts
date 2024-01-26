@@ -5,4 +5,4 @@ const commands = {
     demo: defaultDemo,
   },
 };
-module.exports = commands;
+export default commands;

@@ -125,4 +125,4 @@ if (module.meta.isTest) {
     },
   });
 }
-module.exports = meta;
+export default meta;

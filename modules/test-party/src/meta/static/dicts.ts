@@ -5,4 +5,4 @@ const dicts = [
   partyStatus, //
   partyType,
 ];
-module.exports = dicts;
+export default dicts;

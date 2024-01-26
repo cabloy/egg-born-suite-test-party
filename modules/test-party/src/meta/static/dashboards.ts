@@ -5,4 +5,4 @@ const dashboards = [
   dashboardTest, //
   homeTest,
 ];
-module.exports = dashboards;
+export default dashboards;

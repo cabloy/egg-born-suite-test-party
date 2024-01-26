@@ -24,7 +24,7 @@ const statsTasksUser = require('./bean/stats.tasksUser.js');
 const statsTasksInstance = require('./bean/stats.tasksInstance.js');
 const summerCacheTest = require('./bean/summer.cache.test.js');
 
-module.exports = {
+export default {
   // version
   'version.manager': {
     bean: versionManager,

@@ -4,4 +4,4 @@ const keywords = {};
 // product
 Object.assign(keywords, languages);
 // ok
-module.exports = keywords;
+export default keywords;
