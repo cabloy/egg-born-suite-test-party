@@ -1,5 +1,5 @@
-const eventLoginInfo = require('./bean/event.loginInfo.js');
-const eventWxworkMessage = require('./bean/event.wxworkMessage.js');
+import eventLoginInfo from './bean/event.loginInfo.js';
+import eventWxworkMessage from './bean/event.wxworkMessage.js';
 
 export default {
   'event.loginInfo': {

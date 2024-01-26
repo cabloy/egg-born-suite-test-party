@@ -1,6 +1,6 @@
-const eventLoginInfo = require('./bean/event.loginInfo.js');
-const eventWechatMessage = require('./bean/event.wechatMessage.js');
-const eventWechatMessageMini = require('./bean/event.wechatMessageMini.js');
+import eventLoginInfo from './bean/event.loginInfo.js';
+import eventWechatMessage from './bean/event.wechatMessage.js';
+import eventWechatMessageMini from './bean/event.wechatMessageMini.js';
 
 export default {
   'event.loginInfo': {

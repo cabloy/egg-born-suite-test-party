@@ -1,5 +1,5 @@
-const layoutTest = require('./layout/layoutTest.js');
-const layoutAppMenuTest = require('./layout/layoutAppMenuTest.js');
+import layoutTest from './layout/layoutTest.js';
+import layoutAppMenuTest from './layout/layoutAppMenuTest.js';
 
 const layouts = [
   //

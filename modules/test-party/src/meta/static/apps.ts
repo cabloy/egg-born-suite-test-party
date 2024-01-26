@@ -1,5 +1,5 @@
-const appParty = require('./app/appParty.js');
-const appComponents = require('./app/appComponents.js');
+import appParty from './app/appParty.js';
+import appComponents from './app/appComponents.js';
 
 const apps = [
   //

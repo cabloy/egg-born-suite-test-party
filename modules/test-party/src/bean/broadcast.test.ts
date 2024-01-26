@@ -1,6 +1,6 @@
 import { Bean, BeanBase } from '@cabloy/core';
 
-const assert = require('assert');
+import assert from 'assert';
 
 @Bean({ scene: 'broadcast' })
 export class BroadcastTest extends BeanBase {

@@ -1,5 +1,5 @@
-const party = require('./atomClass/party.js');
-const partyExpense = require('./atomClass/partyExpense.js');
+import party from './atomClass/party.js';
+import partyExpense from './atomClass/partyExpense.js';
 
 export default {
   //

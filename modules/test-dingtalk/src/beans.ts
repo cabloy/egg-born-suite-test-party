@@ -1,5 +1,5 @@
-const eventLoginInfo = require('./bean/event.loginInfo.js');
-const eventDingtalkMessageGeneral = require('./bean/event.dingtalkMessageGeneral.js');
+import eventLoginInfo from './bean/event.loginInfo.js';
+import eventDingtalkMessageGeneral from './bean/event.dingtalkMessageGeneral.js';
 
 export default {
   'event.loginInfo': {

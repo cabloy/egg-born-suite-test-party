@@ -1,6 +1,6 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestParty } from '../index.js';
-const languages = require('./data/autocomplete-languages.json');
+import languages from './data/autocomplete-languages.json';
 
 @Controller()
 export class ControllerKitchenSinkAutocomplete extends BeanBase {

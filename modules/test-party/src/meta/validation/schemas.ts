@@ -1,9 +1,9 @@
-const partyExpense = require('./schema/partyExpense.js');
-const blocks = require('./schema/blocks.js');
-const formTest = require('./schema/formTest.js');
-const party = require('./schema/party.js');
-const partyOverBulk = require('./schema/partyOverBulk.js');
-const settings = require('./schema/settings.js');
+import partyExpense from './schema/partyExpense.js';
+import blocks from './schema/blocks.js';
+import formTest from './schema/formTest.js';
+import party from './schema/party.js';
+import partyOverBulk from './schema/partyOverBulk.js';
+import settings from './schema/settings.js';
 
 const schemas = {};
 // partyExpense

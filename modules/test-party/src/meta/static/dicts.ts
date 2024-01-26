@@ -1,5 +1,5 @@
-const partyStatus = require('./dict/partyStatus.js');
-const partyType = require('./dict/partyType.js');
+import partyStatus from './dict/partyStatus.js';
+import partyType from './dict/partyType.js';
 
 const dicts = [
   partyStatus, //

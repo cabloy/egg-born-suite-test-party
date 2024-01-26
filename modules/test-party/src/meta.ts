@@ -1,22 +1,22 @@
-const extend = require('@cabloy/extend');
+import extend from '@cabloy/extend';
 
-const atomClasses = require('./meta/atomClass/atomClasses.js');
-const schemas = require('./meta/validation/schemas.js');
-const keywords = require('./meta/validation/keywords.js');
+import atomClasses from './meta/atomClass/atomClasses.js';
+import schemas from './meta/validation/schemas.js';
+import keywords from './meta/validation/keywords.js';
 // socketio
-const socketioTest = require('./meta/socketio/test.js');
-const socketioSimpleChat = require('./meta/socketio/simpleChat.js');
+import socketioTest from './meta/socketio/test.js';
+import socketioSimpleChat from './meta/socketio/simpleChat.js';
 // static
-const staticApps = require('./meta/static/apps.js');
-const staticDashboards = require('./meta/static/dashboards.js');
-const staticLayouts = require('./meta/static/layouts.js');
-const staticResources = require('./meta/static/resources.js');
-const staticDicts = require('./meta/static/dicts.js');
-const staticRoles = require('./meta/static/roles.js');
+import staticApps from './meta/static/apps.js';
+import staticDashboards from './meta/static/dashboards.js';
+import staticLayouts from './meta/static/layouts.js';
+import staticResources from './meta/static/resources.js';
+import staticDicts from './meta/static/dicts.js';
+import staticRoles from './meta/static/roles.js';
 // cli commands
-const cliCommands = require('./meta/cli/commands.js');
+import cliCommands from './meta/cli/commands.js';
 // icons
-const iconGroups = require('./meta/icons/groups.js');
+import iconGroups from './meta/icons/groups.js';
 // meta
 const meta = {};
 extend(true, meta, {

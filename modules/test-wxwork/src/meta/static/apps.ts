@@ -1,4 +1,4 @@
-const appTest = require('./app/appTest.js');
+import appTest from './app/appTest.js';
 
 const apps = [
   //

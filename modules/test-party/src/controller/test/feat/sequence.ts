@@ -1,7 +1,7 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestParty } from '../index.js';
-const assert = require('assert');
-const pMap = require('p-map');
+import assert from 'assert';
+import pMap from 'p-map';
 
 @Controller()
 export class ControllerTestFeatSequence extends BeanBase {

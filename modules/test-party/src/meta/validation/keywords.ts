@@ -1,4 +1,4 @@
-const languages = require('./keyword/languages.js');
+import languages from './keyword/languages.js';
 
 const keywords = {};
 // product

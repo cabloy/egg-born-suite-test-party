@@ -1,4 +1,4 @@
-const defaultDemo = require('./command/default.demo.js');
+import defaultDemo from './command/default.demo.js';
 
 const commands = {
   default: {

@@ -1,6 +1,6 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
 import { ScopeModuleTestParty } from '../index.js';
-const assert = require('assert');
+import assert from 'assert';
 
 const atomStaticKey = '--modelWhere--test--';
 const __rows = [

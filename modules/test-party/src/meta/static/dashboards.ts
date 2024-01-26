@@ -1,5 +1,5 @@
-const dashboardTest = require('./dashboard/dashboardTest.js');
-const homeTest = require('./dashboard/homeTest.js');
+import dashboardTest from './dashboard/dashboardTest.js';
+import homeTest from './dashboard/homeTest.js';
 
 const dashboards = [
   dashboardTest, //
