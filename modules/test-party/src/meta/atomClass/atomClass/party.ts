@@ -49,7 +49,7 @@ export default {
     partyOver: {
       code: 101,
       title: 'PartyOver',
-      // actionModule: moduleInfo.relativeName,
+      // actionModule: __ThisModule__,
       actionModule: 'a-base',
       actionComponent: 'action',
       icon: { f7: ':outline:check-circle-outline' },
@@ -118,7 +118,7 @@ export default {
     partyOverBulk: {
       code: 201,
       title: 'PartyOver',
-      // actionModule: moduleInfo.relativeName,
+      // actionModule: __ThisModule__,
       actionModule: 'a-base',
       actionComponent: 'actionBulk',
       icon: { f7: ':outline:check-circle-outline' },

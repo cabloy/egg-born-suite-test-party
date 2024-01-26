@@ -6,7 +6,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetSales',
     }),
     resourceRoles: 'root',
@@ -18,7 +18,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetSalesLine',
     }),
     resourceRoles: 'root',
@@ -30,7 +30,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetSalesPie',
     }),
     resourceRoles: 'root',
@@ -42,7 +42,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetSnapshot',
     }),
     resourceRoles: 'root',
@@ -54,7 +54,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetAbout',
     }),
     resourceRoles: 'root',
@@ -66,7 +66,7 @@ const resources = [
     atomCategoryId: 'a-dashboard:widget.Demonstration',
     resourceType: 'a-dashboard:widget',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       component: 'widgetSimpleChat',
     }),
     resourceRoles: 'root',

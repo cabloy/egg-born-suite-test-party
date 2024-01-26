@@ -6,7 +6,7 @@ export class StatsTasksInstance extends BeanBase {
     const { keys } = context;
     const fullName = keys.join('.');
     const valueOld = await this.ctx.bean.stats._get({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       fullName,
     });
     if (valueOld === undefined) return 1;

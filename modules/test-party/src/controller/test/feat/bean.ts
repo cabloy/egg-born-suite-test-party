@@ -77,7 +77,7 @@ export class ControllerTestFeatBean extends BeanBase {
     assert.equal(res, 'localTest');
 
     // other module
-    res = this.ctx.bean.local.module(moduleInfo.relativeName).test.name;
+    res = this.ctx.bean.local.module(__ThisModule__).test.name;
     assert.equal(res, 'localTest');
 
     // ok

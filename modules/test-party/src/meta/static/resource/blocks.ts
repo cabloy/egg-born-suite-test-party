@@ -10,7 +10,7 @@ const resources = [
         interval: 1000,
       },
       validator: {
-        module: moduleInfo.relativeName,
+        module: __ThisModule__,
         validator: 'blockArticleCommentCount',
       },
     }),

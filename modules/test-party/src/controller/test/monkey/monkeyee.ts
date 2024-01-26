@@ -7,6 +7,6 @@ export class ControllerTestMonkeyMonkeyee extends BeanBase {
   scope: ScopeModuleTestParty;
 
   async test() {
-    this.ctx.success(moduleInfo.relativeName);
+    this.ctx.success(__ThisModule__);
   }
 }

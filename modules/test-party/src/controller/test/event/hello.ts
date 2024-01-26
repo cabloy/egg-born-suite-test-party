@@ -13,7 +13,7 @@ export class ControllerTestEventHello extends BeanBase {
     };
     let result = 'world';
     result = await this.ctx.bean.event.invoke({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       name: 'hello',
       data,
       result,

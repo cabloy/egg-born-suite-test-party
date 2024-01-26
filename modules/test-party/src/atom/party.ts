@@ -4,7 +4,7 @@ import { BeanAtomCmsBase } from 'cabloy-module-api-a-cms';
 @Atom()
 export class AtomParty extends BeanAtomCmsBase {
   get model() {
-    return this.ctx.model.module(moduleInfo.relativeName).party;
+    return this.ctx.model.module(__ThisModule__).party;
   }
 
   async default({ atomClass, item, options, user }) {

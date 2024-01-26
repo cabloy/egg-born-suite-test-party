@@ -16,7 +16,7 @@ export class ControllerTestFeatSocketio extends BeanBase {
       path: _subscribePathTest,
       message,
       messageClass: {
-        module: moduleInfo.relativeName,
+        module: __ThisModule__,
         messageClassName: 'test',
       },
       options,
@@ -35,7 +35,7 @@ export class ControllerTestFeatSocketio extends BeanBase {
       path: _subscribePathSimpleChat,
       message,
       messageClass: {
-        module: moduleInfo.relativeName,
+        module: __ThisModule__,
         messageClassName: 'simpleChat',
       },
       options,

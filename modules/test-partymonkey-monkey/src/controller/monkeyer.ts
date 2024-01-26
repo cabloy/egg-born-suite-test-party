@@ -9,7 +9,7 @@ export class ControllerMonkeyer extends BeanBase {
   async test() {
     const config = this.ctx.config.module('test-party');
     this.ctx.success({
-      moduleName: moduleInfo.relativeName,
+      moduleName: __ThisModule__,
       monkeyed: config.monkeyed,
     });
   }

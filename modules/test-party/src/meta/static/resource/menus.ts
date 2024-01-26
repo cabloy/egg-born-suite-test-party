@@ -7,7 +7,7 @@ const resources = [
     atomCategoryId: 'a-base:menu.Party',
     resourceType: 'a-base:menu',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       atomClassName: 'party',
       atomAction: 'create',
     }),
@@ -22,7 +22,7 @@ const resources = [
     atomCategoryId: 'a-base:menu.Party',
     resourceType: 'a-base:menu',
     resourceConfig: JSON.stringify({
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       atomClassName: 'party',
       atomAction: 'read',
     }),
@@ -74,7 +74,7 @@ const resources = [
     atomCategoryId: 'a-base:menu.General',
     resourceType: 'a-base:menu',
     resourceConfig: JSON.stringify({
-      actionModule: moduleInfo.relativeName,
+      actionModule: __ThisModule__,
       actionPath: 'kitchen-sink/guide',
     }),
     resourceIcon: '::book',
@@ -89,7 +89,7 @@ const resources = [
     atomCategoryId: 'a-base:menu.Components',
     resourceType: 'a-base:menu',
     resourceConfig: JSON.stringify({
-      actionModule: moduleInfo.relativeName,
+      actionModule: __ThisModule__,
       actionPath: 'kitchen-sink/index?mode=2',
     }),
     resourceIcon: '::cabloy',
@@ -104,7 +104,7 @@ const resources = [
     atomCategoryId: 'a-base:menu.Components',
     resourceType: 'a-base:menu',
     resourceConfig: JSON.stringify({
-      actionModule: moduleInfo.relativeName,
+      actionModule: __ThisModule__,
       actionPath: 'kitchen-sink/framework7/index',
     }),
     resourceIcon: ':social:framework7',

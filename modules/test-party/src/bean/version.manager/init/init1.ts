@@ -70,7 +70,7 @@ export class VersionInit extends BeanBase {
     // roles
     for (const [roleName, leader, catalog, roleNameParent] of testData.roles) {
       roleIds[roleName] = await this.ctx.bean.role.add({
-        module: moduleInfo.relativeName,
+        module: __ThisModule__,
         roleName,
         leader,
         catalog,

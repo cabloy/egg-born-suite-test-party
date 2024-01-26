@@ -121,7 +121,7 @@ schemas.party = {
       ebTitle: 'PartyExpenseQuantity',
       ebParams: {
         detailClass: {
-          module: moduleInfo.relativeName,
+          module: __ThisModule__,
           atomClassName: 'partyExpense',
         },
         summary: {
@@ -135,7 +135,7 @@ schemas.party = {
       ebTitle: 'PartyExpenseAmount',
       ebParams: {
         detailClass: {
-          module: moduleInfo.relativeName,
+          module: __ThisModule__,
           atomClassName: 'partyExpense',
         },
         summary: {

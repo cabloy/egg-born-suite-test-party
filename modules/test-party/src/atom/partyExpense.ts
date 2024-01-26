@@ -4,7 +4,7 @@ import { BeanAtomBase } from 'cabloy-module-api-a-base';
 @Atom()
 export class AtomPartyExpense extends BeanAtomBase {
   get model() {
-    return this.ctx.model.module(moduleInfo.relativeName).partyExpense;
+    return this.ctx.model.module(__ThisModule__).partyExpense;
   }
 
   async default({ atomClass, item, options, user }) {

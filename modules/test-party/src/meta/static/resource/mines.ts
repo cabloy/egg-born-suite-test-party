@@ -6,7 +6,7 @@ const resources = [
     atomCategoryId: 'a-base:mine.Tools',
     resourceType: 'a-base:mine',
     resourceConfig: JSON.stringify({
-      actionModule: moduleInfo.relativeName,
+      actionModule: __ThisModule__,
       actionPath: 'kitchen-sink/index',
     }),
     resourceIcon: ':business:kitchen-set',

@@ -17,9 +17,9 @@ export class ControllerTestFeatSummer extends BeanBase {
     // getCache
     const cache = this.ctx.bean.summer.getCache({ name });
     assert.equal(!!cache, true);
-    let cacheOtherModule = this.ctx.bean.summer.module(moduleInfo.relativeName).getCache({ name });
+    let cacheOtherModule = this.ctx.bean.summer.module(__ThisModule__).getCache({ name });
     assert.equal(!!cacheOtherModule, true);
-    cacheOtherModule = this.ctx.bean.summer.getCache({ module: moduleInfo.relativeName, name });
+    cacheOtherModule = this.ctx.bean.summer.getCache({ module: __ThisModule__, name });
     assert.equal(!!cacheOtherModule, true);
 
     let value;

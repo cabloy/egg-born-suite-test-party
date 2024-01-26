@@ -104,7 +104,7 @@ schemas.formTest = {
       type: 'string',
       ebType: 'component',
       ebRender: {
-        module: moduleInfo.relativeName,
+        module: __ThisModule__,
         name: 'renderMotto',
         options: {
           props: {

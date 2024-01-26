@@ -14,7 +14,7 @@ export default class Monkey {
     if (module.info.relativeName !== 'test-party') return;
     // route
     monkeyRoute(module, 'test/monkey/monkeyee/test', {
-      module: moduleInfo.relativeName,
+      module: __ThisModule__,
       name: 'monkeyer',
     });
   }
