@@ -1,4 +1,8 @@
-module.exports = class Atom extends module.meta.class.AtomCmsBase {
+import { Atom } from '@cabloy/core';
+import { BeanAtomCmsBase } from 'cabloy-module-api-a-cms';
+
+@Atom()
+export class AtomParty extends BeanAtomBase {
   get model() {
     return this.ctx.model.module(moduleInfo.relativeName).party;
   }
@@ -112,4 +116,4 @@ module.exports = class Atom extends module.meta.class.AtomCmsBase {
       }
     }
   }
-};
+}
