@@ -1,4 +1,7 @@
-module.exports = class Cli extends module.meta.class.CliBase {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'cli.default' })
+export class CliDefaultDemo extends BeanBase {
   async meta({ user }) {
     const meta = await super.meta({ user });
     return meta;
@@ -76,4 +79,4 @@ module.exports = class Cli extends module.meta.class.CliBase {
       await this.ctx.bean.util.sleep(200);
     }
   }
-};
+}

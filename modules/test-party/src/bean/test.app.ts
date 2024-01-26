@@ -1,4 +1,7 @@
-module.exports = class appBean {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'test' })
+export class TestApp extends BeanBase {
   actionSync({ a, b }) {
     return a + b;
   }
@@ -6,4 +9,4 @@ module.exports = class appBean {
   async actionAsync({ a, b }) {
     return Promise.resolve(a + b);
   }
-};
+}

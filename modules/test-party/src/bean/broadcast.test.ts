@@ -1,6 +1,9 @@
+import { Bean, BeanBase } from '@cabloy/core';
+
 const assert = require('assert');
 
-module.exports = class Broadcast {
+@Bean({ scene: 'broadcast' })
+export class BroadcastTest extends BeanBase {
   async execute(context) {
     const sameAsCaller = context.sameAsCaller;
     const data = context.data;
@@ -12,4 +15,4 @@ module.exports = class Broadcast {
     // data
     assert.equal(data.message, 'hello');
   }
-};
+}

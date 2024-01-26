@@ -1,4 +1,7 @@
-module.exports = class SummerCache {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'summer.cache' })
+export class SummerCacheTest extends BeanBase {
   constructor({ cacheBase }) {
     this._cacheBase = cacheBase;
   }
@@ -9,4 +12,4 @@ module.exports = class SummerCache {
       name: `name_${key.id}`,
     };
   }
-};
+}

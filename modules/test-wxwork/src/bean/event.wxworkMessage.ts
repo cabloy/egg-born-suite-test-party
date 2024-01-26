@@ -1,4 +1,7 @@
-module.exports = class eventBean {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'event' })
+export class EventWxworkMessage extends BeanBase {
   async execute(context, next) {
     const { message } = context.data;
     if (message.MsgType === 'text') {
@@ -15,4 +18,4 @@ module.exports = class eventBean {
     // next
     await next();
   }
-};
+}

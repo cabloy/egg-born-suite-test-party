@@ -1,4 +1,7 @@
-module.exports = class IOMessage extends module.meta.class.IOMessageBase {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'io.message' })
+export class IoMessageTest extends BeanBase {
   async onSaveSync({ path, options, message, messageSync, messageClass }) {
     // options
     const messageScene = (options && options.scene) || '';
@@ -20,4 +23,4 @@ module.exports = class IOMessage extends module.meta.class.IOMessageBase {
     }
     return await super.onSaveSync({ path, options, message, messageSync, messageClass });
   }
-};
+}

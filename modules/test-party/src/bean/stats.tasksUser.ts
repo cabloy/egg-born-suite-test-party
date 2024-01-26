@@ -1,4 +1,7 @@
-module.exports = class Stats {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'stats' })
+export class StatsTasksUser extends BeanBase {
   async execute(context) {
     const { keys, user } = context;
     const fullName = keys.join('.');
@@ -10,4 +13,4 @@ module.exports = class Stats {
     if (valueOld === undefined) return 1;
     return valueOld + 1;
   }
-};
+}

@@ -1,4 +1,7 @@
-module.exports = class EventBean {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'event' })
+export class EventHelloEcho extends BeanBase {
   async execute(context, next) {
     const data = context.data;
     data.text = 'hello echo';
@@ -6,4 +9,4 @@ module.exports = class EventBean {
     await next();
     context.result = `echo.${context.result}`;
   }
-};
+}

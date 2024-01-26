@@ -1,4 +1,7 @@
-module.exports = class eventBean {
+import { Bean, BeanBase } from '@cabloy/core';
+
+@Bean({ scene: 'event' })
+export class EventWechatMessageMini extends BeanBase {
   async execute(context, next) {
     const { beanProvider, message } = context.data;
     // message
@@ -11,4 +14,4 @@ module.exports = class eventBean {
     // next
     await next();
   }
-};
+}

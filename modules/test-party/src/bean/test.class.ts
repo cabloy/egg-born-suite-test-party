@@ -1,3 +1,5 @@
+import { Bean, BeanBase } from '@cabloy/core';
+
 class ClassBeanBase {
   constructor(ctx) {
     this.ctx = ctx;
@@ -8,8 +10,9 @@ class ClassBeanBase {
   }
 }
 
-module.exports = class classBean extends ClassBeanBase {
+@Bean({ scene: 'test' })
+export class TestClass extends BeanBase {
   async actionAsync({ a, b }) {
     return Promise.resolve(a + b);
   }
-};
+}
