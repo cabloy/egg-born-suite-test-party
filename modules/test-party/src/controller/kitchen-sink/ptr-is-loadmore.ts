@@ -13,7 +13,7 @@ export class ControllerKitchenSinkPtrIsLoadmore extends BeanBase {
     // adjust page
     page = this.ctx.bean.util.page(page, false);
     // items
-    const items = [];
+    const items: any[] = [];
     for (let i = 0; i < page.size; i++) {
       const itemId = page.index + i + 1;
       if (itemId > gTestListMax) break;

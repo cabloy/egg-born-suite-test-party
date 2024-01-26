@@ -10,7 +10,7 @@ const __rolesAll = [
   { atomName: 'son', roleTypeCode: 4 },
   { atomName: 'daughter', roleTypeCode: 4 },
 ];
-const roles = [];
+const roles: any[] = [];
 for (const __role of __rolesAll) {
   roles.push({
     atomName: __role.atomName,
