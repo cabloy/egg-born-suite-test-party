@@ -6,7 +6,7 @@ export class TestApp extends BeanBase {
     return a + b;
   }
 
-  async actionAsync({ a, b }) {
+  async actionAsync({ a, b }: any) {
     return Promise.resolve(a + b);
   }
 }

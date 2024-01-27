@@ -2,7 +2,7 @@ import { BeanBase, Local } from '@cabloy/core';
 
 @Local()
 export class LocalTest extends BeanBase {
-  async getMemberId({ user }) {
+  async getMemberId({ user }: any) {
     const modelMember = this.ctx.model.module('a-wxwork').member;
     const member = await modelMember.get({ userId: user.id });
     return {
@@ -10,7 +10,7 @@ export class LocalTest extends BeanBase {
     };
   }
 
-  async sendAppMessage({ message, user }) {
+  async sendAppMessage({ message, user }: any) {
     const content = {
       userIds: [user.id],
       data: {

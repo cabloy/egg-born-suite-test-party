@@ -8,14 +8,14 @@ export class AtomParty extends BeanAtomCmsBase {
     return this.ctx.model.module(__ThisModule__).party;
   }
 
-  async default({ atomClass, item, options, user }) {
+  async default({ atomClass, item, options, user }: any) {
     // party default
     const data = await this.model.default();
     // super
     return await super.default({ atomClass, data, item, options, user });
   }
 
-  async read({ atomClass, options, key, user }) {
+  async read({ atomClass, options, key, user }: any) {
     // super
     const item = await super.read({ atomClass, options, key, user });
     if (!item) return null;
@@ -25,7 +25,7 @@ export class AtomParty extends BeanAtomCmsBase {
     return item;
   }
 
-  async select({ atomClass, options, items, user }) {
+  async select({ atomClass, options, items, user }: any) {
     // super
     await super.select({ atomClass, options, items, user });
     // select
@@ -34,7 +34,7 @@ export class AtomParty extends BeanAtomCmsBase {
     }
   }
 
-  async create({ atomClass, item, options, user }) {
+  async create({ atomClass, item, options, user }: any) {
     // super
     const data = await super.create({ atomClass, item, options, user });
     // atomState
@@ -50,7 +50,7 @@ export class AtomParty extends BeanAtomCmsBase {
     return data;
   }
 
-  async write({ atomClass, target, key, item, options, user }) {
+  async write({ atomClass, target, key, item, options, user }: any) {
     // super
     const data = await super.write({ atomClass, target, key, item, options, user });
     // update party
@@ -61,7 +61,7 @@ export class AtomParty extends BeanAtomCmsBase {
     return data;
   }
 
-  async delete({ atomClass, key, options, user }) {
+  async delete({ atomClass, key, options, user }: any) {
     // super
     await super.delete({ atomClass, key, options, user });
     // delete party
@@ -70,12 +70,12 @@ export class AtomParty extends BeanAtomCmsBase {
     });
   }
 
-  async checkRightAction({ atom, atomClass, action, options, user }) {
+  async checkRightAction({ atom, atomClass, action, options, user }: any) {
     // super
     return await super.checkRightAction({ atom, atomClass, action, options, user });
   }
 
-  async performAction({ key, atomClass, action, item, options, user }) {
+  async performAction({ key, atomClass, action, item, options, user }: any) {
     // super
     await super.performAction({ key, atomClass, action, item, options, user });
     // partyOver
@@ -83,7 +83,7 @@ export class AtomParty extends BeanAtomCmsBase {
     // }
   }
 
-  async performActionBulk({ keys, atomClass, action, item, options, user }) {
+  async performActionBulk({ keys, atomClass, action, item, options, user }: any) {
     // super
     return await super.performActionBulk({
       keys,

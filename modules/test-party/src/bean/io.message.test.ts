@@ -3,7 +3,7 @@ import { BeanIoMessageBase } from 'cabloy-module-api-a-socketio';
 
 @Bean({ scene: 'io.message' })
 export class IoMessageTest extends BeanIoMessageBase {
-  async onSaveSync({ path, options, message, messageSync, messageClass }) {
+  async onSaveSync({ path, options, message, messageSync, messageClass }: any) {
     // options
     const messageScene = (options && options.scene) || '';
     // send back

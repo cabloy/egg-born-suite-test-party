@@ -3,11 +3,11 @@ import { BeanCliBase } from 'cabloy-module-api-a-cli';
 
 @Bean({ scene: 'cli.default' })
 export class CliDefaultDemo extends BeanCliBase {
-  async meta({ user }) {
+  async meta({ user }: any) {
     const meta = await super.meta({ user });
     return meta;
   }
-  async execute({ user }) {
+  async execute({ user }: any) {
     // super
     await super.execute({ user });
     // chalk
@@ -29,7 +29,7 @@ export class CliDefaultDemo extends BeanCliBase {
     await this._levelOne({ progressNo: 0 });
   }
 
-  async _levelOne({ progressNo }) {
+  async _levelOne({ progressNo }: any) {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
@@ -47,7 +47,7 @@ export class CliDefaultDemo extends BeanCliBase {
     }
   }
 
-  async _levelTwo({ progressNo }) {
+  async _levelTwo({ progressNo }: any) {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
@@ -65,7 +65,7 @@ export class CliDefaultDemo extends BeanCliBase {
     }
   }
 
-  async _levelThree({ progressNo }) {
+  async _levelThree({ progressNo }: any) {
     const total = 3;
     let current = 0;
     for (let i = 0; i < total; i++) {

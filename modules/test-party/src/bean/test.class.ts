@@ -15,7 +15,7 @@ class ClassBeanBase {
 
 @Bean({ scene: 'test' })
 export class TestClass extends BeanBase {
-  async actionAsync({ a, b }) {
+  async actionAsync({ a, b }: any) {
     return Promise.resolve(a + b);
   }
 }

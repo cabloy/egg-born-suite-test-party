@@ -246,7 +246,7 @@ export class ControllerTestAtomAll extends BeanBase {
     }
   }
 
-  async _getUser({ userIds, userName }) {
+  async _getUser({ userIds, userName }: any) {
     if (!userName) return null;
     const userId = userIds && userIds[userName];
     if (userId) return { id: userId };

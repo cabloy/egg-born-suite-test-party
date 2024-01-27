@@ -29,11 +29,11 @@ export class TestCtx0 extends BeanBase {
     return a + b;
   }
 
-  async actionAsync({ a, b }) {
+  async actionAsync({ a, b }: any) {
     return Promise.resolve(a + b);
   }
 
-  async actionAsync2({ a, b }) {
+  async actionAsync2({ a, b }: any) {
     const name = this.name;
     const value = await this.actionAsync({ a, b });
     return `${name}:${value}`;

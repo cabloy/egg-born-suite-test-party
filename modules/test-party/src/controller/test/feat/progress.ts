@@ -18,7 +18,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     this.ctx.success({ progressId });
   }
 
-  async _progressInBackground({ progressId }) {
+  async _progressInBackground({ progressId }: any) {
     try {
       // level one
       await this._levelOne({ progressId, progressNo: 0 });
@@ -34,7 +34,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     }
   }
 
-  async _levelOne({ progressId, progressNo }) {
+  async _levelOne({ progressId, progressNo }: any) {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
@@ -53,7 +53,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     }
   }
 
-  async _levelTwo({ progressId, progressNo }) {
+  async _levelTwo({ progressId, progressNo }: any) {
     const total = 2;
     let current = 0;
     for (let i = 0; i < total; i++) {
@@ -72,7 +72,7 @@ export class ControllerTestFeatProgress extends BeanBase {
     }
   }
 
-  async _levelThree({ progressId, progressNo }) {
+  async _levelThree({ progressId, progressNo }: any) {
     const total = 3;
     let current = 0;
     for (let i = 0; i < total; i++) {
