@@ -5,6 +5,7 @@ export class SummerCacheTest extends BeanBase {
   _cacheBase: any;
 
   constructor({ cacheBase }) {
+    super();
     this._cacheBase = cacheBase;
   }
 

@@ -4,6 +4,7 @@ class ClassBeanBase {
   ctx: any;
 
   constructor(ctx) {
+    super();
     this.ctx = ctx;
   }
 
