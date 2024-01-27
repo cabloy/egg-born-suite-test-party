@@ -13,7 +13,7 @@ export class ControllerTestResourceAll extends BeanBase {
     const userRoot = { id: userIds.root };
 
     // function all: including widgets
-    let resourceStaticsAll = this.ctx.module.main.meta.base.statics['a-base.resource'].items;
+    let resourceStaticsAll = this.ctx.module.resource.meta.base.statics['a-base.resource'].items;
     resourceStaticsAll = resourceStaticsAll.filter(item => item.atomRevision > -1);
     const resourceCount = resourceStaticsAll.length;
 
