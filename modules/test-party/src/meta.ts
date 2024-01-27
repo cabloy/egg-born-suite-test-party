@@ -18,7 +18,7 @@ import cliCommands from './meta/cli/commands.js';
 // icons
 import iconGroups from './meta/icons/groups.js';
 // meta
-const meta = {};
+const meta: any = {};
 extend(true, meta, {
   base: {
     atoms: atomClasses,

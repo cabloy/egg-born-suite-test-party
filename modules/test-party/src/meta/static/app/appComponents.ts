@@ -1,4 +1,4 @@
-const info = {};
+const info: any = {};
 const content = {
   presets: {
     anonymous: {

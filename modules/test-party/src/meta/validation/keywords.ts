@@ -1,6 +1,6 @@
 import languages from './keyword/languages.js';
 
-const keywords = {};
+const keywords: any = {};
 // product
 Object.assign(keywords, languages);
 // ok

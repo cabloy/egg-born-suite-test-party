@@ -1,4 +1,4 @@
-const keywords = {};
+const keywords: any = {};
 keywords.languages = {
   async: true,
   type: 'string',

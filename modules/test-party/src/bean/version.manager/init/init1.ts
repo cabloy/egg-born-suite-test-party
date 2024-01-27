@@ -62,7 +62,7 @@ export class VersionInit extends BeanBase {
 
   // roles
   async _testRoles() {
-    const roleIds = {};
+    const roleIds: any = {};
     // system roles
     for (const roleName of this.ctx.constant.module('a-base').systemRoles) {
       const role = await this.ctx.bean.role.getSystemRole({ roleName });
@@ -95,7 +95,7 @@ export class VersionInit extends BeanBase {
   // users
   async _testUsers(roleIds) {
     // userIds
-    const userIds = {};
+    const userIds: any = {};
     for (const [userName, roleName] of testData.users) {
       // add
       if (!userIds[userName]) {
