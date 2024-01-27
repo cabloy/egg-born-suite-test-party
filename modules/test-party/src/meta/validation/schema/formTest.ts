@@ -1,6 +1,6 @@
 import { __ThisModule__ } from '../../../resource/this.js';
 
-const schemas = {};
+const schemas: any = {};
 // formTest
 schemas.formTest = {
   type: 'object',

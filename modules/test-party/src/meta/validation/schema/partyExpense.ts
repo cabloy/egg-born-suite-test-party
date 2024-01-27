@@ -1,4 +1,4 @@
-const schemas = {};
+const schemas: any = {};
 // partyExpense
 schemas.partyExpense = {
   type: 'object',

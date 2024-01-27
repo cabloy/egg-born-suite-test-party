@@ -1,4 +1,4 @@
-const schemas = {};
+const schemas: any = {};
 // blockArticleCommentCount
 schemas.blockArticleCommentCount = {
   type: 'object',

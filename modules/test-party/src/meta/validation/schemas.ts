@@ -5,7 +5,7 @@ import party from './schema/party.js';
 import partyOverBulk from './schema/partyOverBulk.js';
 import settings from './schema/settings.js';
 
-const schemas = {};
+const schemas: any = {};
 // partyExpense
 Object.assign(schemas, partyExpense);
 // blocks

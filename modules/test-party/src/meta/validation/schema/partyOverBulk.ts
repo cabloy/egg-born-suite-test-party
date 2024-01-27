@@ -1,4 +1,4 @@
-const schemas = {};
+const schemas: any = {};
 // party over
 schemas.partyOverBulk = {
   type: 'object',
