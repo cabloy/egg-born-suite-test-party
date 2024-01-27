@@ -8,7 +8,7 @@ class ClassBeanBase {
     this.ctx = ctx;
   }
 
-  actionSync({ a, b }) {
+  actionSync({ a, b }: any) {
     return a + b;
   }
 }

@@ -25,7 +25,7 @@ export class TestCtx0 extends BeanBase {
     this._name = value;
   }
 
-  actionSync({ a, b }) {
+  actionSync({ a, b }: any) {
     return a + b;
   }
 

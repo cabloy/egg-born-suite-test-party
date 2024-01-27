@@ -2,7 +2,7 @@ import { Bean, BeanBase } from '@cabloy/core';
 
 @Bean({ scene: 'test' })
 export class TestApp extends BeanBase {
-  actionSync({ a, b }) {
+  actionSync({ a, b }: any) {
     return a + b;
   }
 

@@ -12,7 +12,7 @@ function monkeyConfig(module, config) {
 }
 
 export default class Monkey {
-  moduleLoading({ /* moduleSelf,*/ module }) {
+  moduleLoading({ /* moduleSelf,*/ module }: any) {
     if (module.info.relativeName !== 'test-party') return;
     // route
     monkeyRoute(module, 'test/monkey/monkeyee/test', {
@@ -23,7 +23,7 @@ export default class Monkey {
   moduleLoaded(/* { moduleSelf, module }*/) {
     // do nothing
   }
-  configLoaded({ /* moduleSelf,*/ module, config }) {
+  configLoaded({ /* moduleSelf,*/ module, config }: any) {
     if (module.info.relativeName !== 'test-party') return;
     // config
     monkeyConfig(module, config);

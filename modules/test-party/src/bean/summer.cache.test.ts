@@ -4,7 +4,7 @@ import { Bean, BeanBase } from '@cabloy/core';
 export class SummerCacheTest extends BeanBase {
   _cacheBase: any;
 
-  constructor({ cacheBase }) {
+  constructor({ cacheBase }: any) {
     super();
     this._cacheBase = cacheBase;
   }
