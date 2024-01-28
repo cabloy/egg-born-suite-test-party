@@ -1,3 +1,4 @@
+import { BeanBase, IMonkeyModule } from '@cabloy/core';
 import { __ThisModule__ } from './resource/this.js';
 
 function monkeyRoute(module, routePath, routeController) {
@@ -7,12 +8,12 @@ function monkeyRoute(module, routePath, routeController) {
   }
 }
 
-function monkeyConfig(module, config) {
+function monkeyConfig(_module, config) {
   config.monkeyed = true;
 }
 
-export default class Monkey {
-  moduleLoading({ /* moduleSelf,*/ module }: any) {
+export class Monkey extends BeanBase implements IMonkeyModule {
+  async moduleLoading({ /* moduleSelf,*/ module }): Promise<void> {
     if (module.info.relativeName !== 'test-party') return;
     // route
     monkeyRoute(module, 'test/monkey/monkeyee/test', {
@@ -20,15 +21,11 @@ export default class Monkey {
       name: 'monkeyer',
     });
   }
-  moduleLoaded(/* { moduleSelf, module }*/) {
-    // do nothing
-  }
-  configLoaded({ /* moduleSelf,*/ module, config }: any) {
+  async moduleLoaded(_options): Promise<void> {}
+  async configLoaded({ /* moduleSelf,*/ module, config }): Promise<void> {
     if (module.info.relativeName !== 'test-party') return;
     // config
     monkeyConfig(module, config);
   }
-  metaLoaded(/* { moduleSelf, module, meta }*/) {
-    // do nothing
-  }
+  async metaLoaded(_options): Promise<void> {}
 }
