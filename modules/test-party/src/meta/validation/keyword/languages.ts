@@ -10,7 +10,7 @@ keywords.languages = {
       const index = locales.findIndex(item => item.value === data);
       if (index > -1) return true;
       const errors = [{ keyword: 'x-languages', params: [], message: ctx.text('NotExpectedValue') }];
-      throw new module.meta.class.Ajv.ValidationError(errors);
+      throw new ctx.bean.ajv.Ajv.ValidationError(errors);
     };
   },
 };
