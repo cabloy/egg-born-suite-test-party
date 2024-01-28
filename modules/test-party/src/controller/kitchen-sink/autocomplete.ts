@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../resource/this.js';
 import languages from './data/autocomplete-languages.json';
 
 @Controller()
-export class ControllerKitchenSinkAutocomplete extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerKitchenSinkAutocomplete extends BeanBase<ScopeModule> {
   async languages() {
     const query = this.ctx.params.query;
     let data;

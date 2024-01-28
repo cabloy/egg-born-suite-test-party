@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestFeatQueue extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatQueue extends BeanBase<ScopeModule> {
   async pushAsync() {
     const res = await this.ctx.meta.util.queuePushAsync({
       module: 'test-party',

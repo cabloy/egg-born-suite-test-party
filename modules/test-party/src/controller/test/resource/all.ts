@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestResourceAll extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestResourceAll extends BeanBase<ScopeModule> {
   async all() {
     // userIds
     const userIds = this.ctx.cache.mem.get('userIds');

@@ -1,14 +1,11 @@
 import { __ThisModule__ } from '../../../resource/this.js';
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 const _subscribePathTest = '/test/party/test';
 const _subscribePathSimpleChat = '/test/party/simpleChat';
 
 @Controller()
-export class ControllerTestFeatSocketio extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatSocketio extends BeanBase<ScopeModule> {
   async publish() {
     const options = this.ctx.request.body.options;
     const message = this.ctx.request.body.message;

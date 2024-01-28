@@ -1,13 +1,10 @@
 import { __ThisModule__ } from '../../../resource/this.js';
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestFeatSummer extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatSummer extends BeanBase<ScopeModule> {
   async summer() {
     // name
     const name = 'test';

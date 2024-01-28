@@ -1,5 +1,5 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 const atomStaticKey = '--model--test--';
@@ -10,10 +10,7 @@ const __rows = [
 ];
 
 @Controller()
-export class ControllerTestFeatModel extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatModel extends BeanBase<ScopeModule> {
   async model() {
     // model
     const model = this.ctx.model.module('a-base').atom;

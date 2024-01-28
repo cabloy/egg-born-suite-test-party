@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../resource/this.js';
 const gTestListMax = 89;
 
 @Controller()
-export class ControllerKitchenSinkPtrIsLoadmore extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerKitchenSinkPtrIsLoadmore extends BeanBase<ScopeModule> {
   async list() {
     // page
     let page = this.ctx.request.body.page;

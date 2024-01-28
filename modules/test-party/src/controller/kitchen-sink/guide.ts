@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../resource/this.js';
 
 @Controller()
-export class ControllerKitchenSinkGuide extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerKitchenSinkGuide extends BeanBase<ScopeModule> {
   async echo() {
     const message = 'Hello World';
     this.ctx.success(message);

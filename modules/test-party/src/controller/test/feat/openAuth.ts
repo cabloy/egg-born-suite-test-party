@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestFeatOpenAuth extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatOpenAuth extends BeanBase<ScopeModule> {
   async resourceCheckSuccess() {
     const user = this.ctx.state.user.op;
     assert.equal(user.userName, 'root');

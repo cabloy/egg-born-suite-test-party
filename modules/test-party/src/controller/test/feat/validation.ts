@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 
 @Controller()
-export class ControllerTestFeatValidation extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatValidation extends BeanBase<ScopeModule> {
   async success() {
     this.ctx.success();
   }

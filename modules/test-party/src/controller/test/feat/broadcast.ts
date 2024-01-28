@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 
 @Controller()
-export class ControllerTestFeatBroadcast extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatBroadcast extends BeanBase<ScopeModule> {
   async emit() {
     this.ctx.meta.util.broadcastEmit({
       locale: 'zh-cn',

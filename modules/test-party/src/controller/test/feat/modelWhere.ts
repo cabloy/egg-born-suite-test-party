@@ -1,5 +1,5 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 const atomStaticKey = '--modelWhere--test--';
@@ -10,10 +10,7 @@ const __rows = [
 ];
 
 @Controller()
-export class ControllerTestFeatModelWhere extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatModelWhere extends BeanBase<ScopeModule> {
   async modelWhere() {
     await this._modelWhere();
     this.ctx.success();

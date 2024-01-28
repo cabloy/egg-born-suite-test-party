@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestFeatInstance extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatInstance extends BeanBase<ScopeModule> {
   async instance() {
     assert.equal(!!this.ctx.instance.id, true);
     assert.equal(!!this.ctx.instance.config, true);

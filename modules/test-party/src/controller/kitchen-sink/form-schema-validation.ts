@@ -1,5 +1,5 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../resource/this.js';
 const __ItemDefault = {
   userName: '',
   password: '',
@@ -13,10 +13,7 @@ const __ItemDefault = {
 };
 
 @Controller()
-export class ControllerKitchenSinkFormSchemaValidation extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerKitchenSinkFormSchemaValidation extends BeanBase<ScopeModule> {
   async load() {
     // try load from db cache
     const cacheName = this._getCacheName();

@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 
 @Controller()
-export class ControllerTestAtomRight extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestAtomRight extends BeanBase<ScopeModule> {
   async checkRightCreate() {
     // checked by route/middleware
     this.ctx.success(this.ctx.request.body.atomClass);

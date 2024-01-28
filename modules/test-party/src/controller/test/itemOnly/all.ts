@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestItemOnlyAll extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestItemOnlyAll extends BeanBase<ScopeModule> {
   async all() {
     const totalTimes = 1;
     const timeStart = new Date().getTime() / 1000;

@@ -1,12 +1,9 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 @Controller()
-export class ControllerTestAtomStarLabel extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestAtomStarLabel extends BeanBase<ScopeModule> {
   async starLabel() {
     // atomClass
     const atomClass = await this.ctx.bean.atomClass.get({ atomClassName: 'party' });

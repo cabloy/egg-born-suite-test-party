@@ -1,13 +1,10 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 import pMap from 'p-map';
 
 @Controller()
-export class ControllerTestFeatSequence extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatSequence extends BeanBase<ScopeModule> {
   async sequence() {
     const arr = [1, 2, 3, 4, 5];
     let results;

@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestWechat } from '../index.js';
+import { ScopeModule } from '../resource/this.js';
 
 @Controller()
-export class ControllerTest extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestWechat;
-
+export class ControllerTest extends BeanBase<ScopeModule> {
   async getOpenid() {
     const res = await this.scope.local.test.getOpenid({
       user: this.ctx.state.user.op,

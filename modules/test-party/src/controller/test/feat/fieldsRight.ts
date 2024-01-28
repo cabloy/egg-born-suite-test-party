@@ -1,5 +1,5 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 import assert from 'assert';
 
 const __testData_allowAllFieldsRead = {
@@ -63,10 +63,7 @@ const __testData_custom_object = {
 };
 
 @Controller()
-export class ControllerTestFeatFieldsRight extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
   async parseSchema() {
     const moduleTestFlow = this.app.meta.modules['test-flow'];
     if (!moduleTestFlow) {

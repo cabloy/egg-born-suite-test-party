@@ -1,11 +1,8 @@
 import { BeanBase, Controller, Use } from '@cabloy/core';
-import { ScopeModuleTestParty } from '../index.js';
+import { ScopeModule } from '../../../resource/this.js';
 
 @Controller()
-export class ControllerTestFeatMiddleware extends BeanBase {
-  @Use()
-  scope: ScopeModuleTestParty;
-
+export class ControllerTestFeatMiddleware extends BeanBase<ScopeModule> {
   async interception() {
     const { a, b } = this.ctx.request.body;
     const c = parseInt(a) + parseInt(b);
