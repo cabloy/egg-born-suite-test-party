@@ -1,5 +1,9 @@
 const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
 
+const url = mockUrl('test/atom/all', false);
+const moduleName = mockInfo().relativeName;
+console.log(url, moduleName);
+return;
 describe.only('action: atom: party', () => {
   it('[atom]', async () => {
     // ctx
