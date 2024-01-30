@@ -1,11 +1,11 @@
-import { __ThisModule__ } from '../resource/this.js';
+import { ScopeModule } from '../resource/this.js';
 import { Atom } from '@cabloy/core';
 import { BeanAtomCmsBase } from 'cabloy-module-api-a-cms';
 
 @Atom()
-export class AtomParty extends BeanAtomCmsBase {
+export class AtomParty extends BeanAtomCmsBase<ScopeModule> {
   get model() {
-    return this.ctx.model.module(__ThisModule__).party;
+    return this.scope.model.party;
   }
 
   async default({ atomClass, item, options, user }: any) {

@@ -1,11 +1,11 @@
-import { __ThisModule__ } from '../resource/this.js';
+import { ScopeModule } from '../resource/this.js';
 import { Atom } from '@cabloy/core';
 import { BeanAtomBase } from 'cabloy-module-api-a-base';
 
 @Atom()
-export class AtomPartyExpense extends BeanAtomBase {
+export class AtomPartyExpense extends BeanAtomBase<ScopeModule> {
   get model() {
-    return this.ctx.model.module(__ThisModule__).partyExpense;
+    return this.scope.model.partyExpense;
   }
 
   async default({ atomClass, item, options, user }: any) {
