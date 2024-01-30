@@ -1,6 +1,8 @@
 import { BeanBase } from '@cabloy/core';
 
 export class TestCtx0 extends BeanBase {
+  _name: string;
+
   __init__(moduleName) {
     this._name = moduleName || this.ctx.module.info.relativeName;
   }

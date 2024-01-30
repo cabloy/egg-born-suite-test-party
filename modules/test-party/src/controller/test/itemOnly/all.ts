@@ -4,6 +4,8 @@ import assert from 'assert';
 
 @Controller()
 export class ControllerTestItemOnlyAll extends BeanBase<ScopeModule> {
+  atomClass: any;
+
   async all() {
     const totalTimes = 1;
     const timeStart = new Date().getTime() / 1000;
@@ -121,7 +123,7 @@ export class ControllerTestItemOnlyAll extends BeanBase<ScopeModule> {
     }
 
     // checkRightCreate
-    const checkRightCreates = [
+    const checkRightCreates: [string, boolean][] = [
       ['Tom', false],
       ['root', false],
     ];

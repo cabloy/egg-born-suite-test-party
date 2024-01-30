@@ -1,6 +1,5 @@
 import { BeanBase, Controller } from '@cabloy/core';
 import { ScopeModule } from '../../../resource/this.js';
-import assert from 'assert';
 
 @Controller()
 export class ControllerTestCtxLocale extends BeanBase<ScopeModule> {

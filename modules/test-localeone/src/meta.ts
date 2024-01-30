@@ -6,6 +6,6 @@ export const meta = {
   validation: {
     validators: {},
     keywords: {},
-    schemas: {},
+    schemas,
   },
 };
