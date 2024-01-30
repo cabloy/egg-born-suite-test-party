@@ -22,3 +22,11 @@ export * from '../bean/event.loginInfo.js';
 export * from '../bean/event.helloEcho.js';
 export * from '../bean/cli.default.demo.js';
 export * from '../bean/broadcast.test.js';
+
+import { BeanTestCtx } from '../bean/test.ctx.js';
+
+declare module '@cabloy/core' {
+  export interface IBeanRecord {
+    testCtx: BeanTestCtx;
+  }
+}

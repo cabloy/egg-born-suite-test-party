@@ -237,14 +237,14 @@ export const routes: IModuleRoute[] = [
   // test/feat/bean: http://localhost:9192/api/test/party/test/feat/bean
   {
     method: 'get',
-    path: 'test/feat/bean',
+    path: 'test/feat/beanTest',
     controller: 'testFeatBean',
     middlewares: 'test',
     meta: { auth: { enable: false } },
   },
   {
     method: 'get',
-    path: 'test/feat/bean/local',
+    path: 'test/feat/bean/localTest',
     controller: 'testFeatBean',
     middlewares: 'test',
     meta: { auth: { enable: false } },
