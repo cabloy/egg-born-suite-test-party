@@ -47,7 +47,7 @@ export class VersionInit extends BeanBase {
     const userIds = await this._testUsers(roleIds);
 
     // role rights
-    await this._testRoleRights(roleIds);
+    await this._testRoleRights();
 
     // cache
     this._testCache(roleIds, userIds);
