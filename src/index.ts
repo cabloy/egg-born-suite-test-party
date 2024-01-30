@@ -1,4 +1,3 @@
-import 'cabloy-module-api-test-dingtalk';
 import 'cabloy-module-api-test-hostsimple-sync';
 import 'cabloy-module-api-test-localeone';
 import 'cabloy-module-api-test-localetwo';

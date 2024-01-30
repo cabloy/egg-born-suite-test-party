@@ -20,7 +20,6 @@
   "description": "",
   "author": "zhennann",
   "dependencies": {
-    "cabloy-module-api-test-dingtalk": "workspace:^",
     "cabloy-module-api-test-hostsimple-sync": "workspace:^",
     "cabloy-module-api-test-localeone": "workspace:^",
     "cabloy-module-api-test-localetwo": "workspace:^",
