@@ -22,9 +22,6 @@
       "path": "modules/test-partymonkey-monkey"
     },
     {
-      "path": "modules/test-wechat"
-    },
-    {
       "path": "modules/test-wxwork"
     }
   ]

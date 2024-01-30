@@ -25,7 +25,6 @@
     "cabloy-module-api-test-localetwo": "workspace:^",
     "cabloy-module-api-test-party": "workspace:^",
     "cabloy-module-api-test-partymonkey-monkey": "workspace:^",
-    "cabloy-module-api-test-wechat": "workspace:^",
     "cabloy-module-api-test-wxwork": "workspace:^"
   }
 }
