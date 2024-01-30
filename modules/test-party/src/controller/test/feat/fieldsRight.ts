@@ -97,9 +97,9 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_allowAllFieldsRead,
     });
-    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, true);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    assert.equal(schemaBase!.schema.properties.atomName.ebReadOnly, true);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, true);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, true);
   }
 
   // mode: allowAllFieldsReadWrite
@@ -108,10 +108,10 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_allowAllFieldsReadWrite,
     });
-    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
-    assert.equal(schemaBase.isSchemaBase, true);
+    assert.equal(schemaBase!.schema.properties.atomName.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, undefined);
+    assert.equal(schemaBase!.isSchemaBase, true);
   }
 
   // mode: allowSpecificFields_1
@@ -120,9 +120,9 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_allowSpecificFields_1,
     });
-    assert.equal(schemaBase.schema.properties.atomName, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, true);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.atomName, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, true);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, undefined);
   }
 
   // mode: allowSpecificFields_2
@@ -131,9 +131,9 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_allowSpecificFields_2,
     });
-    assert.equal(schemaBase.schema.properties.atomName, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
-    assert.equal(schemaBase.schema.properties.details, undefined);
+    assert.equal(schemaBase!.schema.properties.atomName, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, false);
+    assert.equal(schemaBase!.schema.properties.details, undefined);
   }
 
   // mode: allowSpecificFields_3
@@ -142,9 +142,9 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_allowSpecificFields_3,
     });
-    assert.equal(schemaBase.schema.properties.atomName, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, false);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, true);
+    assert.equal(schemaBase!.schema.properties.atomName, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, false);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, true);
   }
   // mode: custom_array
   async _parseSchema_mode_custom_array({ atomClass }: any) {
@@ -152,9 +152,9 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_custom_array,
     });
-    assert.equal(schemaBase.schema.properties.atomName, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.atomName, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, undefined);
   }
   // mode: custom_array
   async _parseSchema_mode_custom_object({ atomClass }: any) {
@@ -162,8 +162,8 @@ export class ControllerTestFeatFieldsRight extends BeanBase<ScopeModule> {
       atomClass,
       fieldsRight: __testData_custom_object,
     });
-    assert.equal(schemaBase.schema.properties.atomName.ebReadOnly, undefined);
-    assert.equal(schemaBase.schema.properties.detailsAmount.ebReadOnly, undefined);
-    assert.equal(schemaBase.schema.properties.details.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.atomName.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.detailsAmount.ebReadOnly, undefined);
+    assert.equal(schemaBase!.schema.properties.details.ebReadOnly, undefined);
   }
 }
