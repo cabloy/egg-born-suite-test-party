@@ -7,9 +7,6 @@
   "include": ["src/**/*"],
   "references": [
     {
-      "path": "modules/test-dingtalk"
-    },
-    {
       "path": "modules/test-hostsimple-sync"
     },
     {
