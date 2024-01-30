@@ -1,5 +1,3 @@
-import extend from '@cabloy/extend';
-
 import atomClasses from './meta/atomClass/atomClasses.js';
 import schemas from './meta/validation/schemas.js';
 import keywords from './meta/validation/keywords.js';
@@ -17,112 +15,117 @@ import staticRoles from './meta/static/roles.js';
 import cliCommands from './meta/cli/commands.js';
 // icons
 import iconGroups from './meta/icons/groups.js';
+import { CabloyApplication } from '@cabloy/core';
 // meta
-const meta: any = {};
-extend(true, meta, {
-  base: {
-    atoms: atomClasses,
-    statics: {
-      'a-app.app': {
-        items: staticApps,
-      },
-      'a-dashboard.dashboard': {
-        items: staticDashboards,
-      },
-      'a-baselayout.layout': {
-        items: staticLayouts,
-      },
-      'a-base.resource': {
-        items: staticResources,
-      },
-      'a-dict.dict': {
-        items: staticDicts,
-      },
-      'a-base.role': {
-        items: staticRoles,
-      },
-    },
-  },
-  validation: {
-    validators: {
-      userTest: {
-        schemas: 'settingsUser,settingsUserExtra',
-      },
-      instanceTest: {
-        schemas: 'settingsInstance',
-      },
-    },
-    keywords,
-    schemas,
-  },
-  cli: {
-    commands: cliCommands,
-  },
-  settings: {
-    user: {
-      validator: 'userTest',
-    },
-    instance: {
-      validator: 'instanceTest',
-    },
-  },
-  event: {
-    implementations: {
-      'a-base:loginInfo': 'loginInfoDashboard',
-    },
-  },
-  index: {
-    indexes: {
-      testPartyExpense: 'createdAt,updatedAt,atomIdMain',
-      testParty: 'createdAt,updatedAt,atomId,partyTypeCode',
-    },
-  },
-  socketio: {
-    messages: {
-      test: socketioTest,
-      simpleChat: socketioSimpleChat,
-    },
-  },
-  stats: {
-    providers: {
-      tasksUser: {
-        user: true,
-        bean: 'tasksUser',
-      },
-      tasksInstance: {
-        user: false,
-        bean: 'tasksInstance',
-        dependencies: 'tasksUser',
-      },
-    },
-  },
-  icon: {
-    groups: iconGroups,
-  },
-});
+export const meta = (app: CabloyApplication) => {
+  const meta: any = {};
 
-// only for test
-if (module.meta.isTest) {
-  // meta
-  extend(true, meta, {
-    event: {
-      declarations: {
-        hello: 'This is a test for event',
-      },
-      implementations: {
-        'test-party:hello': 'helloEcho',
-        'a-base:userVerify': 'userVerify',
-        'a-base:loginInfo': 'loginInfo',
-      },
-    },
-    sequence: {
-      providers: {
-        test: {
-          bean: 'test',
-          start: 0,
+  app.bean.util.extend(meta, {
+    base: {
+      atoms: atomClasses,
+      statics: {
+        'a-app.app': {
+          items: staticApps,
+        },
+        'a-dashboard.dashboard': {
+          items: staticDashboards,
+        },
+        'a-baselayout.layout': {
+          items: staticLayouts,
+        },
+        'a-base.resource': {
+          items: staticResources,
+        },
+        'a-dict.dict': {
+          items: staticDicts,
+        },
+        'a-base.role': {
+          items: staticRoles,
         },
       },
     },
+    validation: {
+      validators: {
+        userTest: {
+          schemas: 'settingsUser,settingsUserExtra',
+        },
+        instanceTest: {
+          schemas: 'settingsInstance',
+        },
+      },
+      keywords,
+      schemas,
+    },
+    cli: {
+      commands: cliCommands,
+    },
+    settings: {
+      user: {
+        validator: 'userTest',
+      },
+      instance: {
+        validator: 'instanceTest',
+      },
+    },
+    event: {
+      implementations: {
+        'a-base:loginInfo': 'loginInfoDashboard',
+      },
+    },
+    index: {
+      indexes: {
+        testPartyExpense: 'createdAt,updatedAt,atomIdMain',
+        testParty: 'createdAt,updatedAt,atomId,partyTypeCode',
+      },
+    },
+    socketio: {
+      messages: {
+        test: socketioTest,
+        simpleChat: socketioSimpleChat,
+      },
+    },
+    stats: {
+      providers: {
+        tasksUser: {
+          user: true,
+          bean: 'tasksUser',
+        },
+        tasksInstance: {
+          user: false,
+          bean: 'tasksInstance',
+          dependencies: 'tasksUser',
+        },
+      },
+    },
+    icon: {
+      groups: iconGroups,
+    },
   });
-}
-export default meta;
+
+  // only for test
+  if (app.meta.isTest) {
+    // meta
+    app.bean.util.extend(meta, {
+      event: {
+        declarations: {
+          hello: 'This is a test for event',
+        },
+        implementations: {
+          'test-party:hello': 'helloEcho',
+          'a-base:userVerify': 'userVerify',
+          'a-base:loginInfo': 'loginInfo',
+        },
+      },
+      sequence: {
+        providers: {
+          test: {
+            bean: 'test',
+            start: 0,
+          },
+        },
+      },
+    });
+  }
+
+  return meta;
+};
