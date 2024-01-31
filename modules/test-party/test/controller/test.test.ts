@@ -1,10 +1,14 @@
 import Mock from 'egg-born-mock';
-console.log(Mock);
+// console.log(Mock);
 // { app, mockUrl, mockInfo, assert }
 
-const url = ''; // Mock.mockUrl('test/atom/all', false);
-const moduleName = Mock.mockInfo().relativeName;
-console.log(url, moduleName);
+describe.only('action: atom: party', () => {
+  it('[atom]', async () => {
+    const url = Mock.mockUrl('test/atom/all', false);
+    const moduleName = Mock.mockInfo().relativeName;
+    console.log(url, moduleName);
+  });
+});
 // return;
 // describe.only('action: atom: party', () => {
 //   it('[atom]', async () => {
