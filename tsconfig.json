@@ -7,13 +7,13 @@
   "include": ["src/**/*"],
   "references": [
     {
-      "path": "modules/test-hostsimple-sync"
+      "path": "modules/test-hostsimple-sync/tsconfig.build.json"
     },
     {
-      "path": "modules/test-localeone"
+      "path": "modules/test-localeone/tsconfig.build.json"
     },
     {
-      "path": "modules/test-localetwo"
+      "path": "modules/test-localetwo/tsconfig.build.json"
     },
     {
       "path": "modules/test-party/tsconfig.build.json"
