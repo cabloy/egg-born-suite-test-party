@@ -1,0 +1,25 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "modules/test-hostsimple-sync"
+    },
+    {
+      "path": "modules/test-localeone"
+    },
+    {
+      "path": "modules/test-localetwo"
+    },
+    {
+      "path": "modules/test-party/tsconfig.build.json"
+    },
+    {
+      "path": "modules/test-partymonkey-monkey"
+    }
+  ]
+}
