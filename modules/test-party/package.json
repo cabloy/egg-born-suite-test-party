@@ -44,7 +44,5 @@
     "preversion": "npm run build:all && git add ."
   },
   "author": "zhennann",
-  "dependencies": {
-    "@cabloy/core": "5.0.0"
-  }
+  "dependencies": {}
 }

@@ -16,7 +16,7 @@
       "path": "modules/test-localetwo"
     },
     {
-      "path": "modules/test-party"
+      "path": "modules/test-party/tsconfig.build.json"
     },
     {
       "path": "modules/test-partymonkey-monkey"
