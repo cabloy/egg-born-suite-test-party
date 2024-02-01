@@ -19,7 +19,7 @@
       "path": "modules/test-party/tsconfig.build.json"
     },
     {
-      "path": "modules/test-partymonkey-monkey"
+      "path": "modules/test-partymonkey-monkey/tsconfig.build.json"
     }
   ]
 }
