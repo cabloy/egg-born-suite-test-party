@@ -43,7 +43,7 @@ export class ControllerTestFeatSocketio extends BeanBase<ScopeModule> {
   }
 
   async _collectUserIds() {
-    const ioRedis = this.ctx.bean.local.module('a-socketio').redis;
+    const ioRedis = this.bean.scope('a-socketio').local.redis;
     const userIds = await ioRedis._getPathUsersOnline({ path: _subscribePathSimpleChat });
     const userAdmin = await this.ctx.bean.user.get({ userName: 'admin' });
     if (userAdmin && !userIds.includes(userAdmin.id)) {
