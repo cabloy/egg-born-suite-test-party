@@ -1,11 +1,10 @@
-import Mock from 'egg-born-mock';
-// console.log(Mock);
-// { app, mockUrl, mockInfo, assert }
+// @ts-ignore: utils
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
 describe.only('action: atom: party', () => {
   it('[atom]', async () => {
-    const url = Mock.mockUrl('test/atom/all', false);
-    const moduleName = Mock.mockInfo().relativeName;
+    const url = mockUrl('test/atom/all', false);
+    const moduleName = mockInfo().relativeName;
     console.log(url, moduleName);
   });
 });
