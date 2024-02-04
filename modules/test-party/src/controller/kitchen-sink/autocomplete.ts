@@ -1,6 +1,6 @@
 import { BeanBase, Controller } from '@cabloy/core';
 import { ScopeModule } from '../../resource/this.js';
-import languages from './data/autocomplete-languages.json';
+import languages from './data/autocomplete-languages.json' with { type: "json" };
 
 @Controller()
 export class ControllerKitchenSinkAutocomplete extends BeanBase<ScopeModule> {
