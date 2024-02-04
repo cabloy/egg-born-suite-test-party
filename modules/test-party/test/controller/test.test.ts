@@ -1,5 +1,5 @@
 // @ts-ignore: utils
-import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
+import { app, mockInfo, assert } from 'egg-born-mock';
 
 describe.only('action: atom: party', () => {
   it('[atom]', async () => {
