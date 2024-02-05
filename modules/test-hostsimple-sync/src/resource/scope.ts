@@ -20,4 +20,8 @@ declare module '@cabloy/core' {
   export interface IBeanScopeRecord {
     'test-hostsimple': ScopeModuleTestHostsimple;
   }
+
+  export interface IBeanScopeConfig {
+    'test-hostsimple': ReturnType<typeof config>;
+  }
 }

@@ -20,4 +20,8 @@ declare module '@cabloy/core' {
   export interface IBeanScopeRecord {
     'test-localetwo': ScopeModuleTestLocaletwo;
   }
+
+  export interface IBeanScopeConfig {
+    'test-localetwo': ReturnType<typeof config>;
+  }
 }

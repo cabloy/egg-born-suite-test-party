@@ -20,4 +20,8 @@ declare module '@cabloy/core' {
   export interface IBeanScopeRecord {
     'test-partymonkey': ScopeModuleTestPartymonkey;
   }
+
+  export interface IBeanScopeConfig {
+    'test-partymonkey': ReturnType<typeof config>;
+  }
 }
