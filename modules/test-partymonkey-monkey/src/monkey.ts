@@ -1,8 +1,8 @@
 import { BeanBase, IModule, IMonkeyModule } from '@cabloy/core';
 import { __ThisModule__ } from './resource/this.js';
 
-function monkeyRoute(module, routePath, routeController) {
-  const route = module.main.routes.find(item => item.path === routePath);
+function monkeyRoute(module: IModule, routePath, routeController) {
+  const route = module.resource.routes.find(item => item.path === routePath);
   if (route) {
     route.controller = routeController;
   }
