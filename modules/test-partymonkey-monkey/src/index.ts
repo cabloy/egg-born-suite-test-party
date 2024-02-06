@@ -4,3 +4,5 @@ export * from './meta.js';
 export * from './routes.js';
 
 export * from './monkey.js';
+
+import './types.js';
