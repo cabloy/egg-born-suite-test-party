@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
-const eggBornUtils = require('egg-born-utils');
+import eggBornUtils from 'egg-born-utils';
 
 describe('test/controller/test/feat/openAuth.test.js', () => {
   const __atomClassParty = {

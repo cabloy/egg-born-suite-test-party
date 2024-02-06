@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
-describe.only('action: atom: party', () => {
+describe('action: atom: party', () => {
   it('[atom]', async () => {
     // ctx
     const ctx = await app.meta.mockUtil.mockCtx();
