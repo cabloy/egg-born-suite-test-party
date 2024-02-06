@@ -1,4 +1,5 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
 describe('test/controller/test/feat/middleware.test.js', () => {
   it('action:interception', async () => {
@@ -32,7 +33,7 @@ describe('test/controller/test/feat/middleware.test.js', () => {
       },
       async function (err) {
         assert.equal(err.code, 'test-party:1002');
-      }
+      },
     );
   });
 

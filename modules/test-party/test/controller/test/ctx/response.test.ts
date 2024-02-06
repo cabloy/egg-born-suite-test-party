@@ -1,4 +1,5 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
 describe('test/controller/test/ctx/response.test.js', () => {
   it('action:response:success', async () => {
@@ -43,7 +44,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
       async function (err) {
         assert.equal(err.code, 'test-party:1001');
         assert.equal(err.message, '错误测试');
-      }
+      },
     );
   });
 
@@ -61,7 +62,7 @@ describe('test/controller/test/ctx/response.test.js', () => {
       async function (err) {
         assert.equal(err.code, 'test-party:1001');
         assert.equal(err.message, '错误测试');
-      }
+      },
     );
   });
 });

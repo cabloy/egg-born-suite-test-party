@@ -1,6 +1,7 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
-describe('test/controller/test/atom/all.test.js', () => {
+describe.only('test/controller/test/atom/all.test.js', () => {
   it('action:all', async () => {
     // ctx
     const ctx = await app.meta.mockUtil.mockCtx();

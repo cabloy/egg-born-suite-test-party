@@ -1,4 +1,5 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
 describe('test/controller/test/function/right.test.js', () => {
   it('action:checkRightResourceUser', async () => {

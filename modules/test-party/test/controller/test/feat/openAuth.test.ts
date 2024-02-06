@@ -1,4 +1,5 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 const eggBornUtils = require('egg-born-utils');
 
 describe('test/controller/test/feat/openAuth.test.js', () => {

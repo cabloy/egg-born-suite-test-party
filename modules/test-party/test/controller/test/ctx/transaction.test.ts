@@ -1,4 +1,5 @@
-const { app, mockUrl, mockInfo, assert } = require('egg-born-mock')(__dirname);
+// eslint-disable-next-line
+import { app, mockUrl, mockInfo, assert } from 'egg-born-mock';
 
 describe('test/controller/test/ctx/transaction.test.js', () => {
   it('action:transaction:fail', async () => {
