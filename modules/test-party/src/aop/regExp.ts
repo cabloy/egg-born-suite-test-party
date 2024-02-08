@@ -1,6 +1,6 @@
 import { Aop, BeanBase } from '@cabloy/core';
 
-@Aop({ match: [/^test-party.test\.\w+$/, 'testctx'] })
+@Aop({ match: [/^test-party.test\.\w+$/, 'testCtx'] })
 export class AopRegExp extends BeanBase {
   __get_name__(context, next) {
     next();

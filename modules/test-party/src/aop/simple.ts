@@ -8,7 +8,7 @@ class AopSimpleBase extends BeanBase {
   }
 }
 
-@Aop({ match: 'testctx' })
+@Aop({ match: 'testCtx' })
 export class AopSimple extends AopSimpleBase {
   // magic
   __get__(context, next) {
@@ -17,21 +17,21 @@ export class AopSimple extends AopSimpleBase {
     if (prop === 'magic') {
       context.value = 'magic:simpleaop';
     }
-    // if (prop === 'name') {
-    //   context.value = `${context.value}:simpleaop`;
-    // }
+    if (prop === 'name') {
+      context.value = `${context.value}:simpleaop`;
+    }
   }
 
-  __set__(_context, next) {
-    // const prop = context.prop;
-    // if (prop === 'name') {
-    //   const parts = context.value.split(':');
-    //   const index = parts.indexOf('simpleaop');
-    //   if (index > -1) {
-    //     parts.splice(index, 1);
-    //   }
-    //   context.value = parts.join(':');
-    // }
+  __set__(context, next) {
+    const prop = context.prop;
+    if (prop === 'name') {
+      const parts = context.value.split(':');
+      const index = parts.indexOf('simpleaop');
+      if (index > -1) {
+        parts.splice(index, 1);
+      }
+      context.value = parts.join(':');
+    }
     next();
   }
 
