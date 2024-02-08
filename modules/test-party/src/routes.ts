@@ -234,7 +234,7 @@ export const routes: IModuleRoute[] = [
     meta: { auth: { enable: false } },
   },
 
-  // test/feat/bean: http://localhost:9192/api/test/party/test/feat/bean
+  // test/feat/beanTest: http://localhost:9192/api/test/party/test/feat/beanTest
   {
     method: 'get',
     path: 'test/feat/beanTest',

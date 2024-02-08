@@ -8,7 +8,7 @@ describe('test/controller/test/feat/bean.test.js', () => {
     await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'get',
-      url: mockUrl('test/feat/bean', false),
+      url: mockUrl('test/feat/beanTest', false),
     });
   });
 
@@ -18,7 +18,7 @@ describe('test/controller/test/feat/bean.test.js', () => {
     await ctx.meta.util.performAction({
       innerAccess: false,
       method: 'get',
-      url: mockUrl('test/feat/bean/local', false),
+      url: mockUrl('test/feat/bean/localTest', false),
     });
   });
 });
