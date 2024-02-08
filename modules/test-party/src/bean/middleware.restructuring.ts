@@ -1,7 +1,7 @@
 import { Bean, BeanBase } from '@cabloy/core';
 
 @Bean({ scene: 'middleware' })
-export class MiddlewareRestructuring extends BeanBase {
+export class MiddlewareTestRestructuring extends BeanBase {
   async execute(_options, next) {
     const { a, b } = this.ctx.request.body;
     this.ctx.request.body.a = parseInt(a);
