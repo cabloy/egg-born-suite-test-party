@@ -21,10 +21,9 @@
   "description": "",
   "author": "zhennann",
   "dependencies": {
-    "cabloy-module-api-test-hostsimple-sync": "workspace:^",
     "cabloy-module-api-test-localeone": "workspace:^",
     "cabloy-module-api-test-localetwo": "workspace:^",
     "cabloy-module-api-test-party": "workspace:^",
-    "cabloy-module-api-test-partymonkey-monkey": "workspace:^"
+    "cabloy-module-api-test-partymonkey": "workspace:^"
   }
 }
